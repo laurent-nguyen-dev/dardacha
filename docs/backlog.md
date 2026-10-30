@@ -17,7 +17,7 @@ Séance → Séance suivante sur un module de contenu réel.
 | T03    | Modèle de contenu, contrôle automatique, guide « ajouter un module »                  | T01       | fait    |
 | T04    | Logique de parcours : rang, séance suivante (F04), totaux                             | T03       | à faire |
 | T05    | Navigation : Menu (F01), Module (F02), Séance (F03, squelette), barre permanente      | T04       | à faire |
-| T06    | Registre du parcours + contenu du module 1 (premier jet, non relu) — avancé avant T04 | T03       | à faire |
+| T06    | Registre du parcours + contenu du module 1 (premier jet, non relu) — avancé avant T04 | T03       | fait    |
 
 ## Sprint 2 — Progression et écoute
 
