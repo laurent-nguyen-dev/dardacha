@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { type Expression, NOMS_VARIANTES, type Variante, VARIANTES } from '@/content/types';
 import { couleurs } from '@/theme';
 
+import { BoutonEcouter } from './BoutonEcouter';
+
 /** Étiquette colorée d'une variante (convention fixe, fonctionnel §1). */
 export function EtiquetteVariante({ variante }: { variante: Variante }) {
   return (
@@ -26,6 +28,9 @@ export function ExpressionComparee({ expression }: { expression: Expression }) {
         <View key={variante} style={styles.ligne}>
           <EtiquetteVariante variante={variante} />
           <Text style={styles.forme}>{texteForme(expression.formes[variante])}</Text>
+          {expression.formes[variante] && (
+            <BoutonEcouter forme={expression.formes[variante]} variante={variante} />
+          )}
         </View>
       ))}
     </View>

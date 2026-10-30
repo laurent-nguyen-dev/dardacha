@@ -248,6 +248,13 @@ habituel du téléphone.
 - Une nouvelle lecture interrompt la précédente.
 - Dans les séances et les révisions, le texte lu est la transcription latine.
   Dans le mémo, le texte lu est le mot en écriture arabe.
+- Avant lecture d'une transcription latine : les précisions entre
+  parenthèses sont retirées, les alternatives « / » sont lues à la suite
+  avec une pause, et les chiffres du chat sont remplacés par des lettres
+  proches (2 → rien, 3 → a, 5 → kh, 6 → t, 7 → h, 9 → q) ; sinon une voix
+  arabe lirait « 7 » comme le nombre sept.
+- Si le téléphone ne fournit pas la liste de ses voix, la lecture est
+  demandée dans la langue de la variante, et le téléphone choisit la voix.
 - Si aucune voix arabe n'est disponible sur l'appareil, un message l'indique
   et explique comment en installer une ; l'application ne plante pas.
 

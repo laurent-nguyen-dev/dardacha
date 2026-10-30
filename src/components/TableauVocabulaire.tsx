@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { type Expression, VARIANTES } from '@/content/types';
 import { couleurs } from '@/theme';
 
+import { BoutonEcouter } from './BoutonEcouter';
 import { EtiquetteVariante, texteForme } from './Variantes';
 
 const LARGEUR_COLONNE = 170;
@@ -25,11 +26,15 @@ export function TableauVocabulaire({ expressions }: { expressions: readonly Expr
         {expressions.map((expression) => (
           <View key={expression.sens} style={styles.ligne}>
             <Text style={[styles.cellule, styles.sens]}>{expression.sens}</Text>
-            {VARIANTES.map((variante) => (
-              <Text key={variante} style={styles.cellule}>
-                {texteForme(expression.formes[variante])}
-              </Text>
-            ))}
+            {VARIANTES.map((variante) => {
+              const forme = expression.formes[variante];
+              return (
+                <View key={variante} style={[styles.cellule, styles.celluleForme]}>
+                  <Text style={styles.texteForme}>{texteForme(forme)}</Text>
+                  {forme && <BoutonEcouter forme={forme} variante={variante} compact />}
+                </View>
+              );
+            })}
           </View>
         ))}
       </View>
@@ -58,5 +63,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   texteEntete: { fontWeight: '700' },
+  celluleForme: { gap: 6 },
+  texteForme: { fontSize: 15, color: couleurs.texte },
   sens: { fontWeight: '600' },
 });

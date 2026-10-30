@@ -27,6 +27,19 @@ quelle variante), expressions supplémentaires, défi oral à faire à voix
 haute, tableau du vocabulaire (fais-le défiler vers la gauche pour voir
 les trois variantes), points à retenir et un mini-dialogue.
 
+## Écouter
+
+Touche **🔊** à côté d'une expression pour l'entendre. L'application
+utilise la voix arabe de ton téléphone (marocaine ou tunisienne si elle est
+installée, sinon une autre voix arabe). La prononciation est approximative :
+la voix lit une transcription en lettres latines.
+
+Si un message indique qu'aucune voix arabe n'est installée :
+
+- **Android** : Paramètres › Système › Langues › Synthèse vocale, puis
+  installer les données vocales « Arabe ».
+- **iPhone** : Réglages › Accessibilité › Contenu énoncé › Voix › Arabe.
+
 ## Progression
 
 - En bas d'une séance, **« Marquer comme terminée »** enregistre la séance.

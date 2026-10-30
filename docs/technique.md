@@ -148,6 +148,12 @@ L'application liste les voix disponibles et choisit, dans l'ordre : la langue
 exacte, puis `ar` / `ar-SA`, puis toute voix `ar-*` (fonctionnel §6.3). La disponibilité de `ar-MA` et
 `ar-TN` varie selon les appareils ; à mesurer sur les téléphones de test.
 
+Implémentation : `logic/audio.ts` (choix de la voix, texte à lire —
+fonctions pures) et `services/audio.ts` (appel à expo-speech). Les codes de
+langue sont comparés après normalisation (`ar_MA` sur Android, `ar-MA` sur
+iOS → `ar-ma`). La liste des voix est gardée en mémoire après le premier
+appel, sauf si elle est vide (moteur Android pas encore prêt).
+
 ## 6. Profil de risque
 
 - **Entrées non fiables** : uniquement le texte saisi dans « À toi de
