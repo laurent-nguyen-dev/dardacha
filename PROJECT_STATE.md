@@ -13,7 +13,7 @@
   - Cahier des charges de la version web (archive) : [docs/archives/cahier-des-charges-pwa.md](docs/archives/cahier-des-charges-pwa.md)
 - **Règle** : le cahier des charges est une synthèse ; toute modification est
   reportée dans fonctionnel.md / technique.md dans le même commit, et inversement.
-- **Ticket en cours** : T04 — logique de parcours (rang, séance suivante, totaux).
+- **Ticket en cours** : T05 — écrans Menu, Module, Séance (squelette) et barre permanente.
 - **En attente de l'utilisateur** : rien.
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T06 — Registre et module 1](docs/journal/T06-module-1-et-registre.md)
+- **Dernière entrée du journal** : [T04 — Logique de parcours](docs/journal/T04-logique-de-parcours.md)
