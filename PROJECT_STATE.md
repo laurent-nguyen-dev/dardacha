@@ -13,7 +13,7 @@
   - Cahier des charges de la version web (archive) : [docs/archives/cahier-des-charges-pwa.md](docs/archives/cahier-des-charges-pwa.md)
 - **Règle** : le cahier des charges est une synthèse ; toute modification est
   reportée dans fonctionnel.md / technique.md dans le même commit, et inversement.
-- **Ticket en cours** : T02 — intégration continue.
+- **Ticket en cours** : T03 — modèle de contenu et registre du parcours.
 - **En attente de l'utilisateur** : rien.
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T01 — Projet Expo](docs/journal/T01-projet-expo.md)
+- **Dernière entrée du journal** : [T02 — Intégration continue](docs/journal/T02-integration-continue.md)

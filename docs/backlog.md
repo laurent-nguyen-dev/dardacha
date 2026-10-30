@@ -13,7 +13,7 @@ Séance → Séance suivante sur un module de contenu réel.
 | Ticket | Titre                                                                                      | Dépend de | État    |
 | ------ | ------------------------------------------------------------------------------------------ | --------- | ------- |
 | T01    | Projet Expo (SDK 58, TypeScript strict, ESLint, Prettier, Jest)                            | —         | fait    |
-| T02    | Intégration continue (types, lint, tests, audit des dépendances)                           | T01       | à faire |
+| T02    | Intégration continue (types, lint, tests, audit des dépendances)                           | T01       | fait    |
 | T03    | Modèle de contenu, registre du parcours, contrôle automatique, guide « ajouter un module » | T01       | à faire |
 | T04    | Logique de parcours : rang, séance suivante (F04), totaux                                  | T03       | à faire |
 | T05    | Navigation : Menu (F01), Module (F02), Séance (F03, squelette), barre permanente           | T04       | à faire |
