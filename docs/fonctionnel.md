@@ -1,0 +1,306 @@
+# Document fonctionnel — Arabe au quotidien (application mobile)
+
+Ce document décrit **ce que fait** l'application, indépendamment de la façon
+dont elle est construite. Il doit permettre de reconstruire le même produit
+avec n'importe quelle technologie. Le « comment » est dans
+[technique.md](technique.md). Les points encore non tranchés renvoient à
+[questions-ouvertes.md](questions-ouvertes.md) (références `Q-xx`).
+
+Origine : ce document détaille le [cahier des charges mobile](cahier-des-charges.md),
+lui-même issu du [cahier des charges de la version web](archives/cahier-des-charges-pwa.md)
+(30 oct. 2026), adapté à une application installée sur téléphone Android et
+iPhone. Le périmètre de la version 1 est la **parité fonctionnelle** avec la
+version web ; les améliorations viennent ensuite (section 9).
+
+---
+
+## 1. Objet
+
+Arabe au quotidien apprend à un adulte francophone débutant l'arabe parlé du
+quotidien, en comparant expression par expression trois variantes :
+
+| Variante | Nom affiché | Couleur |
+| --- | --- | --- |
+| Arabe littéraire moderne | MSA | bleu |
+| Arabe marocain | darija | vert |
+| Arabe tunisien | tounsi | orange |
+
+La convention de couleur est fixe dans toute l'application.
+
+**Objectifs**
+
+- Comparer les trois variantes sur chaque expression.
+- Proposer un parcours court et régulier : 8 modules au départ, 3 séances par
+  module, 5 à 10 minutes par séance.
+- Pouvoir enrichir le parcours de nouveaux modules au fil du temps (3.6).
+- Faire pratiquer à l'écrit (quiz, réponse libre) et à l'oral (défi oral,
+  écoute).
+- Expliquer l'écriture SMS avec chiffres (2, 3, 5, 6, 7, 9).
+- Fonctionner entièrement sans connexion, dès l'installation.
+
+## 2. Utilisateur et périmètre
+
+Adulte francophone débutant, qui apprend seul, sur téléphone, par petites
+séances. Interface entièrement en français.
+
+| Inclus (version 1) | Exclu (version 1) |
+| --- | --- |
+| 8 modules initiaux (24 séances), parcours extensible | Alphabet et lecture de l'écriture arabe |
+| Tableaux comparatifs MSA / darija / tounsi | Compte utilisateur, synchronisation entre appareils |
+| Écoute par voix de synthèse de l'appareil | Enregistrements de voix humaines |
+| Quiz corrigé, correcteur de réponse libre | Évaluation de la grammaire, répétition espacée |
+| Révisions, mémo des chiffres SMS | Séance de révision dédiée |
+| Installation sur Android et iPhone (version de test) | Publication sur les magasins d'applications |
+| Fonctionnement hors ligne complet | Mode sombre (Q-16) |
+
+## 3. Contenu pédagogique
+
+### 3.1 Parcours
+
+Parcours initial (version 1). Le nombre de modules n'est pas figé : voir 3.6.
+
+| N° | Module | Objectif |
+| --- | --- | --- |
+| 1 | Salutations et présentations | Dire bonjour, se présenter, faire connaissance |
+| 2 | Prendre des nouvelles | Demander comment va quelqu'un et répondre |
+| 3 | SMS et WhatsApp | Écrire des messages courts, comprendre les chiffres du chat |
+| 4 | Vie quotidienne | Parler de ses habitudes, de son travail, de ses journées |
+| 5 | Amis et sorties | Proposer, accepter, refuser, fixer un rendez-vous |
+| 6 | Expressions familières | Réagir, plaisanter, exprimer ses émotions |
+| 7 | Relations et sentiments | Parler d'amitié et d'affection avec tact |
+| 8 | Conversations spontanées | Enchaîner les sujets, demander de répéter |
+
+Chaque module a une icône, un titre, une description courte et des séances
+(3 pour les modules initiaux, Q-19). Chaque séance a un titre et un objectif.
+
+### 3.2 Expression
+
+Une **expression** est l'unité de contenu. Elle comporte :
+
+- un sens en français ;
+- une forme par variante (MSA, darija, tounsi), en transcription latine ;
+- éventuellement aucune forme dans une variante (notée « — ») ;
+- éventuellement plusieurs formes alternatives dans une variante, séparées
+  par « / » ;
+- éventuellement des précisions entre parenthèses, qui ne font pas partie de
+  la forme (ex. genre de l'interlocuteur).
+
+Chaque séance contient **3 à 5 expressions de base** et **3 expressions
+supplémentaires**.
+
+### 3.3 Structure d'une séance (ordre d'affichage)
+
+1. **Objectif** de la séance.
+2. **Contexte et usage** : un conseil sur les variantes et le genre de
+   l'interlocuteur.
+3. **Expressions supplémentaires**, avec un bouton d'écoute par variante.
+4. **Défi oral** : une consigne, et un bouton « Voir la correction type »
+   (voir F09).
+5. **Vocabulaire comparé** : tableau français / MSA / darija / tounsi des
+   expressions de base, avec bouton d'écoute par variante.
+6. **À retenir** et **mini-dialogue** de 3 répliques (Q-08).
+7. **Vérifie ta compréhension** : quiz de 4 questions (F08).
+8. **À toi de jouer** : consigne de réponse libre, zone de saisie et bouton
+   « Corriger ma réponse » (F10).
+
+Dans les séances du module 3, un lien ouvre le mémo des chiffres SMS.
+
+### 3.4 Mémo des chiffres SMS
+
+Pour chaque chiffre 2, 3, 5, 6, 7, 9 : la lettre arabe qu'il remplace, le son,
+une indication de prononciation et des exemples (transcription, écriture
+arabe, sens) avec bouton d'écoute.
+
+### 3.5 Rédaction du contenu
+
+Le contenu de la version 1 est **réécrit** (celui de la version web n'est pas
+repris). Il n'est pas validé par un locuteur natif : l'application doit
+l'indiquer (Q-01, Q-02).
+
+### 3.6 Évolution du parcours
+
+L'application doit permettre d'ajouter des modules plus tard **sans modifier
+ses fonctions** : un nouveau module est uniquement du contenu.
+
+- Le nombre de modules n'est pas fixé. Tous les écrans, totaux et
+  pourcentages se calculent à partir du contenu présent (aucun « 8 » ni
+  « 24 » figé).
+- Chaque module et chaque séance a un **identifiant permanent**, distinct de
+  sa position dans le parcours. Un identifiant n'est jamais modifié ni
+  réutilisé. L'ordre d'affichage est défini séparément et peut changer.
+- La progression se rattache à ces identifiants : ajouter, insérer ou
+  réordonner des modules ne fait perdre ni ne décale aucune séance terminée.
+- À l'ajout d'un module, le total augmente : un utilisateur à « 24 / 24 »
+  passe à « 24 / 27 » et voit le nouveau module à 0 %.
+- Si un module ou une séance est retiré, sa progression n'est plus comptée
+  ni affichée ; elle est réutilisée si le contenu revient sous le même
+  identifiant.
+- Un nouveau module respecte la même structure de séance (3.3) et les mêmes
+  règles de contenu (3.2) que les modules initiaux.
+- Les nouveaux modules arrivent par une mise à jour de l'application (Q-20).
+
+## 4. Navigation
+
+Écrans : **Menu**, **Module**, **Séance**, **Révisions**, **Mémo SMS**.
+
+Une barre permanente, présente sur tous les écrans, donne accès à : Menu,
+Révisions, Mémo, Réinitialiser. La progression globale (F06) est visible sur
+tous les écrans.
+
+Le retour système (bouton ou geste « retour » du téléphone) revient à l'écran
+précédent ; depuis le Menu, il quitte l'application selon le comportement
+habituel du téléphone.
+
+## 5. Fonctions
+
+| Réf. | Fonction | Comportement attendu |
+| --- | --- | --- |
+| F01 | Menu principal | Affiche tous les modules du parcours, dans l'ordre défini, en cartes : icône, titre, description, « N / S séances » terminées (S = séances du module) et pourcentage. Toucher une carte ouvre le module. |
+| F02 | Page module | Liste les séances du module (titre, objectif). Une séance terminée est marquée d'une coche et d'un fond vert. |
+| F03 | Page séance | Affiche la séance complète (3.3). En bas, trois boutons : « Retour aux séances », « Marquer comme terminée », « Séance suivante ». |
+| F04 | Séance suivante | Ouvre la séance suivante du module, puis la 1re séance du module suivant après la 3e. Désactivé sur la dernière séance du dernier module. |
+| F05 | Marquer comme terminée | Enregistre la séance comme terminée, met à jour la progression, désactive le bouton et affiche « Séance terminée ». Une séance déjà terminée s'ouvre avec ce bouton déjà désactivé. |
+| F06 | Progression globale | Barre et texte « N / T séances terminées », T étant le nombre total de séances du parcours (24 avec le contenu initial). |
+| F07 | Écoute | Bouton « 🔊 Écouter » par expression et par variante. Voir règles 6.3. |
+| F08 | Quiz de séance | 4 questions à 3 choix. Au toucher : bonne réponse en vert, choix erroné en rouge, correction affichant l'expression dans les trois variantes. Score final, et bouton « Refaire avec de nouvelles questions ». Voir règles 6.1. |
+| F09 | Correction type du défi oral | Le bouton affiche ou masque 4 formules de la séance, chacune dans les trois variantes (Q-07). |
+| F10 | Correcteur de réponse libre | Analyse le texte saisi ; liste les expressions de la séance reconnues (avec la variante reconnue) ; propose jusqu'à 3 expressions non utilisées. Texte vide : demande de saisir un texte. Voir règles 6.2. |
+| F11 | Révisions | Les 2 premières expressions de base de chaque séance (48 fiches avec le contenu initial), groupées par module, avec les trois variantes, le sens et un bouton d'écoute par variante (Q-09). |
+| F12 | Mémo des chiffres SMS | Tableau (3.4) et quiz de 5 questions corrigées (Q-10). Accessible depuis la barre et depuis les séances du module 3. |
+| F13 | Réinitialisation | Demande confirmation ; si confirmé, efface toute la progression et revient au Menu. Si annulé, rien ne change. |
+| F14 | Installation | L'application s'installe sur Android et iPhone comme toute application, avec son nom et son icône. Affichage en orientation portrait uniquement. |
+| F15 | Hors ligne | Tout le contenu est embarqué : aucune fonction ne nécessite de connexion, y compris à la première ouverture. |
+
+## 6. Règles de gestion
+
+### 6.1 Quiz de séance (F08)
+
+- Les questions sont tirées à l'ouverture de la séance, et à nouveau à chaque
+  « Refaire ».
+- **Expressions éligibles** : expressions de base et supplémentaires de la
+  séance. Pour une question portant sur une variante, une expression est
+  exclue si sa forme dans cette variante est vide (« — ») ou commence par un
+  chiffre.
+- **Questions 1 à 3** : « Comment dit-on « *sens* » en *variante* ? ». Les trois
+  questions couvrent chacune une variante différente ; l'ordre tourne selon le
+  rang de la séance dans le parcours (Q-04).
+- **Question 4** : « Que signifie « *forme* » ? » ; les choix sont des sens en
+  français (Q-05).
+- Une même expression n'est pas interrogée deux fois dans le même quiz (Q-06).
+- **Choix** : 3 choix mélangés, 1 bonne réponse et 2 distracteurs. Les
+  distracteurs sont pris d'abord parmi les autres expressions de la séance,
+  puis dans tout le cours si la séance n'en fournit pas assez. Aucun
+  distracteur n'est identique (même texte) à la bonne réponse ni à l'autre
+  distracteur.
+- Une question répondue est verrouillée. Le score « X / 4 » s'affiche dès que
+  les 4 questions sont répondues.
+- Répondre au quiz ne marque pas la séance comme terminée.
+
+### 6.2 Correcteur de réponse libre (F10)
+
+- **Normalisation** du texte saisi et des formes de référence : minuscules,
+  accents retirés, ponctuation retirée, espaces multiples réduits ; les
+  chiffres et les lettres arabes sont conservés.
+- **Expressions comparées** : les 6 premières expressions de la séance, dans
+  l'ordre : expressions de base, puis supplémentaires (Q-11).
+- Pour chaque expression et chaque variante : les alternatives « / » comptent
+  séparément, le texte entre parenthèses est ignoré, seules les formes de
+  **3 caractères ou plus** (après normalisation) sont retenues.
+- Une expression est **reconnue** si l'une de ses formes retenues apparaît
+  dans le texte normalisé (Q-12). La variante affichée est celle de la forme
+  trouvée.
+- **Suggestions** : jusqu'à 3 expressions non reconnues, dans l'ordre des
+  expressions comparées.
+- Le message rappelle toujours que la grammaire et l'accord masculin/féminin
+  ne sont pas vérifiés.
+
+### 6.3 Écoute (F07)
+
+- Langue demandée : arabe standard pour le MSA, arabe du Maroc pour la darija,
+  arabe de Tunisie pour le tounsi. À défaut de voix correspondante, une autre
+  voix arabe est utilisée (Q-13).
+- Vitesse de lecture réduite (paramètre `vitesse_lecture`, section 7).
+- Une nouvelle lecture interrompt la précédente.
+- Dans les séances et les révisions, le texte lu est la transcription latine.
+  Dans le mémo, le texte lu est le mot en écriture arabe.
+- Si aucune voix arabe n'est disponible sur l'appareil, un message l'indique
+  et explique comment en installer une ; l'application ne plante pas.
+
+### 6.4 Progression (F05, F06, F13)
+
+- Une séance terminée est identifiée par l'identifiant permanent de la séance
+  (3.6), jamais par sa position.
+- La progression est conservée sur l'appareil uniquement, et survit à la
+  fermeture et au redémarrage de l'application.
+- Si la conservation échoue, l'application reste utilisable ; la progression
+  de la session en cours reste affichée.
+- Terminer une séance est uniquement une action volontaire de l'utilisateur.
+
+## 7. Paramètres configurables
+
+Ces valeurs sont des **réglages par défaut**, modifiables sans toucher à la
+logique de l'application.
+
+| Paramètre | Valeur par défaut | Rôle |
+| --- | --- | --- |
+| `vitesse_lecture` | 0,86 | Vitesse de la voix (1 = normale) |
+| `quiz_seance_nb_questions` | 4 | Questions par quiz de séance |
+| `quiz_nb_choix` | 3 | Choix par question |
+| `correction_type_nb_formules` | 4 | Formules affichées par F09 |
+| `correcteur_nb_expressions` | 6 | Expressions comparées par F10 |
+| `correcteur_longueur_min` | 3 | Longueur minimale d'une forme retenue |
+| `correcteur_nb_suggestions` | 3 | Suggestions maximum par F10 |
+| `revisions_par_seance` | 2 | Fiches de révision par séance |
+| `quiz_memo_nb_questions` | 5 | Questions du quiz du mémo |
+
+## 8. Données personnelles
+
+Aucune collecte, aucun compte, aucune publicité, aucune mesure d'audience,
+aucun échange réseau. La seule donnée conservée est la liste des séances
+terminées, sur l'appareil.
+
+## 9. Évolutions envisagées (après la version 1)
+
+Par ordre de priorité proposé :
+
+1. Relecture du contenu par un locuteur marocain et un locuteur tunisien.
+2. Écriture arabe pour chaque expression, et écoute lue sur l'écriture arabe.
+3. Un mini-dialogue propre à chaque séance.
+4. Séance de révision et lecture enchaînée des trois variantes.
+5. Filtres par module et répétition espacée dans les révisions.
+6. Correcteur plus fin (motifs, choix guidés).
+7. Export / import de la progression.
+8. Publication sur Google Play et l'App Store.
+
+## 10. Critères de recette (version 1)
+
+Chaque contrôle est joué sur un téléphone Android **et** sur un iPhone.
+
+1. Le menu affiche les 8 modules initiaux ; chaque module ouvre ses 3
+   séances ; les 24 séances s'affichent sans erreur.
+2. Chaque séance affiche un quiz de 4 questions ; chaque réponse produit une
+   correction ; le score s'affiche ; « Refaire » génère un nouveau tirage.
+3. « Voir la correction type » affiche puis masque la correction dans chaque
+   séance.
+4. « Corriger ma réponse » signale expressions reconnues et suggestions, et
+   demande un texte si la zone est vide.
+5. Marquer une séance comme terminée met à jour la barre, la carte du module
+   et la page du module ; la progression survit à la fermeture de
+   l'application ; la réinitialisation remet tout à zéro après confirmation,
+   et ne fait rien si on annule.
+6. « Séance suivante » enchaîne séances et modules, et est désactivé à la fin.
+7. Les révisions affichent 48 fiches (contenu initial) sans erreur.
+8. Le mémo s'ouvre depuis la barre et depuis le module 3 ; son quiz corrige
+   chaque réponse.
+9. Avec une voix arabe installée, le son est audible dans les trois variantes ;
+   sans voix arabe, un message s'affiche et rien ne plante.
+10. En mode avion, dès la première ouverture, toutes les fonctions marchent.
+11. Le bouton/geste retour du téléphone revient à l'écran précédent.
+12. L'affichage reste lisible sur un petit écran (≈ 360 pt de large) et avec
+    une taille de texte système agrandie ; les tableaux défilent
+    horizontalement plutôt que de déborder.
+13. Évolutivité : l'ajout d'un module de test (contenu seul, aucune autre
+    modification) le fait apparaître dans le menu, les révisions et
+    l'enchaînement « Séance suivante » ; les totaux se mettent à jour ; la
+    progression existante est conservée, y compris si le module est inséré
+    au milieu du parcours.
