@@ -5,17 +5,20 @@ import { Bouton } from '@/components/Bouton';
 import { Introuvable } from '@/components/Introuvable';
 import { parcours } from '@/content/parcours';
 import { seanceSuivante, situerSeance } from '@/logic/parcours';
+import { useActionsProgression, useSeancesTerminees } from '@/services/progression';
 import { couleurs } from '@/theme';
 
 // F03 : page séance. Sprint 1 : objectif et contexte ; les autres sections
-// (fonctionnel §3.3) arrivent avec T08 et suivants, le bouton « Marquer
-// comme terminée » avec T07.
+// (fonctionnel §3.3) arrivent avec T08 et suivants.
 export default function PageSeance() {
   const { seanceId } = useLocalSearchParams<{ seanceId: string }>();
+  const terminees = useSeancesTerminees();
+  const { marquerTerminee } = useActionsProgression();
   const position = situerSeance(parcours, seanceId);
   if (!position) return <Introuvable message="Cette séance n'existe pas." />;
   const { module, seance, numeroModule, numeroSeance } = position;
   const suivante = seanceSuivante(parcours, seance.id);
+  const terminee = terminees.has(seance.id);
 
   return (
     <ScrollView contentContainerStyle={styles.page}>
@@ -36,6 +39,12 @@ export default function PageSeance() {
           libelle="Retour aux séances"
           variante="secondaire"
           onPress={() => router.dismissTo(`/module/${module.id}`)}
+        />
+        <Bouton
+          libelle={terminee ? '✓ Séance terminée' : 'Marquer comme terminée'}
+          variante="secondaire"
+          desactive={terminee}
+          onPress={() => marquerTerminee(seance.id)}
         />
         <Bouton
           libelle="Séance suivante"

@@ -4,7 +4,7 @@
 
 - **Projet** : Arabe au quotidien, application mobile native (Android + iPhone),
   portage de la version web (PWA) existante.
-- **Phase actuelle** : 2 — construction. Sprint 1 « Squelette navigable » terminé ; sprint 2 « Progression et écoute » à lancer ([backlog](docs/backlog.md)).
+- **Phase actuelle** : 2 — construction, sprint 2 « Progression et écoute » ([backlog](docs/backlog.md)).
 - **Documents**
   - Fonctionnel : [docs/fonctionnel.md](docs/fonctionnel.md)
   - Technique : [docs/technique.md](docs/technique.md)
@@ -13,7 +13,7 @@
   - Cahier des charges de la version web (archive) : [docs/archives/cahier-des-charges-pwa.md](docs/archives/cahier-des-charges-pwa.md)
 - **Règle** : le cahier des charges est une synthèse ; toute modification est
   reportée dans fonctionnel.md / technique.md dans le même commit, et inversement.
-- **Ticket en cours** : aucun. Prochain : T07 — service de progression.
-- **En attente de l'utilisateur** : installer l'APK de test (docs/exploitation.md) et essayer le sprint 1 ; relecture du module 1 (`src/content/modules/salutations.ts`) ; feu vert pour le sprint 2.
+- **Ticket en cours** : T08 — page séance complète (sections 1 à 6).
+- **En attente de l'utilisateur** : relecture du contenu (modules 1 et 2, quand T10 sera fait).
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T19 — APK par GitHub Actions](docs/journal/T19-apk-github-actions.md)
+- **Dernière entrée du journal** : [T07 — Progression enregistrée](docs/journal/T07-progression.md)

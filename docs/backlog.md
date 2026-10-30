@@ -25,12 +25,16 @@ Séance → Séance suivante sur un module de contenu réel.
 
 ## Sprint 2 — Progression et écoute
 
-| Ticket | Titre                                                            | Dépend de |
-| ------ | ---------------------------------------------------------------- | --------- |
-| T07    | Service de progression (F05, F06, F13), stockage par identifiant | T04       |
-| T08    | Page séance complète : sections 1 à 6 de la structure            | T05       |
-| T09    | Écoute (F07) : choix de voix, repli, message sans voix arabe     | T08       |
-| T10    | Contenu du module 2                                              | T03       |
+**Jalon** : on peut terminer des séances (progression conservée), lire une
+séance complète jusqu'au mini-dialogue et écouter chaque expression ; deux
+modules de contenu.
+
+| Ticket | Titre                                                            | Dépend de | État    |
+| ------ | ---------------------------------------------------------------- | --------- | ------- |
+| T07    | Service de progression (F05, F06, F13), stockage par identifiant | T04       | fait    |
+| T08    | Page séance complète : sections 1 à 6 de la structure            | T05       | à faire |
+| T09    | Écoute (F07) : choix de voix, repli, message sans voix arabe     | T08       | à faire |
+| T10    | Contenu du module 2 « Prendre des nouvelles »                    | T03       | à faire |
 
 ## Sprint 3 — Exercices
 

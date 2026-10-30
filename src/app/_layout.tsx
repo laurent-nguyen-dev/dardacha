@@ -7,13 +7,21 @@ import { BarreOutils } from '@/components/BarreOutils';
 import { BarreProgression } from '@/components/BarreProgression';
 import { parcours } from '@/content/parcours';
 import { progressionGlobale } from '@/logic/parcours';
-import { useSeancesTerminees } from '@/services/progression';
+import { ProgressionProvider, useSeancesTerminees } from '@/services/progression';
 import { couleurs } from '@/theme';
 
-// Layout racine : une pile d'écrans (le bouton/geste « retour » dépile
-// l'écran courant, fonctionnel §4), puis, sous tous les écrans, la
-// progression globale (F06) et la barre permanente.
 export default function RootLayout() {
+  return (
+    <ProgressionProvider>
+      <Application />
+    </ProgressionProvider>
+  );
+}
+
+// Une pile d'écrans (le bouton/geste « retour » dépile l'écran courant,
+// fonctionnel §4), puis, sous tous les écrans, la progression globale (F06)
+// et la barre permanente.
+function Application() {
   const terminees = useSeancesTerminees();
   const { bottom } = useSafeAreaInsets();
   return (

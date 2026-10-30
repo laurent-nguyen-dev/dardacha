@@ -19,3 +19,12 @@ Le contenu est en cours de relecture par des locuteurs natifs.
 - En bas de chaque écran : ta progression sur tout le parcours, et le
   bouton **Menu**. Le bouton ou geste « retour » du téléphone revient à
   l'écran précédent.
+
+## Progression
+
+- En bas d'une séance, **« Marquer comme terminée »** enregistre la séance.
+  Répondre au quiz ne suffit pas : c'est toi qui décides.
+- Ta progression est conservée sur le téléphone, même après fermeture de
+  l'application (elle est perdue si tu désinstalles l'application).
+- **Réinitialiser** (barre du bas) efface toute la progression, après
+  confirmation.
