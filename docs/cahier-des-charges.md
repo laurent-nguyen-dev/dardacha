@@ -39,7 +39,7 @@ La version 1 vise la **parité fonctionnelle** avec la version web. Le contenu p
 
 ## 3. Contenu pédagogique
 
-Le parcours initial compte 8 modules de 3 séances, soit 24 séances. Il est conçu pour s'enrichir : de nouveaux modules pourront être ajoutés plus tard (voir « Évolution du parcours » ci-dessous). Chaque séance contient de 3 à 5 expressions de base et 3 expressions supplémentaires, chacune donnée en MSA, en darija et en tounsi. Le contenu étant réécrit, il est marqué « non relu par un locuteur natif » tant qu'il ne l'a pas été (Q-01, Q-02).
+Le parcours initial compte 8 modules de 3 séances, soit 24 séances. Il est conçu pour s'enrichir : de nouveaux modules pourront être ajoutés plus tard (voir « Évolution du parcours » ci-dessous). Chaque séance contient de 3 à 5 expressions de base et 3 expressions supplémentaires, chacune donnée en MSA, en darija et en tounsi. Le contenu est réécrit module par module ; chaque module est marqué « non relu par un locuteur natif » tant qu'il ne l'a pas été, et le menu l'indique.
 
 | N° | Module | Objectif |
 | --- | --- | --- |
@@ -59,7 +59,7 @@ Le parcours initial compte 8 modules de 3 séances, soit 24 séances. Il est con
 3. Expressions supplémentaires, avec un bouton d'écoute par variante.
 4. Défi oral, avec bouton « Voir la correction type ».
 5. Vocabulaire comparé : tableau français, MSA, darija, tounsi, avec traduction et écoute.
-6. À retenir et mini-dialogue de 3 répliques (identique dans toutes les séances en version 1, Q-08).
+6. À retenir et mini-dialogue de 3 répliques (identique dans toutes les séances en version 1).
 7. Vérifie ta compréhension : quiz de 4 questions corrigées.
 8. À toi de jouer : réponse libre avec bouton « Corriger ma réponse ».
 
@@ -70,7 +70,7 @@ La convention de couleur est fixe : bleu pour le MSA, vert pour la darija, orang
 - Ajouter un module consiste uniquement à ajouter du contenu : aucun écran ni aucune règle n'est modifié. Tous les totaux et pourcentages se calculent à partir du contenu présent.
 - Chaque module et chaque séance a un identifiant permanent, distinct de sa position. La progression s'y rattache : ajouter, insérer ou réordonner des modules ne fait perdre aucune séance terminée.
 - À l'ajout d'un module, le total augmente (« 24 / 24 » devient « 24 / 27 ») et le nouveau module apparaît à 0 %.
-- Un nouveau module suit la même structure de séance que les modules initiaux. Il est livré par une mise à jour de l'application (Q-20).
+- Un nouveau module suit la même structure de séance que les modules initiaux. Il est livré par une mise à jour de l'application.
 
 ## 4. Spécifications fonctionnelles
 
@@ -101,7 +101,7 @@ Les règles complètes, et les précisions apportées aux points flous de la ver
 **Quiz de séance (F08)**
 
 - Les questions sont générées à l'ouverture de la séance, à partir des expressions de base et supplémentaires de cette séance.
-- Trois questions demandent « Comment dit-on … en MSA, darija ou tounsi ? », une variante différente par question ; l'ordre des variantes tourne selon le rang de la séance dans le parcours (Q-04). La quatrième demande le sens français d'une expression.
+- Trois questions demandent « Comment dit-on … en MSA, darija ou tounsi ? », une variante différente par question ; l'ordre des variantes tourne selon le rang de la séance dans le parcours. La quatrième demande le sens français d'une expression.
 - Chaque question a 3 choix, mélangés : 1 bonne réponse et 2 distracteurs pris d'abord dans la séance, puis dans l'ensemble du cours. Un distracteur ne peut pas être identique à la bonne réponse.
 - Les expressions sans valeur dans une variante (« — ») ou commençant par un chiffre sont exclues des questions.
 - Une fois répondue, une question est verrouillée. Le score s'affiche quand les 4 questions sont répondues.
@@ -114,7 +114,7 @@ Les règles complètes, et les précisions apportées aux points flous de la ver
 
 **Écoute (F07)**
 
-- Langue demandée : arabe standard pour le MSA, arabe du Maroc pour la darija, arabe de Tunisie pour le tounsi. Si la voix correspondante n'est pas installée, une autre voix arabe du téléphone est utilisée (Q-13).
+- Langue demandée : arabe standard pour le MSA, arabe du Maroc pour la darija, arabe de Tunisie pour le tounsi. Si la voix correspondante n'est pas installée, une autre voix arabe du téléphone est utilisée.
 - Une nouvelle lecture interrompt la précédente.
 - Dans les séances, le texte lu est la transcription latine. Dans le mémo, le texte lu est le mot en écriture arabe, pour une meilleure prononciation.
 
@@ -132,7 +132,7 @@ Le détail et la justification des choix sont dans le [document technique](techn
 | --- | --- |
 | Architecture | Application mobile multiplateforme sans serveur : un seul code source pour Android et iPhone (Expo / React Native, TypeScript). Logique (quiz, correcteur, progression) séparée de l'affichage et couverte par des tests automatiques. |
 | Plateformes | Android et iOS, téléphones, versions minimales imposées par la version d'Expo utilisée. Orientation portrait. |
-| Installation | Version 1 : installation de test (APK Android ; Expo Go ou build interne sur iPhone, Q-14). Pas de publication sur les magasins. |
+| Installation | Version 1 : installation de test (Expo Go sur les deux téléphones pendant le développement ; APK Android installable ; build iPhone seulement avec un compte Apple Developer). Pas de publication sur les magasins. |
 | Évolutivité | Le contenu est séparé du code, un module par fichier de données. Ajouter un module ne demande aucune modification des écrans ni de la logique ; un contrôle automatique vérifie la structure de chaque module (champs obligatoires, nombre d'expressions, identifiants uniques). |
 | Hors ligne | Contenu embarqué dans l'application. Aucun appel réseau. |
 | Données personnelles | Aucune collecte, aucun compte, aucune publicité ni mesure d'audience. La seule donnée stockée est la liste des séances terminées, sur le téléphone. |

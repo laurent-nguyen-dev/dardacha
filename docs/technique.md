@@ -14,7 +14,9 @@ est appelé à évoluer. Le « quoi » est dans [fonctionnel.md](fonctionnel.md)
 | Stockage local | **@react-native-async-storage/async-storage** | Stockage clé/valeur persistant, suffisant pour une liste de séances terminées. |
 | Tests | **Jest** (preset `jest-expo`) + **React Native Testing Library** | Tests unitaires de la logique (quiz, correcteur, progression) et tests d'écrans. |
 | Qualité | ESLint (config Expo) + Prettier + `tsc --noEmit` | Contrôlés en CI. |
-| Distribution v1 | **EAS Build**, profil `preview` | APK Android installable directement ; iPhone via build interne (ad hoc) ou TestFlight (Q-14). |
+| Distribution v1 | **Expo Go** + **EAS Build** (profil `preview`) | Développement et tests via Expo Go sur Android et iPhone ; APK Android via EAS Build ; build iPhone seulement si un compte Apple Developer est ouvert. |
+| Identifiant d'application | `dev.laurentnguyen.dardacha` | Android `package` et iOS `bundleIdentifier`. Modifiable jusqu'à la première publication, définitif ensuite. |
+| Nom, couleur | « Arabe au quotidien », #102a43 | Icône provisoire en attendant les icônes définitives. |
 
 Choix arrêtés avec l'utilisateur le 30 oct. 2026 : Expo, parité avec la
 version web, contenu réécrit, distribution de test uniquement.
@@ -66,7 +68,8 @@ Exigence : ajouter un module = ajouter du contenu, sans toucher aux écrans ni
   registre. Rien d'autre.
 - **Identifiants permanents** : chaque module et chaque séance porte un champ
   `id` textuel, choisi à la création et jamais modifié ni réutilisé
-  (format proposé : Q-21). La position (numéro affiché « Module 3 ») est
+  (mot-clé lisible sans lien avec la position : module `salutations`,
+  séances `salutations-bonjour`, `salutations-se-presenter`…). La position (numéro affiché « Module 3 ») est
   calculée à partir de l'ordre du registre, jamais stockée.
 - **Rien n'est figé dans le code** : nombre de modules, de séances, total
   « N / T », nombre de fiches, rang de séance pour la rotation du quiz — tout
@@ -84,7 +87,7 @@ Exigence : ajouter un module = ajouter du contenu, sans toucher aux écrans ni
   qui crée le registre.
 - **Livraison** : un nouveau module nécessite un nouveau build (contenu
   embarqué). Option ultérieure : EAS Update, qui pousse du contenu JavaScript
-  sans repasser par un build complet ni par les magasins (Q-20).
+  sans repasser par un build complet ni par les magasins.
 
 ## 3. Correspondance avec la version web
 
@@ -106,14 +109,15 @@ ici). Orientation portrait verrouillée (`orientation: "portrait"` dans
 
 Codes de langue demandés : `ar` (MSA), `ar-MA` (darija), `ar-TN` (tounsi).
 L'application liste les voix disponibles et choisit, dans l'ordre : la langue
-exacte, puis une autre voix `ar-*` (Q-13). La disponibilité de `ar-MA` et
+exacte, puis `ar` / `ar-SA`, puis toute voix `ar-*` (fonctionnel §6.3). La disponibilité de `ar-MA` et
 `ar-TN` varie selon les appareils ; à mesurer sur les téléphones de test.
 
 ## 6. Profil de risque
 
 - **Entrées non fiables** : uniquement le texte saisi dans « À toi de
   jouer », traité localement, jamais exécuté ni envoyé. Seul risque : un
-  texte très long. Limite de saisie : 1 000 caractères (Q-15).
+  texte très long. Limite de saisie : `reponse_longueur_max` = 1 000
+  caractères.
 - **Données sensibles** : aucune. La liste des séances terminées n'est pas
   sensible. Pas de compte, pas de secret, pas de réseau.
 - **Triche / abus** : sans objet (aucun score partagé, aucun serveur).

@@ -51,7 +51,7 @@ séances. Interface entièrement en français.
 | Quiz corrigé, correcteur de réponse libre | Évaluation de la grammaire, répétition espacée |
 | Révisions, mémo des chiffres SMS | Séance de révision dédiée |
 | Installation sur Android et iPhone (version de test) | Publication sur les magasins d'applications |
-| Fonctionnement hors ligne complet | Mode sombre (Q-16) |
+| Fonctionnement hors ligne complet | Mode sombre |
 
 ## 3. Contenu pédagogique
 
@@ -71,7 +71,8 @@ Parcours initial (version 1). Le nombre de modules n'est pas figé : voir 3.6.
 | 8 | Conversations spontanées | Enchaîner les sujets, demander de répéter |
 
 Chaque module a une icône, un titre, une description courte et des séances
-(3 pour les modules initiaux, Q-19). Chaque séance a un titre et un objectif.
+(au moins 1 ; 3 pour les modules initiaux). Chaque séance a un titre et un
+objectif.
 
 ### 3.2 Expression
 
@@ -98,7 +99,8 @@ supplémentaires**.
    (voir F09).
 5. **Vocabulaire comparé** : tableau français / MSA / darija / tounsi des
    expressions de base, avec bouton d'écoute par variante.
-6. **À retenir** et **mini-dialogue** de 3 répliques (Q-08).
+6. **À retenir** et **mini-dialogue** de 3 répliques, identique dans toutes
+   les séances en version 1.
 7. **Vérifie ta compréhension** : quiz de 4 questions (F08).
 8. **À toi de jouer** : consigne de réponse libre, zone de saisie et bouton
    « Corriger ma réponse » (F10).
@@ -114,8 +116,20 @@ arabe, sens) avec bouton d'écoute.
 ### 3.5 Rédaction du contenu
 
 Le contenu de la version 1 est **réécrit** (celui de la version web n'est pas
-repris). Il n'est pas validé par un locuteur natif : l'application doit
-l'indiquer (Q-01, Q-02).
+repris), module par module : premier jet rédigé avec l'assistant, relu par
+l'auteur du projet. Chaque module porte un état de relecture native
+(« non relu » / « relu »).
+
+Tant qu'au moins un module n'est pas relu par un locuteur natif, le Menu
+affiche : « Contenu en cours de relecture par des locuteurs natifs. »
+
+**Transcription latine** : chiffres du chat pour les sons sans équivalent
+français (2 = ء, 3 = ع, 5 = خ, 6 = ط, 7 = ح, 9 = ق), cohérents avec le mémo
+SMS ; voyelles longues non marquées (« salam », pas « salâm »).
+
+**Règle de contenu** : les 2 premières expressions de base de chaque séance
+(reprises dans les révisions) ont obligatoirement une forme dans les trois
+variantes, qui ne commence pas par un chiffre.
 
 ### 3.6 Évolution du parcours
 
@@ -137,7 +151,9 @@ ses fonctions** : un nouveau module est uniquement du contenu.
   identifiant.
 - Un nouveau module respecte la même structure de séance (3.3) et les mêmes
   règles de contenu (3.2) que les modules initiaux.
-- Les nouveaux modules arrivent par une mise à jour de l'application (Q-20).
+- Les nouveaux modules arrivent par une mise à jour de l'application. Aucun
+  téléchargement de contenu à la volée (fonctionnement hors ligne, sans
+  réseau).
 
 ## 4. Navigation
 
@@ -163,10 +179,10 @@ habituel du téléphone.
 | F06 | Progression globale | Barre et texte « N / T séances terminées », T étant le nombre total de séances du parcours (24 avec le contenu initial). |
 | F07 | Écoute | Bouton « 🔊 Écouter » par expression et par variante. Voir règles 6.3. |
 | F08 | Quiz de séance | 4 questions à 3 choix. Au toucher : bonne réponse en vert, choix erroné en rouge, correction affichant l'expression dans les trois variantes. Score final, et bouton « Refaire avec de nouvelles questions ». Voir règles 6.1. |
-| F09 | Correction type du défi oral | Le bouton affiche ou masque 4 formules de la séance, chacune dans les trois variantes (Q-07). |
+| F09 | Correction type du défi oral | Le bouton affiche ou masque les 4 premières expressions de base de la séance (toutes s'il y en a moins), chacune dans les trois variantes. |
 | F10 | Correcteur de réponse libre | Analyse le texte saisi ; liste les expressions de la séance reconnues (avec la variante reconnue) ; propose jusqu'à 3 expressions non utilisées. Texte vide : demande de saisir un texte. Voir règles 6.2. |
-| F11 | Révisions | Les 2 premières expressions de base de chaque séance (48 fiches avec le contenu initial), groupées par module, avec les trois variantes, le sens et un bouton d'écoute par variante (Q-09). |
-| F12 | Mémo des chiffres SMS | Tableau (3.4) et quiz de 5 questions corrigées (Q-10). Accessible depuis la barre et depuis les séances du module 3. |
+| F11 | Révisions | Les 2 premières expressions de base de chaque séance (48 fiches avec le contenu initial), groupées par module, avec les trois variantes, le sens et un bouton d'écoute par variante. |
+| F12 | Mémo des chiffres SMS | Tableau (3.4) et quiz de 5 questions « Quelle lettre arabe remplace le chiffre X ? », 3 choix, chiffres tirés sans répétition parmi les 6 ; chaque réponse est corrigée. Accessible depuis la barre et depuis les séances du module 3. |
 | F13 | Réinitialisation | Demande confirmation ; si confirmé, efface toute la progression et revient au Menu. Si annulé, rien ne change. |
 | F14 | Installation | L'application s'installe sur Android et iPhone comme toute application, avec son nom et son icône. Affichage en orientation portrait uniquement. |
 | F15 | Hors ligne | Tout le contenu est embarqué : aucune fonction ne nécessite de connexion, y compris à la première ouverture. |
@@ -182,11 +198,17 @@ habituel du téléphone.
   exclue si sa forme dans cette variante est vide (« — ») ou commence par un
   chiffre.
 - **Questions 1 à 3** : « Comment dit-on « *sens* » en *variante* ? ». Les trois
-  questions couvrent chacune une variante différente ; l'ordre tourne selon le
-  rang de la séance dans le parcours (Q-04).
-- **Question 4** : « Que signifie « *forme* » ? » ; les choix sont des sens en
-  français (Q-05).
-- Une même expression n'est pas interrogée deux fois dans le même quiz (Q-06).
+  questions couvrent chacune une variante différente. Avec r = rang de la
+  séance dans le parcours (1 pour la première séance du premier module), la
+  question 1 porte sur la variante d'indice `(r − 1) mod 3` dans l'ordre
+  MSA, darija, tounsi, et les questions 2 et 3 sur les suivantes dans l'ordre
+  circulaire. Ex. : r = 1 → MSA, darija, tounsi ; r = 2 → darija, tounsi,
+  MSA.
+- **Question 4** : « Que signifie « *forme* » ? » ; la forme est affichée
+  dans une variante tirée au hasard parmi celles où elle est éligible ; les
+  choix sont des sens en français.
+- Les expressions interrogées sont tirées au hasard parmi les éligibles ; une
+  même expression n'est pas interrogée deux fois dans le même quiz.
 - **Choix** : 3 choix mélangés, 1 bonne réponse et 2 distracteurs. Les
   distracteurs sont pris d'abord parmi les autres expressions de la séance,
   puis dans tout le cours si la séance n'en fournit pas assez. Aucun
@@ -202,13 +224,14 @@ habituel du téléphone.
   accents retirés, ponctuation retirée, espaces multiples réduits ; les
   chiffres et les lettres arabes sont conservés.
 - **Expressions comparées** : les 6 premières expressions de la séance, dans
-  l'ordre : expressions de base, puis supplémentaires (Q-11).
+  l'ordre : expressions de base, puis supplémentaires.
 - Pour chaque expression et chaque variante : les alternatives « / » comptent
   séparément, le texte entre parenthèses est ignoré, seules les formes de
   **3 caractères ou plus** (après normalisation) sont retenues.
 - Une expression est **reconnue** si l'une de ses formes retenues apparaît
-  dans le texte normalisé (Q-12). La variante affichée est celle de la forme
-  trouvée.
+  dans le texte normalisé **en mots entiers** (« bes » n'est pas reconnu dans
+  « besoin »). La variante affichée est celle de la forme trouvée.
+- La saisie est limitée à `reponse_longueur_max` caractères.
 - **Suggestions** : jusqu'à 3 expressions non reconnues, dans l'ordre des
   expressions comparées.
 - Le message rappelle toujours que la grammaire et l'accord masculin/féminin
@@ -217,8 +240,10 @@ habituel du téléphone.
 ### 6.3 Écoute (F07)
 
 - Langue demandée : arabe standard pour le MSA, arabe du Maroc pour la darija,
-  arabe de Tunisie pour le tounsi. À défaut de voix correspondante, une autre
-  voix arabe est utilisée (Q-13).
+  arabe de Tunisie pour le tounsi. Ordre de repli : darija → arabe du Maroc,
+  puis arabe standard, puis toute voix arabe ; tounsi → arabe de Tunisie,
+  puis arabe standard, puis toute voix arabe ; MSA → arabe standard (ou
+  d'Arabie saoudite), puis toute voix arabe. Le repli est silencieux.
 - Vitesse de lecture réduite (paramètre `vitesse_lecture`, section 7).
 - Une nouvelle lecture interrompt la précédente.
 - Dans les séances et les révisions, le texte lu est la transcription latine.
@@ -252,6 +277,7 @@ logique de l'application.
 | `correcteur_nb_suggestions` | 3 | Suggestions maximum par F10 |
 | `revisions_par_seance` | 2 | Fiches de révision par séance |
 | `quiz_memo_nb_questions` | 5 | Questions du quiz du mémo |
+| `reponse_longueur_max` | 1 000 | Caractères maximum de la réponse libre |
 
 ## 8. Données personnelles
 
