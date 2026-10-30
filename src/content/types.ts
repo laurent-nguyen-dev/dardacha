@@ -56,3 +56,10 @@ export interface Module {
   reluParNatif: boolean;
   seances: Seance[];
 }
+
+/** Une réplique du mini-dialogue (fonctionnel §3.3, section 6). */
+export interface Replique {
+  /** Qui parle : « A » ou « B ». */
+  locuteur: string;
+  expression: Expression;
+}

@@ -32,7 +32,7 @@ modules de contenu.
 | Ticket | Titre                                                            | Dépend de | État    |
 | ------ | ---------------------------------------------------------------- | --------- | ------- |
 | T07    | Service de progression (F05, F06, F13), stockage par identifiant | T04       | fait    |
-| T08    | Page séance complète : sections 1 à 6 de la structure            | T05       | à faire |
+| T08    | Page séance complète : sections 1 à 6 de la structure            | T05       | fait    |
 | T09    | Écoute (F07) : choix de voix, repli, message sans voix arabe     | T08       | à faire |
 | T10    | Contenu du module 2 « Prendre des nouvelles »                    | T03       | à faire |
 

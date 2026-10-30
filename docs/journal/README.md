@@ -11,3 +11,4 @@ expliquées en chemin. Fichiers nommés `T<numéro>-<sujet>.md`.
 - [T06 — Registre et module 1](T06-module-1-et-registre.md)
 - [T19 — APK par GitHub Actions](T19-apk-github-actions.md)
 - [T07 — Progression enregistrée](T07-progression.md)
+- [T08 — Page séance complète](T08-page-seance.md)

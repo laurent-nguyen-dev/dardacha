@@ -20,6 +20,13 @@ Le contenu est en cours de relecture par des locuteurs natifs.
   bouton **Menu**. Le bouton ou geste « retour » du téléphone revient à
   l'écran précédent.
 
+## Une séance
+
+Chaque séance se lit de haut en bas : objectif, contexte (quand utiliser
+quelle variante), expressions supplémentaires, défi oral à faire à voix
+haute, tableau du vocabulaire (fais-le défiler vers la gauche pour voir
+les trois variantes), points à retenir et un mini-dialogue.
+
 ## Progression
 
 - En bas d'une séance, **« Marquer comme terminée »** enregistre la séance.

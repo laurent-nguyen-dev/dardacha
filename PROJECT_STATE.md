@@ -13,7 +13,7 @@
   - Cahier des charges de la version web (archive) : [docs/archives/cahier-des-charges-pwa.md](docs/archives/cahier-des-charges-pwa.md)
 - **Règle** : le cahier des charges est une synthèse ; toute modification est
   reportée dans fonctionnel.md / technique.md dans le même commit, et inversement.
-- **Ticket en cours** : T08 — page séance complète (sections 1 à 6).
+- **Ticket en cours** : T09 — écoute (F07).
 - **En attente de l'utilisateur** : relecture du contenu (modules 1 et 2, quand T10 sera fait).
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T07 — Progression enregistrée](docs/journal/T07-progression.md)
+- **Dernière entrée du journal** : [T08 — Page séance complète](docs/journal/T08-page-seance.md)
