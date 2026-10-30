@@ -57,6 +57,12 @@ modules de contenu.
 | T18    | Contenu des modules 5 à 8                   | T03       |
 | T20    | Recette sur Android et iPhone (13 critères) | tout      |
 
+## Hors sprint
+
+| Ticket | Titre                                      | État |
+| ------ | ------------------------------------------ | ---- |
+| T22    | Renommage de l'application en « Dardacha » | fait |
+
 ## Plus tard
 
 | Ticket | Titre                             |

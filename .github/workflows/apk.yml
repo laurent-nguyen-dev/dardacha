@@ -50,20 +50,20 @@ jobs:
         run: ./gradlew assembleRelease -PreactNativeArchitectures=arm64-v8a,armeabi-v7a
 
       - name: Renommage
-        run: cp android/app/build/outputs/apk/release/app-release.apk arabe-au-quotidien.apk
+        run: cp android/app/build/outputs/apk/release/app-release.apk dardacha.apk
 
       - name: Conservation dans les artefacts du build
         uses: actions/upload-artifact@v7
         with:
-          name: arabe-au-quotidien-apk
-          path: arabe-au-quotidien.apk
+          name: dardacha-apk
+          path: dardacha.apk
 
       - name: Publication dans la version de test « apk-test »
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete apk-test --cleanup-tag --yes || true
-          gh release create apk-test arabe-au-quotidien.apk \
+          gh release create apk-test dardacha.apk \
             --prerelease \
             --target "$GITHUB_SHA" \
             --title "Version de test (dernière fabrication)" \

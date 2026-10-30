@@ -2,7 +2,7 @@
 
 À lire en premier avant toute session de travail.
 
-- **Projet** : Arabe au quotidien, application mobile native (Android + iPhone),
+- **Projet** : Dardacha (anciennement « Arabe au quotidien »), application mobile native (Android + iPhone),
   portage de la version web (PWA) existante.
 - **Phase actuelle** : 2 — construction. Sprint 2 « Progression et écoute » terminé ; sprint 3 « Exercices » à lancer ([backlog](docs/backlog.md)).
 - **Documents**
@@ -16,4 +16,4 @@
 - **Ticket en cours** : aucun. Sprint 2 terminé ; prochain : sprint 3 (exercices).
 - **En attente de l'utilisateur** : essai de l'APK du sprint 2 ; relecture des modules 1 et 2 (`src/content/modules/`) et du mini-dialogue (`src/content/dialogue.ts`) ; feu vert pour le sprint 3.
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T10 — Module 2](docs/journal/T10-module-2.md)
+- **Dernière entrée du journal** : [T22 — L'application s'appelle Dardacha](docs/journal/T22-renommage-dardacha.md)

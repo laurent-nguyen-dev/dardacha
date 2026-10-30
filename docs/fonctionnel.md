@@ -1,4 +1,4 @@
-# Document fonctionnel — Arabe au quotidien (application mobile)
+# Document fonctionnel — Dardacha (application mobile)
 
 Ce document décrit **ce que fait** l'application, indépendamment de la façon
 dont elle est construite. Il doit permettre de reconstruire le même produit
@@ -16,7 +16,10 @@ version web ; les améliorations viennent ensuite (section 9).
 
 ## 1. Objet
 
-Arabe au quotidien apprend à un adulte francophone débutant l'arabe parlé du
+Le nom vient du mot « dardacha » (دردشة) : la conversation, la causette.
+La version web s'appelait « Arabe au quotidien ».
+
+Dardacha apprend à un adulte francophone débutant l'arabe parlé du
 quotidien, en comparant expression par expression trois variantes :
 
 | Variante                 | Nom affiché | Couleur |
