@@ -278,6 +278,8 @@ logique de l'application.
 | `revisions_par_seance`        | 2                 | Fiches de révision par séance          |
 | `quiz_memo_nb_questions`      | 5                 | Questions du quiz du mémo              |
 | `reponse_longueur_max`        | 1 000             | Caractères maximum de la réponse libre |
+| `contenu_expressions_base`    | 3 à 5             | Expressions de base par séance         |
+| `contenu_supplementaires`     | 3                 | Expressions supplémentaires par séance |
 
 ## 8. Données personnelles
 
