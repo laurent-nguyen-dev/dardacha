@@ -27,30 +27,30 @@ L'application s'adresse à un adulte francophone débutant, qui apprend seul, su
 
 La version 1 vise la **parité fonctionnelle** avec la version web. Le contenu pédagogique est **réécrit** : celui de la version web n'est pas repris.
 
-| Inclus dans la version 1 | Exclu de la version 1 |
-| --- | --- |
-| 8 modules initiaux (24 séances), parcours extensible | Alphabet arabe et lecture de l'écriture arabe (l'écriture est surtout latine) |
-| Tableaux comparatifs MSA, darija, tounsi | Compte utilisateur, synchronisation entre appareils |
-| Écoute par la voix de synthèse du téléphone | Enregistrements de voix humaines |
-| Quiz généré avec correction, correcteur de réponse libre | Évaluation de la grammaire, répétition espacée |
-| Révisions et mémo des chiffres SMS | Séance de révision dédiée |
-| Applications Android et iPhone installées en version de test | Publication sur Google Play et l'App Store |
-| Fonctionnement hors ligne complet | Mode sombre, affichage tablette et paysage |
+| Inclus dans la version 1                                     | Exclu de la version 1                                                         |
+| ------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| 8 modules initiaux (24 séances), parcours extensible         | Alphabet arabe et lecture de l'écriture arabe (l'écriture est surtout latine) |
+| Tableaux comparatifs MSA, darija, tounsi                     | Compte utilisateur, synchronisation entre appareils                           |
+| Écoute par la voix de synthèse du téléphone                  | Enregistrements de voix humaines                                              |
+| Quiz généré avec correction, correcteur de réponse libre     | Évaluation de la grammaire, répétition espacée                                |
+| Révisions et mémo des chiffres SMS                           | Séance de révision dédiée                                                     |
+| Applications Android et iPhone installées en version de test | Publication sur Google Play et l'App Store                                    |
+| Fonctionnement hors ligne complet                            | Mode sombre, affichage tablette et paysage                                    |
 
 ## 3. Contenu pédagogique
 
 Le parcours initial compte 8 modules de 3 séances, soit 24 séances. Il est conçu pour s'enrichir : de nouveaux modules pourront être ajoutés plus tard (voir « Évolution du parcours » ci-dessous). Chaque séance contient de 3 à 5 expressions de base et 3 expressions supplémentaires, chacune donnée en MSA, en darija et en tounsi. Le contenu est réécrit module par module ; chaque module est marqué « non relu par un locuteur natif » tant qu'il ne l'a pas été, et le menu l'indique.
 
-| N° | Module | Objectif |
-| --- | --- | --- |
-| 1 | Salutations et présentations | Dire bonjour, se présenter, faire connaissance |
-| 2 | Prendre des nouvelles | Demander comment va quelqu'un et répondre |
-| 3 | SMS et WhatsApp | Écrire des messages courts, comprendre les chiffres du chat |
-| 4 | Vie quotidienne | Parler de ses habitudes, de son travail, de ses journées |
-| 5 | Amis et sorties | Proposer, accepter, refuser, fixer un rendez-vous |
-| 6 | Expressions familières | Réagir, plaisanter, exprimer ses émotions |
-| 7 | Relations et sentiments | Parler d'amitié et d'affection avec tact |
-| 8 | Conversations spontanées | Enchaîner les sujets, demander de répéter |
+| N°  | Module                       | Objectif                                                    |
+| --- | ---------------------------- | ----------------------------------------------------------- |
+| 1   | Salutations et présentations | Dire bonjour, se présenter, faire connaissance              |
+| 2   | Prendre des nouvelles        | Demander comment va quelqu'un et répondre                   |
+| 3   | SMS et WhatsApp              | Écrire des messages courts, comprendre les chiffres du chat |
+| 4   | Vie quotidienne              | Parler de ses habitudes, de son travail, de ses journées    |
+| 5   | Amis et sorties              | Proposer, accepter, refuser, fixer un rendez-vous           |
+| 6   | Expressions familières       | Réagir, plaisanter, exprimer ses émotions                   |
+| 7   | Relations et sentiments      | Parler d'amitié et d'affection avec tact                    |
+| 8   | Conversations spontanées     | Enchaîner les sujets, demander de répéter                   |
 
 **Structure d'une séance, dans l'ordre d'affichage**
 
@@ -76,23 +76,23 @@ La convention de couleur est fixe : bleu pour le MSA, vert pour la darija, orang
 
 L'application a 15 fonctions, réparties en navigation, apprentissage, exercices et suivi. Une barre permanente donne accès au menu, aux révisions, au mémo et à la réinitialisation. Le bouton ou le geste « retour » du téléphone revient à l'écran précédent.
 
-| Réf. | Fonction | Description et comportement attendu |
-| --- | --- | --- |
-| F01 | Menu principal | Affiche tous les modules du parcours sous forme de cartes : icône, titre, description, nombre de séances terminées sur le nombre de séances du module, et pourcentage. Toucher une carte ouvre le module. |
-| F02 | Page module | Liste les séances du module avec titre et objectif. Une séance terminée est marquée d'une coche et d'un fond vert. |
-| F03 | Page séance | Affiche le contenu complet de la séance (voir section 3). Trois boutons en bas : retour aux séances du module, marquer comme terminée, séance suivante. |
-| F04 | Séance suivante | Passe à la séance suivante du module, puis au module suivant après la dernière séance. Désactivé à la dernière séance du dernier module. |
-| F05 | Marquer comme terminée | Enregistre la séance, met à jour la progression, désactive le bouton et affiche « Séance terminée ». Une séance déjà terminée s'ouvre avec le bouton désactivé. |
-| F06 | Progression globale | Barre et texte « N / T séances terminées » (T = total des séances du parcours, 24 au départ), visibles sur tous les écrans. |
-| F07 | Écoute | Un bouton « 🔊 Écouter » par expression et par variante. Lecture à vitesse réduite (0,86 par défaut). Si aucune voix arabe n'est installée sur le téléphone, un message l'indique et explique comment en installer une. |
-| F08 | Quiz de séance | 4 questions à 3 choix. Au toucher : bonne réponse en vert, erreur en rouge, correction avec les trois variantes. Score final et bouton pour refaire avec de nouvelles questions. |
-| F09 | Correction type du défi oral | Bouton qui affiche ou masque 4 formules de la séance, chacune dans les trois variantes. |
-| F10 | Correcteur de réponse libre | Analyse le texte saisi dans « À toi de jouer », liste les expressions de la séance reconnues (avec leur variante) et propose jusqu'à 3 expressions manquantes. |
-| F11 | Révisions | Écran de fiches, 2 expressions par séance (48 fiches au départ), avec les trois variantes, la traduction et trois boutons d'écoute. |
-| F12 | Mémo des chiffres SMS | Tableau des chiffres 2, 3, 5, 6, 7, 9 : lettre arabe, son, prononciation, exemples avec écoute en écriture arabe. Quiz de 5 questions corrigées. Accès aussi depuis les séances du module 3. |
-| F13 | Réinitialisation | Efface la progression après une confirmation, puis revient au menu. |
-| F14 | Installation | L'application s'installe sur Android et sur iPhone avec son nom et son icône, s'ouvre en plein écran, en orientation portrait. |
-| F15 | Hors ligne | Tout le contenu est embarqué dans l'application : aucune fonction ne nécessite de connexion, y compris à la première ouverture. |
+| Réf. | Fonction                     | Description et comportement attendu                                                                                                                                                                                     |
+| ---- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| F01  | Menu principal               | Affiche tous les modules du parcours sous forme de cartes : icône, titre, description, nombre de séances terminées sur le nombre de séances du module, et pourcentage. Toucher une carte ouvre le module.               |
+| F02  | Page module                  | Liste les séances du module avec titre et objectif. Une séance terminée est marquée d'une coche et d'un fond vert.                                                                                                      |
+| F03  | Page séance                  | Affiche le contenu complet de la séance (voir section 3). Trois boutons en bas : retour aux séances du module, marquer comme terminée, séance suivante.                                                                 |
+| F04  | Séance suivante              | Passe à la séance suivante du module, puis au module suivant après la dernière séance. Désactivé à la dernière séance du dernier module.                                                                                |
+| F05  | Marquer comme terminée       | Enregistre la séance, met à jour la progression, désactive le bouton et affiche « Séance terminée ». Une séance déjà terminée s'ouvre avec le bouton désactivé.                                                         |
+| F06  | Progression globale          | Barre et texte « N / T séances terminées » (T = total des séances du parcours, 24 au départ), visibles sur tous les écrans.                                                                                             |
+| F07  | Écoute                       | Un bouton « 🔊 Écouter » par expression et par variante. Lecture à vitesse réduite (0,86 par défaut). Si aucune voix arabe n'est installée sur le téléphone, un message l'indique et explique comment en installer une. |
+| F08  | Quiz de séance               | 4 questions à 3 choix. Au toucher : bonne réponse en vert, erreur en rouge, correction avec les trois variantes. Score final et bouton pour refaire avec de nouvelles questions.                                        |
+| F09  | Correction type du défi oral | Bouton qui affiche ou masque 4 formules de la séance, chacune dans les trois variantes.                                                                                                                                 |
+| F10  | Correcteur de réponse libre  | Analyse le texte saisi dans « À toi de jouer », liste les expressions de la séance reconnues (avec leur variante) et propose jusqu'à 3 expressions manquantes.                                                          |
+| F11  | Révisions                    | Écran de fiches, 2 expressions par séance (48 fiches au départ), avec les trois variantes, la traduction et trois boutons d'écoute.                                                                                     |
+| F12  | Mémo des chiffres SMS        | Tableau des chiffres 2, 3, 5, 6, 7, 9 : lettre arabe, son, prononciation, exemples avec écoute en écriture arabe. Quiz de 5 questions corrigées. Accès aussi depuis les séances du module 3.                            |
+| F13  | Réinitialisation             | Efface la progression après une confirmation, puis revient au menu.                                                                                                                                                     |
+| F14  | Installation                 | L'application s'installe sur Android et sur iPhone avec son nom et son icône, s'ouvre en plein écran, en orientation portrait.                                                                                          |
+| F15  | Hors ligne                   | Tout le contenu est embarqué dans l'application : aucune fonction ne nécessite de connexion, y compris à la première ouverture.                                                                                         |
 
 ## 5. Règles de gestion
 
@@ -128,38 +128,38 @@ Les règles complètes, et les précisions apportées aux points flous de la ver
 
 Le détail et la justification des choix sont dans le [document technique](technique.md).
 
-| Domaine | Exigence |
-| --- | --- |
-| Architecture | Application mobile multiplateforme sans serveur : un seul code source pour Android et iPhone (Expo / React Native, TypeScript). Logique (quiz, correcteur, progression) séparée de l'affichage et couverte par des tests automatiques. |
-| Plateformes | Android et iOS, téléphones, versions minimales imposées par la version d'Expo utilisée. Orientation portrait. |
-| Installation | Version 1 : installation de test (Expo Go sur les deux téléphones pendant le développement ; APK Android installable ; build iPhone seulement avec un compte Apple Developer). Pas de publication sur les magasins. |
-| Évolutivité | Le contenu est séparé du code, un module par fichier de données. Ajouter un module ne demande aucune modification des écrans ni de la logique ; un contrôle automatique vérifie la structure de chaque module (champs obligatoires, nombre d'expressions, identifiants uniques). |
-| Hors ligne | Contenu embarqué dans l'application. Aucun appel réseau. |
-| Données personnelles | Aucune collecte, aucun compte, aucune publicité ni mesure d'audience. La seule donnée stockée est la liste des séances terminées, sur le téléphone. |
-| Affichage | Adapté aux petits écrans (≈ 360 pt de large) et à une taille de texte système agrandie. Les tableaux défilent horizontalement plutôt que de déborder. Respect des zones sûres (encoche, barre de navigation). |
-| Accessibilité | Boutons natifs, libellés lisibles par les lecteurs d'écran (TalkBack, VoiceOver), contrastes soignés, zones tactiles d'au moins 44 pt. Pas d'audit formel en version 1. |
-| Langue de l'interface | Français. |
-| Audio | Dépend du moteur de synthèse vocale du téléphone et des voix arabes installées. Message de repli si aucune voix arabe n'est disponible. |
-| Paramètres | Les valeurs chiffrées (vitesse de lecture, nombre de questions, de formules, de fiches…) sont des réglages par défaut modifiables sans toucher à la logique (document fonctionnel, section 7). |
-| Qualité | Intégration continue sur chaque modification : vérification des types, analyse du code, tests, audit de sécurité des dépendances. |
-| Licence | Code sous licence MIT ; dépendances à licence permissive uniquement. |
-| Livrables | Dépôt du code source, documentation (fonctionnelle, technique, journal de développement), APK Android de test, build iPhone de test. |
+| Domaine               | Exigence                                                                                                                                                                                                                                                                         |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Architecture          | Application mobile multiplateforme sans serveur : un seul code source pour Android et iPhone (Expo / React Native, TypeScript). Logique (quiz, correcteur, progression) séparée de l'affichage et couverte par des tests automatiques.                                           |
+| Plateformes           | Android et iOS, téléphones, versions minimales imposées par la version d'Expo utilisée. Orientation portrait.                                                                                                                                                                    |
+| Installation          | Version 1 : installation de test (Expo Go sur les deux téléphones pendant le développement ; APK Android installable ; build iPhone seulement avec un compte Apple Developer). Pas de publication sur les magasins.                                                              |
+| Évolutivité           | Le contenu est séparé du code, un module par fichier de données. Ajouter un module ne demande aucune modification des écrans ni de la logique ; un contrôle automatique vérifie la structure de chaque module (champs obligatoires, nombre d'expressions, identifiants uniques). |
+| Hors ligne            | Contenu embarqué dans l'application. Aucun appel réseau.                                                                                                                                                                                                                         |
+| Données personnelles  | Aucune collecte, aucun compte, aucune publicité ni mesure d'audience. La seule donnée stockée est la liste des séances terminées, sur le téléphone.                                                                                                                              |
+| Affichage             | Adapté aux petits écrans (≈ 360 pt de large) et à une taille de texte système agrandie. Les tableaux défilent horizontalement plutôt que de déborder. Respect des zones sûres (encoche, barre de navigation).                                                                    |
+| Accessibilité         | Boutons natifs, libellés lisibles par les lecteurs d'écran (TalkBack, VoiceOver), contrastes soignés, zones tactiles d'au moins 44 pt. Pas d'audit formel en version 1.                                                                                                          |
+| Langue de l'interface | Français.                                                                                                                                                                                                                                                                        |
+| Audio                 | Dépend du moteur de synthèse vocale du téléphone et des voix arabes installées. Message de repli si aucune voix arabe n'est disponible.                                                                                                                                          |
+| Paramètres            | Les valeurs chiffrées (vitesse de lecture, nombre de questions, de formules, de fiches…) sont des réglages par défaut modifiables sans toucher à la logique (document fonctionnel, section 7).                                                                                   |
+| Qualité               | Intégration continue sur chaque modification : vérification des types, analyse du code, tests, audit de sécurité des dépendances.                                                                                                                                                |
+| Licence               | Code sous licence MIT ; dépendances à licence permissive uniquement.                                                                                                                                                                                                             |
+| Livrables             | Dépôt du code source, documentation (fonctionnelle, technique, journal de développement), APK Android de test, build iPhone de test.                                                                                                                                             |
 
 ## 7. Limites connues et évolutions
 
 Le contenu linguistique n'est pas validé par un locuteur natif : c'est la première action à mener avant un usage sérieux.
 
-| Limite de la version 1 | Évolution possible |
-| --- | --- |
-| Contenu réécrit, non relu par un locuteur natif | Relecture par un locuteur marocain et un locuteur tunisien |
-| Écoute lue sur la transcription latine, donc prononciation approximative | Ajouter l'écriture arabe à chaque expression, ou enregistrer des voix humaines |
-| Voix arabe marocaine ou tunisienne souvent absente des téléphones | Voix humaines enregistrées, embarquées dans l'application |
-| Mini-dialogue identique dans les 24 séances | Un dialogue propre à chaque séance |
-| Pas de séance de révision ni de lecture enchaînée des trois variantes | Implémenter ces deux fonctions |
-| Révisions sans filtre ni répétition espacée | Filtres par module et répétition espacée |
-| Le correcteur ne juge pas la grammaire ni le genre | Correcteur par motifs, ou réponse à choix guidés |
-| Progression locale à un téléphone ; perdue si l'application est désinstallée | Export et import de la progression, ou compte avec synchronisation |
-| Pas de publication | Publication sur Google Play et l'App Store |
+| Limite de la version 1                                                       | Évolution possible                                                             |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Contenu réécrit, non relu par un locuteur natif                              | Relecture par un locuteur marocain et un locuteur tunisien                     |
+| Écoute lue sur la transcription latine, donc prononciation approximative     | Ajouter l'écriture arabe à chaque expression, ou enregistrer des voix humaines |
+| Voix arabe marocaine ou tunisienne souvent absente des téléphones            | Voix humaines enregistrées, embarquées dans l'application                      |
+| Mini-dialogue identique dans les 24 séances                                  | Un dialogue propre à chaque séance                                             |
+| Pas de séance de révision ni de lecture enchaînée des trois variantes        | Implémenter ces deux fonctions                                                 |
+| Révisions sans filtre ni répétition espacée                                  | Filtres par module et répétition espacée                                       |
+| Le correcteur ne juge pas la grammaire ni le genre                           | Correcteur par motifs, ou réponse à choix guidés                               |
+| Progression locale à un téléphone ; perdue si l'application est désinstallée | Export et import de la progression, ou compte avec synchronisation             |
+| Pas de publication                                                           | Publication sur Google Play et l'App Store                                     |
 
 ## 8. Critères de recette
 

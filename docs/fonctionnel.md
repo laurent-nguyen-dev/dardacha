@@ -19,11 +19,11 @@ version web ; les améliorations viennent ensuite (section 9).
 Arabe au quotidien apprend à un adulte francophone débutant l'arabe parlé du
 quotidien, en comparant expression par expression trois variantes :
 
-| Variante | Nom affiché | Couleur |
-| --- | --- | --- |
-| Arabe littéraire moderne | MSA | bleu |
-| Arabe marocain | darija | vert |
-| Arabe tunisien | tounsi | orange |
+| Variante                 | Nom affiché | Couleur |
+| ------------------------ | ----------- | ------- |
+| Arabe littéraire moderne | MSA         | bleu    |
+| Arabe marocain           | darija      | vert    |
+| Arabe tunisien           | tounsi      | orange  |
 
 La convention de couleur est fixe dans toute l'application.
 
@@ -43,15 +43,15 @@ La convention de couleur est fixe dans toute l'application.
 Adulte francophone débutant, qui apprend seul, sur téléphone, par petites
 séances. Interface entièrement en français.
 
-| Inclus (version 1) | Exclu (version 1) |
-| --- | --- |
-| 8 modules initiaux (24 séances), parcours extensible | Alphabet et lecture de l'écriture arabe |
-| Tableaux comparatifs MSA / darija / tounsi | Compte utilisateur, synchronisation entre appareils |
-| Écoute par voix de synthèse de l'appareil | Enregistrements de voix humaines |
-| Quiz corrigé, correcteur de réponse libre | Évaluation de la grammaire, répétition espacée |
-| Révisions, mémo des chiffres SMS | Séance de révision dédiée |
-| Installation sur Android et iPhone (version de test) | Publication sur les magasins d'applications |
-| Fonctionnement hors ligne complet | Mode sombre |
+| Inclus (version 1)                                   | Exclu (version 1)                                   |
+| ---------------------------------------------------- | --------------------------------------------------- |
+| 8 modules initiaux (24 séances), parcours extensible | Alphabet et lecture de l'écriture arabe             |
+| Tableaux comparatifs MSA / darija / tounsi           | Compte utilisateur, synchronisation entre appareils |
+| Écoute par voix de synthèse de l'appareil            | Enregistrements de voix humaines                    |
+| Quiz corrigé, correcteur de réponse libre            | Évaluation de la grammaire, répétition espacée      |
+| Révisions, mémo des chiffres SMS                     | Séance de révision dédiée                           |
+| Installation sur Android et iPhone (version de test) | Publication sur les magasins d'applications         |
+| Fonctionnement hors ligne complet                    | Mode sombre                                         |
 
 ## 3. Contenu pédagogique
 
@@ -59,16 +59,16 @@ séances. Interface entièrement en français.
 
 Parcours initial (version 1). Le nombre de modules n'est pas figé : voir 3.6.
 
-| N° | Module | Objectif |
-| --- | --- | --- |
-| 1 | Salutations et présentations | Dire bonjour, se présenter, faire connaissance |
-| 2 | Prendre des nouvelles | Demander comment va quelqu'un et répondre |
-| 3 | SMS et WhatsApp | Écrire des messages courts, comprendre les chiffres du chat |
-| 4 | Vie quotidienne | Parler de ses habitudes, de son travail, de ses journées |
-| 5 | Amis et sorties | Proposer, accepter, refuser, fixer un rendez-vous |
-| 6 | Expressions familières | Réagir, plaisanter, exprimer ses émotions |
-| 7 | Relations et sentiments | Parler d'amitié et d'affection avec tact |
-| 8 | Conversations spontanées | Enchaîner les sujets, demander de répéter |
+| N°  | Module                       | Objectif                                                    |
+| --- | ---------------------------- | ----------------------------------------------------------- |
+| 1   | Salutations et présentations | Dire bonjour, se présenter, faire connaissance              |
+| 2   | Prendre des nouvelles        | Demander comment va quelqu'un et répondre                   |
+| 3   | SMS et WhatsApp              | Écrire des messages courts, comprendre les chiffres du chat |
+| 4   | Vie quotidienne              | Parler de ses habitudes, de son travail, de ses journées    |
+| 5   | Amis et sorties              | Proposer, accepter, refuser, fixer un rendez-vous           |
+| 6   | Expressions familières       | Réagir, plaisanter, exprimer ses émotions                   |
+| 7   | Relations et sentiments      | Parler d'amitié et d'affection avec tact                    |
+| 8   | Conversations spontanées     | Enchaîner les sujets, demander de répéter                   |
 
 Chaque module a une icône, un titre, une description courte et des séances
 (au moins 1 ; 3 pour les modules initiaux). Chaque séance a un titre et un
@@ -169,23 +169,23 @@ habituel du téléphone.
 
 ## 5. Fonctions
 
-| Réf. | Fonction | Comportement attendu |
-| --- | --- | --- |
-| F01 | Menu principal | Affiche tous les modules du parcours, dans l'ordre défini, en cartes : icône, titre, description, « N / S séances » terminées (S = séances du module) et pourcentage. Toucher une carte ouvre le module. |
-| F02 | Page module | Liste les séances du module (titre, objectif). Une séance terminée est marquée d'une coche et d'un fond vert. |
-| F03 | Page séance | Affiche la séance complète (3.3). En bas, trois boutons : « Retour aux séances », « Marquer comme terminée », « Séance suivante ». |
-| F04 | Séance suivante | Ouvre la séance suivante du module, puis la 1re séance du module suivant après la 3e. Désactivé sur la dernière séance du dernier module. |
-| F05 | Marquer comme terminée | Enregistre la séance comme terminée, met à jour la progression, désactive le bouton et affiche « Séance terminée ». Une séance déjà terminée s'ouvre avec ce bouton déjà désactivé. |
-| F06 | Progression globale | Barre et texte « N / T séances terminées », T étant le nombre total de séances du parcours (24 avec le contenu initial). |
-| F07 | Écoute | Bouton « 🔊 Écouter » par expression et par variante. Voir règles 6.3. |
-| F08 | Quiz de séance | 4 questions à 3 choix. Au toucher : bonne réponse en vert, choix erroné en rouge, correction affichant l'expression dans les trois variantes. Score final, et bouton « Refaire avec de nouvelles questions ». Voir règles 6.1. |
-| F09 | Correction type du défi oral | Le bouton affiche ou masque les 4 premières expressions de base de la séance (toutes s'il y en a moins), chacune dans les trois variantes. |
-| F10 | Correcteur de réponse libre | Analyse le texte saisi ; liste les expressions de la séance reconnues (avec la variante reconnue) ; propose jusqu'à 3 expressions non utilisées. Texte vide : demande de saisir un texte. Voir règles 6.2. |
-| F11 | Révisions | Les 2 premières expressions de base de chaque séance (48 fiches avec le contenu initial), groupées par module, avec les trois variantes, le sens et un bouton d'écoute par variante. |
-| F12 | Mémo des chiffres SMS | Tableau (3.4) et quiz de 5 questions « Quelle lettre arabe remplace le chiffre X ? », 3 choix, chiffres tirés sans répétition parmi les 6 ; chaque réponse est corrigée. Accessible depuis la barre et depuis les séances du module 3. |
-| F13 | Réinitialisation | Demande confirmation ; si confirmé, efface toute la progression et revient au Menu. Si annulé, rien ne change. |
-| F14 | Installation | L'application s'installe sur Android et iPhone comme toute application, avec son nom et son icône. Affichage en orientation portrait uniquement. |
-| F15 | Hors ligne | Tout le contenu est embarqué : aucune fonction ne nécessite de connexion, y compris à la première ouverture. |
+| Réf. | Fonction                     | Comportement attendu                                                                                                                                                                                                                   |
+| ---- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| F01  | Menu principal               | Affiche tous les modules du parcours, dans l'ordre défini, en cartes : icône, titre, description, « N / S séances » terminées (S = séances du module) et pourcentage. Toucher une carte ouvre le module.                               |
+| F02  | Page module                  | Liste les séances du module (titre, objectif). Une séance terminée est marquée d'une coche et d'un fond vert.                                                                                                                          |
+| F03  | Page séance                  | Affiche la séance complète (3.3). En bas, trois boutons : « Retour aux séances », « Marquer comme terminée », « Séance suivante ».                                                                                                     |
+| F04  | Séance suivante              | Ouvre la séance suivante du module, puis la 1re séance du module suivant après la 3e. Désactivé sur la dernière séance du dernier module.                                                                                              |
+| F05  | Marquer comme terminée       | Enregistre la séance comme terminée, met à jour la progression, désactive le bouton et affiche « Séance terminée ». Une séance déjà terminée s'ouvre avec ce bouton déjà désactivé.                                                    |
+| F06  | Progression globale          | Barre et texte « N / T séances terminées », T étant le nombre total de séances du parcours (24 avec le contenu initial).                                                                                                               |
+| F07  | Écoute                       | Bouton « 🔊 Écouter » par expression et par variante. Voir règles 6.3.                                                                                                                                                                 |
+| F08  | Quiz de séance               | 4 questions à 3 choix. Au toucher : bonne réponse en vert, choix erroné en rouge, correction affichant l'expression dans les trois variantes. Score final, et bouton « Refaire avec de nouvelles questions ». Voir règles 6.1.         |
+| F09  | Correction type du défi oral | Le bouton affiche ou masque les 4 premières expressions de base de la séance (toutes s'il y en a moins), chacune dans les trois variantes.                                                                                             |
+| F10  | Correcteur de réponse libre  | Analyse le texte saisi ; liste les expressions de la séance reconnues (avec la variante reconnue) ; propose jusqu'à 3 expressions non utilisées. Texte vide : demande de saisir un texte. Voir règles 6.2.                             |
+| F11  | Révisions                    | Les 2 premières expressions de base de chaque séance (48 fiches avec le contenu initial), groupées par module, avec les trois variantes, le sens et un bouton d'écoute par variante.                                                   |
+| F12  | Mémo des chiffres SMS        | Tableau (3.4) et quiz de 5 questions « Quelle lettre arabe remplace le chiffre X ? », 3 choix, chiffres tirés sans répétition parmi les 6 ; chaque réponse est corrigée. Accessible depuis la barre et depuis les séances du module 3. |
+| F13  | Réinitialisation             | Demande confirmation ; si confirmé, efface toute la progression et revient au Menu. Si annulé, rien ne change.                                                                                                                         |
+| F14  | Installation                 | L'application s'installe sur Android et iPhone comme toute application, avec son nom et son icône. Affichage en orientation portrait uniquement.                                                                                       |
+| F15  | Hors ligne                   | Tout le contenu est embarqué : aucune fonction ne nécessite de connexion, y compris à la première ouverture.                                                                                                                           |
 
 ## 6. Règles de gestion
 
@@ -197,14 +197,14 @@ habituel du téléphone.
   séance. Pour une question portant sur une variante, une expression est
   exclue si sa forme dans cette variante est vide (« — ») ou commence par un
   chiffre.
-- **Questions 1 à 3** : « Comment dit-on « *sens* » en *variante* ? ». Les trois
+- **Questions 1 à 3** : « Comment dit-on « _sens_ » en _variante_ ? ». Les trois
   questions couvrent chacune une variante différente. Avec r = rang de la
   séance dans le parcours (1 pour la première séance du premier module), la
   question 1 porte sur la variante d'indice `(r − 1) mod 3` dans l'ordre
   MSA, darija, tounsi, et les questions 2 et 3 sur les suivantes dans l'ordre
   circulaire. Ex. : r = 1 → MSA, darija, tounsi ; r = 2 → darija, tounsi,
   MSA.
-- **Question 4** : « Que signifie « *forme* » ? » ; la forme est affichée
+- **Question 4** : « Que signifie « _forme_ » ? » ; la forme est affichée
   dans une variante tirée au hasard parmi celles où elle est éligible ; les
   choix sont des sens en français.
 - Les expressions interrogées sont tirées au hasard parmi les éligibles ; une
@@ -266,18 +266,18 @@ habituel du téléphone.
 Ces valeurs sont des **réglages par défaut**, modifiables sans toucher à la
 logique de l'application.
 
-| Paramètre | Valeur par défaut | Rôle |
-| --- | --- | --- |
-| `vitesse_lecture` | 0,86 | Vitesse de la voix (1 = normale) |
-| `quiz_seance_nb_questions` | 4 | Questions par quiz de séance |
-| `quiz_nb_choix` | 3 | Choix par question |
-| `correction_type_nb_formules` | 4 | Formules affichées par F09 |
-| `correcteur_nb_expressions` | 6 | Expressions comparées par F10 |
-| `correcteur_longueur_min` | 3 | Longueur minimale d'une forme retenue |
-| `correcteur_nb_suggestions` | 3 | Suggestions maximum par F10 |
-| `revisions_par_seance` | 2 | Fiches de révision par séance |
-| `quiz_memo_nb_questions` | 5 | Questions du quiz du mémo |
-| `reponse_longueur_max` | 1 000 | Caractères maximum de la réponse libre |
+| Paramètre                     | Valeur par défaut | Rôle                                   |
+| ----------------------------- | ----------------- | -------------------------------------- |
+| `vitesse_lecture`             | 0,86              | Vitesse de la voix (1 = normale)       |
+| `quiz_seance_nb_questions`    | 4                 | Questions par quiz de séance           |
+| `quiz_nb_choix`               | 3                 | Choix par question                     |
+| `correction_type_nb_formules` | 4                 | Formules affichées par F09             |
+| `correcteur_nb_expressions`   | 6                 | Expressions comparées par F10          |
+| `correcteur_longueur_min`     | 3                 | Longueur minimale d'une forme retenue  |
+| `correcteur_nb_suggestions`   | 3                 | Suggestions maximum par F10            |
+| `revisions_par_seance`        | 2                 | Fiches de révision par séance          |
+| `quiz_memo_nb_questions`      | 5                 | Questions du quiz du mémo              |
+| `reponse_longueur_max`        | 1 000             | Caractères maximum de la réponse libre |
 
 ## 8. Données personnelles
 

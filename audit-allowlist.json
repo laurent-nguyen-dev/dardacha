@@ -1,0 +1,22 @@
+{
+  "paquets": [
+    {
+      "paquet": "zod",
+      "avis": "GHSA-mrhx-c7xc-m3w5",
+      "justification": "Utilisé uniquement par l'outil en ligne de commande Expo (@expo/cli), au moment du build, pour valider notre propre configuration. Absent de l'application livrée ; aucune entrée non fiable. Le correctif proposé par npm rétrograde Expo en SDK 51.",
+      "revoir": "À chaque montée de version d'Expo."
+    },
+    {
+      "paquet": "@expo/cli",
+      "avis": "via zod",
+      "justification": "Même cause que zod.",
+      "revoir": "À chaque montée de version d'Expo."
+    },
+    {
+      "paquet": "expo",
+      "avis": "via @expo/cli → zod",
+      "justification": "Même cause que zod.",
+      "revoir": "À chaque montée de version d'Expo."
+    }
+  ]
+}

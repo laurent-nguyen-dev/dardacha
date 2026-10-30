@@ -5,33 +5,57 @@ est appelé à évoluer. Le « quoi » est dans [fonctionnel.md](fonctionnel.md)
 
 ## 1. Choix de la pile
 
-| Domaine | Choix | Pourquoi |
-| --- | --- | --- |
-| Framework | **Expo SDK 58** (React Native 0.88) | Un seul code pour Android et iPhone ; compilation iOS dans le cloud (EAS Build), donc sans Mac ; proche du JavaScript de la version web. Versions vérifiées sur npm le 30 oct. 2026. |
-| Langage | **TypeScript** (mode `strict`) | Le typage du contenu (modules, séances, expressions) attrape les erreurs de saisie dès la compilation. |
-| Navigation | **expo-router** | Navigation par fichiers, gère le retour système Android et le geste retour iOS. |
-| Voix | **expo-speech** | Utilise la synthèse vocale native (Android TTS, iOS AVSpeechSynthesizer). |
-| Stockage local | **@react-native-async-storage/async-storage** | Stockage clé/valeur persistant, suffisant pour une liste de séances terminées. |
-| Tests | **Jest** (preset `jest-expo`) + **React Native Testing Library** | Tests unitaires de la logique (quiz, correcteur, progression) et tests d'écrans. |
-| Qualité | ESLint (config Expo) + Prettier + `tsc --noEmit` | Contrôlés en CI. |
-| Distribution v1 | **Expo Go** + **EAS Build** (profil `preview`) | Développement et tests via Expo Go sur Android et iPhone ; APK Android via EAS Build ; build iPhone seulement si un compte Apple Developer est ouvert. |
-| Identifiant d'application | `dev.laurentnguyen.dardacha` | Android `package` et iOS `bundleIdentifier`. Modifiable jusqu'à la première publication, définitif ensuite. |
-| Nom, couleur | « Arabe au quotidien », #102a43 | Icône provisoire en attendant les icônes définitives. |
+| Domaine                   | Choix                                                            | Pourquoi                                                                                                                                                                             |
+| ------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Framework                 | **Expo SDK 58** (React Native 0.88)                              | Un seul code pour Android et iPhone ; compilation iOS dans le cloud (EAS Build), donc sans Mac ; proche du JavaScript de la version web. Versions vérifiées sur npm le 30 oct. 2026. |
+| Langage                   | **TypeScript** (mode `strict`)                                   | Le typage du contenu (modules, séances, expressions) attrape les erreurs de saisie dès la compilation.                                                                               |
+| Navigation                | **expo-router**                                                  | Navigation par fichiers, gère le retour système Android et le geste retour iOS.                                                                                                      |
+| Voix                      | **expo-speech**                                                  | Utilise la synthèse vocale native (Android TTS, iOS AVSpeechSynthesizer).                                                                                                            |
+| Stockage local            | **@react-native-async-storage/async-storage**                    | Stockage clé/valeur persistant, suffisant pour une liste de séances terminées.                                                                                                       |
+| Tests                     | **Jest** (preset `jest-expo`) + **React Native Testing Library** | Tests unitaires de la logique (quiz, correcteur, progression) et tests d'écrans.                                                                                                     |
+| Qualité                   | ESLint (config Expo) + Prettier + `tsc --noEmit`                 | Contrôlés en CI.                                                                                                                                                                     |
+| Distribution v1           | **Expo Go** + **EAS Build** (profil `preview`)                   | Développement et tests via Expo Go sur Android et iPhone ; APK Android via EAS Build ; build iPhone seulement si un compte Apple Developer est ouvert.                               |
+| Identifiant d'application | `dev.laurentnguyen.dardacha`                                     | Android `package` et iOS `bundleIdentifier`. Modifiable jusqu'à la première publication, définitif ensuite.                                                                          |
+| Nom, couleur              | « Arabe au quotidien », #102a43                                  | Icône provisoire en attendant les icônes définitives.                                                                                                                                |
 
 Choix arrêtés avec l'utilisateur le 30 oct. 2026 : Expo, parité avec la
 version web, contenu réécrit, distribution de test uniquement.
 
+### 1.1 Versions installées (T01) et écarts justifiés
+
+Versions alignées sur `expo/bundledNativeModules.json` (la liste officielle
+des versions compatibles avec le SDK), installées par `expo install`.
+
+- **Expo 58.0, React Native 0.88.1, React 19.3.0, TypeScript 6.0.**
+- **react-dom 19.3.0** : épinglé explicitement. expo-router embarque un
+  composant d'onglets web dont la dépendance `react-dom` se résolvait
+  sinon en 19.3.1, incompatible avec react 19.3.0. Inutilisé sur mobile.
+- **ESLint 9** (et non 10, dernière version) : `eslint-config-expo` 58
+  regroupe des plugins pas encore garantis sous ESLint 10. À réévaluer à la
+  prochaine version d'Expo.
+- **TypeScript 6** ne charge plus automatiquement les paquets `@types/*` :
+  `tsconfig.json` déclare `"types": ["jest"]`.
+
+### 1.2 Accès réseau de l'environnement de développement cloud
+
+Le site docs.expo.dev et les serveurs d'Expo (api.expo.dev) sont bloqués
+dans l'environnement cloud où l'assistant travaille ; le registre npm est
+accessible. Conséquences : `expo install` y tourne avec `EXPO_OFFLINE=1`
+(il prend alors les versions de `bundledNativeModules.json`, ce qui est le
+comportement voulu), et les API sont vérifiées dans le code source des
+paquets installés plutôt que dans la documentation en ligne.
+
 ## 2. Architecture prévue
 
 ```
-app/                    écrans (expo-router)
-  _layout.tsx           barre permanente + progression globale
-  index.tsx             Menu (F01)
-  module/[m].tsx        Page module (F02)
-  seance/[m]/[s].tsx    Page séance (F03–F10)
-  revisions.tsx         Révisions (F11)
-  memo.tsx              Mémo SMS (F12)
 src/
+  app/                  écrans (expo-router) — chaque fichier est une route
+    _layout.tsx         pile d'écrans + barre permanente + progression
+    index.tsx           Menu (F01)
+    module/[moduleId].tsx   Page module (F02)
+    seance/[seanceId].tsx   Page séance (F03–F10)
+    revisions.tsx       Révisions (F11)
+    memo.tsx            Mémo SMS (F12)
   content/              contenu pédagogique, données pures typées
     types.ts
     modules/            un fichier par module
@@ -47,7 +71,18 @@ src/
     progression.ts      F05, F06, F13 (AsyncStorage)
     audio.ts            F07 (expo-speech)
   components/           composants d'affichage réutilisables
+  theme.ts              couleurs
+tests/
+  ecrans/               tests d'écrans (hors de src/app, sinon expo-router
+                        les prendrait pour des routes)
+scripts/
+  audit.js              audit des dépendances avec liste d'exceptions
 ```
+
+Les tests de logique sont placés à côté du code testé (`quiz.test.ts` à côté
+de `quiz.ts`). Les routes utilisent les identifiants permanents (§2.1) :
+`/seance/salutations-bonjour`, jamais `/module/1/seance/2`. L'alias `@/`
+désigne `src/` (tsconfig et Jest).
 
 Principe : **la logique est séparée de l'affichage**. Tout ce qui a une règle
 (fonctionnel §6) vit dans `src/logic/` en fonctions pures, testables sans
@@ -91,19 +126,20 @@ Exigence : ajouter un module = ajouter du contenu, sans toucher aux écrans ni
 
 ## 3. Correspondance avec la version web
 
-| Version web | Version mobile |
-| --- | --- |
-| Synthèse vocale du navigateur (`speechSynthesis`) | expo-speech (moteur natif) |
-| `localStorage` | AsyncStorage |
-| Manifeste + service worker (F14, F15) | Application native, contenu embarqué dans le paquet |
-| Un fichier HTML de 55 Ko | Projet Expo multi-fichiers |
-| Seuil d'affichage 600 px | Mise en page fluide ; v1 en portrait téléphone |
+| Version web                                       | Version mobile                                      |
+| ------------------------------------------------- | --------------------------------------------------- |
+| Synthèse vocale du navigateur (`speechSynthesis`) | expo-speech (moteur natif)                          |
+| `localStorage`                                    | AsyncStorage                                        |
+| Manifeste + service worker (F14, F15)             | Application native, contenu embarqué dans le paquet |
+| Un fichier HTML de 55 Ko                          | Projet Expo multi-fichiers                          |
+| Seuil d'affichage 600 px                          | Mise en page fluide ; v1 en portrait téléphone      |
 
 ## 4. Plateformes cibles
 
-Minimums d'Expo SDK 58 (à confirmer à l'initialisation du projet et à noter
-ici). Orientation portrait verrouillée (`orientation: "portrait"` dans
-`app.json`).
+- **Android 7.0** (API 24) minimum, cible API 36 (React Native 0.88).
+- **iOS 16.4** minimum (Expo SDK 58, `Expo.podspec`).
+- Téléphones uniquement (`supportsTablet: false`). Orientation portrait verrouillée (`orientation: "portrait"` dans
+  `app.json`).
 
 ## 5. Voix et langues
 
@@ -121,23 +157,35 @@ exacte, puis `ar` / `ar-SA`, puis toute voix `ar-*` (fonctionnel §6.3). La disp
 - **Données sensibles** : aucune. La liste des séances terminées n'est pas
   sensible. Pas de compte, pas de secret, pas de réseau.
 - **Triche / abus** : sans objet (aucun score partagé, aucun serveur).
-- **Hygiène générale** : analyse des dépendances en CI (`npm audit`), aucune
-  clé ni identifiant dans le dépôt (les identifiants EAS / Apple restent dans
-  le compte Expo de l'utilisateur).
+- **Hygiène générale** : analyse des dépendances en CI (`npm run audit`),
+  aucune clé ni identifiant dans le dépôt (les identifiants EAS / Apple
+  restent dans le compte Expo de l'utilisateur).
+- **Vulnérabilités acceptées** : listées et justifiées une à une dans
+  `audit-allowlist.json`, revues à chaque montée de version d'Expo. À ce
+  jour : `zod` (GHSA-mrhx-c7xc-m3w5), utilisé seulement par l'outil Expo au
+  moment du build pour valider notre propre configuration, absent de
+  l'application livrée.
 
 ## 7. Licence et dépendances
 
 - Projet sous **licence MIT** (fichier `LICENSE`), code ouvert.
 - Toute nouvelle dépendance doit avoir une licence compatible (MIT, Apache-2.0,
   BSD, ISC…), vérifiée dans la PR qui l'ajoute.
-- Dépendances à licence non permissive : **aucune** à ce jour.
+- Dépendances à licence non entièrement permissive (relevé du 30 oct. 2026,
+  arbre complet) :
+  - `node-forge` : « BSD-3-Clause OR GPL-2.0 » — on retient BSD-3-Clause.
+  - `lightningcss` : MPL-2.0 (copyleft faible, par fichier). Outil de build
+    CSS pour le web, tiré par Expo ; non livré dans l'application mobile et
+    non modifié : aucune obligation pour nous.
+  - `@csstools/color-helpers` : MIT-0 (permissive, sans attribution).
 
 ## 8. Paramètres configurables internes
 
 Tous les paramètres de `src/config.ts` sont listés dans le document
 fonctionnel §7. Aucun paramètre interne caché à ce jour.
 
-## 9. Intégration continue (prévue)
+## 9. Intégration continue
 
-À chaque PR : `npm ci`, `tsc --noEmit`, ESLint, Jest, `npm audit
---audit-level=high`. Les builds EAS sont lancés à la main pour les jalons.
+À chaque push et PR : `npm ci`, `npm run typecheck`, `npm run lint`,
+`npm run format:check`, `npm test`, `npm run audit`. Les builds EAS sont
+lancés à la main pour les jalons.
