@@ -7,4 +7,5 @@ expliquées en chemin. Fichiers nommés `T<numéro>-<sujet>.md`.
 - [T02 — Intégration continue](T02-integration-continue.md)
 - [T03 — Modèle de contenu](T03-modele-de-contenu.md)
 - [T04 — Logique de parcours](T04-logique-de-parcours.md)
+- [T05 — Navigation et premiers écrans](T05-navigation.md)
 - [T06 — Registre et module 1](T06-module-1-et-registre.md)

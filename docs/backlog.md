@@ -7,17 +7,20 @@ l'ordre des chapitres de la spécification.
 
 ## Sprint 1 — Squelette navigable
 
+**Terminé le 30 oct. 2026.** Reste à faire par l'utilisateur : essai sur
+téléphone via Expo Go (docs/exploitation.md).
+
 **Jalon** : l'application s'ouvre dans Expo Go et l'on navigue Menu → Module →
 Séance → Séance suivante sur un module de contenu réel.
 
-| Ticket | Titre                                                                                 | Dépend de | État    |
-| ------ | ------------------------------------------------------------------------------------- | --------- | ------- |
-| T01    | Projet Expo (SDK 58, TypeScript strict, ESLint, Prettier, Jest)                       | —         | fait    |
-| T02    | Intégration continue (types, lint, tests, audit des dépendances)                      | T01       | fait    |
-| T03    | Modèle de contenu, contrôle automatique, guide « ajouter un module »                  | T01       | fait    |
-| T04    | Logique de parcours : rang, séance suivante (F04), totaux                             | T03       | fait    |
-| T05    | Navigation : Menu (F01), Module (F02), Séance (F03, squelette), barre permanente      | T04       | à faire |
-| T06    | Registre du parcours + contenu du module 1 (premier jet, non relu) — avancé avant T04 | T03       | fait    |
+| Ticket | Titre                                                                                 | Dépend de | État |
+| ------ | ------------------------------------------------------------------------------------- | --------- | ---- |
+| T01    | Projet Expo (SDK 58, TypeScript strict, ESLint, Prettier, Jest)                       | —         | fait |
+| T02    | Intégration continue (types, lint, tests, audit des dépendances)                      | T01       | fait |
+| T03    | Modèle de contenu, contrôle automatique, guide « ajouter un module »                  | T01       | fait |
+| T04    | Logique de parcours : rang, séance suivante (F04), totaux                             | T03       | fait |
+| T05    | Navigation : Menu (F01), Module (F02), Séance (F03, squelette), barre permanente      | T04       | fait |
+| T06    | Registre du parcours + contenu du module 1 (premier jet, non relu) — avancé avant T04 | T03       | fait |
 
 ## Sprint 2 — Progression et écoute
 

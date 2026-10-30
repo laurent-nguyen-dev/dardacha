@@ -8,3 +8,14 @@ moderne (MSA, en bleu), en darija marocaine (en vert) et en tounsi tunisien
 (en orange).
 
 Le contenu est en cours de relecture par des locuteurs natifs.
+
+## Se déplacer
+
+- **Menu** : la liste des modules, avec pour chacun le nombre de séances
+  terminées. Touche un module pour voir ses séances.
+- **Module** : la liste de ses séances. Touche une séance pour l'ouvrir.
+- **Séance** : en bas, « Retour aux séances » revient au module, « Séance
+  suivante » ouvre la séance d'après (puis le module suivant).
+- En bas de chaque écran : ta progression sur tout le parcours, et le
+  bouton **Menu**. Le bouton ou geste « retour » du téléphone revient à
+  l'écran précédent.
