@@ -31,7 +31,8 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-          cache: gradle
+          # Pas de « cache: gradle » : les fichiers Gradle n'existent qu'après
+          # la génération du projet Android, plus bas.
 
       - name: Installation des dépendances
         run: npm ci
