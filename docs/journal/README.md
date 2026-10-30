@@ -13,3 +13,4 @@ expliquées en chemin. Fichiers nommés `T<numéro>-<sujet>.md`.
 - [T07 — Progression enregistrée](T07-progression.md)
 - [T08 — Page séance complète](T08-page-seance.md)
 - [T09 — Écoute](T09-ecoute.md)
+- [T10 — Module 2](T10-module-2.md)

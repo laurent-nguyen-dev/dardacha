@@ -25,16 +25,18 @@ Séance → Séance suivante sur un module de contenu réel.
 
 ## Sprint 2 — Progression et écoute
 
+**Terminé le 30 oct. 2026.**
+
 **Jalon** : on peut terminer des séances (progression conservée), lire une
 séance complète jusqu'au mini-dialogue et écouter chaque expression ; deux
 modules de contenu.
 
-| Ticket | Titre                                                            | Dépend de | État    |
-| ------ | ---------------------------------------------------------------- | --------- | ------- |
-| T07    | Service de progression (F05, F06, F13), stockage par identifiant | T04       | fait    |
-| T08    | Page séance complète : sections 1 à 6 de la structure            | T05       | fait    |
-| T09    | Écoute (F07) : choix de voix, repli, message sans voix arabe     | T08       | fait    |
-| T10    | Contenu du module 2 « Prendre des nouvelles »                    | T03       | à faire |
+| Ticket | Titre                                                            | Dépend de | État |
+| ------ | ---------------------------------------------------------------- | --------- | ---- |
+| T07    | Service de progression (F05, F06, F13), stockage par identifiant | T04       | fait |
+| T08    | Page séance complète : sections 1 à 6 de la structure            | T05       | fait |
+| T09    | Écoute (F07) : choix de voix, repli, message sans voix arabe     | T08       | fait |
+| T10    | Contenu du module 2 « Prendre des nouvelles »                    | T03       | fait |
 
 ## Sprint 3 — Exercices
 
