@@ -13,14 +13,15 @@ téléphone via Expo Go (docs/exploitation.md).
 **Jalon** : l'application s'ouvre dans Expo Go et l'on navigue Menu → Module →
 Séance → Séance suivante sur un module de contenu réel.
 
-| Ticket | Titre                                                                                 | Dépend de | État |
-| ------ | ------------------------------------------------------------------------------------- | --------- | ---- |
-| T01    | Projet Expo (SDK 58, TypeScript strict, ESLint, Prettier, Jest)                       | —         | fait |
-| T02    | Intégration continue (types, lint, tests, audit des dépendances)                      | T01       | fait |
-| T03    | Modèle de contenu, contrôle automatique, guide « ajouter un module »                  | T01       | fait |
-| T04    | Logique de parcours : rang, séance suivante (F04), totaux                             | T03       | fait |
-| T05    | Navigation : Menu (F01), Module (F02), Séance (F03, squelette), barre permanente      | T04       | fait |
-| T06    | Registre du parcours + contenu du module 1 (premier jet, non relu) — avancé avant T04 | T03       | fait |
+| Ticket | Titre                                                                                  | Dépend de | État |
+| ------ | -------------------------------------------------------------------------------------- | --------- | ---- |
+| T01    | Projet Expo (SDK 58, TypeScript strict, ESLint, Prettier, Jest)                        | —         | fait |
+| T02    | Intégration continue (types, lint, tests, audit des dépendances)                       | T01       | fait |
+| T03    | Modèle de contenu, contrôle automatique, guide « ajouter un module »                   | T01       | fait |
+| T04    | Logique de parcours : rang, séance suivante (F04), totaux                              | T03       | fait |
+| T05    | Navigation : Menu (F01), Module (F02), Séance (F03, squelette), barre permanente       | T04       | fait |
+| T19    | APK Android de test fabriqué par GitHub Actions (avancé à la demande de l'utilisateur) | T01       | fait |
+| T06    | Registre du parcours + contenu du module 1 (premier jet, non relu) — avancé avant T04  | T03       | fait |
 
 ## Sprint 2 — Progression et écoute
 
@@ -43,10 +44,15 @@ Séance → Séance suivante sur un module de contenu réel.
 
 ## Sprint 4 — Révisions, mémo, livraison de test
 
-| Ticket | Titre                                                    | Dépend de |
-| ------ | -------------------------------------------------------- | --------- |
-| T16    | Révisions (F11)                                          | T09       |
-| T17    | Mémo des chiffres SMS et son quiz (F12)                  | T09, T15  |
-| T18    | Contenu des modules 5 à 8                                | T03       |
-| T19    | Icône provisoire, configuration EAS, APK Android de test | —         |
-| T20    | Recette sur Android et iPhone (13 critères)              | tout      |
+| Ticket | Titre                                       | Dépend de |
+| ------ | ------------------------------------------- | --------- |
+| T16    | Révisions (F11)                             | T09       |
+| T17    | Mémo des chiffres SMS et son quiz (F12)     | T09, T15  |
+| T18    | Contenu des modules 5 à 8                   | T03       |
+| T20    | Recette sur Android et iPhone (13 critères) | tout      |
+
+## Plus tard
+
+| Ticket | Titre                             |
+| ------ | --------------------------------- |
+| T21    | Icône définitive de l'application |

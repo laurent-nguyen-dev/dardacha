@@ -5,18 +5,18 @@ est appelé à évoluer. Le « quoi » est dans [fonctionnel.md](fonctionnel.md)
 
 ## 1. Choix de la pile
 
-| Domaine                   | Choix                                                            | Pourquoi                                                                                                                                                                             |
-| ------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Framework                 | **Expo SDK 58** (React Native 0.88)                              | Un seul code pour Android et iPhone ; compilation iOS dans le cloud (EAS Build), donc sans Mac ; proche du JavaScript de la version web. Versions vérifiées sur npm le 30 oct. 2026. |
-| Langage                   | **TypeScript** (mode `strict`)                                   | Le typage du contenu (modules, séances, expressions) attrape les erreurs de saisie dès la compilation.                                                                               |
-| Navigation                | **expo-router**                                                  | Navigation par fichiers, gère le retour système Android et le geste retour iOS.                                                                                                      |
-| Voix                      | **expo-speech**                                                  | Utilise la synthèse vocale native (Android TTS, iOS AVSpeechSynthesizer).                                                                                                            |
-| Stockage local            | **@react-native-async-storage/async-storage**                    | Stockage clé/valeur persistant, suffisant pour une liste de séances terminées.                                                                                                       |
-| Tests                     | **Jest** (preset `jest-expo`) + **React Native Testing Library** | Tests unitaires de la logique (quiz, correcteur, progression) et tests d'écrans.                                                                                                     |
-| Qualité                   | ESLint (config Expo) + Prettier + `tsc --noEmit`                 | Contrôlés en CI.                                                                                                                                                                     |
-| Distribution v1           | **Expo Go** + **EAS Build** (profil `preview`)                   | Développement et tests via Expo Go sur Android et iPhone ; APK Android via EAS Build ; build iPhone seulement si un compte Apple Developer est ouvert.                               |
-| Identifiant d'application | `dev.laurentnguyen.dardacha`                                     | Android `package` et iOS `bundleIdentifier`. Modifiable jusqu'à la première publication, définitif ensuite.                                                                          |
-| Nom, couleur              | « Arabe au quotidien », #102a43                                  | Icône provisoire en attendant les icônes définitives.                                                                                                                                |
+| Domaine                   | Choix                                                             | Pourquoi                                                                                                                                                                                                                            |
+| ------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Framework                 | **Expo SDK 58** (React Native 0.88)                               | Un seul code pour Android et iPhone ; compilation iOS dans le cloud (EAS Build), donc sans Mac ; proche du JavaScript de la version web. Versions vérifiées sur npm le 30 oct. 2026.                                                |
+| Langage                   | **TypeScript** (mode `strict`)                                    | Le typage du contenu (modules, séances, expressions) attrape les erreurs de saisie dès la compilation.                                                                                                                              |
+| Navigation                | **expo-router**                                                   | Navigation par fichiers, gère le retour système Android et le geste retour iOS.                                                                                                                                                     |
+| Voix                      | **expo-speech**                                                   | Utilise la synthèse vocale native (Android TTS, iOS AVSpeechSynthesizer).                                                                                                                                                           |
+| Stockage local            | **@react-native-async-storage/async-storage**                     | Stockage clé/valeur persistant, suffisant pour une liste de séances terminées.                                                                                                                                                      |
+| Tests                     | **Jest** (preset `jest-expo`) + **React Native Testing Library**  | Tests unitaires de la logique (quiz, correcteur, progression) et tests d'écrans.                                                                                                                                                    |
+| Qualité                   | ESLint (config Expo) + Prettier + `tsc --noEmit`                  | Contrôlés en CI.                                                                                                                                                                                                                    |
+| Distribution v1           | **APK fabriqué par GitHub Actions** (`.github/workflows/apk.yml`) | À chaque push : `expo prebuild` puis `gradlew assembleRelease` sur un serveur GitHub ; l'APK est publié dans la Release de test `apk-test`. Aucun compte Expo ni outil Android sur l'ordinateur de l'utilisateur. iPhone : Expo Go. |
+| Identifiant d'application | `dev.laurentnguyen.dardacha`                                      | Android `package` et iOS `bundleIdentifier`. Modifiable jusqu'à la première publication, définitif ensuite.                                                                                                                         |
+| Nom, couleur              | « Arabe au quotidien », #102a43                                   | Icône provisoire en attendant les icônes définitives.                                                                                                                                                                               |
 
 Choix arrêtés avec l'utilisateur le 30 oct. 2026 : Expo, parité avec la
 version web, contenu réécrit, distribution de test uniquement.
@@ -184,7 +184,27 @@ exacte, puis `ar` / `ar-SA`, puis toute voix `ar-*` (fonctionnel §6.3). La disp
 Tous les paramètres de `src/config.ts` sont listés dans le document
 fonctionnel §7. Aucun paramètre interne caché à ce jour.
 
-## 9. Intégration continue
+## 9. Fabrication de l'APK
+
+- `npx expo prebuild --platform android` génère le projet Android natif
+  (dossier `android/`, ignoré par git) à partir d'`app.json`.
+- `./gradlew assembleRelease` compile un APK qui **embarque** le code
+  JavaScript (fonctionne sans ordinateur ni réseau), pour les processeurs
+  `arm64-v8a` et `armeabi-v7a` (la quasi-totalité des téléphones ; les
+  émulateurs x86 sont exclus pour réduire le temps de compilation).
+- **Signature** : le projet généré signe la version « release » avec la clé
+  de test `debug.keystore` fournie par le modèle Expo, identique à chaque
+  génération. L'APK s'installe donc directement et chaque nouvelle version
+  remplace la précédente. Une publication sur Google Play exigera une vraie
+  clé, gardée en secret (évolution n°8).
+- `versionCode` fixe (1) : Android accepte de réinstaller une version de
+  même numéro par-dessus. À rendre croissant avant toute publication.
+- **Publication** : Release GitHub `apk-test` (pré-version), supprimée et
+  recréée à chaque fabrication ; l'APK est aussi conservé en artefact du
+  build. Le workflow a la permission d'écrire dans le dépôt (Releases)
+  uniquement pour cela.
+
+## 10. Intégration continue
 
 À chaque push et PR : `npm ci`, `npm run typecheck`, `npm run lint`,
 `npm run format:check`, `npm test`, `npm run audit`. Les builds EAS sont

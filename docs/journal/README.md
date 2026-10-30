@@ -9,3 +9,4 @@ expliquées en chemin. Fichiers nommés `T<numéro>-<sujet>.md`.
 - [T04 — Logique de parcours](T04-logique-de-parcours.md)
 - [T05 — Navigation et premiers écrans](T05-navigation.md)
 - [T06 — Registre et module 1](T06-module-1-et-registre.md)
+- [T19 — APK par GitHub Actions](T19-apk-github-actions.md)

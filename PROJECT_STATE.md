@@ -14,6 +14,6 @@
 - **Règle** : le cahier des charges est une synthèse ; toute modification est
   reportée dans fonctionnel.md / technique.md dans le même commit, et inversement.
 - **Ticket en cours** : aucun. Prochain : T07 — service de progression.
-- **En attente de l'utilisateur** : essai du sprint 1 sur téléphone (Expo Go) ; relecture du module 1 (`src/content/modules/salutations.ts`) ; feu vert pour le sprint 2.
+- **En attente de l'utilisateur** : installer l'APK de test (docs/exploitation.md) et essayer le sprint 1 ; relecture du module 1 (`src/content/modules/salutations.ts`) ; feu vert pour le sprint 2.
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T05 — Navigation et premiers écrans](docs/journal/T05-navigation.md)
+- **Dernière entrée du journal** : [T19 — APK par GitHub Actions](docs/journal/T19-apk-github-actions.md)

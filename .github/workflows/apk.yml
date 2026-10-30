@@ -1,0 +1,69 @@
+# Fabrication de l'APK Android de test, à chaque envoi de code sur GitHub.
+#
+# L'APK est publié sur la page « Releases » du dépôt, sous la version de
+# test « apk-test », remplacée à chaque fabrication : il suffit de
+# l'ouvrir depuis le téléphone et de toucher le fichier .apk
+# (docs/exploitation.md).
+name: APK Android
+
+on:
+  push:
+  workflow_dispatch:
+
+# Un seul build à la fois : un nouvel envoi annule le build en cours.
+concurrency:
+  group: apk
+  cancel-in-progress: true
+
+permissions:
+  contents: write # nécessaire pour publier l'APK dans les Releases
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v7
+        with:
+          distribution: temurin
+          java-version: 17
+          cache: gradle
+
+      - name: Installation des dépendances
+        run: npm ci
+
+      # Génère le projet Android natif à partir d'app.json (dossier android/,
+      # jamais commité : technique.md §1).
+      - name: Génération du projet Android
+        run: npx expo prebuild --platform android --no-install
+
+      # Compilation « release » : le code JavaScript est embarqué dans l'APK,
+      # qui fonctionne sans ordinateur ni connexion. Signé avec la clé de
+      # test fournie par Expo : installable directement, pas publiable.
+      - name: Compilation de l'APK
+        working-directory: android
+        run: ./gradlew assembleRelease -PreactNativeArchitectures=arm64-v8a,armeabi-v7a
+
+      - name: Renommage
+        run: cp android/app/build/outputs/apk/release/app-release.apk arabe-au-quotidien.apk
+
+      - name: Conservation dans les artefacts du build
+        uses: actions/upload-artifact@v7
+        with:
+          name: arabe-au-quotidien-apk
+          path: arabe-au-quotidien.apk
+
+      - name: Publication dans la version de test « apk-test »
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete apk-test --cleanup-tag --yes || true
+          gh release create apk-test arabe-au-quotidien.apk \
+            --prerelease \
+            --target "$GITHUB_SHA" \
+            --title "Version de test (dernière fabrication)" \
+            --notes "APK fabriqué automatiquement depuis la branche ${GITHUB_REF_NAME}, commit ${GITHUB_SHA::7}, le $(date -u '+%d/%m/%Y à %H:%M') UTC. Version de test, non publiée sur Google Play."
