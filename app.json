@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Arabe au quotidien",
+    "slug": "arabe-au-quotidien",
+    "version": "0.1.0",
+    "scheme": "arabeauquotidien",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "dev.laurentnguyen.dardacha",
+      "supportsTablet": false
+    },
+    "android": {
+      "package": "dev.laurentnguyen.dardacha",
+      "adaptiveIcon": {
+        "backgroundColor": "#102a43",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": ["expo-router"]
+  }
+}
