@@ -33,8 +33,9 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-          # Pas de « cache: gradle » : les fichiers Gradle n'existent qu'après
-          # la génération du projet Android, plus bas.
+          # Pas de « cache: gradle » ici : cette option cherche des fichiers
+          # Gradle qui n'existent qu'après la génération du projet Android.
+          # Le cache Gradle est géré plus bas, par actions/cache.
 
       - name: Installation des dépendances
         run: npm ci
@@ -43,6 +44,21 @@ jobs:
       # jamais commité : technique.md §1).
       - name: Génération du projet Android
         run: npx expo prebuild --platform android --no-install
+
+      # Cache Gradle : dépendances Android téléchargées, Gradle lui-même et
+      # résultats de transformations. Le projet Android étant généré à partir
+      # des dépendances npm et d'app.json, la clé dépend de ces deux fichiers ;
+      # s'ils changent, on repart du cache précédent le plus proche
+      # (restore-keys) plutôt que de zéro.
+      - name: Cache Gradle
+        uses: actions/cache@v6
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: gradle-${{ runner.os }}-${{ hashFiles('package-lock.json', 'app.json') }}
+          restore-keys: |
+            gradle-${{ runner.os }}-
 
       # Compilation « release » : le code JavaScript est embarqué dans l'APK,
       # qui fonctionne sans ordinateur ni connexion. Signé avec la clé de

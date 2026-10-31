@@ -70,10 +70,11 @@ fonctions, 8 modules), prête pour la recette sur téléphone.
 
 ## Hors sprint
 
-| Ticket | Titre                                      | État |
-| ------ | ------------------------------------------ | ---- |
-| T22    | Renommage de l'application en « Dardacha » | fait |
-| T23    | Préparation à l'ouverture en open source   | fait |
+| Ticket | Titre                                               | État |
+| ------ | --------------------------------------------------- | ---- |
+| T22    | Renommage de l'application en « Dardacha »          | fait |
+| T23    | Préparation à l'ouverture en open source            | fait |
+| T24    | Cache Gradle pour accélérer la fabrication de l'APK | fait |
 
 ## Plus tard
 
