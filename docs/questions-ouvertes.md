@@ -14,6 +14,8 @@ Aucune.
 - Publication sur les magasins : fiches, captures, politique de
   confidentialité, compte Apple Developer.
 - Icônes définitives (celles de la version web, ou nouvelles).
+- Recette sur iPhone : pas d'appareil disponible. À jouer avant toute
+  publication sur l'App Store (Expo Go suffit, ou un build iOS de test).
 
 ## Tranchées
 
@@ -45,3 +47,4 @@ Aucune.
 | 2026-10-30 | Q-20 | Livraison des nouveaux modules      | Mise à jour de l'application, pas de téléchargement                                                                | fonctionnel §3.6       |
 | 2026-10-30 | Q-21 | Format des identifiants             | Mots-clés lisibles sans lien avec la position                                                                      | technique §2.1         |
 | 2026-10-30 | —    | Nom de l'application                | « Dardacha » remplace « Arabe au quotidien » (Q-17)                                                                | technique §1, app.json |
+| 2026-10-31 | —    | Recette v1                          | Validée sur Android ; iPhone reporté faute d'appareil                                                              | recette.md             |
