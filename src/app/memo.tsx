@@ -53,7 +53,7 @@ function FicheChiffre({ chiffre }: { chiffre: ChiffreMemo }) {
           <Text style={styles.transcription}>{exemple.transcription}</Text>
           <Text style={styles.arabe}>{exemple.arabe}</Text>
           <Text style={styles.sens}>{exemple.sens}</Text>
-          <BoutonEcouter forme={exemple.arabe} variante="msa" ecritureArabe compact />
+          <BoutonEcouter forme={exemple.arabe} arabe={exemple.arabe} variante="msa" compact />
         </View>
       ))}
     </View>

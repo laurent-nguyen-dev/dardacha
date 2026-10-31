@@ -125,6 +125,26 @@ Exigence : ajouter un module = ajouter du contenu, sans toucher aux écrans ni
   embarqué). Option ultérieure : EAS Update, qui pousse du contenu JavaScript
   sans repasser par un build complet ni par les magasins.
 
+### 2.2 Écriture arabe (version 1.1, fonctionnel §3.7)
+
+- **Modèle** : champ facultatif `arabe?: Partial<Record<Variante, string>>`
+  sur `Expression`, à côté de `formes`. Facultatif pour que chaque module
+  puisse l'ajouter à son rythme sans casser les autres.
+- **Contrôle automatique** (`validation.ts`) : une écriture arabe n'existe
+  que pour une variante qui a une forme latine ; elle ne contient que des
+  lettres arabes, des espaces, « / », « … » et la ponctuation (؟ ، . ! ?) ;
+  elle a autant d'alternatives « / » que la forme latine ; pas de
+  parenthèses.
+- **Affichage** : `Text` avec `writingDirection: 'rtl'`, police système (les
+  polices d'Android et d'iOS contiennent l'arabe ; aucune police à
+  embarquer).
+- **Écoute** : `BoutonEcouter` lit l'écriture arabe quand elle existe
+  (« / » remplacé par « ، » pour une pause), sinon la transcription latine
+  préparée par `texteALire`.
+- **Correcteur** : `normaliser` unifie aussi l'écriture arabe (voyelles et
+  hamza portée retirées par la décomposition Unicode, ـ retiré, ى → ي,
+  ة → ه) ; les formes arabes passent par les mêmes `formesRetenues`.
+
 ## 3. Correspondance avec la version web
 
 | Version web                                       | Version mobile                                      |

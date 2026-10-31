@@ -7,6 +7,10 @@ import { config } from '@/config';
  * Minuscules, accents retirés, ponctuation remplacée par des espaces,
  * espaces multiples réduits. Les chiffres et les lettres (latines comme
  * arabes) sont conservés.
+ *
+ * Écriture arabe (fonctionnel §6.2) : voyelles et hamza portée retirées
+ * par la même décomposition que les accents (أ → ا, ؤ → و, ئ → ي), trait
+ * d'allongement ـ retiré, ى confondu avec ي et ة avec ه.
  */
 export function normaliser(texte: string): string {
   return (
@@ -15,6 +19,9 @@ export function normaliser(texte: string): string {
       // Décompose « é » en « e » + accent, puis retire les accents.
       .normalize('NFD')
       .replace(/\p{M}/gu, '')
+      .replace(/ـ/g, '')
+      .replace(/ى/g, 'ي')
+      .replace(/ة/g, 'ه')
       // Tout ce qui n'est ni lettre ni chiffre devient un espace.
       .replace(/[^\p{L}\p{N}]+/gu, ' ')
       .trim()

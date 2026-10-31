@@ -9,6 +9,14 @@ describe('normaliser (fonctionnel §6.2)', () => {
     expect(normaliser('Sba7 el-5ir… مرحبا')).toBe('sba7 el 5ir مرحبا');
   });
 
+  it('unifie l’écriture arabe : voyelles, hamza portée, ـ, ى/ي, ة/ه', () => {
+    expect(normaliser('أَنَا مِنْ فَرَنْسَا')).toBe('انا من فرنسا');
+    expect(normaliser('إسمي')).toBe('اسمي');
+    expect(normaliser('آخر مسؤول قائد')).toBe('اخر مسوول قايد');
+    expect(normaliser('السلامـــة')).toBe('السلامه');
+    expect(normaliser('على مدرسة')).toBe('علي مدرسه');
+  });
+
   it('réduit les espaces multiples', () => {
     expect(normaliser('  salam   3likoum \n ')).toBe('salam 3likoum');
   });

@@ -1,7 +1,7 @@
 import { Pressable, StyleSheet, Text } from 'react-native';
 
 import { NOMS_VARIANTES, type Variante } from '@/content/types';
-import { texteALire } from '@/logic/audio';
+import { texteALire, texteArabeALire } from '@/logic/audio';
 import { lire } from '@/services/audio';
 import { couleurs } from '@/theme';
 
@@ -11,17 +11,17 @@ interface Props {
   variante: Variante;
   /** Version courte (icône seule), pour les cellules du tableau. */
   compact?: boolean;
-  /** La forme est en écriture arabe : elle est lue telle quelle (mémo, §6.3). */
-  ecritureArabe?: boolean;
+  /** Écriture arabe de la forme : lue à sa place quand elle existe (§6.3). */
+  arabe?: string;
 }
 
 // F07 : « 🔊 Écouter », une forme dans une variante.
-export function BoutonEcouter({ forme, variante, compact = false, ecritureArabe = false }: Props) {
+export function BoutonEcouter({ forme, variante, compact = false, arabe }: Props) {
   return (
     <Pressable
       accessibilityRole="button"
       accessibilityLabel={`Écouter en ${NOMS_VARIANTES[variante]} : ${forme}`}
-      onPress={() => lire(ecritureArabe ? forme : texteALire(forme), variante)}
+      onPress={() => lire(arabe ? texteArabeALire(arabe) : texteALire(forme), variante)}
       hitSlop={8}
       style={({ pressed }) => [styles.bouton, pressed && styles.presse]}
     >

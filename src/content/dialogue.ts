@@ -12,6 +12,11 @@ export const miniDialogue: readonly Replique[] = [
         darija: 'salam 3likoum, labas ?',
         tounsi: '3aslema, labes ?',
       },
+      arabe: {
+        msa: 'السلام عليكم، كيف حالك؟',
+        darija: 'سلام عليكم، لاباس؟',
+        tounsi: 'عسلامة، لاباس؟',
+      },
     },
   },
   {
@@ -23,6 +28,11 @@ export const miniDialogue: readonly Replique[] = [
         darija: 'labas, l-7amdoullah. w nta ?',
         tounsi: 'labes, el-7amdoullah. w enti ?',
       },
+      arabe: {
+        msa: 'بخير، الحمد لله. وأنت؟',
+        darija: 'لاباس، الحمد لله. ونتا؟',
+        tounsi: 'لاباس، الحمد لله. وانتي؟',
+      },
     },
   },
   {
@@ -33,6 +43,11 @@ export const miniDialogue: readonly Replique[] = [
         msa: 'ana bi5ayr, choukran.',
         darija: 'ana bi5ir, choukran.',
         tounsi: 'ena labes, ya3tik sa77a.',
+      },
+      arabe: {
+        msa: 'أنا بخير، شكرا.',
+        darija: 'أنا بخير، شكرا.',
+        tounsi: 'أنا لاباس، يعطيك الصحة.',
       },
     },
   },

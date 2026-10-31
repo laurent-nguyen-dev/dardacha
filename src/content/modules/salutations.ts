@@ -22,6 +22,7 @@ export const salutations: Module = {
             darija: 'salam 3likoum',
             tounsi: 'salam 3likoum',
           },
+          arabe: { msa: 'السلام عليكم', darija: 'سلام عليكم', tounsi: 'سلام عليكم' },
         },
         {
           sens: 'Bonjour (réponse)',
@@ -30,24 +31,29 @@ export const salutations: Module = {
             darija: 'wa 3likoum salam',
             tounsi: 'w 3likoum salam',
           },
+          arabe: { msa: 'وعليكم السلام', darija: 'وعليكم السلام', tounsi: 'وعليكم السلام' },
         },
         {
           sens: 'Bonjour (le matin)',
           formes: { msa: 'saba7 al-5ayr', darija: 'sba7 l-5ir', tounsi: 'sba7 el-5ir' },
+          arabe: { msa: 'صباح الخير', darija: 'صباح الخير', tounsi: 'صباح الخير' },
         },
         {
           sens: 'Au revoir',
           formes: { msa: 'ma3a as-salama', darija: 'bslama', tounsi: 'bislema' },
+          arabe: { msa: 'مع السلامة', darija: 'بسلامة', tounsi: 'بسلامة' },
         },
       ],
       supplementaires: [
         {
           sens: 'Bonsoir',
           formes: { msa: 'masa2 al-5ayr', darija: 'msa l-5ir', tounsi: 'msa el-5ir' },
+          arabe: { msa: 'مساء الخير', darija: 'مسا الخير', tounsi: 'مسا الخير' },
         },
         {
           sens: 'Salut (entre proches)',
           formes: { msa: 'mar7aban', darija: 'salam', tounsi: '3aslema' },
+          arabe: { msa: 'مرحبا', darija: 'سلام', tounsi: 'عسلامة' },
         },
         {
           sens: 'Bonne nuit',
@@ -55,6 +61,11 @@ export const salutations: Module = {
             msa: 'tousbi7 3ala 5ayr (à un homme) / tousbi7ina 3ala 5ayr (à une femme)',
             darija: 'tesba7 3la 5ir',
             tounsi: 'tosbo7 3la 5ir',
+          },
+          arabe: {
+            msa: 'تصبح على خير / تصبحين على خير',
+            darija: 'تصبح على خير',
+            tounsi: 'تصبح على خير',
           },
         },
       ],
@@ -75,6 +86,7 @@ export const salutations: Module = {
         {
           sens: "Je m'appelle …",
           formes: { msa: 'ismi …', darija: 'smiti …', tounsi: 'esmi …' },
+          arabe: { msa: 'اسمي …', darija: 'سميتي …', tounsi: 'اسمي …' },
         },
         {
           sens: "Comment tu t'appelles ?",
@@ -83,10 +95,12 @@ export const salutations: Module = {
             darija: 'chnou smitek ?',
             tounsi: 'chesmek ?',
           },
+          arabe: { msa: 'ما اسمك؟ / ما اسمك؟', darija: 'شنو سميتك؟', tounsi: 'شسمك؟' },
         },
         {
           sens: 'Enchanté(e)',
           formes: { msa: 'tacharrafna', darija: 'mtcharfin', tounsi: 'mitcharfin' },
+          arabe: { msa: 'تشرفنا', darija: 'متشرفين', tounsi: 'متشرفين' },
         },
         {
           sens: 'Je suis français(e)',
@@ -94,6 +108,11 @@ export const salutations: Module = {
             msa: 'ana faransi (homme) / ana faransiya (femme)',
             darija: 'ana fransawi (homme) / ana fransawiya (femme)',
             tounsi: 'ena fransawi (homme) / ena fransawiya (femme)',
+          },
+          arabe: {
+            msa: 'أنا فرنسي / أنا فرنسية',
+            darija: 'أنا فرنساوي / أنا فرنساوية',
+            tounsi: 'أنا فرنساوي / أنا فرنساوية',
           },
         },
       ],
@@ -105,6 +124,7 @@ export const salutations: Module = {
             darija: 'kansken f paris',
             tounsi: 'noskon fi paris',
           },
+          arabe: { msa: 'أسكن في باريس', darija: 'كنسكن ف باريس', tounsi: 'نسكن في باريس' },
         },
         {
           sens: 'Et toi ?',
@@ -113,6 +133,7 @@ export const salutations: Module = {
             darija: 'w nta ? (à un homme) / w nti ? (à une femme)',
             tounsi: 'w enti ?',
           },
+          arabe: { msa: 'وأنت؟ / وأنت؟', darija: 'ونتا؟ / ونتي؟', tounsi: 'وانتي؟' },
         },
         {
           sens: 'Je parle un peu arabe',
@@ -120,6 +141,11 @@ export const salutations: Module = {
             msa: 'atakallamou al-3arabiya 9alilan',
             darija: 'kanhder chwiya l-3arbiya',
             tounsi: 'nahki chwaya bel-3arbi',
+          },
+          arabe: {
+            msa: 'أتكلم العربية قليلا',
+            darija: 'كنهضر شوية العربية',
+            tounsi: 'نحكي شوية بالعربي',
           },
         },
       ],
@@ -144,10 +170,16 @@ export const salutations: Module = {
             darija: 'mnin nta ? (à un homme) / mnin nti ? (à une femme)',
             tounsi: 'mnin enti ?',
           },
+          arabe: {
+            msa: 'من أين أنت؟ / من أين أنت؟',
+            darija: 'منين نتا؟ / منين نتي؟',
+            tounsi: 'منين انتي؟',
+          },
         },
         {
           sens: 'Je viens de France',
           formes: { msa: 'ana min faransa', darija: 'ana men fransa', tounsi: 'ena men fransa' },
+          arabe: { msa: 'أنا من فرنسا', darija: 'أنا من فرنسا', tounsi: 'أنا من فرنسا' },
         },
         {
           sens: 'Tu habites où ?',
@@ -156,16 +188,23 @@ export const salutations: Module = {
             darija: 'fin saken ? (à un homme) / fin sakna ? (à une femme)',
             tounsi: 'win toskon ?',
           },
+          arabe: {
+            msa: 'أين تسكن؟ / أين تسكنين؟',
+            darija: 'فين ساكن؟ / فين ساكنة؟',
+            tounsi: 'وين تسكن؟',
+          },
         },
         {
           sens: "Qu'est-ce que tu fais dans la vie ?",
           formes: { msa: 'ma 3amalouk ?', darija: 'ach kat5dem ?', tounsi: 'chnowa ta5dem ?' },
+          arabe: { msa: 'ما عملك؟', darija: 'أش كتخدم؟', tounsi: 'شنوة تخدم؟' },
         },
       ],
       supplementaires: [
         {
           sens: 'Je travaille dans …',
           formes: { msa: 'a3malou fi …', darija: 'kan5dem f …', tounsi: 'na5dem fi …' },
+          arabe: { msa: 'أعمل في …', darija: 'كنخدم ف …', tounsi: 'نخدم في …' },
         },
         {
           sens: 'Je suis étudiant(e)',
@@ -174,10 +213,12 @@ export const salutations: Module = {
             darija: 'ana kan9ra',
             tounsi: 'ena na9ra',
           },
+          arabe: { msa: 'أنا طالب / أنا طالبة', darija: 'أنا كنقرا', tounsi: 'أنا نقرا' },
         },
         {
           sens: 'Moi aussi',
           formes: { msa: 'wa ana aydan', darija: '7ta ana', tounsi: 'ena zeda' },
+          arabe: { msa: 'وأنا أيضا', darija: 'حتى أنا', tounsi: 'أنا زادة' },
         },
       ],
       defiOral:

@@ -25,3 +25,8 @@ expliquées en chemin. Fichiers nommés `T<numéro>-<sujet>.md`.
 - [T18 — Modules 5 à 8](T18-modules-5-8.md)
 - [T23 — Préparation open source](T23-open-source.md)
 - [T24 — Cache Gradle](T24-cache-gradle.md)
+- [T25 — Modèle et contrôle de l'écriture arabe](T25-modele-ecriture-arabe.md)
+- [T26 — Affichage de l'écriture arabe](T26-affichage-arabe.md)
+- [T27 — Écoute de l'écriture arabe](T27-ecoute-arabe.md)
+- [T28 — Correcteur : réponses en écriture arabe](T28-correcteur-arabe.md)
+- [T29 — Écriture arabe du module 1 et du mini-dialogue](T29-arabe-module-1.md)

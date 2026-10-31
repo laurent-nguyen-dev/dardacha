@@ -43,10 +43,18 @@ questions »** tire un nouveau quiz.
 
 ## À toi de jouer
 
-Écris une réponse en transcription latine (comme dans l'application), puis
+Écris une réponse en transcription latine (comme dans l'application) ou en
+écriture arabe, puis
 touche **« Corriger ma réponse »**. Le correcteur liste les expressions de
 la séance qu'il a reconnues, et t'en propose d'autres. Il ne vérifie ni la
 grammaire ni l'accord au masculin ou au féminin.
+
+## Écriture arabe
+
+Dans les modules qui l'ont déjà (pour l'instant le module 1 et le
+mini-dialogue), l'écriture arabe s'affiche sous chaque transcription latine.
+La voix lit alors l'écriture arabe, ce qui donne une prononciation plus
+juste.
 
 ## Écouter
 

@@ -111,4 +111,43 @@ describe('validerParcours', () => {
       "Séance « s » : l'expression « quatre » (reprise en révision) ne doit pas commencer par un chiffre en darija.",
     ]);
   });
+
+  describe('écriture arabe (fonctionnel §3.7)', () => {
+    function avecArabe(arabe: Expression['arabe'], formes?: Partial<Expression['formes']>) {
+      const s = seance('s');
+      s.supplementaires[0] = {
+        sens: 'au revoir',
+        formes: { msa: 'ma3a as-salama', darija: 'bslama', tounsi: 'bislema', ...formes },
+        arabe,
+      };
+      return validerParcours([module('m', [s])]);
+    }
+
+    it('accepte une écriture arabe valide, complète ou partielle', () => {
+      expect(avecArabe({ msa: 'مع السلامة', darija: 'بسلامة', tounsi: 'بسلامة' })).toEqual([]);
+      expect(avecArabe({ darija: 'بسلامة' })).toEqual([]);
+      expect(avecArabe({ msa: 'ما اسمك؟ / من أنت…' }, { msa: 'a / b' })).toEqual([]);
+    });
+
+    it('refuse une écriture arabe sans forme latine dans la variante', () => {
+      expect(avecArabe({ msa: 'مع السلامة' }, { msa: null })).toEqual([
+        "Séance « s » : l'expression « au revoir » a une écriture arabe en msa sans forme latine.",
+      ]);
+    });
+
+    it('refuse des lettres latines ou des parenthèses dans l’écriture arabe', () => {
+      expect(avecArabe({ darija: 'bslama' })).toEqual([
+        "Séance « s » : l'écriture arabe de « au revoir » en darija contient autre chose que des lettres arabes.",
+      ]);
+      expect(avecArabe({ darija: 'بسلامة (للرجل)' })).toEqual([
+        "Séance « s » : l'écriture arabe de « au revoir » en darija contient autre chose que des lettres arabes.",
+      ]);
+    });
+
+    it('exige autant d’alternatives « / » que la forme latine', () => {
+      expect(avecArabe({ msa: 'ما اسمك؟' }, { msa: 'ma ismouka ? / ma ismouki ?' })).toEqual([
+        "Séance « s » : l'écriture arabe de « au revoir » en msa a 1 alternative(s), la forme latine 2.",
+      ]);
+    });
+  });
 });

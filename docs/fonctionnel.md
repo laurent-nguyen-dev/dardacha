@@ -87,7 +87,10 @@ Une **expression** est l'unité de contenu. Elle comporte :
 - éventuellement plusieurs formes alternatives dans une variante, séparées
   par « / » ;
 - éventuellement des précisions entre parenthèses, qui ne font pas partie de
-  la forme (ex. genre de l'interlocuteur).
+  la forme (ex. genre de l'interlocuteur) ;
+- **éventuellement, pour chaque variante qui a une forme, son écriture
+  arabe** (version 1.1, voir 3.7). Elle reprend les mêmes alternatives, dans
+  le même ordre, séparées par « / », sans les précisions entre parenthèses.
 
 Chaque séance contient **3 à 5 expressions de base** et **3 expressions
 supplémentaires**.
@@ -136,6 +139,28 @@ SMS ; voyelles longues non marquées (« salam », pas « salâm »).
 **Règle de contenu** : les 2 premières expressions de base de chaque séance
 (reprises dans les révisions) ont obligatoirement une forme dans les trois
 variantes, qui ne commence pas par un chiffre.
+
+### 3.7 Écriture arabe (version 1.1)
+
+L'écriture arabe complète la transcription latine ; elle ne la remplace pas.
+L'apprentissage de l'alphabet reste hors périmètre.
+
+- **Facultative, module par module** : un module sans écriture arabe
+  s'affiche et fonctionne exactement comme en version 1. Une expression peut
+  avoir l'écriture arabe pour certaines variantes seulement.
+- **Affichage** : partout où une forme est affichée (expressions
+  supplémentaires, vocabulaire comparé, mini-dialogue, correction type,
+  correction du quiz, suggestions du correcteur, révisions), son écriture
+  arabe apparaît **sous** la transcription latine, de droite à gauche. Les
+  choix du quiz restent en transcription latine.
+- **MSA sans voyelles** (sans harakat), comme dans l'usage courant et comme
+  la darija et le tounsi.
+- **Darija et tounsi : orthographe d'usage courant**, telle que les
+  locuteurs l'écrivent le plus souvent, en gardant l'orthographe du MSA pour
+  les mots communs (« بسلامة », « عسلامة »). Aucune orthographe officielle
+  n'existe : la relecture native tranche.
+- L'écriture arabe est relue par des natifs comme le reste du contenu
+  (3.5) : l'état « relu » d'un module couvre les deux écritures.
 
 ### 3.6 Évolution du parcours
 
@@ -234,6 +259,11 @@ habituel du téléphone.
 - Pour chaque expression et chaque variante : les alternatives « / » comptent
   séparément, le texte entre parenthèses est ignoré, seules les formes de
   **3 caractères ou plus** (après normalisation) sont retenues.
+- Les formes en **écriture arabe** (3.7) sont comparées aussi, selon les
+  mêmes règles : on peut répondre en lettres latines ou arabes. Pour
+  l'écriture arabe, la normalisation retire aussi les voyelles et la
+  hamza portée (أ إ آ → ا, ؤ → و, ئ → ي), le trait d'allongement (ـ), et
+  confond ى avec ي et ة avec ه, variations fréquentes à la saisie.
 - Une expression est **reconnue** si l'une de ses formes retenues apparaît
   dans le texte normalisé **en mots entiers** (« bes » n'est pas reconnu dans
   « besoin »). La variante affichée est celle de la forme trouvée.
@@ -252,8 +282,10 @@ habituel du téléphone.
   d'Arabie saoudite), puis toute voix arabe. Le repli est silencieux.
 - Vitesse de lecture réduite (paramètre `vitesse_lecture`, section 7).
 - Une nouvelle lecture interrompt la précédente.
-- Dans les séances et les révisions, le texte lu est la transcription latine.
-  Dans le mémo, le texte lu est le mot en écriture arabe.
+- **Texte lu** : l'écriture arabe de la forme quand elle existe (3.7), pour
+  une meilleure prononciation ; sinon la transcription latine. Dans le mémo,
+  toujours le mot en écriture arabe. Les alternatives en écriture arabe sont
+  lues à la suite, avec une pause.
 - Avant lecture d'une transcription latine : les précisions entre
   parenthèses sont retirées, les alternatives « / » sont lues à la suite
   avec une pause, et les chiffres du chat sont remplacés par des lettres
@@ -305,7 +337,8 @@ terminées, sur l'appareil.
 Par ordre de priorité proposé :
 
 1. Relecture du contenu par un locuteur marocain et un locuteur tunisien.
-2. Écriture arabe pour chaque expression, et écoute lue sur l'écriture arabe.
+2. Écriture arabe pour chaque expression, et écoute lue sur l'écriture
+   arabe — **en cours (version 1.1, §3.7)**.
 3. Un mini-dialogue propre à chaque séance.
 4. Séance de révision et lecture enchaînée des trois variantes.
 5. Filtres par module et répétition espacée dans les révisions.
