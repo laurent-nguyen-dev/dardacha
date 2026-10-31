@@ -4,6 +4,7 @@ import { type Expression, VARIANTES } from '@/content/types';
 import { couleurs } from '@/theme';
 
 import { BoutonEcouter } from './BoutonEcouter';
+import { TexteArabe } from './TexteArabe';
 import { EtiquetteVariante, texteForme } from './Variantes';
 
 const LARGEUR_COLONNE = 170;
@@ -28,9 +29,11 @@ export function TableauVocabulaire({ expressions }: { expressions: readonly Expr
             <Text style={[styles.cellule, styles.sens]}>{expression.sens}</Text>
             {VARIANTES.map((variante) => {
               const forme = expression.formes[variante];
+              const arabe = expression.arabe?.[variante];
               return (
                 <View key={variante} style={[styles.cellule, styles.celluleForme]}>
                   <Text style={styles.texteForme}>{texteForme(forme)}</Text>
+                  {arabe && <TexteArabe texte={arabe} />}
                   {forme && <BoutonEcouter forme={forme} variante={variante} compact />}
                 </View>
               );

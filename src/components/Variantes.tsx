@@ -4,6 +4,7 @@ import { type Expression, NOMS_VARIANTES, type Variante, VARIANTES } from '@/con
 import { couleurs } from '@/theme';
 
 import { BoutonEcouter } from './BoutonEcouter';
+import { TexteArabe } from './TexteArabe';
 
 /** Étiquette colorée d'une variante (convention fixe, fonctionnel §1). */
 export function EtiquetteVariante({ variante }: { variante: Variante }) {
@@ -19,20 +20,28 @@ export function texteForme(forme: string | null): string {
   return forme ?? '—';
 }
 
-/** Sens en français, puis une ligne par variante. */
+/**
+ * Sens en français, puis une ligne par variante : transcription latine et,
+ * si elle existe, écriture arabe en dessous (fonctionnel §3.7).
+ */
 export function ExpressionComparee({ expression }: { expression: Expression }) {
   return (
     <View style={styles.carte}>
       <Text style={styles.sens}>{expression.sens}</Text>
-      {VARIANTES.map((variante) => (
-        <View key={variante} style={styles.ligne}>
-          <EtiquetteVariante variante={variante} />
-          <Text style={styles.forme}>{texteForme(expression.formes[variante])}</Text>
-          {expression.formes[variante] && (
-            <BoutonEcouter forme={expression.formes[variante]} variante={variante} />
-          )}
-        </View>
-      ))}
+      {VARIANTES.map((variante) => {
+        const forme = expression.formes[variante];
+        const arabe = expression.arabe?.[variante];
+        return (
+          <View key={variante} style={styles.ligne}>
+            <EtiquetteVariante variante={variante} />
+            <View style={styles.formes}>
+              <Text style={styles.forme}>{texteForme(forme)}</Text>
+              {arabe && <TexteArabe texte={arabe} />}
+            </View>
+            {forme && <BoutonEcouter forme={forme} variante={variante} />}
+          </View>
+        );
+      })}
     </View>
   );
 }
@@ -50,5 +59,6 @@ const styles = StyleSheet.create({
   ligne: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   etiquette: { borderRadius: 4, paddingHorizontal: 6, paddingVertical: 2, minWidth: 56 },
   texteEtiquette: { color: '#ffffff', fontSize: 12, fontWeight: '700', textAlign: 'center' },
-  forme: { flex: 1, fontSize: 16, color: couleurs.texte },
+  formes: { flex: 1, gap: 2 },
+  forme: { fontSize: 16, color: couleurs.texte },
 });
