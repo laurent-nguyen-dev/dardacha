@@ -13,7 +13,7 @@
   - Cahier des charges de la version web (archive) : [docs/archives/cahier-des-charges-pwa.md](docs/archives/cahier-des-charges-pwa.md)
 - **Règle** : le cahier des charges est une synthèse ; toute modification est
   reportée dans fonctionnel.md / technique.md dans le même commit, et inversement.
-- **Ticket en cours** : T25 — modèle et contrôle de l'écriture arabe.
+- **Ticket en cours** : T26 — affichage de l'écriture arabe.
 - **En attente de l'utilisateur** : choix des évolutions de la version 1.1 ; relecture du contenu par des locuteurs natifs (`src/content/`).
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T24 — Cache Gradle](docs/journal/T24-cache-gradle.md)
+- **Dernière entrée du journal** : [T25 — Modèle et contrôle de l'écriture arabe](docs/journal/T25-modele-ecriture-arabe.md)

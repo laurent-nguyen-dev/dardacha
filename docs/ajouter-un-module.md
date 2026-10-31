@@ -45,6 +45,23 @@ Les valeurs chiffrées viennent de `src/config.ts`.
 - Formes alternatives séparées par `/` ; précisions entre parenthèses, par
   ex. `labas 3lik (à un homme) / labas 3lik (à une femme)`.
 
+## Écriture arabe (facultative)
+
+Champ `arabe` de chaque expression, une entrée par variante qui a une forme :
+
+```ts
+{
+  sens: 'Et toi ?',
+  formes: { msa: 'wa anta ? (à un homme) / wa anti ? (à une femme)', darija: 'w nta ? / w nti ?', tounsi: 'w enti ?' },
+  arabe: { msa: 'وأنت؟ / وأنت؟', darija: 'ونتا؟ / ونتي؟', tounsi: 'وانتي؟' },
+}
+```
+
+- Mêmes alternatives « / », dans le même ordre ; pas de parenthèses.
+- MSA sans voyelles ; darija et tounsi dans l'orthographe d'usage courant.
+- `npm test` vérifie : lettres arabes uniquement, variante qui a bien une
+  forme latine, même nombre d'alternatives.
+
 ## Retirer ou déplacer un module
 
 Déplacer = changer sa place dans le registre (la progression est conservée).

@@ -80,6 +80,7 @@ function validerSeance(seance: Seance): string[] {
     if (!VARIANTES.some((variante) => aUneForme(expression.formes[variante]))) {
       erreurs.push(`${prefixe} : l'expression « ${expression.sens} » n'a aucune forme.`);
     }
+    erreurs.push(...validerEcritureArabe(expression, prefixe));
   }
 
   // Les premières expressions de base sont reprises dans les révisions :
@@ -99,6 +100,39 @@ function validerExpressionDeRevision(expression: Expression, prefixe: string): s
       erreurs.push(`${debut} doit avoir une forme en ${variante}.`);
     } else if (/^\d/.test(forme)) {
       erreurs.push(`${debut} ne doit pas commencer par un chiffre en ${variante}.`);
+    }
+  }
+  return erreurs;
+}
+
+/**
+ * Lettres arabes, espaces, séparateur d'alternatives « / », « … » et
+ * ponctuation (، ؟ sont des caractères « communs » pour Unicode, d'où leur
+ * mention explicite).
+ */
+const ECRITURE_ARABE = /^[\p{Script=Arabic}\s/…،؟.!?]+$/u;
+
+/** Écriture arabe facultative (fonctionnel §3.7, technique §2.2). */
+export function validerEcritureArabe(expression: Expression, prefixe: string): string[] {
+  const erreurs: string[] = [];
+  for (const variante of VARIANTES) {
+    const arabe = expression.arabe?.[variante];
+    if (arabe === undefined) continue;
+    const forme = expression.formes[variante];
+    if (!aUneForme(forme)) {
+      erreurs.push(
+        `${prefixe} : l'expression « ${expression.sens} » a une écriture arabe en ${variante} sans forme latine.`,
+      );
+      continue;
+    }
+    const debut = `${prefixe} : l'écriture arabe de « ${expression.sens} » en ${variante}`;
+    if (!ECRITURE_ARABE.test(arabe)) {
+      erreurs.push(`${debut} contient autre chose que des lettres arabes.`);
+    }
+    const nbArabe = arabe.split('/').length;
+    const nbLatin = forme.split('/').length;
+    if (nbArabe !== nbLatin) {
+      erreurs.push(`${debut} a ${nbArabe} alternative(s), la forme latine ${nbLatin}.`);
     }
   }
   return erreurs;

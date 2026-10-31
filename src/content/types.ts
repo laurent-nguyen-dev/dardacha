@@ -24,6 +24,12 @@ export const NOMS_VARIANTES: Record<Variante, string> = {
 export interface Expression {
   sens: string;
   formes: Record<Variante, string | null>;
+  /**
+   * Écriture arabe, facultative (version 1.1, fonctionnel §3.7) : pour une
+   * variante qui a une forme, mêmes alternatives « / » dans le même ordre,
+   * sans les précisions entre parenthèses.
+   */
+  arabe?: Partial<Record<Variante, string>>;
 }
 
 export interface Seance {
