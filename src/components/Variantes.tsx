@@ -38,7 +38,7 @@ export function ExpressionComparee({ expression }: { expression: Expression }) {
               <Text style={styles.forme}>{texteForme(forme)}</Text>
               {arabe && <TexteArabe texte={arabe} />}
             </View>
-            {forme && <BoutonEcouter forme={forme} variante={variante} />}
+            {forme && <BoutonEcouter forme={forme} arabe={arabe} variante={variante} />}
           </View>
         );
       })}

@@ -78,7 +78,7 @@ autres modules suivent un par un (fonctionnel §3.7).
 | ------ | ------------------------------------------------------- | --------- | ------- |
 | T25    | Modèle et contrôle automatique de l'écriture arabe      | —         | fait    |
 | T26    | Affichage de l'écriture arabe (de droite à gauche)      | T25       | fait    |
-| T27    | Écoute de l'écriture arabe                              | T25       | à faire |
+| T27    | Écoute de l'écriture arabe                              | T25       | fait    |
 | T28    | Correcteur : réponses en écriture arabe                 | T25       | à faire |
 | T29    | Écriture arabe du module 1 et du mini-dialogue          | T25       | à faire |
 | T30    | Écriture arabe des modules 2 à 8 (un commit par module) | T29       | à faire |

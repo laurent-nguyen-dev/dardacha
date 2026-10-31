@@ -1,4 +1,4 @@
-import { choisirVoix, texteALire, type VoixDisponible } from './audio';
+import { choisirVoix, texteALire, texteArabeALire, type VoixDisponible } from './audio';
 
 function voix(identifier: string, language: string): VoixDisponible {
   return { identifier, language };
@@ -50,5 +50,15 @@ describe('texteALire', () => {
     expect(texteALire('3aslema, ya3tik sa77a, 9alilan, 6alib')).toBe(
       'aaslema, yaatik sahha, qalilan, talib',
     );
+  });
+});
+
+describe('texteArabeALire', () => {
+  it('lit les alternatives à la suite, avec une pause', () => {
+    expect(texteArabeALire('ونتا؟ / ونتي؟')).toBe('ونتا؟، ونتي؟');
+  });
+
+  it('retire les points de suspension des formes à compléter', () => {
+    expect(texteArabeALire('اسمي …')).toBe('اسمي');
   });
 });

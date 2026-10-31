@@ -71,3 +71,16 @@ export function texteALire(forme: string): string {
     .replace(/\s+,/g, ',')
     .trim();
 }
+
+/**
+ * Texte envoyé à la voix pour une écriture arabe (fonctionnel §6.3) :
+ * alternatives séparées par une virgule arabe (pause), sans les points de
+ * suspension des formes à compléter.
+ */
+export function texteArabeALire(arabe: string): string {
+  return arabe
+    .replace(/\s*\/\s*/g, '، ')
+    .replace(/…/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}

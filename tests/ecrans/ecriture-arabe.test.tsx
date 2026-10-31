@@ -1,4 +1,7 @@
-import { renderRouter, screen } from 'expo-router/testing-library';
+import * as Speech from 'expo-speech';
+import { act, fireEvent, renderRouter, screen } from 'expo-router/testing-library';
+
+import { oublierVoix } from '@/services/audio';
 
 // Parcours de test : une expression avec écriture arabe partielle (MSA et
 // tounsi, pas darija), pour vérifier l'affichage indépendamment du contenu
@@ -46,5 +49,21 @@ describe('Écriture arabe (fonctionnel §3.7)', () => {
     expect(screen.getAllByText('عسلامة').length).toBeGreaterThanOrEqual(2);
     // La darija n'a pas d'écriture arabe : seule la transcription latine s'affiche.
     expect(screen.getAllByText('salam').length).toBeGreaterThanOrEqual(2);
+  });
+
+  it('lit l’écriture arabe quand elle existe, la transcription latine sinon', async () => {
+    jest.clearAllMocks();
+    oublierVoix();
+    await renderRouter('./src/app', { initialUrl: '/seance/test-seance' });
+
+    await act(async () => {
+      fireEvent.press(screen.getAllByRole('button', { name: /^Écouter en MSA/ })[0]);
+    });
+    expect(Speech.speak).toHaveBeenLastCalledWith('السلام عليكم', expect.anything());
+
+    await act(async () => {
+      fireEvent.press(screen.getAllByRole('button', { name: /^Écouter en darija/ })[0]);
+    });
+    expect(Speech.speak).toHaveBeenLastCalledWith('salam', expect.anything());
   });
 });

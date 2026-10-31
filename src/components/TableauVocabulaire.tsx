@@ -34,7 +34,9 @@ export function TableauVocabulaire({ expressions }: { expressions: readonly Expr
                 <View key={variante} style={[styles.cellule, styles.celluleForme]}>
                   <Text style={styles.texteForme}>{texteForme(forme)}</Text>
                   {arabe && <TexteArabe texte={arabe} />}
-                  {forme && <BoutonEcouter forme={forme} variante={variante} compact />}
+                  {forme && (
+                    <BoutonEcouter forme={forme} arabe={arabe} variante={variante} compact />
+                  )}
                 </View>
               );
             })}
