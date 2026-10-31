@@ -68,6 +68,21 @@ fonctions, 8 modules), prête pour la recette sur téléphone.
 | T18    | Contenu des modules 5 à 8                   | T03       | fait                            |
 | T20    | Recette sur Android et iPhone (13 critères) | tout      | Android validé ; iPhone reporté |
 
+## Sprint 5 — Écriture arabe (version 1.1)
+
+**Jalon** : l'écriture arabe s'affiche sous chaque forme, est lue par la voix
+et acceptée par le correcteur, pour le module 1 et le mini-dialogue ; les
+autres modules suivent un par un (fonctionnel §3.7).
+
+| Ticket | Titre                                                   | Dépend de | État    |
+| ------ | ------------------------------------------------------- | --------- | ------- |
+| T25    | Modèle et contrôle automatique de l'écriture arabe      | —         | à faire |
+| T26    | Affichage de l'écriture arabe (de droite à gauche)      | T25       | à faire |
+| T27    | Écoute de l'écriture arabe                              | T25       | à faire |
+| T28    | Correcteur : réponses en écriture arabe                 | T25       | à faire |
+| T29    | Écriture arabe du module 1 et du mini-dialogue          | T25       | à faire |
+| T30    | Écriture arabe des modules 2 à 8 (un commit par module) | T29       | à faire |
+
 ## Hors sprint
 
 | Ticket | Titre                                               | État |

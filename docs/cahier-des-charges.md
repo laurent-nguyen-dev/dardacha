@@ -12,7 +12,7 @@ Dardacha est une application mobile, pour Android et iPhone, qui apprend en fran
 
 Une version web installable (PWA) existe déjà. Le projet consiste à proposer la même application sous forme d'**applications natives Android et iPhone**, installées comme n'importe quelle autre application et utilisables entièrement sans connexion.
 
-L'application permet à un francophone d'apprendre en parallèle trois façons de parler l'arabe du quotidien, avec transcription latine, traduction française, écoute et exercices corrigés.
+L'application permet à un francophone d'apprendre en parallèle trois façons de parler l'arabe du quotidien, avec transcription latine (et, depuis la version 1.1, écriture arabe en complément), traduction française, écoute et exercices corrigés.
 
 **Objectifs**
 
@@ -29,15 +29,15 @@ L'application s'adresse à un adulte francophone débutant, qui apprend seul, su
 
 La version 1 vise la **parité fonctionnelle** avec la version web. Le contenu pédagogique est **réécrit** : celui de la version web n'est pas repris.
 
-| Inclus dans la version 1                                     | Exclu de la version 1                                                         |
-| ------------------------------------------------------------ | ----------------------------------------------------------------------------- |
-| 8 modules initiaux (24 séances), parcours extensible         | Alphabet arabe et lecture de l'écriture arabe (l'écriture est surtout latine) |
-| Tableaux comparatifs MSA, darija, tounsi                     | Compte utilisateur, synchronisation entre appareils                           |
-| Écoute par la voix de synthèse du téléphone                  | Enregistrements de voix humaines                                              |
-| Quiz généré avec correction, correcteur de réponse libre     | Évaluation de la grammaire, répétition espacée                                |
-| Révisions et mémo des chiffres SMS                           | Séance de révision dédiée                                                     |
-| Applications Android et iPhone installées en version de test | Publication sur Google Play et l'App Store                                    |
-| Fonctionnement hors ligne complet                            | Mode sombre, affichage tablette et paysage                                    |
+| Inclus dans la version 1                                     | Exclu de la version 1                                                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| 8 modules initiaux (24 séances), parcours extensible         | Apprentissage de l'alphabet arabe (l'écriture arabe est affichée en complément du latin à partir de la v1.1) |
+| Tableaux comparatifs MSA, darija, tounsi                     | Compte utilisateur, synchronisation entre appareils                                                          |
+| Écoute par la voix de synthèse du téléphone                  | Enregistrements de voix humaines                                                                             |
+| Quiz généré avec correction, correcteur de réponse libre     | Évaluation de la grammaire, répétition espacée                                                               |
+| Révisions et mémo des chiffres SMS                           | Séance de révision dédiée                                                                                    |
+| Applications Android et iPhone installées en version de test | Publication sur Google Play et l'App Store                                                                   |
+| Fonctionnement hors ligne complet                            | Mode sombre, affichage tablette et paysage                                                                   |
 
 ## 3. Contenu pédagogique
 
@@ -66,6 +66,12 @@ Le parcours initial compte 8 modules de 3 séances, soit 24 séances. Il est con
 8. À toi de jouer : réponse libre avec bouton « Corriger ma réponse ».
 
 La convention de couleur est fixe : bleu pour le MSA, vert pour la darija, orange pour le tounsi.
+
+**Écriture arabe (version 1.1)**
+
+- Chaque forme peut avoir son écriture arabe, affichée sous la transcription latine, de droite à gauche. Elle est ajoutée module par module ; un module sans elle fonctionne comme en version 1.
+- MSA sans voyelles ; darija et tounsi dans l'orthographe d'usage courant, proche du MSA pour les mots communs. La relecture native tranche.
+- Le correcteur de réponse libre accepte aussi une réponse en écriture arabe, et l'écoute lit l'écriture arabe quand elle existe.
 
 **Évolution du parcours**
 
@@ -118,7 +124,7 @@ Les règles complètes, et les précisions apportées aux points flous de la ver
 
 - Langue demandée : arabe standard pour le MSA, arabe du Maroc pour la darija, arabe de Tunisie pour le tounsi. Si la voix correspondante n'est pas installée, une autre voix arabe du téléphone est utilisée.
 - Une nouvelle lecture interrompt la précédente.
-- Dans les séances, le texte lu est la transcription latine. Dans le mémo, le texte lu est le mot en écriture arabe, pour une meilleure prononciation.
+- Le texte lu est l'écriture arabe de la forme quand elle existe (version 1.1), pour une meilleure prononciation ; sinon la transcription latine. Dans le mémo, c'est toujours le mot en écriture arabe.
 
 **Progression (F05, F06, F13)**
 
