@@ -22,6 +22,7 @@ export const familier: Module = {
             darija: 'ma ymkench !',
             tounsi: 'mouch mmkon !',
           },
+          arabe: { msa: 'هذا مستحيل!', darija: 'ما يمكنش!', tounsi: 'موش ممكن!' },
         },
         {
           sens: 'Magnifique (que Dieu le préserve) !',
@@ -30,6 +31,7 @@ export const familier: Module = {
             darija: 'machallah !',
             tounsi: 'machallah !',
           },
+          arabe: { msa: 'ما شاء الله!', darija: 'ما شاء الله!', tounsi: 'ما شاء الله!' },
         },
         {
           sens: 'Quel dommage !',
@@ -38,6 +40,7 @@ export const familier: Module = {
             darija: '5sara !',
             tounsi: 'ya 5sara !',
           },
+          arabe: { msa: 'يا للأسف!', darija: 'خسارة!', tounsi: 'يا خسارة!' },
         },
         {
           sens: 'Oh là là !',
@@ -46,6 +49,7 @@ export const familier: Module = {
             darija: 'ya rabbi !',
             tounsi: 'ya rabbi !',
           },
+          arabe: { msa: 'يا إلهي!', darija: 'يا ربي!', tounsi: 'يا ربي!' },
         },
       ],
       supplementaires: [
@@ -56,6 +60,7 @@ export const familier: Module = {
             darija: 'wach bse7 ?',
             tounsi: '7a9 rabbi ?',
           },
+          arabe: { msa: 'حقا؟', darija: 'واش بصح؟', tounsi: 'حق ربي؟' },
         },
         {
           sens: 'Tant mieux !',
@@ -64,6 +69,7 @@ export const familier: Module = {
             darija: '7sen !',
             tounsi: 'a7sen !',
           },
+          arabe: { msa: 'أحسن!', darija: 'حسن!', tounsi: 'أحسن!' },
         },
         {
           sens: "Je n'en reviens pas !",
@@ -72,6 +78,7 @@ export const familier: Module = {
             darija: 'ma kansadde9ch !',
             tounsi: 'mouch msadde9 !',
           },
+          arabe: { msa: 'لا أصدق!', darija: 'ما كنصدقش!', tounsi: 'موش مصدق!' },
         },
       ],
       defiOral:
@@ -94,6 +101,11 @@ export const familier: Module = {
             darija: 'ana fer7an (homme) / ana fer7ana (femme)',
             tounsi: 'ena far7an (homme) / ena far7ana (femme)',
           },
+          arabe: {
+            msa: 'أنا سعيد / أنا سعيدة',
+            darija: 'أنا فرحان / أنا فرحانة',
+            tounsi: 'أنا فرحان / أنا فرحانة',
+          },
         },
         {
           sens: 'Je suis triste',
@@ -101,6 +113,11 @@ export const familier: Module = {
             msa: 'ana 7azin (homme) / ana 7azina (femme)',
             darija: 'ana 7zin (homme) / ana 7zina (femme)',
             tounsi: 'ena 7zin (homme) / ena 7zina (femme)',
+          },
+          arabe: {
+            msa: 'أنا حزين / أنا حزينة',
+            darija: 'أنا حزين / أنا حزينة',
+            tounsi: 'أنا حزين / أنا حزينة',
           },
         },
         {
@@ -110,6 +127,11 @@ export const familier: Module = {
             darija: 'ana m9elle9 (homme) / ana m9ell9a (femme)',
             tounsi: 'ena metghachech (homme) / ena metghachcha (femme)',
           },
+          arabe: {
+            msa: 'أنا غاضب / أنا غاضبة',
+            darija: 'أنا مقلق / أنا مقلقة',
+            tounsi: 'أنا متغشش / أنا متغششة',
+          },
         },
         {
           sens: 'Je suis stressé(e)',
@@ -117,6 +139,11 @@ export const familier: Module = {
             msa: 'ana moutawattir (homme) / ana moutawattira (femme)',
             darija: 'ana mstressé (homme) / ana mstressia (femme)',
             tounsi: 'ena mstressi (homme) / ena mstressia (femme)',
+          },
+          arabe: {
+            msa: 'أنا متوتر / أنا متوترة',
+            darija: 'أنا مسطريسي / أنا مسطريسية',
+            tounsi: 'أنا مسطريسي / أنا مسطريسية',
           },
         },
       ],
@@ -128,6 +155,7 @@ export const familier: Module = {
             darija: 'ferre7tini',
             tounsi: 'far7tni',
           },
+          arabe: { msa: 'هذا يسعدني', darija: 'فرحتيني', tounsi: 'فرحتني' },
         },
         {
           sens: "J'en ai marre",
@@ -136,6 +164,7 @@ export const familier: Module = {
             darija: '3yit',
             tounsi: 'mallit',
           },
+          arabe: { msa: 'لقد سئمت', darija: 'عييت', tounsi: 'مليت' },
         },
         {
           sens: "Ne t'inquiète pas",
@@ -144,6 +173,7 @@ export const familier: Module = {
             darija: 'ma t9le9ch',
             tounsi: 'ma t9alla9ch',
           },
+          arabe: { msa: 'لا تقلق! / لا تقلقي!', darija: 'ما تقلقش', tounsi: 'ما تقلقش' },
         },
       ],
       defiOral: "Dis comment tu te sens aujourd'hui, puis demande à un ami comment il se sent.",
@@ -165,6 +195,7 @@ export const familier: Module = {
             darija: 'kand7ek !',
             tounsi: 'nod7ek !',
           },
+          arabe: { msa: 'أنا أمزح!', darija: 'كنضحك!', tounsi: 'نضحك!' },
         },
         {
           sens: 'Tu es drôle',
@@ -172,6 +203,11 @@ export const familier: Module = {
             msa: 'anta moud7ik (à un homme) / anti moud7ika (à une femme)',
             darija: 'nta mdo77ek (à un homme) / nti mdo77ka (à une femme)',
             tounsi: 'enti tda77ek',
+          },
+          arabe: {
+            msa: 'أنت مضحك / أنت مضحكة',
+            darija: 'نتا مضحك / نتي مضحكة',
+            tounsi: 'انتي تضحك',
           },
         },
         {
@@ -181,6 +217,7 @@ export const familier: Module = {
             darija: 'baraka !',
             tounsi: 'yezzi !',
           },
+          arabe: { msa: 'توقف! / توقفي!', darija: 'باراكا!', tounsi: 'يزي!' },
         },
         {
           sens: "C'est trop drôle",
@@ -189,6 +226,7 @@ export const familier: Module = {
             darija: 'kayd77ek bzaf',
             tounsi: 'yod7ek barcha',
           },
+          arabe: { msa: 'هذا مضحك جدا', darija: 'كيضحك بزاف', tounsi: 'يضحك برشا' },
         },
       ],
       supplementaires: [
@@ -199,6 +237,7 @@ export const familier: Module = {
             darija: 'kand7kou bzaf',
             tounsi: 'nod7kou barcha',
           },
+          arabe: { msa: 'نضحك كثيرا', darija: 'كنضحكو بزاف', tounsi: 'نضحكو برشا' },
         },
         {
           sens: 'Tu me fais rire',
@@ -207,6 +246,7 @@ export const familier: Module = {
             darija: 'katd7ekni',
             tounsi: 'tad7akni',
           },
+          arabe: { msa: 'تضحكني', darija: 'كتضحكني', tounsi: 'تضحكني' },
         },
         {
           sens: "N'importe quoi !",
@@ -215,6 +255,7 @@ export const familier: Module = {
             darija: 'kalam 5awi !',
             tounsi: 'klem fergh !',
           },
+          arabe: { darija: 'كلام خاوي!', tounsi: 'كلام فارغ!' },
         },
       ],
       defiOral: "Raconte une petite histoire drôle, puis dis à ton ami qu'il te fait rire.",
