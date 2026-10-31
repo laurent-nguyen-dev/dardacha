@@ -24,3 +24,4 @@ expliquées en chemin. Fichiers nommés `T<numéro>-<sujet>.md`.
 - [T17 — Mémo des chiffres SMS](T17-memo.md)
 - [T18 — Modules 5 à 8](T18-modules-5-8.md)
 - [T23 — Préparation open source](T23-open-source.md)
+- [T24 — Cache Gradle](T24-cache-gradle.md)

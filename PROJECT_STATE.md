@@ -16,4 +16,4 @@
 - **Ticket en cours** : aucun.
 - **En attente de l'utilisateur** : choix des évolutions de la version 1.1 ; relecture du contenu par des locuteurs natifs (`src/content/`).
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T23 — Préparation open source](docs/journal/T23-open-source.md)
+- **Dernière entrée du journal** : [T24 — Cache Gradle](docs/journal/T24-cache-gradle.md)
