@@ -104,6 +104,7 @@ en scène sa situation et réemploie ses expressions (fonctionnel §3.8).
 | T22    | Renommage de l'application en « Dardacha »          | fait |
 | T23    | Préparation à l'ouverture en open source            | fait |
 | T24    | Cache Gradle pour accélérer la fabrication de l'APK | fait |
+| T33    | Versions numérotées et releases par version         | fait |
 
 ## Plus tard
 

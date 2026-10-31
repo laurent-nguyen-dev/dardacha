@@ -2,7 +2,7 @@
   "expo": {
     "name": "Dardacha",
     "slug": "dardacha",
-    "version": "0.1.0",
+    "version": "1.2.0",
     "scheme": "dardacha",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,7 +19,8 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "versionCode": 10200
     },
     "plugins": ["expo-router"]
   }

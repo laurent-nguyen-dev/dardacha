@@ -53,8 +53,11 @@ tounsi tunisien.**
 
 ## Installer
 
-- **Android** : télécharger `dardacha.apk` depuis la
-  [version de test](https://github.com/laurent-nguyen-dev/dardacha/releases/tag/apk-test),
+- **Android** : télécharger l'APK de la dernière version depuis la page
+  [Releases](https://github.com/laurent-nguyen-dev/dardacha/releases)
+  (nouveautés : [versions.md](docs/versions.md)), ou `dardacha.apk` depuis la
+  [version de test](https://github.com/laurent-nguyen-dev/dardacha/releases/tag/apk-test)
+  pour le tout dernier état,
   puis l'ouvrir sur le téléphone (Android demande d'autoriser l'installation
   la première fois). Détails : [exploitation.md](docs/exploitation.md).
 - **iPhone** : pas encore de version installable ; on peut lancer

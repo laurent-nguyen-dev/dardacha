@@ -15,5 +15,6 @@
   reportée dans fonctionnel.md / technique.md dans le même commit, et inversement.
 - **Ticket en cours** : aucun.
 - **En attente de l'utilisateur** : relecture native du contenu, écriture arabe comprise (`src/content/`) ; choix de la prochaine évolution.
+- **Versions** : numéro dans `app.json` (`node scripts/version.js X.Y.Z`), notes dans [docs/versions.md](docs/versions.md), publication par le workflow « Publier une version ».
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T32 — Mini-dialogues des 24 séances](docs/journal/T32-dialogues-seances.md)
+- **Dernière entrée du journal** : [T33 — Versions numérotées](docs/journal/T33-versions.md)
