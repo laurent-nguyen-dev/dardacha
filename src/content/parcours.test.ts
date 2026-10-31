@@ -2,7 +2,7 @@ import { miniDialogue } from './dialogue';
 import { memo } from './memo';
 import { parcours } from './parcours';
 import { VARIANTES } from './types';
-import { validerParcours } from './validation';
+import { validerEcritureArabe, validerParcours } from './validation';
 
 // Contrôle du vrai contenu : un module mal formé fait échouer la CI, avec
 // la liste des erreurs en français.
@@ -17,6 +17,7 @@ describe('parcours', () => {
       for (const variante of VARIANTES) {
         expect(expression.formes[variante]?.trim()).toBeTruthy();
       }
+      expect(validerEcritureArabe(expression, 'Mini-dialogue')).toEqual([]);
     }
   });
 

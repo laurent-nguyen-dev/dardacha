@@ -45,8 +45,10 @@ tounsi tunisien.**
 - ⚠️ **Le contenu linguistique n'a pas encore été relu par des locuteurs
   natifs.** C'est un premier jet ; l'application l'indique sur son menu.
   Toute correction est bienvenue (voir « Contribuer »).
-- La prononciation est approximative : la voix lit une transcription latine.
-  L'ajout de l'écriture arabe est la prochaine évolution prévue.
+- **Écriture arabe en cours d'ajout** (version 1.1) : déjà présente pour le
+  module 1 et le mini-dialogue, affichée sous la transcription latine et lue
+  par la voix. Ailleurs, la voix lit encore la transcription latine, d'où
+  une prononciation approximative.
 
 ## Installer
 
