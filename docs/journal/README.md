@@ -30,3 +30,4 @@ expliquées en chemin. Fichiers nommés `T<numéro>-<sujet>.md`.
 - [T27 — Écoute de l'écriture arabe](T27-ecoute-arabe.md)
 - [T28 — Correcteur : réponses en écriture arabe](T28-correcteur-arabe.md)
 - [T29 — Écriture arabe du module 1 et du mini-dialogue](T29-arabe-module-1.md)
+- [T30 — Écriture arabe des modules 2 à 8](T30-arabe-modules-2-8.md)

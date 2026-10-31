@@ -338,7 +338,7 @@ Par ordre de priorité proposé :
 
 1. Relecture du contenu par un locuteur marocain et un locuteur tunisien.
 2. Écriture arabe pour chaque expression, et écoute lue sur l'écriture
-   arabe — **en cours (version 1.1, §3.7)**.
+   arabe — **fait en version 1.1 (§3.7)**, à relire par des natifs.
 3. Un mini-dialogue propre à chaque séance.
 4. Séance de révision et lecture enchaînée des trois variantes.
 5. Filtres par module et répétition espacée dans les révisions.
