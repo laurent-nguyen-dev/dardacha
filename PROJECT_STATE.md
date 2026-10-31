@@ -13,7 +13,7 @@
   - Cahier des charges de la version web (archive) : [docs/archives/cahier-des-charges-pwa.md](docs/archives/cahier-des-charges-pwa.md)
 - **Règle** : le cahier des charges est une synthèse ; toute modification est
   reportée dans fonctionnel.md / technique.md dans le même commit, et inversement.
-- **Ticket en cours** : T14 — correcteur de réponse libre (F10).
+- **Ticket en cours** : T15 — contenu des modules 3 et 4, données du mémo.
 - **En attente de l'utilisateur** : essai de l'APK du sprint 2 ; relecture des modules 1 et 2 (`src/content/modules/`) et du mini-dialogue (`src/content/dialogue.ts`) ; feu vert pour le sprint 3.
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T13 — Correction type du défi oral](docs/journal/T13-correction-type.md)
+- **Dernière entrée du journal** : [T14 — Correcteur de réponse libre](docs/journal/T14-correcteur.md)

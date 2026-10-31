@@ -6,6 +6,7 @@ import { Bouton } from '@/components/Bouton';
 import { CorrectionType } from '@/components/CorrectionType';
 import { Introuvable } from '@/components/Introuvable';
 import { Quiz } from '@/components/Quiz';
+import { ReponseLibre } from '@/components/ReponseLibre';
 import { TableauVocabulaire } from '@/components/TableauVocabulaire';
 import { ExpressionComparee } from '@/components/Variantes';
 import { miniDialogue } from '@/content/dialogue';
@@ -74,6 +75,10 @@ export default function PageSeance() {
 
       <Section titre="Vérifie ta compréhension">
         <Quiz key={seance.id} seanceId={seance.id} />
+      </Section>
+
+      <Section titre="À toi de jouer">
+        <ReponseLibre key={seance.id} seance={seance} />
       </Section>
 
       <View style={styles.actions}>

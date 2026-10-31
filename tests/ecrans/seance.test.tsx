@@ -18,6 +18,7 @@ describe('Page séance (F03)', () => {
       'À retenir',
       'Mini-dialogue',
       'Vérifie ta compréhension',
+      'À toi de jouer',
     ]);
   });
 

@@ -25,7 +25,8 @@ Le contenu est en cours de relecture par des locuteurs natifs.
 Chaque séance se lit de haut en bas : objectif, contexte (quand utiliser
 quelle variante), expressions supplémentaires, défi oral à faire à voix
 haute, tableau du vocabulaire (fais-le défiler vers la gauche pour voir
-les trois variantes), points à retenir et un mini-dialogue.
+les trois variantes), points à retenir, mini-dialogue, quiz et réponse
+libre.
 
 ## Défi oral
 
@@ -39,6 +40,13 @@ une réponse : elle devient verte si elle est juste, rouge sinon, et la
 correction montre l'expression dans les trois variantes. Une fois les 4
 questions répondues, ton score s'affiche ; **« Refaire avec de nouvelles
 questions »** tire un nouveau quiz.
+
+## À toi de jouer
+
+Écris une réponse en transcription latine (comme dans l'application), puis
+touche **« Corriger ma réponse »**. Le correcteur liste les expressions de
+la séance qu'il a reconnues, et t'en propose d'autres. Il ne vérifie ni la
+grammaire ni l'accord au masculin ou au féminin.
 
 ## Écouter
 
