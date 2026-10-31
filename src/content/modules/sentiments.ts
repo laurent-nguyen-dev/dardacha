@@ -22,6 +22,11 @@ export const sentiments: Module = {
             darija: 'hada sa7bi (un ami) / hadi sa7bti (une amie)',
             tounsi: 'hedha sa7bi (un ami) / hedhi sa7bti (une amie)',
           },
+          arabe: {
+            msa: 'هذا صديقي / هذه صديقتي',
+            darija: 'هادا صاحبي / هادي صاحبتي',
+            tounsi: 'هذا صاحبي / هذي صاحبتي',
+          },
         },
         {
           sens: "Je t'apprécie beaucoup",
@@ -30,6 +35,7 @@ export const sentiments: Module = {
             darija: 'kan7tremek bzaf',
             tounsi: 'n9adrek barcha',
           },
+          arabe: { msa: 'أقدرك كثيرا / أقدرك كثيرا', darija: 'كنحترمك بزاف', tounsi: 'نقدرك برشا' },
         },
         {
           sens: 'On se connaît depuis longtemps',
@@ -37,6 +43,11 @@ export const sentiments: Module = {
             msa: 'nata3arafou mounthou zaman',
             darija: 'kan3erfo ba3diyatna chhal hadi',
             tounsi: 'na3arfou b3adhna men zman',
+          },
+          arabe: {
+            msa: 'نتعارف منذ زمان',
+            darija: 'كنعرفو بعضياتنا شحال هادي',
+            tounsi: 'نعرفو بعضنا من زمان',
           },
         },
         {
@@ -46,6 +57,7 @@ export const sentiments: Module = {
             darija: 't9der t3awel 3liya',
             tounsi: 'tnajjem t3awel 3liya',
           },
+          arabe: { msa: 'يمكنك الاعتماد علي', darija: 'تقدر تعول عليا', tounsi: 'تنجم تعول عليا' },
         },
       ],
       supplementaires: [
@@ -56,6 +68,7 @@ export const sentiments: Module = {
             darija: 'a7san sa7bi',
             tounsi: 'a7sen sa7bi',
           },
+          arabe: { msa: 'صديقي المقرب', darija: 'أحسن صاحبي', tounsi: 'أحسن صاحبي' },
         },
         {
           sens: "Tu m'as manqué",
@@ -64,6 +77,7 @@ export const sentiments: Module = {
             darija: 'twe77echtek',
             tounsi: 'twa7chtek',
           },
+          arabe: { msa: 'اشتقت إليك', darija: 'توحشتك', tounsi: 'توحشتك' },
         },
         {
           sens: "Merci d'être là",
@@ -72,6 +86,7 @@ export const sentiments: Module = {
             darija: 'choukran 3la wjoudek',
             tounsi: 'ya3tik sa77a 3la wjoudek',
           },
+          arabe: { msa: 'شكرا لوجودك', darija: 'شكرا على وجودك', tounsi: 'يعطيك الصحة على وجودك' },
         },
       ],
       defiOral: "Présente ton meilleur ami à quelqu'un, puis dis à ton ami que tu l'apprécies.",
@@ -93,6 +108,11 @@ export const sentiments: Module = {
             darija: 'nta 3ziz 3liya (à un homme) / nti 3ziza 3liya (à une femme)',
             tounsi: 'enti 3ziz 3liya (à un homme) / enti 3ziza 3liya (à une femme)',
           },
+          arabe: {
+            msa: 'أنت عزيز علي / أنت عزيزة علي',
+            darija: 'نتا عزيز عليا / نتي عزيزة عليا',
+            tounsi: 'انتي عزيز عليا / انتي عزيزة عليا',
+          },
         },
         {
           sens: 'Je pense à toi',
@@ -101,6 +121,7 @@ export const sentiments: Module = {
             darija: 'kanfekker fik',
             tounsi: 'n5ammem fik',
           },
+          arabe: { msa: 'أفكر فيك', darija: 'كنفكر فيك', tounsi: 'نخمم فيك' },
         },
         {
           sens: 'Mon cœur (affectueux)',
@@ -109,6 +130,7 @@ export const sentiments: Module = {
             darija: 'a 9albi',
             tounsi: 'ya 9albi',
           },
+          arabe: { msa: 'يا قلبي', darija: 'آ قلبي', tounsi: 'يا قلبي' },
         },
         {
           sens: 'Prends soin de toi',
@@ -117,6 +139,7 @@ export const sentiments: Module = {
             darija: 'rd balek 3la rasek',
             tounsi: 'rod balek 3la rou7ek',
           },
+          arabe: { msa: 'اعتن بنفسك', darija: 'رد بالك على راسك', tounsi: 'رد بالك على روحك' },
         },
       ],
       supplementaires: [
@@ -127,6 +150,11 @@ export const sentiments: Module = {
             darija: 'nta wa7ed mzyan (à un homme) / nti wa7da mzyana (à une femme)',
             tounsi: 'enti bnadem behi',
           },
+          arabe: {
+            msa: 'أنت شخص طيب / أنت شخصة طيبة',
+            darija: 'نتا واحد مزيان / نتي وحدة مزيانة',
+            tounsi: 'انتي بنادم بهي',
+          },
         },
         {
           sens: 'Je suis fier (fière) de toi',
@@ -135,6 +163,7 @@ export const sentiments: Module = {
             darija: 'ana fa5our bik',
             tounsi: 'ena fa5our bik',
           },
+          arabe: { msa: 'أنا فخور بك', darija: 'أنا فخور بيك', tounsi: 'أنا فخور بيك' },
         },
         {
           sens: 'Que Dieu te protège',
@@ -143,6 +172,7 @@ export const sentiments: Module = {
             darija: 'lla ye7mik',
             tounsi: 'rabbi y7amik',
           },
+          arabe: { msa: 'الله يحميك', darija: 'الله يحميك', tounsi: 'ربي يحميك' },
         },
       ],
       defiOral:
@@ -165,6 +195,7 @@ export const sentiments: Module = {
             darija: 'ana hna m3ak',
             tounsi: 'ena houni m3ak',
           },
+          arabe: { msa: 'أنا هنا من أجلك', darija: 'أنا هنا معاك', tounsi: 'أنا هوني معاك' },
         },
         {
           sens: 'Ça va passer',
@@ -173,6 +204,7 @@ export const sentiments: Module = {
             darija: 'ghadi ydouz kolchi',
             tounsi: 'taw t3addi',
           },
+          arabe: { msa: 'ستتحسن الأمور', darija: 'غادي يدوز كلشي', tounsi: 'توا تعدي' },
         },
         {
           sens: 'Que Dieu facilite',
@@ -181,6 +213,7 @@ export const sentiments: Module = {
             darija: 'lla ysahhel',
             tounsi: 'rabbi ysahhel',
           },
+          arabe: { msa: 'الله ييسر', darija: 'الله يسهل', tounsi: 'ربي يسهل' },
         },
         {
           sens: 'Courage !',
@@ -189,6 +222,7 @@ export const sentiments: Module = {
             darija: 'sber !',
             tounsi: 'osbor !',
           },
+          arabe: { msa: 'تشجع! / تشجعي!', darija: 'صبر!', tounsi: 'اصبر!' },
         },
       ],
       supplementaires: [
@@ -199,6 +233,7 @@ export const sentiments: Module = {
             darija: 'machi mouchkil',
             tounsi: 'mouch mochkla',
           },
+          arabe: { msa: 'ليس أمرا خطيرا', darija: 'ماشي مشكل', tounsi: 'موش مشكلة' },
         },
         {
           sens: 'Tu veux en parler ?',
@@ -207,6 +242,7 @@ export const sentiments: Module = {
             darija: 'bghiti nhadro ?',
             tounsi: 't7ebb nahkiw ?',
           },
+          arabe: { msa: 'هل تريد أن نتحدث؟', darija: 'بغيتي نهضرو؟', tounsi: 'تحب نحكيو؟' },
         },
         {
           sens: 'Je comprends',
@@ -215,6 +251,7 @@ export const sentiments: Module = {
             darija: 'fhemtek',
             tounsi: 'fhemtek',
           },
+          arabe: { msa: 'أفهم', darija: 'فهمتك', tounsi: 'فهمتك' },
         },
       ],
       defiOral: "Un ami traverse un moment difficile : rassure-le et propose-lui d'en parler.",

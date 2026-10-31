@@ -22,6 +22,7 @@ export const conversation: Module = {
             darija: 'ma fhemtch',
             tounsi: 'ma fhemtech',
           },
+          arabe: { msa: 'لم أفهم', darija: 'ما فهمتش', tounsi: 'ما فهمتش' },
         },
         {
           sens: 'Tu peux répéter ?',
@@ -30,6 +31,7 @@ export const conversation: Module = {
             darija: 'momkin t3awed ?',
             tounsi: 'tnajjem t3awed ?',
           },
+          arabe: { msa: 'هل يمكنك أن تعيد؟', darija: 'ممكن تعاود؟', tounsi: 'تنجم تعاود؟' },
         },
         {
           sens: "Parle lentement, s'il te plaît",
@@ -37,6 +39,11 @@ export const conversation: Module = {
             msa: 'takallam bi-bou62, min fadlik',
             darija: 'hder bechwiya 3afak',
             tounsi: 'a7ki bechwaya 3aychek',
+          },
+          arabe: {
+            msa: 'تكلم ببطء، من فضلك',
+            darija: 'هضر بشوية عافاك',
+            tounsi: 'احكي بشوية عيشك',
           },
         },
         {
@@ -46,6 +53,7 @@ export const conversation: Module = {
             darija: 'ach kat3ni hadi ?',
             tounsi: 'chniya ma3neha ?',
           },
+          arabe: { msa: 'ما معنى هذا؟', darija: 'أش كتعني هادي؟', tounsi: 'شنية معناها؟' },
         },
       ],
       supplementaires: [
@@ -56,6 +64,7 @@ export const conversation: Module = {
             darija: 'kant3allem l-3arbiya',
             tounsi: 'nat3allem el-3arbi',
           },
+          arabe: { msa: 'أتعلم العربية', darija: 'كنتعلم العربية', tounsi: 'نتعلم العربي' },
         },
         {
           sens: 'Comment on dit … en arabe ?',
@@ -63,6 +72,11 @@ export const conversation: Module = {
             msa: 'kayfa na9oulou … bil-3arabiya ?',
             darija: 'kifach kangoulo … b l-3arbiya ?',
             tounsi: 'kifech n9oulou … bel-3arbi ?',
+          },
+          arabe: {
+            msa: 'كيف نقول … بالعربية؟',
+            darija: 'كيفاش كنقولو … بالعربية؟',
+            tounsi: 'كيفاش نقولو … بالعربي؟',
           },
         },
         {
@@ -72,6 +86,7 @@ export const conversation: Module = {
             darija: 'ah, fhemt',
             tounsi: 'ah, fhemt',
           },
+          arabe: { msa: 'آه، فهمت', darija: 'آه، فهمت', tounsi: 'آه، فهمت' },
         },
       ],
       defiOral:
@@ -94,6 +109,11 @@ export const conversation: Module = {
             darija: 'w nta, ach ban lik ? (à un homme) / w nti, ach ban lik ? (à une femme)',
             tounsi: 'w enti, chniya ra2yek ?',
           },
+          arabe: {
+            msa: 'وأنت، ما رأيك؟ / وأنت، ما رأيك؟',
+            darija: 'ونتا، أش بان ليك؟ / ونتي، أش بان ليك؟',
+            tounsi: 'وانتي، شنية رأيك؟',
+          },
         },
         {
           sens: "Parlons d'autre chose",
@@ -101,6 +121,11 @@ export const conversation: Module = {
             msa: 'li-nata7addath 3an chay2 a5ar',
             darija: 'nhadro 3la chi 7aja o5ra',
             tounsi: 'nahkiw 3la 7aja o5ra',
+          },
+          arabe: {
+            msa: 'لنتحدث عن شيء آخر',
+            darija: 'نهضرو على شي حاجة أخرى',
+            tounsi: 'نحكيو على حاجة أخرى',
           },
         },
         {
@@ -110,6 +135,7 @@ export const conversation: Module = {
             darija: '3la dkr …',
             tounsi: '3la fekra …',
           },
+          arabe: { msa: 'بالمناسبة …', darija: 'على ذكر …', tounsi: 'على فكرة …' },
         },
         {
           sens: 'Tu sais quoi ?',
@@ -118,6 +144,7 @@ export const conversation: Module = {
             darija: '3reft ach ?',
             tounsi: 'ta3ref chniya ?',
           },
+          arabe: { msa: 'هل تعرف؟', darija: 'عرفتي أش؟', tounsi: 'تعرف شنية؟' },
         },
       ],
       supplementaires: [
@@ -128,6 +155,7 @@ export const conversation: Module = {
             darija: 'zwin had chi',
             tounsi: '7aja behya',
           },
+          arabe: { msa: 'هذا ممتع', darija: 'زوين هاد الشي', tounsi: 'حاجة بهية' },
         },
         {
           sens: 'Comme je disais…',
@@ -136,6 +164,7 @@ export const conversation: Module = {
             darija: 'kif kont kangoul …',
             tounsi: 'kima 9otlek …',
           },
+          arabe: { msa: 'كما كنت أقول …', darija: 'كيف كنت كنقول …', tounsi: 'كيما قتلك …' },
         },
         {
           sens: 'Ça me rappelle…',
@@ -143,6 +172,11 @@ export const conversation: Module = {
             msa: 'hatha youthakkirouni bi …',
             darija: 'had chi kayfekkerni f …',
             tounsi: 'hedha yfakkarni fi …',
+          },
+          arabe: {
+            msa: 'هذا يذكرني ب …',
+            darija: 'هاد الشي كيفكرني ف …',
+            tounsi: 'هذا يفكرني في …',
           },
         },
       ],
@@ -166,6 +200,7 @@ export const conversation: Module = {
             darija: 'nchoufek 9rib',
             tounsi: 'nchoufek 9rib',
           },
+          arabe: { msa: 'نراك قريبا / نراك قريبا', darija: 'نشوفك قريب', tounsi: 'نشوفك قريب' },
         },
         {
           sens: "C'était un plaisir",
@@ -174,6 +209,7 @@ export const conversation: Module = {
             darija: 'tcherrefna',
             tounsi: 'tcharrafna',
           },
+          arabe: { msa: 'كان من دواعي سروري', darija: 'تشرفنا', tounsi: 'تشرفنا' },
         },
         {
           sens: 'Je dois y aller',
@@ -182,6 +218,7 @@ export const conversation: Module = {
             darija: '5assni nmchi',
             tounsi: 'lazemni nemchi',
           },
+          arabe: { msa: 'يجب أن أذهب', darija: 'خاصني نمشي', tounsi: 'لازمني نمشي' },
         },
         {
           sens: 'Bonne journée',
@@ -190,6 +227,7 @@ export const conversation: Module = {
             darija: 'nharek mzyan',
             tounsi: 'nharek zin',
           },
+          arabe: { msa: 'يوما سعيدا', darija: 'نهارك مزيان', tounsi: 'نهارك زين' },
         },
       ],
       supplementaires: [
@@ -200,6 +238,11 @@ export const conversation: Module = {
             darija: 'sellem liya 3la l-3a2ila',
             tounsi: 'sallemli 3al 3ayla',
           },
+          arabe: {
+            msa: 'سلم لي على عائلتك',
+            darija: 'سلم ليا على العائلة',
+            tounsi: 'سلملي على العايلة',
+          },
         },
         {
           sens: 'Appelle-moi quand tu veux',
@@ -207,6 +250,11 @@ export const conversation: Module = {
             msa: 'ittasil bi mata chi2ta',
             darija: '3ayyet liya waqtma bghiti',
             tounsi: 'kallamni wa9t eli t7ebb',
+          },
+          arabe: {
+            msa: 'اتصل بي متى شئت',
+            darija: 'عيط ليا وقتما بغيتي',
+            tounsi: 'كلمني وقت اللي تحب',
           },
         },
         {
@@ -216,6 +264,7 @@ export const conversation: Module = {
             darija: 'rja3 bslama',
             tounsi: 'traw7 bislema',
           },
+          arabe: { msa: 'عودة سالمة', darija: 'رجع بسلامة', tounsi: 'تروح بالسلامة' },
         },
       ],
       defiOral:

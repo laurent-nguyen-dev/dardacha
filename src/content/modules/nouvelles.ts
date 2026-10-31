@@ -22,6 +22,7 @@ export const nouvelles: Module = {
             darija: 'labas ?',
             tounsi: 'labes ?',
           },
+          arabe: { msa: 'كيف حالك؟ / كيف حالك؟', darija: 'لاباس؟', tounsi: 'لاباس؟' },
         },
         {
           sens: 'Ça va, Dieu merci',
@@ -30,6 +31,7 @@ export const nouvelles: Module = {
             darija: 'labas, l-7amdoullah',
             tounsi: 'labes, el-7amdoullah',
           },
+          arabe: { msa: 'بخير، الحمد لله', darija: 'لاباس، الحمد لله', tounsi: 'لاباس، الحمد لله' },
         },
         {
           sens: 'Comment vas-tu ?',
@@ -38,16 +40,19 @@ export const nouvelles: Module = {
             darija: 'kidayr ? (à un homme) / kidayra ? (à une femme)',
             tounsi: 'chniya a7walek ?',
           },
+          arabe: { msa: 'كيف الحال؟', darija: 'كيداير؟ / كيدايرة؟', tounsi: 'شنية أحوالك؟' },
         },
         {
           sens: 'Quoi de neuf ?',
           formes: { msa: 'ma al-jadid ?', darija: 'ach 5barek ?', tounsi: 'chniya l-a5bar ?' },
+          arabe: { msa: 'ما الجديد؟', darija: 'أش خبارك؟', tounsi: 'شنية الأخبار؟' },
         },
       ],
       supplementaires: [
         {
           sens: 'Tout va bien',
           formes: { msa: 'koullou chay2 bi5ayr', darija: 'kolchi mzyan', tounsi: 'kol chay behi' },
+          arabe: { msa: 'كل شيء بخير', darija: 'كلشي مزيان', tounsi: 'كل شي بهي' },
         },
         {
           sens: 'Et toi, ça va ?',
@@ -56,6 +61,11 @@ export const nouvelles: Module = {
             darija: 'w nta, labas ? (à un homme) / w nti, labas ? (à une femme)',
             tounsi: 'w enti, labes ?',
           },
+          arabe: {
+            msa: 'وأنت، كيف حالك؟ / وأنت، كيف حالك؟',
+            darija: 'ونتا، لاباس؟ / ونتي، لاباس؟',
+            tounsi: 'وانتي، لاباس؟',
+          },
         },
         {
           sens: 'Ça fait longtemps !',
@@ -63,6 +73,11 @@ export const nouvelles: Module = {
             msa: 'lam arak mounthou zaman ! (à un homme) / lam araki mounthou zaman ! (à une femme)',
             darija: 'hadi modda ma chefnak !',
             tounsi: 'malla ghiba !',
+          },
+          arabe: {
+            msa: 'لم أرك منذ زمان! / لم أرك منذ زمان!',
+            darija: 'هادي مدة ما شفناك!',
+            tounsi: 'ملا غيبة!',
           },
         },
       ],
@@ -83,10 +98,12 @@ export const nouvelles: Module = {
         {
           sens: 'Très bien',
           formes: { msa: 'jayyid jiddan', darija: 'mzyan bzaf', tounsi: 'behi barcha' },
+          arabe: { msa: 'جيد جدا', darija: 'مزيان بزاف', tounsi: 'بهي برشا' },
         },
         {
           sens: 'Pas mal',
           formes: { msa: 'la ba2s', darija: 'machi 5ayb', tounsi: 'mouch 5ayeb' },
+          arabe: { msa: 'لا بأس', darija: 'ماشي خايب', tounsi: 'موش خايب' },
         },
         {
           sens: 'Je suis fatigué(e)',
@@ -95,10 +112,16 @@ export const nouvelles: Module = {
             darija: 'ana 3iyyan (homme) / ana 3iyyana (femme)',
             tounsi: 'ena ta3ban (homme) / ena ta3bana (femme)',
           },
+          arabe: {
+            msa: 'أنا متعب / أنا متعبة',
+            darija: 'أنا عيان / أنا عيانة',
+            tounsi: 'أنا تعبان / أنا تعبانة',
+          },
         },
         {
           sens: 'Pas très bien',
           formes: { msa: 'lastou bi5ayr', darija: 'machi mzyan bzaf', tounsi: 'mouch behi barcha' },
+          arabe: { msa: 'لست بخير', darija: 'ماشي مزيان بزاف', tounsi: 'موش بهي برشا' },
         },
       ],
       supplementaires: [
@@ -109,6 +132,11 @@ export const nouvelles: Module = {
             darija: 'ana mrid (homme) / ana mrida (femme)',
             tounsi: 'ena mrid (homme) / ena mrida (femme)',
           },
+          arabe: {
+            msa: 'أنا مريض / أنا مريضة',
+            darija: 'أنا مريض / أنا مريضة',
+            tounsi: 'أنا مريض / أنا مريضة',
+          },
         },
         {
           sens: "J'ai beaucoup de travail",
@@ -117,6 +145,11 @@ export const nouvelles: Module = {
             darija: '3ndi bzaf dial l-5edma',
             tounsi: '3andi barcha 5edma',
           },
+          arabe: {
+            msa: 'عندي عمل كثير',
+            darija: 'عندي بزاف ديال الخدمة',
+            tounsi: 'عندي برشا خدمة',
+          },
         },
         {
           sens: 'Ça va aller, si Dieu le veut',
@@ -124,6 +157,11 @@ export const nouvelles: Module = {
             msa: 'sa-yakounou koullou chay2 bi5ayr, in cha2a allah',
             darija: 'ghadi ykoun kolchi mzyan, inchallah',
             tounsi: 'bech ykoun kol chay behi, inchallah',
+          },
+          arabe: {
+            msa: 'سيكون كل شيء بخير، إن شاء الله',
+            darija: 'غادي يكون كلشي مزيان، إن شاء الله',
+            tounsi: 'باش يكون كل شي بهي، إن شاء الله',
           },
         },
       ],
@@ -147,10 +185,12 @@ export const nouvelles: Module = {
             darija: 'kidayra l-3a2ila ?',
             tounsi: 'chniya a7wel el-3ayla ?',
           },
+          arabe: { msa: 'كيف العائلة؟', darija: 'كيدايرة العائلة؟', tounsi: 'شنية أحوال العايلة؟' },
         },
         {
           sens: 'Tout le monde va bien',
           formes: { msa: 'al-jami3 bi5ayr', darija: 'kolchi bi5ir', tounsi: 'lkol labes' },
+          arabe: { msa: 'الجميع بخير', darija: 'كلشي بخير', tounsi: 'الكل لاباس' },
         },
         {
           sens: 'Comment vont tes parents ?',
@@ -159,6 +199,11 @@ export const nouvelles: Module = {
             darija: 'kidayrin l-walidin ?',
             tounsi: 'chniya a7wel el-waldin ?',
           },
+          arabe: {
+            msa: 'كيف والداك؟ / كيف والداك؟',
+            darija: 'كيدايرين الواليدين؟',
+            tounsi: 'شنية أحوال الوالدين؟',
+          },
         },
         {
           sens: 'Passe-leur le bonjour',
@@ -166,6 +211,11 @@ export const nouvelles: Module = {
             msa: 'balligh-houm salami (à un homme) / ballighi-houm salami (à une femme)',
             darija: 'sellem 3lihoum (à un homme) / sellmi 3lihoum (à une femme)',
             tounsi: 'sallemli 3lihom',
+          },
+          arabe: {
+            msa: 'بلغهم سلامي / بلغيهم سلامي',
+            darija: 'سلم عليهم / سلمي عليهم',
+            tounsi: 'سلملي عليهم',
           },
         },
       ],
@@ -177,6 +227,7 @@ export const nouvelles: Module = {
             darija: 'kidayrin d-drari ?',
             tounsi: 'chniya a7wel es-sghar ?',
           },
+          arabe: { msa: 'كيف الأطفال؟', darija: 'كيدايرين الدراري؟', tounsi: 'شنية أحوال الصغار؟' },
         },
         {
           sens: 'Ils te passent le bonjour',
@@ -185,10 +236,12 @@ export const nouvelles: Module = {
             darija: 'kaysellmou 3lik',
             tounsi: 'ysallmou 3lik',
           },
+          arabe: { msa: 'يسلمون عليك', darija: 'كيسلمو عليك', tounsi: 'يسلمو عليك' },
         },
         {
           sens: 'Que Dieu te garde',
           formes: { msa: 'allah ya7fadhouk', darija: 'lla y7fdek', tounsi: 'rabbi y5allik' },
+          arabe: { msa: 'الله يحفظك', darija: 'الله يحفظك', tounsi: 'ربي يخليك' },
         },
       ],
       defiOral:

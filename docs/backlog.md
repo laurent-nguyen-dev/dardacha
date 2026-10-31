@@ -70,18 +70,20 @@ fonctions, 8 modules), prête pour la recette sur téléphone.
 
 ## Sprint 5 — Écriture arabe (version 1.1)
 
+**Terminé le 31 oct. 2026** (contenu non relu par des natifs).
+
 **Jalon** : l'écriture arabe s'affiche sous chaque forme, est lue par la voix
 et acceptée par le correcteur, pour le module 1 et le mini-dialogue ; les
 autres modules suivent un par un (fonctionnel §3.7).
 
-| Ticket | Titre                                                   | Dépend de | État    |
-| ------ | ------------------------------------------------------- | --------- | ------- |
-| T25    | Modèle et contrôle automatique de l'écriture arabe      | —         | fait    |
-| T26    | Affichage de l'écriture arabe (de droite à gauche)      | T25       | fait    |
-| T27    | Écoute de l'écriture arabe                              | T25       | fait    |
-| T28    | Correcteur : réponses en écriture arabe                 | T25       | fait    |
-| T29    | Écriture arabe du module 1 et du mini-dialogue          | T25       | fait    |
-| T30    | Écriture arabe des modules 2 à 8 (un commit par module) | T29       | à faire |
+| Ticket | Titre                                                   | Dépend de | État |
+| ------ | ------------------------------------------------------- | --------- | ---- |
+| T25    | Modèle et contrôle automatique de l'écriture arabe      | —         | fait |
+| T26    | Affichage de l'écriture arabe (de droite à gauche)      | T25       | fait |
+| T27    | Écoute de l'écriture arabe                              | T25       | fait |
+| T28    | Correcteur : réponses en écriture arabe                 | T25       | fait |
+| T29    | Écriture arabe du module 1 et du mini-dialogue          | T25       | fait |
+| T30    | Écriture arabe des modules 2 à 8 (un commit par module) | T29       | fait |
 
 ## Hors sprint
 

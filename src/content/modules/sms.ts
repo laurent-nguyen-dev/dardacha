@@ -23,32 +23,39 @@ export const sms: Module = {
             darija: 'choukran bzaf',
             tounsi: 'ya3tik sa77a barcha',
           },
+          arabe: { msa: 'شكرا جزيلا', darija: 'شكرا بزاف', tounsi: 'يعطيك الصحة برشا' },
         },
         {
           sens: 'Bonne chance',
           formes: { msa: 'bi-ttawfi9', darija: 'lah ywaf9ek', tounsi: 'rabbi ywaf9ek' },
+          arabe: { msa: 'بالتوفيق', darija: 'الله يوفقك', tounsi: 'ربي يوفقك' },
         },
         {
           sens: "S'il te plaît",
           formes: { msa: 'min fadlik', darija: '3afak', tounsi: '3aychek' },
+          arabe: { msa: 'من فضلك', darija: 'عافاك', tounsi: 'عيشك' },
         },
         {
           sens: "D'accord",
           formes: { msa: '7asanan', darija: 'wakha', tounsi: 'behi' },
+          arabe: { msa: 'حسنا', darija: 'واخا', tounsi: 'بهي' },
         },
       ],
       supplementaires: [
         {
           sens: 'Mort de rire (mdr)',
           formes: { msa: null, darija: 'hhhh', tounsi: 'hhhh' },
+          arabe: { darija: 'هههه', tounsi: 'هههه' },
         },
         {
           sens: 'Dieu merci (abrégé)',
           formes: { msa: 'al-7amdou lillah', darija: 'l7mdlh', tounsi: '7mdl' },
+          arabe: { msa: 'الحمد لله', darija: 'الحمدلله', tounsi: 'حمدل' },
         },
         {
           sens: 'Inchallah (abrégé)',
           formes: { msa: 'in cha2a allah', darija: 'nchlh', tounsi: 'nchlh' },
+          arabe: { msa: 'إن شاء الله', darija: 'انشالله', tounsi: 'انشالله' },
         },
       ],
       defiOral:
@@ -72,6 +79,7 @@ export const sms: Module = {
             darija: 'fin nta ? (à un homme) / fin nti ? (à une femme)',
             tounsi: 'win enti ?',
           },
+          arabe: { msa: 'أين أنت؟ / أين أنت؟', darija: 'فين نتا؟ / فين نتي؟', tounsi: 'وين انتي؟' },
         },
         {
           sens: "J'arrive",
@@ -79,6 +87,11 @@ export const sms: Module = {
             msa: 'ana 9adim (homme) / ana 9adima (femme)',
             darija: 'ana jay (homme) / ana jaya (femme)',
             tounsi: 'ena jey (homme) / ena jeya (femme)',
+          },
+          arabe: {
+            msa: 'أنا قادم / أنا قادمة',
+            darija: 'أنا جاي / أنا جاية',
+            tounsi: 'أنا جاي / أنا جاية',
           },
         },
         {
@@ -88,6 +101,7 @@ export const sms: Module = {
             darija: 't3a66elt',
             tounsi: 't2a55ert',
           },
+          arabe: { msa: 'أنا متأخر / أنا متأخرة', darija: 'تعطلت', tounsi: 'تأخرت' },
         },
         {
           sens: 'Appelle-moi',
@@ -96,16 +110,19 @@ export const sms: Module = {
             darija: '3ayyet liya',
             tounsi: 'kallamni',
           },
+          arabe: { msa: 'اتصل بي / اتصلي بي', darija: 'عيط ليا', tounsi: 'كلمني' },
         },
       ],
       supplementaires: [
         {
           sens: "Je t'attends",
           formes: { msa: 'ana anta6irouk', darija: 'kantsennak', tounsi: 'nestannak' },
+          arabe: { msa: 'أنا أنتظرك', darija: 'كنتسناك', tounsi: 'نستناك' },
         },
         {
           sens: 'Tout de suite',
           formes: { msa: '7alan', darija: 'daba', tounsi: 'taw' },
+          arabe: { msa: 'حالا', darija: 'دابا', tounsi: 'توا' },
         },
         {
           sens: "D'accord, à tout à l'heure",
@@ -113,6 +130,11 @@ export const sms: Module = {
             msa: '7asanan, ila al-li9a2',
             darija: 'wakha, nchoufek men b3d',
             tounsi: 'behi, nchoufek ba3d',
+          },
+          arabe: {
+            msa: 'حسنا، إلى اللقاء',
+            darija: 'واخا، نشوفك من بعد',
+            tounsi: 'بهي، نشوفك بعد',
           },
         },
       ],
@@ -133,6 +155,7 @@ export const sms: Module = {
         {
           sens: 'Super !',
           formes: { msa: 'moumtaz !', darija: 'zwin !', tounsi: 'mriguel !' },
+          arabe: { msa: 'ممتاز!', darija: 'زوين!', tounsi: 'مريقل!' },
         },
         {
           sens: 'Pas de souci',
@@ -141,14 +164,17 @@ export const sms: Module = {
             darija: 'ma kayn mouchkil',
             tounsi: 'ma famma 7atta mochkla',
           },
+          arabe: { msa: 'لا مشكلة', darija: 'ما كاين مشكل', tounsi: 'ما فما حتى مشكلة' },
         },
         {
           sens: "C'est vrai ?",
           formes: { msa: 'hal hatha sa7i7 ?', darija: 'bse7 ?', tounsi: 'bel7a9 ?' },
+          arabe: { msa: 'هل هذا صحيح؟', darija: 'بصح؟', tounsi: 'بالحق؟' },
         },
         {
           sens: 'Félicitations !',
           formes: { msa: 'mabrouk !', darija: 'mabrouk !', tounsi: 'mabrouk !' },
+          arabe: { msa: 'مبروك!', darija: 'مبروك!', tounsi: 'مبروك!' },
         },
       ],
       supplementaires: [
@@ -159,6 +185,11 @@ export const sms: Module = {
             darija: 'ana mtafe9 (homme) / ana mtaf9a (femme)',
             tounsi: 'ena mouwafe9',
           },
+          arabe: {
+            msa: 'أنا موافق / أنا موافقة',
+            darija: 'أنا متافق / أنا متافقة',
+            tounsi: 'أنا موافق',
+          },
         },
         {
           sens: 'Bravo !',
@@ -167,10 +198,12 @@ export const sms: Module = {
             darija: 'tbarkellah 3lik !',
             tounsi: 'bravo 3lik !',
           },
+          arabe: { msa: 'أحسنت! / أحسنت!', darija: 'تبارك الله عليك!', tounsi: 'برافو عليك!' },
         },
         {
           sens: 'Bon courage',
           formes: { msa: 'kana allah fi 3awnik', darija: 'lah y3awnek', tounsi: 'rabbi m3ak' },
+          arabe: { msa: 'كان الله في عونك', darija: 'الله يعاونك', tounsi: 'ربي معاك' },
         },
       ],
       defiOral:
