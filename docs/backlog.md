@@ -73,6 +73,7 @@ fonctions, 8 modules), prête pour la recette sur téléphone.
 | Ticket | Titre                                      | État |
 | ------ | ------------------------------------------ | ---- |
 | T22    | Renommage de l'application en « Dardacha » | fait |
+| T23    | Préparation à l'ouverture en open source   | fait |
 
 ## Plus tard
 

@@ -17,6 +17,14 @@ Aucune.
 - Recette sur iPhone : pas d'appareil disponible. À jouer avant toute
   publication sur l'App Store (Expo Go suffit, ou un build iOS de test).
 
+## Avant l'ouverture en open source
+
+- Licence du contenu pédagogique : MIT comme le code (actuel), ou une
+  licence de contenu (CC BY-SA 4.0) ?
+- Mention « @Emma » dans l'archive du cahier des charges web : garder,
+  retirer ?
+- Code de conduite (Contributor Covenant) : en ajouter un ?
+
 ## Tranchées
 
 | Date       | Réf. | Question                            | Décision                                                                                                           | Reportée dans          |

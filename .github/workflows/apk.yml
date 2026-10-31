@@ -1,18 +1,20 @@
 # Fabrication de l'APK Android de test, à chaque envoi de code sur GitHub.
 #
-# L'APK est publié sur la page « Releases » du dépôt, sous la version de
-# test « apk-test », remplacée à chaque fabrication : il suffit de
-# l'ouvrir depuis le téléphone et de toucher le fichier .apk
-# (docs/exploitation.md).
+# Sur toute branche, l'APK est conservé dans les artefacts du build (pour
+# essayer une branche avant fusion). Sur `main` seulement, il est aussi
+# publié sur la page « Releases », sous la version de test « apk-test »,
+# remplacée à chaque fabrication (docs/exploitation.md) : une branche de
+# travail ne peut donc pas écraser la version proposée au public.
 name: APK Android
 
 on:
   push:
   workflow_dispatch:
 
-# Un seul build à la fois : un nouvel envoi annule le build en cours.
+# Un seul build à la fois par branche : un nouvel envoi annule le build en
+# cours de la même branche.
 concurrency:
-  group: apk
+  group: apk-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -59,6 +61,7 @@ jobs:
           path: dardacha.apk
 
       - name: Publication dans la version de test « apk-test »
+        if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -67,4 +70,4 @@ jobs:
             --prerelease \
             --target "$GITHUB_SHA" \
             --title "Version de test (dernière fabrication)" \
-            --notes "APK fabriqué automatiquement depuis la branche ${GITHUB_REF_NAME}, commit ${GITHUB_SHA::7}, le $(date -u '+%d/%m/%Y à %H:%M') UTC. Version de test, non publiée sur Google Play."
+            --notes "APK fabriqué automatiquement depuis la branche principale, commit ${GITHUB_SHA::7}, le $(date -u '+%d/%m/%Y à %H:%M') UTC. Version de test, non publiée sur Google Play."

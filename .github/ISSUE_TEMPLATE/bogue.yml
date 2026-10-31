@@ -1,0 +1,29 @@
+name: Bogue
+description: Quelque chose ne fonctionne pas comme prévu dans l'application.
+title: 'Bogue : '
+labels: ['bogue']
+body:
+  - type: textarea
+    id: etapes
+    attributes:
+      label: Étapes pour reproduire
+      placeholder: '1. Ouvrir le module… 2. Toucher… 3. …'
+    validations:
+      required: true
+  - type: textarea
+    id: attendu
+    attributes:
+      label: Ce qui était attendu, et ce qui s'est passé
+    validations:
+      required: true
+  - type: input
+    id: appareil
+    attributes:
+      label: Téléphone et système
+      placeholder: 'Pixel 7, Android 15'
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version de l'APK (texte de la version de test, ou commit)
