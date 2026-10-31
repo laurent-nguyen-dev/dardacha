@@ -10,6 +10,72 @@ export const conversation: Module = {
   seances: [
     {
       id: 'conversation-faire-repeter',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Tu viens à la fête samedi ?',
+            formes: {
+              msa: 'hal ta2tina ila al-7afla yawm as-sabt ?',
+              darija: 'wach ghadi tji l l-7afla nhar s-sebt ?',
+              tounsi: 'bech tji lel 7afla nhar es-sebt ?',
+            },
+            arabe: {
+              msa: 'هل تأتين إلى الحفلة يوم السبت؟',
+              darija: 'واش غادي تجي للحفلة نهار السبت؟',
+              tounsi: 'باش تجي للحفلة نهار السبت؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: "Je n'ai pas compris. Tu peux répéter ?",
+            formes: {
+              msa: 'lam afham. hal youmkinouka an tou3id ?',
+              darija: 'ma fhemtch. momkin t3awed ?',
+              tounsi: 'ma fhemtech. tnajjem t3awed ?',
+            },
+            arabe: {
+              msa: 'لم أفهم. هل يمكنك أن تعيد؟',
+              darija: 'ما فهمتش. ممكن تعاود؟',
+              tounsi: 'ما فهمتش. تنجم تعاود؟',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'La fête, samedi !',
+            formes: {
+              msa: 'al-7afla, yawm as-sabt !',
+              darija: 'l-7afla, nhar s-sebt !',
+              tounsi: 'el-7afla, nhar es-sebt !',
+            },
+            arabe: {
+              msa: 'الحفلة، يوم السبت!',
+              darija: 'الحفلة، نهار السبت!',
+              tounsi: 'الحفلة، نهار السبت!',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Ah, je vois ! Oui, je viens.',
+            formes: {
+              msa: 'ah, fahimtou ! na3am, sa-ati.',
+              darija: 'ah, fhemt ! iyyeh, ghadi nji.',
+              tounsi: 'ah, fhemt ! ey, bech nji.',
+            },
+            arabe: {
+              msa: 'آه، فهمت! نعم، سآتي.',
+              darija: 'آه، فهمت! إيه، غادي نجي.',
+              tounsi: 'آه، فهمت! إي، باش نجي.',
+            },
+          },
+        },
+      ],
       titre: 'Faire répéter',
       objectif: "Dire qu'on n'a pas compris, demander de répéter ou de ralentir.",
       contexte:
@@ -97,6 +163,56 @@ export const conversation: Module = {
     },
     {
       id: 'conversation-changer-sujet',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Au fait, tu sais quoi ?',
+            formes: {
+              msa: 'bil-mounasaba, hal ta3rifin ?',
+              darija: '3la dkr, 3refti ach ?',
+              tounsi: '3la fekra, ta3ref chniya ?',
+            },
+            arabe: {
+              msa: 'بالمناسبة، هل تعرفين؟',
+              darija: 'على ذكر، عرفتي أش؟',
+              tounsi: 'على فكرة، تعرف شنية؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Non, quoi ?',
+            formes: { msa: 'la, matha ?', darija: 'la, ach ?', tounsi: 'le, chniya ?' },
+            arabe: { msa: 'لا، ماذا؟', darija: 'لا، أش؟', tounsi: 'لا، شنية؟' },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "J'apprends l'arabe ! Et toi, qu'en penses-tu ?",
+            formes: {
+              msa: 'ata3allamou al-3arabiya ! wa anti, ma ra2youki ?',
+              darija: 'kant3allem l-3arbiya ! w nti, ach ban lik ?',
+              tounsi: 'nat3allem el-3arbi ! w enti, chniya ra2yek ?',
+            },
+            arabe: {
+              msa: 'أتعلم العربية! وأنت، ما رأيك؟',
+              darija: 'كنتعلم العربية! ونتي، أش بان ليك؟',
+              tounsi: 'نتعلم العربي! وانتي، شنية رأيك؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: "C'est intéressant !",
+            formes: { msa: 'hatha moumti3 !', darija: 'zwin had chi !', tounsi: '7aja behya !' },
+            arabe: { msa: 'هذا ممتع!', darija: 'زوين هاد الشي!', tounsi: 'حاجة بهية!' },
+          },
+        },
+      ],
       titre: 'Changer de sujet',
       objectif: 'Relancer et enchaîner : au fait, et toi, tu sais quoi ?',
       contexte:
@@ -188,6 +304,64 @@ export const conversation: Module = {
     },
     {
       id: 'conversation-conclure',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "Je dois y aller. C'était un plaisir !",
+            formes: {
+              msa: 'yajibou an athhab. kana min dawa3i sourouri !',
+              darija: '5assni nmchi. tcherrefna !',
+              tounsi: 'lazemni nemchi. tcharrafna !',
+            },
+            arabe: {
+              msa: 'يجب أن أذهب. كان من دواعي سروري!',
+              darija: 'خاصني نمشي. تشرفنا!',
+              tounsi: 'لازمني نمشي. تشرفنا!',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Pour moi aussi. Salue ta famille de ma part !',
+            formes: {
+              msa: 'wa ana aydan. sallim li 3ala 3a2ilatik !',
+              darija: '7ta ana. sellem liya 3la l-3a2ila !',
+              tounsi: 'ena zeda. sallemli 3al 3ayla !',
+            },
+            arabe: {
+              msa: 'وأنا أيضا. سلم لي على عائلتك!',
+              darija: 'حتى أنا. سلم ليا على العائلة!',
+              tounsi: 'أنا زادة. سلملي على العايلة!',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Promis. On se voit bientôt !',
+            formes: {
+              msa: 'akid. naraki 9ariban !',
+              darija: 'akid. nchoufek 9rib !',
+              tounsi: 'akid. nchoufek 9rib !',
+            },
+            arabe: {
+              msa: 'أكيد. نراك قريبا!',
+              darija: 'أكيد. نشوفك قريب!',
+              tounsi: 'أكيد. نشوفك قريب!',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Bonne journée !',
+            formes: { msa: 'yawman sa3idan !', darija: 'nharek mzyan !', tounsi: 'nharek zin !' },
+            arabe: { msa: 'يوما سعيدا!', darija: 'نهارك مزيان!', tounsi: 'نهارك زين!' },
+          },
+        },
+      ],
       titre: 'Terminer une conversation',
       objectif: 'Prendre congé poliment et promettre de se revoir.',
       contexte:
