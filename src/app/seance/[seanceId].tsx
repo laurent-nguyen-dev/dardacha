@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { Bouton } from '@/components/Bouton';
+import { CorrectionType } from '@/components/CorrectionType';
 import { Introuvable } from '@/components/Introuvable';
 import { Quiz } from '@/components/Quiz';
 import { TableauVocabulaire } from '@/components/TableauVocabulaire';
@@ -49,6 +50,7 @@ export default function PageSeance() {
 
       <Section titre="Défi oral">
         <Text style={styles.texte}>{seance.defiOral}</Text>
+        <CorrectionType key={seance.id} expressions={seance.expressions} />
       </Section>
 
       <Section titre="Vocabulaire comparé">

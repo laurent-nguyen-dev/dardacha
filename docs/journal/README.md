@@ -17,3 +17,4 @@ expliquées en chemin. Fichiers nommés `T<numéro>-<sujet>.md`.
 - [T22 — L'application s'appelle Dardacha](T22-renommage-dardacha.md)
 - [T11 — Normalisation de texte](T11-normalisation.md)
 - [T12 — Quiz de séance](T12-quiz.md)
+- [T13 — Correction type du défi oral](T13-correction-type.md)

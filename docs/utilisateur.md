@@ -27,6 +27,11 @@ quelle variante), expressions supplémentaires, défi oral à faire à voix
 haute, tableau du vocabulaire (fais-le défiler vers la gauche pour voir
 les trois variantes), points à retenir et un mini-dialogue.
 
+## Défi oral
+
+Fais le défi à voix haute, puis touche **« Voir la correction type »** pour
+comparer avec les formules de la séance, dans les trois variantes.
+
 ## Quiz
 
 En fin de séance, **« Vérifie ta compréhension »** pose 4 questions. Touche
