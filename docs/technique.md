@@ -233,13 +233,21 @@ fonctionnel §7. Aucun paramètre interne caché à ce jour.
   génération. L'APK s'installe donc directement et chaque nouvelle version
   remplace la précédente. Une publication sur Google Play exigera une vraie
   clé, gardée en secret (évolution n°8).
-- `versionCode` fixe (1) : Android accepte de réinstaller une version de
-  même numéro par-dessus. À rendre croissant avant toute publication.
 - **Cache Gradle** (`actions/cache`) : dépendances Android, distribution
   Gradle et transformations, gardées entre deux fabrications ; clé calculée
   sur `package-lock.json` et `app.json`. Ne couvre pas la compilation du code
   natif C++ de React Native, qui reste refaite à chaque fois. GitHub partage
   les caches de `main` avec les autres branches, pas l'inverse.
+- **Numéro de version** : `app.json` (`version`, `android.versionCode`) et
+  `package.json`, mis à jour ensemble par `scripts/version.js` ;
+  `versionCode` = majeur × 10 000 + mineur × 100 + correctif, pour qu'une
+  version plus récente ait toujours un numéro plus grand (exigence
+  d'Android pour installer une mise à jour).
+- **Versions numérotées** : workflow `release.yml`, lancé à la main
+  (`workflow_dispatch`) avec un numéro et un commit ; il fabrique l'APK de ce
+  commit avec ce numéro et crée la release `vX.Y.Z` (tag sur ce commit).
+  Le workflow vient toujours de `main`, le code fabriqué du commit choisi :
+  on peut donc publier une version passée. Refus si la release existe déjà.
 - **Publication** : sur `main` uniquement, Release GitHub `apk-test`
   (pré-version), supprimée et recréée à chaque fabrication. Sur toute
   branche, l'APK est conservé en artefact du build, ce qui permet d'essayer

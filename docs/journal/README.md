@@ -33,3 +33,4 @@ expliquées en chemin. Fichiers nommés `T<numéro>-<sujet>.md`.
 - [T30 — Écriture arabe des modules 2 à 8](T30-arabe-modules-2-8.md)
 - [T31 — Mini-dialogue de séance : modèle, contrôle, affichage](T31-dialogue-seance.md)
 - [T32 — Mini-dialogues des 24 séances](T32-dialogues-seances.md)
+- [T33 — Versions numérotées](T33-versions.md)
