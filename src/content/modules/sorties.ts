@@ -10,6 +10,64 @@ export const sorties: Module = {
   seances: [
     {
       id: 'sorties-proposer',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Tu veux venir avec nous ce soir ?',
+            formes: {
+              msa: 'hal touridina an ta2ti ma3ana hatha al-masa2 ?',
+              darija: 'bghiti tji m3ana had l-3chiya ?',
+              tounsi: 't7ebb tji m3ana el-lila ?',
+            },
+            arabe: {
+              msa: 'هل تريدين أن تأتي معنا هذا المساء؟',
+              darija: 'بغيتي تجي معانا هاد العشية؟',
+              tounsi: 'تحب تجي معانا الليلة؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Oui ! On va boire un café ?',
+            formes: {
+              msa: 'na3am ! hal nachrabou 9ahwa ?',
+              darija: 'iyyeh ! nchorbo chi 9ahwa ?',
+              tounsi: 'ey ! nochorbou 9ahwa ?',
+            },
+            arabe: {
+              msa: 'نعم! هل نشرب قهوة؟',
+              darija: 'إيه! نشربو شي قهوة؟',
+              tounsi: 'إي! نشربو قهوة؟',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Et après, on mange ensemble ?',
+            formes: {
+              msa: 'wa ba3da thalik, hal na2koulou ma3an ?',
+              darija: 'w men b3d, nakloo m3a ba3d ?',
+              tounsi: 'w ba3d, nekloo m3a b3adhna ?',
+            },
+            arabe: {
+              msa: 'وبعد ذلك، هل نأكل معا؟',
+              darija: 'ومن بعد، ناكلو مع بعض؟',
+              tounsi: 'وبعد، ناكلو مع بعضنا؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Allons-y !',
+            formes: { msa: 'hayya bina !', darija: 'yallah !', tounsi: 'ayya !' },
+            arabe: { msa: 'هيا بنا!', darija: 'يالله!', tounsi: 'أيا!' },
+          },
+        },
+      ],
       titre: 'Proposer une sortie',
       objectif: "Inviter quelqu'un à sortir, boire un café ou manger.",
       contexte:
@@ -100,6 +158,72 @@ export const sorties: Module = {
     },
     {
       id: 'sorties-repondre',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Tu es libre demain ?',
+            formes: {
+              msa: 'hal anti fargha ghadan ?',
+              darija: 'wach nti fadya ghedda ?',
+              tounsi: 'enti fadhi ghodwa ?',
+            },
+            arabe: {
+              msa: 'هل أنت فارغة غدا؟',
+              darija: 'واش نتي فاضية غدا؟',
+              tounsi: 'انتي فاضي غدوة؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: "Désolée, je ne peux pas, j'ai un empêchement.",
+            formes: {
+              msa: 'ana asifa, la asta6i3, ladayya mani3.',
+              darija: 'sme7 liya, ma n9derch, 3ndi chi 7aja.',
+              tounsi: 'samahni, ma najjamch, 3andi chghol.',
+            },
+            arabe: {
+              msa: 'أنا آسفة، لا أستطيع، لدي مانع.',
+              darija: 'سمح ليا، ما نقدرش، عندي شي حاجة.',
+              tounsi: 'سامحني، ما نجمش، عندي شغل.',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Pas de souci. Le week-end prochain ?',
+            formes: {
+              msa: 'la mouchkila. fi nihayat al-ousbou3 al-9adim ?',
+              darija: 'ma kayn mouchkil. l-wikand jay ?',
+              tounsi: 'ma famma 7atta mochkla. el-weekend ejjey ?',
+            },
+            arabe: {
+              msa: 'لا مشكلة. في نهاية الأسبوع القادم؟',
+              darija: 'ما كاين مشكل. الويكاند الجاي؟',
+              tounsi: 'ما فما حتى مشكلة. الويكاند الجاي؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Pourquoi pas ! Avec plaisir.',
+            formes: {
+              msa: 'wa lima la ! bi-koulli srour.',
+              darija: '3lach la ! b koll ferha.',
+              tounsi: '3lech le ! b koll far7a.',
+            },
+            arabe: {
+              msa: 'ولم لا! بكل سرور.',
+              darija: 'علاش لا! بكل فرحة.',
+              tounsi: 'علاش لا! بكل فرحة.',
+            },
+          },
+        },
+      ],
       titre: 'Accepter ou refuser',
       objectif: 'Dire oui avec plaisir, ou refuser poliment.',
       contexte:
@@ -187,6 +311,60 @@ export const sorties: Module = {
     },
     {
       id: 'sorties-rendez-vous',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'On se retrouve où ?',
+            formes: { msa: 'ayna nalta9i ?', darija: 'fin ntla9aw ?', tounsi: 'win net9ablou ?' },
+            arabe: { msa: 'أين نلتقي؟', darija: 'فين نتلاقاو؟', tounsi: 'وين نتقابلو؟' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Devant le café, vers huit heures.',
+            formes: {
+              msa: 'amama al-ma9ha, nahwa as-sa3a ath-thamina.',
+              darija: '9eddam l-9ahwa, m3a t-tmnya.',
+              tounsi: '9oddem el-9ahwa, m3a ethmanya.',
+            },
+            arabe: {
+              msa: 'أمام المقهى، نحو الساعة الثامنة.',
+              darija: 'قدام القهوة، مع التمنية.',
+              tounsi: 'قدام القهوة، مع الثمنية.',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "D'accord, je t'envoie l'adresse.",
+            formes: {
+              msa: '7asanan, sa-oursilou laki al-3inwan.',
+              darija: 'wakha, ghadi nsifet lik l-adresse.',
+              tounsi: 'behi, taw nab3athlek l-adresse.',
+            },
+            arabe: {
+              msa: 'حسنا، سأرسل لك العنوان.',
+              darija: 'واخا، غادي نصيفط ليك لادريس.',
+              tounsi: 'بهي، توا نبعثلك لادريس.',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Ne sois pas en retard !',
+            formes: {
+              msa: 'la tata2a55ar !',
+              darija: 'ma t3a66elch !',
+              tounsi: 'ma tet2a55arch !',
+            },
+            arabe: { msa: 'لا تتأخر!', darija: 'ما تعطلش!', tounsi: 'ما تتأخرش!' },
+          },
+        },
+      ],
       titre: 'Fixer un rendez-vous',
       objectif: "Se mettre d'accord sur une heure et un lieu.",
       contexte:
