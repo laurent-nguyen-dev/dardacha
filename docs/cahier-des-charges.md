@@ -1,9 +1,11 @@
-# Cahier des charges — Arabe au quotidien (applications mobiles)
+# Cahier des charges — Dardacha (applications mobiles)
 
 Oct 30, 2026 · Laurent Nguyen
 
-Arabe au quotidien est une application mobile, pour Android et iPhone, qui apprend en français l'arabe parlé. Elle compare l'arabe littéraire moderne (MSA), la darija marocaine et le tounsi tunisien, en 24 séances de 5 à 10 minutes.
+Dardacha est une application mobile, pour Android et iPhone, qui apprend en français l'arabe parlé. Elle compare l'arabe littéraire moderne (MSA), la darija marocaine et le tounsi tunisien, en 24 séances de 5 à 10 minutes.
 
+> L'application s'appelle désormais **Dardacha** (« la conversation ») ; la version web s'appelait « Arabe au quotidien ».
+>
 > Ce cahier des charges remplace, pour les applications mobiles, celui de la version web (PWA), archivé dans [archives/cahier-des-charges-pwa.md](archives/cahier-des-charges-pwa.md). Les règles détaillées sont dans le [document fonctionnel](fonctionnel.md), les choix d'implémentation dans le [document technique](technique.md), et les points non tranchés dans les [questions ouvertes](questions-ouvertes.md) (références `Q-xx`). Toute modification de ce cahier se reporte dans ces documents dans le même commit, et inversement.
 
 ## 1. Contexte et objectifs

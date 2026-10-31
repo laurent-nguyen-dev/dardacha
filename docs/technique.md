@@ -1,4 +1,4 @@
-# Document technique — Arabe au quotidien (application mobile)
+# Document technique — Dardacha (application mobile)
 
 Ce document décrit **comment** l'application est construite aujourd'hui. Il
 est appelé à évoluer. Le « quoi » est dans [fonctionnel.md](fonctionnel.md).
@@ -16,7 +16,7 @@ est appelé à évoluer. Le « quoi » est dans [fonctionnel.md](fonctionnel.md)
 | Qualité                   | ESLint (config Expo) + Prettier + `tsc --noEmit`                  | Contrôlés en CI.                                                                                                                                                                                                                    |
 | Distribution v1           | **APK fabriqué par GitHub Actions** (`.github/workflows/apk.yml`) | À chaque push : `expo prebuild` puis `gradlew assembleRelease` sur un serveur GitHub ; l'APK est publié dans la Release de test `apk-test`. Aucun compte Expo ni outil Android sur l'ordinateur de l'utilisateur. iPhone : Expo Go. |
 | Identifiant d'application | `dev.laurentnguyen.dardacha`                                      | Android `package` et iOS `bundleIdentifier`. Modifiable jusqu'à la première publication, définitif ensuite.                                                                                                                         |
-| Nom, couleur              | « Arabe au quotidien », #102a43                                   | Icône provisoire en attendant les icônes définitives.                                                                                                                                                                               |
+| Nom, couleur              | « Dardacha », #102a43                                             | Icône provisoire en attendant les icônes définitives.                                                                                                                                                                               |
 
 Choix arrêtés avec l'utilisateur le 30 oct. 2026 : Expo, parité avec la
 version web, contenu réécrit, distribution de test uniquement.

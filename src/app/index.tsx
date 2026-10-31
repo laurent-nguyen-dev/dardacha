@@ -14,7 +14,7 @@ export default function Menu() {
 
   return (
     <ScrollView contentContainerStyle={styles.liste}>
-      <Stack.Screen options={{ title: 'Arabe au quotidien' }} />
+      <Stack.Screen options={{ title: 'Dardacha' }} />
       {contenuNonRelu && (
         <View style={styles.avertissement}>
           <Text style={styles.texteAvertissement}>

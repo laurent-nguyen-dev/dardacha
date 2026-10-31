@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "Arabe au quotidien",
-    "slug": "arabe-au-quotidien",
+    "name": "Dardacha",
+    "slug": "dardacha",
     "version": "0.1.0",
-    "scheme": "arabeauquotidien",
+    "scheme": "dardacha",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
