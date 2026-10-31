@@ -16,3 +16,4 @@ expliquées en chemin. Fichiers nommés `T<numéro>-<sujet>.md`.
 - [T10 — Module 2](T10-module-2.md)
 - [T22 — L'application s'appelle Dardacha](T22-renommage-dardacha.md)
 - [T11 — Normalisation de texte](T11-normalisation.md)
+- [T12 — Quiz de séance](T12-quiz.md)

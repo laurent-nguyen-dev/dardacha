@@ -4,6 +4,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { Bouton } from '@/components/Bouton';
 import { Introuvable } from '@/components/Introuvable';
+import { Quiz } from '@/components/Quiz';
 import { TableauVocabulaire } from '@/components/TableauVocabulaire';
 import { ExpressionComparee } from '@/components/Variantes';
 import { miniDialogue } from '@/content/dialogue';
@@ -12,8 +13,11 @@ import { seanceSuivante, situerSeance } from '@/logic/parcours';
 import { useActionsProgression, useSeancesTerminees } from '@/services/progression';
 import { couleurs } from '@/theme';
 
-// F03 : page séance, sections dans l'ordre du fonctionnel §3.3. Sections 7
-// (quiz) et 8 (réponse libre) : sprint 3.
+// F03 : page séance, sections dans l'ordre du fonctionnel §3.3.
+//
+// Les sections qui ont un état (quiz, correction type, réponse libre)
+// reçoivent `key={seance.id}` : « Séance suivante » réutilise cet écran, et
+// la clé force React à repartir d'un état neuf pour la nouvelle séance.
 export default function PageSeance() {
   const { seanceId } = useLocalSearchParams<{ seanceId: string }>();
   const terminees = useSeancesTerminees();
@@ -64,6 +68,10 @@ export default function PageSeance() {
             </View>
           </View>
         ))}
+      </Section>
+
+      <Section titre="Vérifie ta compréhension">
+        <Quiz key={seance.id} seanceId={seance.id} />
       </Section>
 
       <View style={styles.actions}>

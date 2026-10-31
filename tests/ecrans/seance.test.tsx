@@ -6,7 +6,7 @@ import { parcours } from '@/content/parcours';
 const seance = parcours[0].seances[0];
 
 describe('Page séance (F03)', () => {
-  it('affiche les sections 1 à 6 dans l’ordre du fonctionnel §3.3', async () => {
+  it('affiche les sections dans l’ordre du fonctionnel §3.3', async () => {
     await renderRouter('./src/app', { initialUrl: `/seance/${seance.id}` });
     const titres = screen.getAllByRole('header').map((element) => element.props.children);
     expect(titres).toEqual([
@@ -17,6 +17,7 @@ describe('Page séance (F03)', () => {
       'Vocabulaire comparé',
       'À retenir',
       'Mini-dialogue',
+      'Vérifie ta compréhension',
     ]);
   });
 

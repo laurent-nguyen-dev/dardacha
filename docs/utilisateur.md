@@ -27,6 +27,14 @@ quelle variante), expressions supplémentaires, défi oral à faire à voix
 haute, tableau du vocabulaire (fais-le défiler vers la gauche pour voir
 les trois variantes), points à retenir et un mini-dialogue.
 
+## Quiz
+
+En fin de séance, **« Vérifie ta compréhension »** pose 4 questions. Touche
+une réponse : elle devient verte si elle est juste, rouge sinon, et la
+correction montre l'expression dans les trois variantes. Une fois les 4
+questions répondues, ton score s'affiche ; **« Refaire avec de nouvelles
+questions »** tire un nouveau quiz.
+
 ## Écouter
 
 Touche **🔊** à côté d'une expression pour l'entendre. L'application
