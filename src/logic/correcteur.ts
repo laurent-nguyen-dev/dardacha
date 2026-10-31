@@ -30,10 +30,12 @@ export function corriger(seance: Seance, texte: string): Correction {
   const reconnues: ExpressionReconnue[] = [];
   const nonReconnues: Expression[] = [];
   for (const expression of comparees) {
+    // Formes latines et, si elles existent, écritures arabes (§3.7).
     const variante = VARIANTES.find((v) =>
-      formesRetenues(expression.formes[v]).some((forme) =>
-        contientEnMotsEntiers(texteNormalise, forme),
-      ),
+      [
+        ...formesRetenues(expression.formes[v]),
+        ...formesRetenues(expression.arabe?.[v] ?? null),
+      ].some((forme) => contientEnMotsEntiers(texteNormalise, forme)),
     );
     if (variante) {
       reconnues.push({ expression, variante });

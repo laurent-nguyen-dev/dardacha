@@ -12,11 +12,14 @@ const seance: Seance = {
   objectif: '',
   contexte: '',
   expressions: [
-    expression('Bonjour', {
-      msa: 'as-salamou 3alaykoum',
-      darija: 'salam 3likoum',
-      tounsi: '3aslema',
-    }),
+    {
+      ...expression('Bonjour', {
+        msa: 'as-salamou 3alaykoum',
+        darija: 'salam 3likoum',
+        tounsi: '3aslema',
+      }),
+      arabe: { msa: 'السلام عليكم', darija: 'سلام عليكم', tounsi: 'عسلامة' },
+    },
     expression('Ça va ?', { msa: 'kayfa 7alouk ?', darija: 'labas ?', tounsi: 'labes ?' }),
     expression('Et toi ?', {
       msa: 'wa anta ? (à un homme) / wa anti ? (à une femme)',
@@ -86,5 +89,14 @@ describe('corriger (F10, fonctionnel §6.2)', () => {
 
   it('ne reconnaît une forme qu’en mots entiers', () => {
     expect(corriger(seance, 'labassss')).toMatchObject({ reconnues: [] });
+  });
+
+  it('reconnaît une réponse en écriture arabe, avec ou sans voyelles et hamza', () => {
+    expect(corriger(seance, 'عَسلامة! السلام عليكم')).toMatchObject({
+      reconnues: [{ expression: { sens: 'Bonjour' }, variante: 'msa' }],
+    });
+    expect(corriger(seance, 'عسلامه')).toMatchObject({
+      reconnues: [{ expression: { sens: 'Bonjour' }, variante: 'tounsi' }],
+    });
   });
 });
