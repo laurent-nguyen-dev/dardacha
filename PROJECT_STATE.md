@@ -13,7 +13,7 @@
   - Cahier des charges de la version web (archive) : [docs/archives/cahier-des-charges-pwa.md](docs/archives/cahier-des-charges-pwa.md)
 - **Règle** : le cahier des charges est une synthèse ; toute modification est
   reportée dans fonctionnel.md / technique.md dans le même commit, et inversement.
-- **Ticket en cours** : T18 — contenu des modules 5 à 8.
+- **Ticket en cours** : T20 — recette (préparation de la fiche ; essais sur téléphone par l'utilisateur).
 - **En attente de l'utilisateur** : essai de l'APK du sprint 3 ; relecture du contenu des modules 1 à 4, du mini-dialogue et du mémo (`src/content/`) ; feu vert pour le sprint 4.
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T17 — Mémo des chiffres SMS](docs/journal/T17-memo.md)
+- **Dernière entrée du journal** : [T18 — Modules 5 à 8](docs/journal/T18-modules-5-8.md)
