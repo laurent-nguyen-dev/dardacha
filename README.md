@@ -29,6 +29,8 @@ tounsi tunisien.**
   | Darija (Maroc)         | vert    | bslama                  |
   | Tounsi (Tunisie)       | orange  | bislema                 |
 
+- **Un mini-dialogue par séance**, entre Karim et Sara, qui met en scène
+  les expressions de la séance.
 - **Exercices** : quiz corrigé, défi oral avec correction type, réponse
   libre avec un correcteur qui repère les expressions de la séance.
 - **Révisions** et **mémo des chiffres SMS** (le 3, le 7, le 9… de

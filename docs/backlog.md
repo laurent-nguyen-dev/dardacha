@@ -87,13 +87,15 @@ autres modules suivent un par un (fonctionnel §3.7).
 
 ## Sprint 6 — Mini-dialogue de séance (version 1.2)
 
+**Terminé le 31 oct. 2026** (contenu non relu par des natifs).
+
 **Jalon** : chaque séance des 8 modules a son propre mini-dialogue, qui met
 en scène sa situation et réemploie ses expressions (fonctionnel §3.8).
 
-| Ticket | Titre                                                    | Dépend de | État    |
-| ------ | -------------------------------------------------------- | --------- | ------- |
-| T31    | Modèle, contrôle et affichage du mini-dialogue de séance | —         | fait    |
-| T32    | Mini-dialogues des 24 séances (un commit par module)     | T31       | à faire |
+| Ticket | Titre                                                    | Dépend de | État |
+| ------ | -------------------------------------------------------- | --------- | ---- |
+| T31    | Modèle, contrôle et affichage du mini-dialogue de séance | —         | fait |
+| T32    | Mini-dialogues des 24 séances (un commit par module)     | T31       | fait |
 
 ## Hors sprint
 
