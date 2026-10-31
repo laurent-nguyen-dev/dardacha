@@ -12,6 +12,9 @@
 - **Modèles d'issue** : « Correction de contenu » (séance, expression,
   variante, forme proposée, locuteur natif ou non) et « Bogue ».
 - **SECURITY.md** : signalement privé des vulnérabilités.
+- **CODE_OF_CONDUCT.md** : adaptation française et courte du Contributor
+  Covenant 2.1 (attribution CC BY 4.0 incluse), avec une règle propre au
+  projet : aucune variante de l'arabe ni aucune région n'est dénigrée.
 - **Workflow APK** : la version de test publique n'est plus publiée que
   depuis `main` ; les autres branches gardent leur APK en artefact de
   build. Sans cela, n'importe quelle branche de contribution aurait

@@ -46,5 +46,7 @@ licence est compatible avec la licence MIT du projet (docs/technique.md §7).
 
 ## Respect
 
-Échanges courtois et bienveillants, en particulier envers les personnes qui
-débutent en arabe ou en programmation.
+Toute participation au projet suit le [code de conduite](CODE_OF_CONDUCT.md) :
+échanges courtois et bienveillants, en particulier envers les personnes qui
+débutent en arabe ou en programmation, et respect de toutes les variantes de
+l'arabe.

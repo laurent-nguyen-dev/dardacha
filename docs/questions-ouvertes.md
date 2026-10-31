@@ -17,10 +17,6 @@ Aucune.
 - Recette sur iPhone : pas d'appareil disponible. À jouer avant toute
   publication sur l'App Store (Expo Go suffit, ou un build iOS de test).
 
-## Avant l'ouverture en open source
-
-- Code de conduite (Contributor Covenant) : en ajouter un ?
-
 ## Tranchées
 
 | Date       | Réf. | Question                            | Décision                                                                                                           | Reportée dans                      |
@@ -54,3 +50,4 @@ Aucune.
 | 2026-10-31 | —    | Recette v1                          | Validée sur Android ; iPhone reporté faute d'appareil                                                              | recette.md                         |
 | 2026-10-31 | —    | Licence du contenu pédagogique      | MIT, comme le code                                                                                                 | LICENSE, README                    |
 | 2026-10-31 | —    | Auteure du cahier des charges web   | Mention « @Emma » remplacée par « Marie-Emmanuelle Pichard »                                                       | archives/cahier-des-charges-pwa.md |
+| 2026-10-31 | —    | Code de conduite                    | Ajouté : adaptation française du Contributor Covenant 2.1                                                          | CODE_OF_CONDUCT.md                 |

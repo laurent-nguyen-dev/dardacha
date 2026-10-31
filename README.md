@@ -72,6 +72,8 @@ Les contributions sont les bienvenues, en particulier :
   code à écrire — voir [ajouter-un-module.md](docs/ajouter-un-module.md).
 - **Code** : voir [CONTRIBUTING.md](CONTRIBUTING.md).
 
+Toute participation suit le [code de conduite](CODE_OF_CONDUCT.md).
+
 ## Développer
 
 Prérequis : Node.js 22 ou plus récent.
