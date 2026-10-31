@@ -5,7 +5,7 @@
 // applique ce contrôle au vrai contenu : un module mal formé fait échouer
 // la CI avant d'arriver dans l'application.
 import { config } from '../config';
-import { type Expression, type Module, type Seance, VARIANTES } from './types';
+import { type Expression, type Module, type Replique, type Seance, VARIANTES } from './types';
 
 const FORMAT_IDENTIFIANT = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
@@ -83,6 +83,10 @@ function validerSeance(seance: Seance): string[] {
     erreurs.push(...validerEcritureArabe(expression, prefixe));
   }
 
+  if (seance.dialogue) {
+    erreurs.push(...validerDialogue(seance.dialogue, prefixe));
+  }
+
   // Les premières expressions de base sont reprises dans les révisions :
   // elles doivent être complètes (fonctionnel §3.5, règle de contenu).
   for (const expression of seance.expressions.slice(0, config.revisionsParSeance)) {
@@ -102,6 +106,34 @@ function validerExpressionDeRevision(expression: Expression, prefixe: string): s
       erreurs.push(`${debut} ne doit pas commencer par un chiffre en ${variante}.`);
     }
   }
+  return erreurs;
+}
+
+/** Mini-dialogue de séance, facultatif (fonctionnel §3.8, technique §2.3). */
+function validerDialogue(dialogue: readonly Replique[], prefixe: string): string[] {
+  const erreurs: string[] = [];
+  const { dialogueRepliquesMin: min, dialogueRepliquesMax: max } = config;
+  if (dialogue.length < min || dialogue.length > max) {
+    erreurs.push(
+      `${prefixe} : le mini-dialogue a ${dialogue.length} répliques (attendu : ${min} à ${max}).`,
+    );
+  }
+  dialogue.forEach(({ locuteur, expression }, index) => {
+    const replique = `${prefixe} : la réplique ${index + 1} du mini-dialogue`;
+    const attendu = index % 2 === 0 ? 'A' : 'B';
+    if (locuteur !== attendu) {
+      erreurs.push(`${replique} doit être dite par ${attendu}.`);
+    }
+    for (const variante of VARIANTES) {
+      if (!aUneForme(expression.formes[variante])) {
+        erreurs.push(`${replique} n'a pas de forme en ${variante}.`);
+      }
+      if (!expression.arabe?.[variante]) {
+        erreurs.push(`${replique} n'a pas d'écriture arabe en ${variante}.`);
+      }
+    }
+    erreurs.push(...validerEcritureArabe(expression, `${prefixe} (mini-dialogue)`));
+  });
   return erreurs;
 }
 

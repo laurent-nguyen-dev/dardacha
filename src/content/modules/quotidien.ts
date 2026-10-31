@@ -10,6 +10,60 @@ export const quotidien: Module = {
   seances: [
     {
       id: 'quotidien-journee',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Tu te lèves tôt ?',
+            formes: {
+              msa: 'hal tastay9i6ina moubakkiran ?',
+              darija: 'wach katnodi bekri ?',
+              tounsi: 'tnodh bekri ?',
+            },
+            arabe: { msa: 'هل تستيقظين مبكرا؟', darija: 'واش كتنوضي بكري؟', tounsi: 'تنوض بكري؟' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Oui, je me lève tôt et je prends le petit-déjeuner.',
+            formes: {
+              msa: 'na3am, astay9i6ou moubakkiran wa atanawalou al-if6ar.',
+              darija: 'iyyeh, kannod bekri w kanfe6er.',
+              tounsi: 'ey, nnodh bekri w nfa6ar.',
+            },
+            arabe: {
+              msa: 'نعم، أستيقظ مبكرا وأتناول الفطور.',
+              darija: 'إيه، كننوض بكري وكنفطر.',
+              tounsi: 'إي، ننوض بكري ونفطر.',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Et le soir ?',
+            formes: { msa: 'wa fi al-masa2 ?', darija: 'w f l-3chiya ?', tounsi: 'w fil 3chiya ?' },
+            arabe: { msa: 'وفي المساء؟', darija: 'وف العشية؟', tounsi: 'وفي العشية؟' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Je rentre à la maison : je suis occupée toute la journée.',
+            formes: {
+              msa: 'arji3ou ila al-bayt : ana machghoula 6awala al-yawm.',
+              darija: 'kanrje3 l dar : ana mchghoula n-nhar kamel.',
+              tounsi: 'nrawa7 lel dar : ena mechghoula en-nhar el-kol.',
+            },
+            arabe: {
+              msa: 'أرجع إلى البيت، أنا مشغولة طوال اليوم.',
+              darija: 'كنرجع للدار، أنا مشغولة النهار كامل.',
+              tounsi: 'نروح للدار، أنا مشغولة النهار الكل.',
+            },
+          },
+        },
+      ],
       titre: 'Raconter sa journée',
       objectif: "Dire ce qu'on fait le matin, l'après-midi et le soir.",
       contexte:
@@ -72,6 +126,64 @@ export const quotidien: Module = {
     },
     {
       id: 'quotidien-travail',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Tu travailles où ?',
+            formes: { msa: 'ayna ta3malin ?', darija: 'fin kat5dmi ?', tounsi: 'win ta5dem ?' },
+            arabe: { msa: 'أين تعملين؟', darija: 'فين كتخدمي؟', tounsi: 'وين تخدم؟' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Je travaille dans un bureau. Et toi ?',
+            formes: {
+              msa: 'a3malou fi maktab. wa anta ?',
+              darija: 'kan5dem f biro. w nta ?',
+              tounsi: 'na5dem fi biro. w enti ?',
+            },
+            arabe: {
+              msa: 'أعمل في مكتب. وأنت؟',
+              darija: 'كنخدم ف بيرو. ونتا؟',
+              tounsi: 'نخدم في بيرو. وانتي؟',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Je travaille à la maison. Le travail est fatigant ?',
+            formes: {
+              msa: 'a3malou fi al-bayt. hal al-3amal mout3ib ?',
+              darija: 'kan5dem f dar. wach l-5edma kat3ayyi ?',
+              tounsi: 'na5dem fil dar. el-5edma ta3ba ?',
+            },
+            arabe: {
+              msa: 'أعمل في البيت. هل العمل متعب؟',
+              darija: 'كنخدم ف الدار. واش الخدمة كتعيي؟',
+              tounsi: 'نخدم في الدار. الخدمة تاعبة؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: "Un peu. Aujourd'hui, j'ai une réunion avec le patron.",
+            formes: {
+              msa: '9alilan. al-yawm ladayya ijtima3 ma3a al-moudir.',
+              darija: 'chwiya. lyoum 3ndi ijtima3 m3a l-patron.',
+              tounsi: 'chwaya. lyoum 3andi réunion m3a el-patron.',
+            },
+            arabe: {
+              msa: 'قليلا. اليوم لدي اجتماع مع المدير.',
+              darija: 'شوية. اليوم عندي اجتماع مع الباطرون.',
+              tounsi: 'شوية. اليوم عندي ريونيون مع الباطرون.',
+            },
+          },
+        },
+      ],
       titre: 'Parler de son travail',
       objectif: "Dire où l'on travaille et comment ça se passe.",
       contexte:
@@ -126,6 +238,72 @@ export const quotidien: Module = {
     },
     {
       id: 'quotidien-habitudes',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Tu bois du café chaque matin ?',
+            formes: {
+              msa: 'hal tachrabina al-9ahwa koulla saba7 ?',
+              darija: 'wach katchrbi l-9ahwa koll sba7 ?',
+              tounsi: 'tochrob 9ahwa koll sbe7 ?',
+            },
+            arabe: {
+              msa: 'هل تشربين القهوة كل صباح؟',
+              darija: 'واش كتشربي القهوة كل صباح؟',
+              tounsi: 'تشرب قهوة كل صباح؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Oui, et je fais du sport le week-end.',
+            formes: {
+              msa: 'na3am, wa oumarisou ar-riyada fi 3ou6lat nihayat al-ousbou3.',
+              darija: 'iyyeh, w kandir sport f l-wikand.',
+              tounsi: 'ey, w na3mel sport fil weekend.',
+            },
+            arabe: {
+              msa: 'نعم، وأمارس الرياضة في عطلة نهاية الأسبوع.',
+              darija: 'إيه، وكندير السبور ف الويكاند.',
+              tounsi: 'إي، ونعمل سبور في الويكاند.',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "Moi, jamais ! Mais j'aime lire.",
+            formes: {
+              msa: 'ana, abadan ! lakin ou7ibbou al-9ira2a.',
+              darija: 'ana, 3emmerni ! walakin kanbghi n9ra.',
+              tounsi: 'ena, 3omri ! ama n7eb na9ra.',
+            },
+            arabe: {
+              msa: 'أنا، أبدا! لكن أحب القراءة.',
+              darija: 'أنا، عمرني! ولكن كنبغي نقرا.',
+              tounsi: 'أنا، عمري! أما نحب نقرا.',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Moi aussi, parfois.',
+            formes: {
+              msa: 'wa ana aydan, a7yanan.',
+              darija: '7ta ana, chi merrat.',
+              tounsi: 'ena zeda, sa3at.',
+            },
+            arabe: {
+              msa: 'وأنا أيضا، أحيانا.',
+              darija: 'حتى أنا، شي مرات.',
+              tounsi: 'أنا زادة، ساعات.',
+            },
+          },
+        },
+      ],
       titre: 'Parler de ses habitudes',
       objectif: "Dire ce qu'on fait souvent, parfois ou jamais.",
       contexte:

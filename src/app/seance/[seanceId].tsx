@@ -72,7 +72,7 @@ export default function PageSeance() {
       </Section>
 
       <Section titre="Mini-dialogue">
-        {miniDialogue.map((replique, index) => (
+        {(seance.dialogue ?? miniDialogue).map((replique, index) => (
           <View key={index} style={styles.replique}>
             <Text style={styles.locuteur}>{replique.locuteur} :</Text>
             <View style={styles.contenuReplique}>

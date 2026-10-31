@@ -10,6 +10,56 @@ export const salutations: Module = {
   seances: [
     {
       id: 'salutations-bonjour',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Bonjour !',
+            formes: {
+              msa: 'as-salamou 3alaykoum !',
+              darija: 'salam 3likoum !',
+              tounsi: '3aslema !',
+            },
+            arabe: { msa: 'السلام عليكم!', darija: 'سلام عليكم!', tounsi: 'عسلامة!' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Bonjour (réponse) !',
+            formes: {
+              msa: 'wa 3alaykoum as-salam !',
+              darija: 'wa 3likoum salam !',
+              tounsi: 'w 3likoum salam !',
+            },
+            arabe: { msa: 'وعليكم السلام!', darija: 'وعليكم السلام!', tounsi: 'وعليكم السلام!' },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Bonne journée, au revoir !',
+            formes: {
+              msa: 'yawman sa3idan, ma3a as-salama !',
+              darija: 'nharek mzyan, bslama !',
+              tounsi: 'nharek zin, bislema !',
+            },
+            arabe: {
+              msa: 'يوما سعيدا، مع السلامة!',
+              darija: 'نهارك مزيان، بسلامة!',
+              tounsi: 'نهارك زين، بسلامة!',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Au revoir !',
+            formes: { msa: 'ma3a as-salama !', darija: 'bslama !', tounsi: 'bislema !' },
+            arabe: { msa: 'مع السلامة!', darija: 'بسلامة!', tounsi: 'بسلامة!' },
+          },
+        },
+      ],
       titre: 'Dire bonjour et au revoir',
       objectif: "Saluer quelqu'un et prendre congé, du matin au soir.",
       contexte:
@@ -78,6 +128,72 @@ export const salutations: Module = {
     },
     {
       id: 'salutations-se-presenter',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "Je m'appelle Karim. Et toi, comment tu t'appelles ?",
+            formes: {
+              msa: 'ismi karim. wa anti, ma ismouki ?',
+              darija: 'smiti karim. w nti, chnou smitek ?',
+              tounsi: 'esmi karim. w enti, chesmek ?',
+            },
+            arabe: {
+              msa: 'اسمي كريم. وأنت، ما اسمك؟',
+              darija: 'سميتي كريم. ونتي، شنو سميتك؟',
+              tounsi: 'اسمي كريم. وانتي، شسمك؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: "Je m'appelle Sara. Enchantée !",
+            formes: {
+              msa: 'ismi sara. tacharrafna !',
+              darija: 'smiti sara. mtcharfin !',
+              tounsi: 'esmi sara. mitcharfin !',
+            },
+            arabe: {
+              msa: 'اسمي سارة. تشرفنا!',
+              darija: 'سميتي سارة. متشرفين!',
+              tounsi: 'اسمي سارة. متشرفين!',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Je suis français. Et toi ?',
+            formes: {
+              msa: 'ana faransi. wa anti ?',
+              darija: 'ana fransawi. w nti ?',
+              tounsi: 'ena fransawi. w enti ?',
+            },
+            arabe: {
+              msa: 'أنا فرنسي. وأنت؟',
+              darija: 'أنا فرنساوي. ونتي؟',
+              tounsi: 'أنا فرنساوي. وانتي؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: "Moi aussi, et j'habite à Paris.",
+            formes: {
+              msa: 'wa ana aydan, wa askounou fi baris.',
+              darija: '7ta ana, w kansken f paris.',
+              tounsi: 'ena zeda, w noskon fi paris.',
+            },
+            arabe: {
+              msa: 'وأنا أيضا، وأسكن في باريس.',
+              darija: 'حتى أنا، وكنسكن ف باريس.',
+              tounsi: 'أنا زادة، ونسكن في باريس.',
+            },
+          },
+        },
+      ],
       titre: 'Se présenter',
       objectif: 'Dire son prénom, sa nationalité et sa ville.',
       contexte:
@@ -158,6 +274,56 @@ export const salutations: Module = {
     },
     {
       id: 'salutations-faire-connaissance',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "Tu viens d'où ?",
+            formes: { msa: 'min ayna anti ?', darija: 'mnin nti ?', tounsi: 'mnin enti ?' },
+            arabe: { msa: 'من أين أنت؟', darija: 'منين نتي؟', tounsi: 'منين انتي؟' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Je viens de France. Et toi ?',
+            formes: {
+              msa: 'ana min faransa. wa anta ?',
+              darija: 'ana men fransa. w nta ?',
+              tounsi: 'ena men fransa. w enti ?',
+            },
+            arabe: {
+              msa: 'أنا من فرنسا. وأنت؟',
+              darija: 'أنا من فرنسا. ونتا؟',
+              tounsi: 'أنا من فرنسا. وانتي؟',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "Moi aussi. Qu'est-ce que tu fais dans la vie ?",
+            formes: {
+              msa: 'wa ana aydan. ma 3amalouki ?',
+              darija: '7ta ana. ach kat5dmi ?',
+              tounsi: 'ena zeda. chnowa ta5dem ?',
+            },
+            arabe: {
+              msa: 'وأنا أيضا. ما عملك؟',
+              darija: 'حتى أنا. أش كتخدمي؟',
+              tounsi: 'أنا زادة. شنوة تخدم؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Je suis étudiante.',
+            formes: { msa: 'ana 6aliba.', darija: 'ana kan9ra.', tounsi: 'ena na9ra.' },
+            arabe: { msa: 'أنا طالبة.', darija: 'أنا كنقرا.', tounsi: 'أنا نقرا.' },
+          },
+        },
+      ],
       titre: 'Faire connaissance',
       objectif: "Demander à quelqu'un d'où il vient, où il habite et ce qu'il fait.",
       contexte:

@@ -11,6 +11,60 @@ export const sms: Module = {
   seances: [
     {
       id: 'sms-chiffres',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Merci beaucoup !',
+            formes: {
+              msa: 'choukran jazilan !',
+              darija: 'choukran bzaf !',
+              tounsi: 'ya3tik sa77a barcha !',
+            },
+            arabe: { msa: 'شكرا جزيلا!', darija: 'شكرا بزاف!', tounsi: 'يعطيك الصحة برشا!' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'De rien. Bonne chance demain !',
+            formes: {
+              msa: '3afwan. bi-ttawfi9 ghadan !',
+              darija: 'bla jmil. lah ywaf9ek ghedda !',
+              tounsi: 'bla jmil. rabbi ywaf9ek ghodwa !',
+            },
+            arabe: {
+              msa: 'عفوا. بالتوفيق غدا!',
+              darija: 'بلا جميل. الله يوفقك غدا!',
+              tounsi: 'بلا جميل. ربي يوفقك غدوة!',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "Inchallah. Tu m'envoies l'adresse, s'il te plaît ?",
+            formes: {
+              msa: 'in cha2a allah. toursilina li al-3inwan, min fadliki ?',
+              darija: 'inchallah. tsifti liya l-adresse, 3afak ?',
+              tounsi: 'inchallah. tab3athli l-adresse, 3aychek ?',
+            },
+            arabe: {
+              msa: 'إن شاء الله. ترسلين لي العنوان، من فضلك؟',
+              darija: 'إن شاء الله. تصيفطي ليا لادريس، عافاك؟',
+              tounsi: 'إن شاء الله. تبعثلي لادريس، عيشك؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: "D'accord !",
+            formes: { msa: '7asanan !', darija: 'wakha !', tounsi: 'behi !' },
+            arabe: { msa: 'حسنا!', darija: 'واخا!', tounsi: 'بهي!' },
+          },
+        },
+      ],
       titre: 'Lire les chiffres du chat',
       objectif: 'Reconnaître les chiffres qui remplacent des lettres arabes.',
       contexte:
@@ -67,6 +121,64 @@ export const sms: Module = {
     },
     {
       id: 'sms-messages-courts',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Tu es où ?',
+            formes: { msa: 'ayna anti ?', darija: 'fin nti ?', tounsi: 'win enti ?' },
+            arabe: { msa: 'أين أنت؟', darija: 'فين نتي؟', tounsi: 'وين انتي؟' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: "Je suis en retard, j'arrive tout de suite !",
+            formes: {
+              msa: 'ana mouta2a55ira, ana 9adima 7alan !',
+              darija: 't3a66elt, ana jaya daba !',
+              tounsi: 't2a55ert, ena jeya taw !',
+            },
+            arabe: {
+              msa: 'أنا متأخرة، أنا قادمة حالا!',
+              darija: 'تعطلت، أنا جاية دابا!',
+              tounsi: 'تأخرت، أنا جاية توا!',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "Pas de souci, je t'attends.",
+            formes: {
+              msa: 'la mouchkila, ana anta6irouki.',
+              darija: 'ma kayn mouchkil, kantsennak.',
+              tounsi: 'ma famma 7atta mochkla, nestannak.',
+            },
+            arabe: {
+              msa: 'لا مشكلة، أنا أنتظرك.',
+              darija: 'ما كاين مشكل، كنتسناك.',
+              tounsi: 'ما فما حتى مشكلة، نستناك.',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: "D'accord, à tout à l'heure !",
+            formes: {
+              msa: '7asanan, ila al-li9a2 !',
+              darija: 'wakha, nchoufek men b3d !',
+              tounsi: 'behi, nchoufek ba3d !',
+            },
+            arabe: {
+              msa: 'حسنا، إلى اللقاء!',
+              darija: 'واخا، نشوفك من بعد!',
+              tounsi: 'بهي، نشوفك بعد!',
+            },
+          },
+        },
+      ],
       titre: 'Écrire un message court',
       objectif: "Envoyer un message simple : où es-tu, j'arrive, je suis en retard.",
       contexte:
@@ -147,6 +259,60 @@ export const sms: Module = {
     },
     {
       id: 'sms-reagir',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "J'ai trouvé du travail !",
+            formes: { msa: 'wajadtou 3amalan !', darija: 'l9it l-5edma !', tounsi: 'l9it 5edma !' },
+            arabe: { msa: 'وجدت عملا!', darija: 'لقيت الخدمة!', tounsi: 'لقيت خدمة!' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: "C'est vrai ? Félicitations !",
+            formes: {
+              msa: 'hal hatha sa7i7 ? mabrouk !',
+              darija: 'bse7 ? mabrouk !',
+              tounsi: 'bel7a9 ? mabrouk !',
+            },
+            arabe: { msa: 'هل هذا صحيح؟ مبروك!', darija: 'بصح؟ مبروك!', tounsi: 'بالحق؟ مبروك!' },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Merci ! On fête ça ce soir ?',
+            formes: {
+              msa: 'choukran ! hal na7tafil hatha al-masa2 ?',
+              darija: 'choukran ! n7tafloo had l-3chiya ?',
+              tounsi: 'ya3tik sa77a ! n7tflou el-lila ?',
+            },
+            arabe: {
+              msa: 'شكرا! هل نحتفل هذا المساء؟',
+              darija: 'شكرا! نحتافلو هاد العشية؟',
+              tounsi: 'يعطيك الصحة! نحتفلو الليلة؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: "Super, je suis d'accord !",
+            formes: {
+              msa: 'moumtaz, ana mouwafi9a !',
+              darija: 'zwin, ana mtaf9a !',
+              tounsi: 'mriguel, ena mouwafe9a !',
+            },
+            arabe: {
+              msa: 'ممتاز، أنا موافقة!',
+              darija: 'زوين، أنا متافقة!',
+              tounsi: 'مريقل، أنا موافقة!',
+            },
+          },
+        },
+      ],
       titre: 'Réagir dans une conversation',
       objectif: "Répondre vite : super, pas de souci, c'est vrai ?, félicitations.",
       contexte:

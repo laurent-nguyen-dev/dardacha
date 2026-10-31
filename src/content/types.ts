@@ -49,6 +49,11 @@ export interface Seance {
   aRetenir: string;
   /** Consigne de la réponse libre « À toi de jouer ». */
   aToiDeJouer: string;
+  /**
+   * Mini-dialogue propre à la séance, facultatif (version 1.2, fonctionnel
+   * §3.8). Sans lui, la séance affiche le dialogue commun.
+   */
+  dialogue?: Replique[];
 }
 
 export interface Module {

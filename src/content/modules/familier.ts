@@ -10,6 +10,60 @@ export const familier: Module = {
   seances: [
     {
       id: 'familier-reagir',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "J'ai raté mon train !",
+            formes: {
+              msa: 'fatani al-9i6ar !',
+              darija: 'ma l7a9tch t-tran !',
+              tounsi: 'fatni et-tran !',
+            },
+            arabe: { msa: 'فاتني القطار!', darija: 'ما لحقتش التران!', tounsi: 'فاتني التران!' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Quel dommage ! Sérieux ?',
+            formes: {
+              msa: 'ya lil-asaf ! 7a99an ?',
+              darija: '5sara ! wach bse7 ?',
+              tounsi: 'ya 5sara ! 7a9 rabbi ?',
+            },
+            arabe: {
+              msa: 'يا للأسف! حقا؟',
+              darija: 'خسارة! واش بصح؟',
+              tounsi: 'يا خسارة! حق ربي؟',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "Oui, mais quelqu'un m'a emmené en voiture !",
+            formes: {
+              msa: 'na3am, lakin a7aduhum awsalani bi-sayyaratihi !',
+              darija: 'iyyeh, walakin chi wa7ed wsselni f tomobilo !',
+              tounsi: 'ey, ama wa7ed wsselni fi karhabtou !',
+            },
+            arabe: {
+              msa: 'نعم، لكن أحدهم أوصلني بسيارته!',
+              darija: 'إيه، ولكن شي واحد وصلني ف طوموبيلو!',
+              tounsi: 'إي، أما واحد وصلني في كرهبتو!',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Tant mieux !',
+            formes: { msa: 'a7san !', darija: '7sen !', tounsi: 'a7sen !' },
+            arabe: { msa: 'أحسن!', darija: 'حسن!', tounsi: 'أحسن!' },
+          },
+        },
+      ],
       titre: 'Réagir à une nouvelle',
       objectif: "Exprimer la surprise, l'admiration ou la déception.",
       contexte:
@@ -89,6 +143,68 @@ export const familier: Module = {
     },
     {
       id: 'familier-emotions',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Tu es triste ?',
+            formes: {
+              msa: 'hal anti 7azina ?',
+              darija: 'wach nti 7zina ?',
+              tounsi: 'enti 7zina ?',
+            },
+            arabe: { msa: 'هل أنت حزينة؟', darija: 'واش نتي حزينة؟', tounsi: 'انتي حزينة؟' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: "Non, je suis stressée. J'en ai marre !",
+            formes: {
+              msa: 'la, ana moutawattira. la9ad sa2imtou !',
+              darija: 'la, ana mstressia. 3yit !',
+              tounsi: 'le, ena mstressia. mallit !',
+            },
+            arabe: {
+              msa: 'لا، أنا متوترة. لقد سئمت!',
+              darija: 'لا، أنا مسطريسية. عييت!',
+              tounsi: 'لا، أنا مسطريسية. مليت!',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "Ne t'inquiète pas, ça va passer.",
+            formes: {
+              msa: 'la ta9la9i, sata7assanou al-oumour.',
+              darija: 'ma t9le9ch, ghadi ydouz kolchi.',
+              tounsi: 'ma t9alla9ch, taw t3addi.',
+            },
+            arabe: {
+              msa: 'لا تقلقي، ستتحسن الأمور.',
+              darija: 'ما تقلقش، غادي يدوز كلشي.',
+              tounsi: 'ما تقلقش، توا تعدي.',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Merci, ça me fait plaisir.',
+            formes: {
+              msa: 'choukran, hatha yous3idouni.',
+              darija: 'choukran, ferre7tni.',
+              tounsi: 'ya3tik sa77a, far7tni.',
+            },
+            arabe: {
+              msa: 'شكرا، هذا يسعدني.',
+              darija: 'شكرا، فرحتني.',
+              tounsi: 'يعطيك الصحة، فرحتني.',
+            },
+          },
+        },
+      ],
       titre: "Dire ce qu'on ressent",
       objectif: "Dire qu'on est content, triste, énervé ou stressé.",
       contexte:
@@ -183,6 +299,56 @@ export const familier: Module = {
     },
     {
       id: 'familier-plaisanter',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Tu es drôle !',
+            formes: { msa: 'anti moud7ika !', darija: 'nti mdo77ka !', tounsi: 'enti tda77ek !' },
+            arabe: { msa: 'أنت مضحكة!', darija: 'نتي مضحكة!', tounsi: 'انتي تضحك!' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Je plaisante ! On rigole bien.',
+            formes: {
+              msa: 'ana amza7 ! nad7akou kathiran.',
+              darija: 'kand7ek ! kand7kou bzaf.',
+              tounsi: 'nod7ek ! nod7kou barcha.',
+            },
+            arabe: {
+              msa: 'أنا أمزح! نضحك كثيرا.',
+              darija: 'كنضحك! كنضحكو بزاف.',
+              tounsi: 'نضحك! نضحكو برشا.',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "C'est trop drôle !",
+            formes: {
+              msa: 'hatha moud7ik jiddan !',
+              darija: 'kayd77ek bzaf !',
+              tounsi: 'yod7ek barcha !',
+            },
+            arabe: { msa: 'هذا مضحك جدا!', darija: 'كيضحك بزاف!', tounsi: 'يضحك برشا!' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Arrête, tu me fais rire !',
+            formes: {
+              msa: 'tawa99af, tod7ikouni !',
+              darija: 'baraka, katd7ekni !',
+              tounsi: 'yezzi, tad7akni !',
+            },
+            arabe: { msa: 'توقف، تضحكني!', darija: 'باراكا، كتضحكني!', tounsi: 'يزي، تضحكني!' },
+          },
+        },
+      ],
       titre: 'Plaisanter et taquiner',
       objectif: "Rire, taquiner gentiment, détendre l'atmosphère.",
       contexte:

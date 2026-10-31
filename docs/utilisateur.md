@@ -25,8 +25,8 @@ Le contenu est en cours de relecture par des locuteurs natifs.
 Chaque séance se lit de haut en bas : objectif, contexte (quand utiliser
 quelle variante), expressions supplémentaires, défi oral à faire à voix
 haute, tableau du vocabulaire (fais-le défiler vers la gauche pour voir
-les trois variantes), points à retenir, mini-dialogue, quiz et réponse
-libre.
+les trois variantes), points à retenir, un mini-dialogue entre Karim et
+Sara qui met en scène la séance, quiz et réponse libre.
 
 ## Défi oral
 

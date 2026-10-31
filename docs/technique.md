@@ -145,6 +145,15 @@ Exigence : ajouter un module = ajouter du contenu, sans toucher aux écrans ni
   hamza portée retirées par la décomposition Unicode, ـ retiré, ى → ي,
   ة → ه) ; les formes arabes passent par les mêmes `formesRetenues`.
 
+### 2.3 Mini-dialogue de séance (version 1.2, fonctionnel §3.8)
+
+- **Modèle** : champ facultatif `dialogue?: Replique[]` sur `Seance` ; la
+  page séance affiche `seance.dialogue ?? miniDialogue` (dialogue commun).
+- **Contrôle automatique** : nombre de répliques entre
+  `config.dialogueRepliquesMin` et `config.dialogueRepliquesMax`, locuteurs
+  A et B en alternance en commençant par A, formes et écriture arabe
+  présentes dans les trois variantes, écriture arabe valide (§2.2).
+
 ## 3. Correspondance avec la version web
 
 | Version web                                       | Version mobile                                      |

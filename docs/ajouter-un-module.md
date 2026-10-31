@@ -62,6 +62,20 @@ Champ `arabe` de chaque expression, une entrée par variante qui a une forme :
 - `npm test` vérifie : lettres arabes uniquement, variante qui a bien une
   forme latine, même nombre d'alternatives.
 
+## Mini-dialogue de séance (facultatif)
+
+Champ `dialogue` de la séance : 3 à 6 répliques, A et B en alternance en
+commençant par A, chacune complète dans les trois variantes avec son
+écriture arabe. Sans ce champ, la séance affiche le dialogue commun.
+
+```ts
+dialogue: [
+  { locuteur: 'A', expression: { sens: '…', formes: { msa: '…', darija: '…', tounsi: '…' }, arabe: { msa: '…', darija: '…', tounsi: '…' } } },
+  { locuteur: 'B', expression: { … } },
+  { locuteur: 'A', expression: { … } },
+],
+```
+
 ## Retirer ou déplacer un module
 
 Déplacer = changer sa place dans le registre (la progression est conservée).

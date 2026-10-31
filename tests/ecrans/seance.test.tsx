@@ -37,7 +37,7 @@ describe('Page séance (F03)', () => {
       supplementaire.formes.tounsi!,
       base.sens,
       base.formes.msa!,
-      miniDialogue[2].expression.formes.tounsi!,
+      (seance.dialogue ?? miniDialogue)[2].expression.formes.tounsi!,
     ]) {
       expect(screen.getAllByText(texte).length).toBeGreaterThan(0);
     }

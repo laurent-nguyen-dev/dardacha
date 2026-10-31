@@ -10,6 +10,68 @@ export const nouvelles: Module = {
   seances: [
     {
       id: 'nouvelles-ca-va',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Salut, ça va ?',
+            formes: {
+              msa: 'marhaban, kayfa 7alouki ?',
+              darija: 'salam, labas ?',
+              tounsi: '3aslema, labes ?',
+            },
+            arabe: { msa: 'مرحبا، كيف حالك؟', darija: 'سلام، لاباس؟', tounsi: 'عسلامة، لاباس؟' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Ça va, Dieu merci. Et toi, ça va ?',
+            formes: {
+              msa: 'bi5ayr, al-7amdou lillah. wa anta, kayfa 7alouk ?',
+              darija: 'labas, l-7amdoullah. w nta, labas ?',
+              tounsi: 'labes, el-7amdoullah. w enti, labes ?',
+            },
+            arabe: {
+              msa: 'بخير، الحمد لله. وأنت، كيف حالك؟',
+              darija: 'لاباس، الحمد لله. ونتا، لاباس؟',
+              tounsi: 'لاباس، الحمد لله. وانتي، لاباس؟',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Tout va bien. Quoi de neuf ?',
+            formes: {
+              msa: 'koullou chay2 bi5ayr. ma al-jadid ?',
+              darija: 'kolchi mzyan. ach 5barek ?',
+              tounsi: 'kol chay behi. chniya l-a5bar ?',
+            },
+            arabe: {
+              msa: 'كل شيء بخير. ما الجديد؟',
+              darija: 'كلشي مزيان. أش خبارك؟',
+              tounsi: 'كل شي بهي. شنية الأخبار؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Rien de spécial. Ça fait longtemps !',
+            formes: {
+              msa: 'la jadid. lam arak mounthou zaman !',
+              darija: 'walou. hadi modda ma chefnak !',
+              tounsi: 'ma famma chay. malla ghiba !',
+            },
+            arabe: {
+              msa: 'لا جديد. لم أرك منذ زمان!',
+              darija: 'والو. هادي مدة ما شفناك!',
+              tounsi: 'ما فما شي. ملا غيبة!',
+            },
+          },
+        },
+      ],
       titre: 'Demander comment ça va',
       objectif: "Demander à quelqu'un comment il va et ce qu'il y a de neuf.",
       contexte:
@@ -90,6 +152,64 @@ export const nouvelles: Module = {
     },
     {
       id: 'nouvelles-repondre',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Comment vas-tu ?',
+            formes: { msa: 'kayfa al-7al ?', darija: 'kidayra ?', tounsi: 'chniya a7walek ?' },
+            arabe: { msa: 'كيف الحال؟', darija: 'كيدايرة؟', tounsi: 'شنية أحوالك؟' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Pas très bien, je suis fatiguée.',
+            formes: {
+              msa: 'lastou bi5ayr, ana mout3aba.',
+              darija: 'machi mzyan bzaf, ana 3iyyana.',
+              tounsi: 'mouch behi barcha, ena ta3bana.',
+            },
+            arabe: {
+              msa: 'لست بخير، أنا متعبة.',
+              darija: 'ماشي مزيان بزاف، أنا عيانة.',
+              tounsi: 'موش بهي برشا، أنا تعبانة.',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Tu as beaucoup de travail ?',
+            formes: {
+              msa: 'hal 3indaki 3amal kathir ?',
+              darija: '3ndek bzaf dial l-5edma ?',
+              tounsi: '3andek barcha 5edma ?',
+            },
+            arabe: {
+              msa: 'هل عندك عمل كثير؟',
+              darija: 'عندك بزاف ديال الخدمة؟',
+              tounsi: 'عندك برشا خدمة؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Oui. Ça va aller, si Dieu le veut.',
+            formes: {
+              msa: 'na3am. sa-yakounou koullou chay2 bi5ayr, in cha2a allah.',
+              darija: 'iyyeh. ghadi ykoun kolchi mzyan, inchallah.',
+              tounsi: 'ey. bech ykoun kol chay behi, inchallah.',
+            },
+            arabe: {
+              msa: 'نعم. سيكون كل شيء بخير، إن شاء الله.',
+              darija: 'إيه. غادي يكون كلشي مزيان، إن شاء الله.',
+              tounsi: 'إي. باش يكون كل شي بهي، إن شاء الله.',
+            },
+          },
+        },
+      ],
       titre: 'Répondre et nuancer',
       objectif: 'Dire que ça va très bien, moyennement ou pas très bien.',
       contexte:
@@ -173,6 +293,72 @@ export const nouvelles: Module = {
     },
     {
       id: 'nouvelles-proches',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Comment va la famille ?',
+            formes: {
+              msa: 'kayfa al-3a2ila ?',
+              darija: 'kidayra l-3a2ila ?',
+              tounsi: 'chniya a7wel el-3ayla ?',
+            },
+            arabe: {
+              msa: 'كيف العائلة؟',
+              darija: 'كيدايرة العائلة؟',
+              tounsi: 'شنية أحوال العايلة؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Tout le monde va bien, Dieu merci. Et tes parents ?',
+            formes: {
+              msa: 'al-jami3 bi5ayr, al-7amdou lillah. wa walidak ?',
+              darija: 'kolchi bi5ir, l-7amdoullah. w l-walidin dialek ?',
+              tounsi: 'lkol labes, el-7amdoullah. w el-waldin ?',
+            },
+            arabe: {
+              msa: 'الجميع بخير، الحمد لله. ووالداك؟',
+              darija: 'كلشي بخير، الحمد لله. والواليدين ديالك؟',
+              tounsi: 'الكل لاباس، الحمد لله. والوالدين؟',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Ils vont bien. Ils te passent le bonjour.',
+            formes: {
+              msa: 'houm bi5ayr. yousallimouna 3alayki.',
+              darija: 'bi5ir. kaysellmou 3lik.',
+              tounsi: 'labes. ysallmou 3lik.',
+            },
+            arabe: {
+              msa: 'هم بخير. يسلمون عليك.',
+              darija: 'بخير. كيسلمو عليك.',
+              tounsi: 'لاباس. يسلمو عليك.',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Passe-leur le bonjour. Que Dieu te garde !',
+            formes: {
+              msa: 'balligh-houm salami. allah ya7fadhouk !',
+              darija: 'sellem 3lihoum. lla y7fdek !',
+              tounsi: 'sallemli 3lihom. rabbi y5allik !',
+            },
+            arabe: {
+              msa: 'بلغهم سلامي. الله يحفظك!',
+              darija: 'سلم عليهم. الله يحفظك!',
+              tounsi: 'سلملي عليهم. ربي يخليك!',
+            },
+          },
+        },
+      ],
       titre: 'Prendre des nouvelles des proches',
       objectif: 'Demander comment va la famille et transmettre ses salutations.',
       contexte:
