@@ -4,7 +4,7 @@
 
 - **Projet** : Dardacha (anciennement « Arabe au quotidien »), application mobile native (Android + iPhone),
   portage de la version web (PWA) existante.
-- **Phase actuelle** : 2 — construction. Sprint 3 « Exercices » terminé ; sprint 4 « Révisions, mémo, livraison de test » à lancer ([backlog](docs/backlog.md)).
+- **Phase actuelle** : 2 — construction, sprint 4 « Révisions, mémo, livraison de test » ([backlog](docs/backlog.md)).
 - **Documents**
   - Fonctionnel : [docs/fonctionnel.md](docs/fonctionnel.md)
   - Technique : [docs/technique.md](docs/technique.md)
@@ -13,7 +13,7 @@
   - Cahier des charges de la version web (archive) : [docs/archives/cahier-des-charges-pwa.md](docs/archives/cahier-des-charges-pwa.md)
 - **Règle** : le cahier des charges est une synthèse ; toute modification est
   reportée dans fonctionnel.md / technique.md dans le même commit, et inversement.
-- **Ticket en cours** : aucun. Sprint 3 terminé ; prochain : sprint 4 (révisions, mémo, modules 5 à 8, recette).
+- **Ticket en cours** : T17 — mémo des chiffres SMS (F12).
 - **En attente de l'utilisateur** : essai de l'APK du sprint 3 ; relecture du contenu des modules 1 à 4, du mini-dialogue et du mémo (`src/content/`) ; feu vert pour le sprint 4.
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T15 — Modules 3 et 4, données du mémo](docs/journal/T15-modules-3-4-memo.md)
+- **Dernière entrée du journal** : [T16 — Révisions](docs/journal/T16-revisions.md)

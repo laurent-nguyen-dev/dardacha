@@ -20,3 +20,4 @@ expliquées en chemin. Fichiers nommés `T<numéro>-<sujet>.md`.
 - [T13 — Correction type du défi oral](T13-correction-type.md)
 - [T14 — Correcteur de réponse libre](T14-correcteur.md)
 - [T15 — Modules 3 et 4, données du mémo](T15-modules-3-4-memo.md)
+- [T16 — Révisions](T16-revisions.md)

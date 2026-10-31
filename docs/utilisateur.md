@@ -61,6 +61,11 @@ Si un message indique qu'aucune voix arabe n'est installée :
   installer les données vocales « Arabe ».
 - **iPhone** : Réglages › Accessibilité › Contenu énoncé › Voix › Arabe.
 
+## Révisions
+
+**Révisions** (barre du bas) rassemble, module par module, deux expressions
+clés de chaque séance, dans les trois variantes, avec l'écoute.
+
 ## Progression
 
 - En bas d'une séance, **« Marquer comme terminée »** enregistre la séance.
