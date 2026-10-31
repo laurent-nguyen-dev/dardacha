@@ -22,6 +22,11 @@ export const sorties: Module = {
             darija: 'bghiti tji m3ana ?',
             tounsi: 't7ebb tji m3ana ?',
           },
+          arabe: {
+            msa: 'هل تريد أن تأتي معنا؟ / هل تريدين أن تأتي معنا؟',
+            darija: 'بغيتي تجي معانا؟',
+            tounsi: 'تحب تجي معانا؟',
+          },
         },
         {
           sens: 'On va boire un café ?',
@@ -30,6 +35,7 @@ export const sorties: Module = {
             darija: 'nchorbo chi 9ahwa ?',
             tounsi: 'nochorbou 9ahwa ?',
           },
+          arabe: { msa: 'هل نشرب قهوة؟', darija: 'نشربو شي قهوة؟', tounsi: 'نشربو قهوة؟' },
         },
         {
           sens: 'Allons-y !',
@@ -38,6 +44,7 @@ export const sorties: Module = {
             darija: 'yallah !',
             tounsi: 'ayya !',
           },
+          arabe: { msa: 'هيا بنا!', darija: 'يالله!', tounsi: 'أيا!' },
         },
         {
           sens: 'Ce soir',
@@ -46,6 +53,7 @@ export const sorties: Module = {
             darija: 'had l-3chiya',
             tounsi: 'el-lila',
           },
+          arabe: { msa: 'هذا المساء', darija: 'هاد العشية', tounsi: 'الليلة' },
         },
       ],
       supplementaires: [
@@ -56,6 +64,7 @@ export const sorties: Module = {
             darija: 'nakloo m3a ba3d ?',
             tounsi: 'nekloo m3a b3adhna ?',
           },
+          arabe: { msa: 'هل نأكل معا؟', darija: 'ناكلو مع بعض؟', tounsi: 'ناكلو مع بعضنا؟' },
         },
         {
           sens: 'Tu es libre demain ?',
@@ -64,6 +73,11 @@ export const sorties: Module = {
             darija: 'wach nta fadi ghedda ? (à un homme) / wach nti fadya ghedda ? (à une femme)',
             tounsi: 'enti fadhi ghodwa ?',
           },
+          arabe: {
+            msa: 'هل أنت فارغ غدا؟ / هل أنت فارغة غدا؟',
+            darija: 'واش نتا فاضي غدا؟ / واش نتي فاضية غدا؟',
+            tounsi: 'انتي فاضي غدوة؟',
+          },
         },
         {
           sens: 'Le week-end prochain',
@@ -71,6 +85,11 @@ export const sorties: Module = {
             msa: 'fi nihayat al-ousbou3 al-9adim',
             darija: 'l-wikand jay',
             tounsi: 'el-weekend ejjey',
+          },
+          arabe: {
+            msa: 'في نهاية الأسبوع القادم',
+            darija: 'الويكاند الجاي',
+            tounsi: 'الويكاند الجاي',
           },
         },
       ],
@@ -93,6 +112,7 @@ export const sorties: Module = {
             darija: 'b koll ferha',
             tounsi: 'b koll far7a',
           },
+          arabe: { msa: 'بكل سرور', darija: 'بكل فرحة', tounsi: 'بكل فرحة' },
         },
         {
           sens: 'Désolé(e), je ne peux pas',
@@ -100,6 +120,11 @@ export const sorties: Module = {
             msa: 'ana asif, la asta6i3 (homme) / ana asifa, la asta6i3 (femme)',
             darija: 'sme7 liya, ma n9derch',
             tounsi: 'samahni, ma najjamch',
+          },
+          arabe: {
+            msa: 'أنا آسف، لا أستطيع / أنا آسفة، لا أستطيع',
+            darija: 'سمح ليا، ما نقدرش',
+            tounsi: 'سامحني، ما نجمش',
           },
         },
         {
@@ -109,6 +134,11 @@ export const sorties: Module = {
             darija: 'merra o5ra, inchallah',
             tounsi: 'marra o5ra, inchallah',
           },
+          arabe: {
+            msa: 'مرة أخرى، إن شاء الله',
+            darija: 'مرة أخرى، إن شاء الله',
+            tounsi: 'مرة أخرى، إن شاء الله',
+          },
         },
         {
           sens: 'Pourquoi pas !',
@@ -117,6 +147,7 @@ export const sorties: Module = {
             darija: '3lach la !',
             tounsi: '3lech le !',
           },
+          arabe: { msa: 'ولم لا!', darija: 'علاش لا!', tounsi: 'علاش لا!' },
         },
       ],
       supplementaires: [
@@ -127,6 +158,7 @@ export const sorties: Module = {
             darija: '3ndi chi 7aja',
             tounsi: '3andi chghol',
           },
+          arabe: { msa: 'لدي مانع', darija: 'عندي شي حاجة', tounsi: 'عندي شغل' },
         },
         {
           sens: 'Bonne idée !',
@@ -135,6 +167,7 @@ export const sorties: Module = {
             darija: 'fikra zwina !',
             tounsi: 'fekra behya !',
           },
+          arabe: { msa: 'فكرة جيدة!', darija: 'فكرة زوينة!', tounsi: 'فكرة بهية!' },
         },
         {
           sens: 'Je ne sais pas encore',
@@ -143,6 +176,7 @@ export const sorties: Module = {
             darija: 'ma3reftch mazal',
             tounsi: 'ma na3rafch mazelt',
           },
+          arabe: { msa: 'لا أعرف بعد', darija: 'ما عرفتش مازال', tounsi: 'ما نعرفش مازلت' },
         },
       ],
       defiOral:
@@ -165,6 +199,7 @@ export const sorties: Module = {
             darija: 'm3a ach7al ?',
             tounsi: 'm3a 9addech ?',
           },
+          arabe: { msa: 'في أي ساعة؟', darija: 'مع أشحال؟', tounsi: 'مع قداش؟' },
         },
         {
           sens: 'On se retrouve où ?',
@@ -173,6 +208,7 @@ export const sorties: Module = {
             darija: 'fin ntla9aw ?',
             tounsi: 'win net9ablou ?',
           },
+          arabe: { msa: 'أين نلتقي؟', darija: 'فين نتلاقاو؟', tounsi: 'وين نتقابلو؟' },
         },
         {
           sens: 'Devant le café',
@@ -181,6 +217,7 @@ export const sorties: Module = {
             darija: '9eddam l-9ahwa',
             tounsi: '9oddem el-9ahwa',
           },
+          arabe: { msa: 'أمام المقهى', darija: 'قدام القهوة', tounsi: 'قدام القهوة' },
         },
         {
           sens: "À tout à l'heure",
@@ -189,6 +226,7 @@ export const sorties: Module = {
             darija: 'nchoufek men b3d',
             tounsi: 'nchoufek ba3d',
           },
+          arabe: { msa: 'إلى اللقاء قريبا', darija: 'نشوفك من بعد', tounsi: 'نشوفك بعد' },
         },
       ],
       supplementaires: [
@@ -199,6 +237,7 @@ export const sorties: Module = {
             darija: 'm3a t-tmnya',
             tounsi: 'm3a ethmanya',
           },
+          arabe: { msa: 'نحو الساعة الثامنة', darija: 'مع التمنية', tounsi: 'مع الثمنية' },
         },
         {
           sens: "Je t'envoie l'adresse",
@@ -206,6 +245,11 @@ export const sorties: Module = {
             msa: 'sa-oursilou laka al-3inwan',
             darija: 'ghadi nsifet lik l-adresse',
             tounsi: 'taw nab3athlek l-adresse',
+          },
+          arabe: {
+            msa: 'سأرسل لك العنوان',
+            darija: 'غادي نصيفط ليك لادريس',
+            tounsi: 'توا نبعثلك لادريس',
           },
         },
         {
@@ -215,6 +259,7 @@ export const sorties: Module = {
             darija: 'ma t3a66elch !',
             tounsi: 'ma tet2a55arch !',
           },
+          arabe: { msa: 'لا تتأخر! / لا تتأخري!', darija: 'ما تعطلش!', tounsi: 'ما تتأخرش!' },
         },
       ],
       defiOral:
