@@ -55,24 +55,25 @@ du défi oral et un correcteur de réponse libre ; quatre modules de contenu.
 
 ## Sprint 4 — Révisions, mémo, livraison de test
 
-**Développement terminé le 31 oct. 2026** ; reste la recette sur téléphone
-([fiche de recette](recette.md)).
+**Terminé le 31 oct. 2026.** Recette validée sur Android ; iPhone reporté
+faute d'appareil ([fiche de recette](recette.md)).
 
 **Jalon** : application complète en parité avec la version web (15
 fonctions, 8 modules), prête pour la recette sur téléphone.
 
-| Ticket | Titre                                       | Dépend de | État                                   |
-| ------ | ------------------------------------------- | --------- | -------------------------------------- |
-| T16    | Révisions (F11)                             | T09       | fait                                   |
-| T17    | Mémo des chiffres SMS et son quiz (F12)     | T09, T15  | fait                                   |
-| T18    | Contenu des modules 5 à 8                   | T03       | fait                                   |
-| T20    | Recette sur Android et iPhone (13 critères) | tout      | fiche prête ; essais par l'utilisateur |
+| Ticket | Titre                                       | Dépend de | État                            |
+| ------ | ------------------------------------------- | --------- | ------------------------------- |
+| T16    | Révisions (F11)                             | T09       | fait                            |
+| T17    | Mémo des chiffres SMS et son quiz (F12)     | T09, T15  | fait                            |
+| T18    | Contenu des modules 5 à 8                   | T03       | fait                            |
+| T20    | Recette sur Android et iPhone (13 critères) | tout      | Android validé ; iPhone reporté |
 
 ## Hors sprint
 
 | Ticket | Titre                                      | État |
 | ------ | ------------------------------------------ | ---- |
 | T22    | Renommage de l'application en « Dardacha » | fait |
+| T23    | Préparation à l'ouverture en open source   | fait |
 
 ## Plus tard
 

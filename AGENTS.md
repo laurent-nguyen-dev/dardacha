@@ -1,5 +1,5 @@
 > Avant toute chose : lire `PROJECT_STATE.md` (état du projet) et `docs/technique.md`.
-> Dans l'environnement cloud, `expo install` se lance avec `EXPO_OFFLINE=1` (docs/technique.md §1.2).
+> Sans accès aux serveurs d'Expo (réseau filtré), lancer `expo install` avec `EXPO_OFFLINE=1` (docs/technique.md §1.2).
 
 This is an Expo/React Native mobile application. Prioritize mobile-first patterns, performance, and cross-platform compatibility.
 

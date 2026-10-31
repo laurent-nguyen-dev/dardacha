@@ -1,0 +1,46 @@
+name: Correction de contenu
+description: Signaler une expression fausse, peu naturelle ou mal traduite.
+title: 'Contenu : '
+labels: ['contenu']
+body:
+  - type: input
+    id: seance
+    attributes:
+      label: Module et séance
+      placeholder: 'Module 2 · Répondre et nuancer'
+    validations:
+      required: true
+  - type: input
+    id: expression
+    attributes:
+      label: Expression concernée (sens en français)
+      placeholder: 'Pas mal'
+    validations:
+      required: true
+  - type: dropdown
+    id: variante
+    attributes:
+      label: Variante
+      options: [MSA, darija, tounsi, traduction française]
+    validations:
+      required: true
+  - type: input
+    id: actuelle
+    attributes:
+      label: Forme actuelle
+  - type: input
+    id: proposee
+    attributes:
+      label: Forme proposée
+    validations:
+      required: true
+  - type: textarea
+    id: explication
+    attributes:
+      label: Explication (facultatif)
+      description: Usage, région, registre, accord masculin/féminin…
+  - type: dropdown
+    id: natif
+    attributes:
+      label: Êtes-vous locuteur natif de cette variante ?
+      options: ['Oui', 'Non']

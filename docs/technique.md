@@ -5,18 +5,18 @@ est appelé à évoluer. Le « quoi » est dans [fonctionnel.md](fonctionnel.md)
 
 ## 1. Choix de la pile
 
-| Domaine                   | Choix                                                             | Pourquoi                                                                                                                                                                                                                            |
-| ------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Framework                 | **Expo SDK 58** (React Native 0.88)                               | Un seul code pour Android et iPhone ; compilation iOS dans le cloud (EAS Build), donc sans Mac ; proche du JavaScript de la version web. Versions vérifiées sur npm le 30 oct. 2026.                                                |
-| Langage                   | **TypeScript** (mode `strict`)                                    | Le typage du contenu (modules, séances, expressions) attrape les erreurs de saisie dès la compilation.                                                                                                                              |
-| Navigation                | **expo-router**                                                   | Navigation par fichiers, gère le retour système Android et le geste retour iOS.                                                                                                                                                     |
-| Voix                      | **expo-speech**                                                   | Utilise la synthèse vocale native (Android TTS, iOS AVSpeechSynthesizer).                                                                                                                                                           |
-| Stockage local            | **@react-native-async-storage/async-storage**                     | Stockage clé/valeur persistant, suffisant pour une liste de séances terminées.                                                                                                                                                      |
-| Tests                     | **Jest** (preset `jest-expo`) + **React Native Testing Library**  | Tests unitaires de la logique (quiz, correcteur, progression) et tests d'écrans.                                                                                                                                                    |
-| Qualité                   | ESLint (config Expo) + Prettier + `tsc --noEmit`                  | Contrôlés en CI.                                                                                                                                                                                                                    |
-| Distribution v1           | **APK fabriqué par GitHub Actions** (`.github/workflows/apk.yml`) | À chaque push : `expo prebuild` puis `gradlew assembleRelease` sur un serveur GitHub ; l'APK est publié dans la Release de test `apk-test`. Aucun compte Expo ni outil Android sur l'ordinateur de l'utilisateur. iPhone : Expo Go. |
-| Identifiant d'application | `dev.laurentnguyen.dardacha`                                      | Android `package` et iOS `bundleIdentifier`. Modifiable jusqu'à la première publication, définitif ensuite.                                                                                                                         |
-| Nom, couleur              | « Dardacha », #102a43                                             | Icône provisoire en attendant les icônes définitives.                                                                                                                                                                               |
+| Domaine                   | Choix                                                             | Pourquoi                                                                                                                                                                                                                                                                                    |
+| ------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Framework                 | **Expo SDK 58** (React Native 0.88)                               | Un seul code pour Android et iPhone ; compilation iOS dans le cloud (EAS Build), donc sans Mac ; proche du JavaScript de la version web. Versions vérifiées sur npm le 30 oct. 2026.                                                                                                        |
+| Langage                   | **TypeScript** (mode `strict`)                                    | Le typage du contenu (modules, séances, expressions) attrape les erreurs de saisie dès la compilation.                                                                                                                                                                                      |
+| Navigation                | **expo-router**                                                   | Navigation par fichiers, gère le retour système Android et le geste retour iOS.                                                                                                                                                                                                             |
+| Voix                      | **expo-speech**                                                   | Utilise la synthèse vocale native (Android TTS, iOS AVSpeechSynthesizer).                                                                                                                                                                                                                   |
+| Stockage local            | **@react-native-async-storage/async-storage**                     | Stockage clé/valeur persistant, suffisant pour une liste de séances terminées.                                                                                                                                                                                                              |
+| Tests                     | **Jest** (preset `jest-expo`) + **React Native Testing Library**  | Tests unitaires de la logique (quiz, correcteur, progression) et tests d'écrans.                                                                                                                                                                                                            |
+| Qualité                   | ESLint (config Expo) + Prettier + `tsc --noEmit`                  | Contrôlés en CI.                                                                                                                                                                                                                                                                            |
+| Distribution v1           | **APK fabriqué par GitHub Actions** (`.github/workflows/apk.yml`) | À chaque push : `expo prebuild` puis `gradlew assembleRelease` sur un serveur GitHub ; sur `main`, l'APK est publié dans la Release de test `apk-test` (artefact de build sur les autres branches). Aucun compte Expo ni outil Android sur l'ordinateur de l'utilisateur. iPhone : Expo Go. |
+| Identifiant d'application | `dev.laurentnguyen.dardacha`                                      | Android `package` et iOS `bundleIdentifier`. Modifiable jusqu'à la première publication, définitif ensuite.                                                                                                                                                                                 |
+| Nom, couleur              | « Dardacha », #102a43                                             | Icône provisoire en attendant les icônes définitives.                                                                                                                                                                                                                                       |
 
 Choix arrêtés avec l'utilisateur le 30 oct. 2026 : Expo, parité avec la
 version web, contenu réécrit, distribution de test uniquement.
@@ -36,14 +36,15 @@ des versions compatibles avec le SDK), installées par `expo install`.
 - **TypeScript 6** ne charge plus automatiquement les paquets `@types/*` :
   `tsconfig.json` déclare `"types": ["jest"]`.
 
-### 1.2 Accès réseau de l'environnement de développement cloud
+### 1.2 Travailler sans accès aux serveurs d'Expo
 
-Le site docs.expo.dev et les serveurs d'Expo (api.expo.dev) sont bloqués
-dans l'environnement cloud où l'assistant travaille ; le registre npm est
-accessible. Conséquences : `expo install` y tourne avec `EXPO_OFFLINE=1`
-(il prend alors les versions de `bundledNativeModules.json`, ce qui est le
-comportement voulu), et les API sont vérifiées dans le code source des
-paquets installés plutôt que dans la documentation en ligne.
+Dans un environnement au réseau filtré où le registre npm est accessible
+mais pas les serveurs d'Expo (api.expo.dev, docs.expo.dev) — c'était le cas
+de l'environnement de développement de la version 1 —, lancer
+`expo install` avec `EXPO_OFFLINE=1` : il prend alors les versions de
+`bundledNativeModules.json`, c'est-à-dire exactement les versions
+compatibles avec le SDK. Les API se vérifient alors dans le code source
+des paquets installés (`node_modules/…/build/*.d.ts`).
 
 ## 2. Architecture prévue
 
@@ -205,10 +206,11 @@ fonctionnel §7. Aucun paramètre interne caché à ce jour.
   clé, gardée en secret (évolution n°8).
 - `versionCode` fixe (1) : Android accepte de réinstaller une version de
   même numéro par-dessus. À rendre croissant avant toute publication.
-- **Publication** : Release GitHub `apk-test` (pré-version), supprimée et
-  recréée à chaque fabrication ; l'APK est aussi conservé en artefact du
-  build. Le workflow a la permission d'écrire dans le dépôt (Releases)
-  uniquement pour cela.
+- **Publication** : sur `main` uniquement, Release GitHub `apk-test`
+  (pré-version), supprimée et recréée à chaque fabrication. Sur toute
+  branche, l'APK est conservé en artefact du build, ce qui permet d'essayer
+  une branche sans écraser la version proposée au public. Le workflow a la
+  permission d'écrire dans le dépôt (Releases) uniquement pour cela.
 
 ## 10. Intégration continue
 

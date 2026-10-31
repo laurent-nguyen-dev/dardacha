@@ -33,6 +33,13 @@ milieu du parcours sans perte de progression. Sur téléphone, il suffit de
 vérifier qu'une progression faite avec un ancien APK est toujours là après
 installation du nouveau.
 
+## Résultats
+
+| Date       | Plateforme                | Résultat                                                                                                              |
+| ---------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| 2026-10-31 | Android (APK du sprint 4) | Validé par l'utilisateur : « ça marche bien ». Aucun écart signalé. Le détail critère par critère n'a pas été relevé. |
+| —          | iPhone                    | **Non jouée** : pas d'iPhone disponible. Reportée (voir questions-ouvertes.md).                                       |
+
 ## Remarques
 
 _(Écarts constatés, avec le téléphone, le modèle et la version du système.)_

@@ -1,6 +1,12 @@
 {
   "name": "dardacha",
   "version": "0.1.0",
+  "description": "Apprendre l'arabe parlé du quotidien en français : MSA, darija marocaine et tounsi tunisien comparés.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laurent-nguyen-dev/dardacha.git"
+  },
+  "author": "Laurent Nguyen",
   "main": "expo-router/entry",
   "private": true,
   "license": "MIT",
