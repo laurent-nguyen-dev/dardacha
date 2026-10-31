@@ -19,6 +19,11 @@ logique** : c'est uniquement du contenu (fonctionnel.md §3.6).
 4. **Lancer `npm test`.** Le contrôle du contenu signale toute erreur de
    structure, en français, avec la séance concernée.
 
+## Options
+
+- `lienMemo: true` : les séances du module affichent un bouton vers le mémo
+  des chiffres SMS (utilisé par le module « SMS et WhatsApp »).
+
 ## Règles vérifiées automatiquement
 
 Les valeurs chiffrées viennent de `src/config.ts`.

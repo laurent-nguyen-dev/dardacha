@@ -12,6 +12,7 @@ import { ExpressionComparee } from '@/components/Variantes';
 import { miniDialogue } from '@/content/dialogue';
 import { parcours } from '@/content/parcours';
 import { seanceSuivante, situerSeance } from '@/logic/parcours';
+import { genererQuiz } from '@/logic/quiz';
 import { useActionsProgression, useSeancesTerminees } from '@/services/progression';
 import { couleurs } from '@/theme';
 
@@ -49,6 +50,14 @@ export default function PageSeance() {
         ))}
       </Section>
 
+      {module.lienMemo && (
+        <Bouton
+          libelle="🔢 Mémo des chiffres SMS"
+          variante="secondaire"
+          onPress={() => router.push('/memo')}
+        />
+      )}
+
       <Section titre="Défi oral">
         <Text style={styles.texte}>{seance.defiOral}</Text>
         <CorrectionType key={seance.id} expressions={seance.expressions} />
@@ -74,7 +83,11 @@ export default function PageSeance() {
       </Section>
 
       <Section titre="Vérifie ta compréhension">
-        <Quiz key={seance.id} seanceId={seance.id} />
+        <Quiz
+          key={seance.id}
+          generer={() => genererQuiz(parcours, seance.id)}
+          correction={(question) => <ExpressionComparee expression={question.expression} />}
+        />
       </Section>
 
       <Section titre="À toi de jouer">

@@ -54,6 +54,8 @@ export interface Module {
   description: string;
   /** Relu par des locuteurs natifs (fonctionnel §3.5). */
   reluParNatif: boolean;
+  /** Ses séances affichent un lien vers le mémo des chiffres SMS (F12). */
+  lienMemo?: boolean;
   seances: Seance[];
 }
 

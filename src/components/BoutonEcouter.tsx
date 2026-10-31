@@ -11,15 +11,17 @@ interface Props {
   variante: Variante;
   /** Version courte (icône seule), pour les cellules du tableau. */
   compact?: boolean;
+  /** La forme est en écriture arabe : elle est lue telle quelle (mémo, §6.3). */
+  ecritureArabe?: boolean;
 }
 
 // F07 : « 🔊 Écouter », une forme dans une variante.
-export function BoutonEcouter({ forme, variante, compact = false }: Props) {
+export function BoutonEcouter({ forme, variante, compact = false, ecritureArabe = false }: Props) {
   return (
     <Pressable
       accessibilityRole="button"
       accessibilityLabel={`Écouter en ${NOMS_VARIANTES[variante]} : ${forme}`}
-      onPress={() => lire(texteALire(forme), variante)}
+      onPress={() => lire(ecritureArabe ? forme : texteALire(forme), variante)}
       hitSlop={8}
       style={({ pressed }) => [styles.bouton, pressed && styles.presse]}
     >

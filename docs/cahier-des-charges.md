@@ -91,7 +91,7 @@ L'application a 15 fonctions, réparties en navigation, apprentissage, exercices
 | F09  | Correction type du défi oral | Bouton qui affiche ou masque 4 formules de la séance, chacune dans les trois variantes.                                                                                                                                 |
 | F10  | Correcteur de réponse libre  | Analyse le texte saisi dans « À toi de jouer », liste les expressions de la séance reconnues (avec leur variante) et propose jusqu'à 3 expressions manquantes.                                                          |
 | F11  | Révisions                    | Écran de fiches, 2 expressions par séance (48 fiches au départ), avec les trois variantes, la traduction et trois boutons d'écoute.                                                                                     |
-| F12  | Mémo des chiffres SMS        | Tableau des chiffres 2, 3, 5, 6, 7, 9 : lettre arabe, son, prononciation, exemples avec écoute en écriture arabe. Quiz de 5 questions corrigées. Accès aussi depuis les séances du module 3.                            |
+| F12  | Mémo des chiffres SMS        | Tableau des chiffres 2, 3, 5, 6, 7, 9 : lettre arabe, son, prononciation, exemples avec écoute en écriture arabe. Quiz de 5 questions corrigées. Accès aussi depuis les séances du module « SMS et WhatsApp ».          |
 | F13  | Réinitialisation             | Efface la progression après une confirmation, puis revient au menu.                                                                                                                                                     |
 | F14  | Installation                 | L'application s'installe sur Android et sur iPhone avec son nom et son icône, s'ouvre en plein écran, en orientation portrait.                                                                                          |
 | F15  | Hors ligne                   | Tout le contenu est embarqué dans l'application : aucune fonction ne nécessite de connexion, y compris à la première ouverture.                                                                                         |
@@ -174,7 +174,7 @@ L'application est réceptionnée quand les 13 contrôles suivants réussissent, 
 - [ ] 5\. Marquer une séance comme terminée met à jour la barre, le module et la page des séances ; la progression est conservée après fermeture de l'application ; la réinitialisation remet tout à zéro après confirmation.
 - [ ] 6\. Le bouton « Séance suivante » enchaîne les séances et les modules, et est désactivé à la fin.
 - [ ] 7\. Les 48 fiches de révision initiales s'affichent sans erreur.
-- [ ] 8\. Le mémo s'ouvre depuis la barre et depuis le module 3 ; son quiz corrige chaque réponse.
+- [ ] 8\. Le mémo s'ouvre depuis la barre et depuis le module « SMS et WhatsApp » ; son quiz corrige chaque réponse.
 - [ ] 9\. Avec une voix arabe installée, le son est audible dans les trois variantes ; sans voix arabe, un message s'affiche et rien ne plante.
 - [ ] 10\. L'application s'installe et apparaît avec son icône parmi les autres applications.
 - [ ] 11\. En mode avion, dès la première ouverture, toutes les fonctions marchent.

@@ -12,6 +12,7 @@ import {
 } from '@/content/types';
 import { aUneForme } from '@/content/validation';
 
+import { type Alea, melanger, tirer } from './hasard';
 import { situerSeance } from './parcours';
 
 export interface Question {
@@ -25,8 +26,6 @@ export interface Question {
   choix: string[];
   bonneReponse: string;
 }
-
-type Alea = () => number;
 
 export function genererQuiz(
   parcours: readonly Module[],
@@ -132,18 +131,4 @@ function composerChoix(
     if (!choix.includes(candidat)) choix.push(candidat);
   }
   return melanger(choix, alea);
-}
-
-function tirer<T>(liste: readonly T[], alea: Alea): T {
-  return liste[Math.floor(alea() * liste.length)];
-}
-
-/** Mélange de Fisher-Yates, sur une copie. */
-function melanger<T>(liste: readonly T[], alea: Alea): T[] {
-  const copie = [...liste];
-  for (let i = copie.length - 1; i > 0; i--) {
-    const j = Math.floor(alea() * (i + 1));
-    [copie[i], copie[j]] = [copie[j], copie[i]];
-  }
-  return copie;
 }

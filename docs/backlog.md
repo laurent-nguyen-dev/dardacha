@@ -61,7 +61,7 @@ fonctions, 8 modules), prête pour la recette sur téléphone.
 | Ticket | Titre                                       | Dépend de | État    |
 | ------ | ------------------------------------------- | --------- | ------- |
 | T16    | Révisions (F11)                             | T09       | fait    |
-| T17    | Mémo des chiffres SMS et son quiz (F12)     | T09, T15  | à faire |
+| T17    | Mémo des chiffres SMS et son quiz (F12)     | T09, T15  | fait    |
 | T18    | Contenu des modules 5 à 8                   | T03       | à faire |
 | T20    | Recette sur Android et iPhone (13 critères) | tout      | à faire |
 
