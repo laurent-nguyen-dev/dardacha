@@ -22,7 +22,10 @@ par des locuteurs natifs**.
 
 ## v1.0.0 — 31 octobre 2026
 
-Première version, au niveau de la version web :
+Première version, au niveau de la version web. Fabriquée à partir du code du
+commit `9d98733` (fin du sprint 4) ; le tag `v1.0.0` pointe sur une copie de
+ce commit dont seuls les fichiers `.github/workflows` diffèrent (voir
+technique §9).
 
 - 8 modules, 24 séances ; chaque expression en MSA, darija et tounsi, avec
   traduction et écoute.
