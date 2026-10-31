@@ -63,3 +63,21 @@ export interface Replique {
   locuteur: string;
   expression: Expression;
 }
+
+/** Un exemple du mémo des chiffres SMS (fonctionnel §3.4). */
+export interface ExempleMemo {
+  /** Transcription latine, avec le chiffre. */
+  transcription: string;
+  /** Le mot en écriture arabe : c'est lui qui est lu à voix haute (§6.3). */
+  arabe: string;
+  sens: string;
+}
+
+/** Un chiffre du chat et la lettre arabe qu'il remplace. */
+export interface ChiffreMemo {
+  chiffre: string;
+  lettre: string;
+  son: string;
+  prononciation: string;
+  exemples: ExempleMemo[];
+}

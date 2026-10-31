@@ -9,6 +9,8 @@ export const couleurs = {
   bordure: '#d9e2ec',
   succes: '#2f855a',
   fondSucces: '#e6f6ec',
+  erreur: '#c53030',
+  fondErreur: '#fdecec',
   msa: '#1c64c4',
   darija: '#2f855a',
   tounsi: '#c05621',
