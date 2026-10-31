@@ -4,7 +4,7 @@
 
 - **Projet** : Dardacha (anciennement « Arabe au quotidien »), application mobile native (Android + iPhone),
   portage de la version web (PWA) existante.
-- **Phase actuelle** : version 1.1 terminée : écriture arabe dans les 8 modules et le mini-dialogue (sprint 5). Prochaine étape à choisir parmi les évolutions du fonctionnel §9.
+- **Phase actuelle** : version 1.2, sprint 6 « Mini-dialogue de séance » ([backlog](docs/backlog.md), fonctionnel §3.8).
 - **Documents**
   - Fonctionnel : [docs/fonctionnel.md](docs/fonctionnel.md)
   - Technique : [docs/technique.md](docs/technique.md)
@@ -13,7 +13,7 @@
   - Cahier des charges de la version web (archive) : [docs/archives/cahier-des-charges-pwa.md](docs/archives/cahier-des-charges-pwa.md)
 - **Règle** : le cahier des charges est une synthèse ; toute modification est
   reportée dans fonctionnel.md / technique.md dans le même commit, et inversement.
-- **Ticket en cours** : aucun.
+- **Ticket en cours** : T31 — modèle, contrôle et affichage du mini-dialogue de séance.
 - **En attente de l'utilisateur** : relecture native du contenu, écriture arabe comprise (`src/content/`) ; choix de la prochaine évolution.
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
 - **Dernière entrée du journal** : [T30 — Écriture arabe des modules 2 à 8](docs/journal/T30-arabe-modules-2-8.md)

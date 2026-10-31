@@ -105,8 +105,8 @@ supplémentaires**.
    (voir F09).
 5. **Vocabulaire comparé** : tableau français / MSA / darija / tounsi des
    expressions de base, avec bouton d'écoute par variante.
-6. **À retenir** et **mini-dialogue** de 3 répliques, identique dans toutes
-   les séances en version 1.
+6. **À retenir** et **mini-dialogue** : le dialogue propre à la séance s'il
+   existe (version 1.2, voir 3.8), sinon le dialogue commun de 3 répliques.
 7. **Vérifie ta compréhension** : quiz de 4 questions (F08).
 8. **À toi de jouer** : consigne de réponse libre, zone de saisie et bouton
    « Corriger ma réponse » (F10).
@@ -161,6 +161,20 @@ L'apprentissage de l'alphabet reste hors périmètre.
   n'existe : la relecture native tranche.
 - L'écriture arabe est relue par des natifs comme le reste du contenu
   (3.5) : l'état « relu » d'un module couvre les deux écritures.
+
+### 3.8 Mini-dialogue de séance (version 1.2)
+
+- **Facultatif, séance par séance** : une séance peut avoir son propre
+  mini-dialogue ; sinon elle affiche le dialogue commun (version 1). Un
+  nouveau module peut donc être ajouté sans dialogue.
+- **3 à 6 répliques** (paramètres `dialogue_repliques_min` et
+  `dialogue_repliques_max`), dites par **A et B en alternance**, en
+  commençant par A.
+- **Chaque réplique est complète** : un sens en français, une forme dans
+  chacune des trois variantes et son écriture arabe (3.7). Les répliques
+  s'écoutent comme les autres expressions.
+- **Règle de rédaction** (non vérifiée automatiquement) : le dialogue met en
+  scène la situation de la séance et réemploie ses expressions.
 
 ### 3.6 Évolution du parcours
 
@@ -311,20 +325,22 @@ habituel du téléphone.
 Ces valeurs sont des **réglages par défaut**, modifiables sans toucher à la
 logique de l'application.
 
-| Paramètre                     | Valeur par défaut | Rôle                                   |
-| ----------------------------- | ----------------- | -------------------------------------- |
-| `vitesse_lecture`             | 0,86              | Vitesse de la voix (1 = normale)       |
-| `quiz_seance_nb_questions`    | 4                 | Questions par quiz de séance           |
-| `quiz_nb_choix`               | 3                 | Choix par question                     |
-| `correction_type_nb_formules` | 4                 | Formules affichées par F09             |
-| `correcteur_nb_expressions`   | 6                 | Expressions comparées par F10          |
-| `correcteur_longueur_min`     | 3                 | Longueur minimale d'une forme retenue  |
-| `correcteur_nb_suggestions`   | 3                 | Suggestions maximum par F10            |
-| `revisions_par_seance`        | 2                 | Fiches de révision par séance          |
-| `quiz_memo_nb_questions`      | 5                 | Questions du quiz du mémo              |
-| `reponse_longueur_max`        | 1 000             | Caractères maximum de la réponse libre |
-| `contenu_expressions_base`    | 3 à 5             | Expressions de base par séance         |
-| `contenu_supplementaires`     | 3                 | Expressions supplémentaires par séance |
+| Paramètre                     | Valeur par défaut | Rôle                                           |
+| ----------------------------- | ----------------- | ---------------------------------------------- |
+| `vitesse_lecture`             | 0,86              | Vitesse de la voix (1 = normale)               |
+| `quiz_seance_nb_questions`    | 4                 | Questions par quiz de séance                   |
+| `quiz_nb_choix`               | 3                 | Choix par question                             |
+| `correction_type_nb_formules` | 4                 | Formules affichées par F09                     |
+| `correcteur_nb_expressions`   | 6                 | Expressions comparées par F10                  |
+| `correcteur_longueur_min`     | 3                 | Longueur minimale d'une forme retenue          |
+| `correcteur_nb_suggestions`   | 3                 | Suggestions maximum par F10                    |
+| `revisions_par_seance`        | 2                 | Fiches de révision par séance                  |
+| `quiz_memo_nb_questions`      | 5                 | Questions du quiz du mémo                      |
+| `reponse_longueur_max`        | 1 000             | Caractères maximum de la réponse libre         |
+| `dialogue_repliques_min`      | 3                 | Répliques minimum d'un mini-dialogue de séance |
+| `dialogue_repliques_max`      | 6                 | Répliques maximum d'un mini-dialogue de séance |
+| `contenu_expressions_base`    | 3 à 5             | Expressions de base par séance                 |
+| `contenu_supplementaires`     | 3                 | Expressions supplémentaires par séance         |
 
 ## 8. Données personnelles
 
@@ -339,7 +355,7 @@ Par ordre de priorité proposé :
 1. Relecture du contenu par un locuteur marocain et un locuteur tunisien.
 2. Écriture arabe pour chaque expression, et écoute lue sur l'écriture
    arabe — **fait en version 1.1 (§3.7)**, à relire par des natifs.
-3. Un mini-dialogue propre à chaque séance.
+3. Un mini-dialogue propre à chaque séance — **en cours (version 1.2, §3.8)**.
 4. Séance de révision et lecture enchaînée des trois variantes.
 5. Filtres par module et répétition espacée dans les révisions.
 6. Correcteur plus fin (motifs, choix guidés).

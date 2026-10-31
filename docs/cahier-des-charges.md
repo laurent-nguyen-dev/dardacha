@@ -61,7 +61,7 @@ Le parcours initial compte 8 modules de 3 séances, soit 24 séances. Il est con
 3. Expressions supplémentaires, avec un bouton d'écoute par variante.
 4. Défi oral, avec bouton « Voir la correction type ».
 5. Vocabulaire comparé : tableau français, MSA, darija, tounsi, avec traduction et écoute.
-6. À retenir et mini-dialogue de 3 répliques (identique dans toutes les séances en version 1).
+6. À retenir et mini-dialogue : propre à la séance (3 à 6 répliques, depuis la version 1.2), ou à défaut le dialogue commun de 3 répliques.
 7. Vérifie ta compréhension : quiz de 4 questions corrigées.
 8. À toi de jouer : réponse libre avec bouton « Corriger ma réponse ».
 
@@ -162,7 +162,6 @@ Le contenu linguistique n'est pas validé par un locuteur natif : c'est la premi
 | Contenu réécrit, non relu par un locuteur natif                              | Relecture par un locuteur marocain et un locuteur tunisien                     |
 | Écoute lue sur la transcription latine, donc prononciation approximative     | Ajouter l'écriture arabe à chaque expression, ou enregistrer des voix humaines |
 | Voix arabe marocaine ou tunisienne souvent absente des téléphones            | Voix humaines enregistrées, embarquées dans l'application                      |
-| Mini-dialogue identique dans les 24 séances                                  | Un dialogue propre à chaque séance                                             |
 | Pas de séance de révision ni de lecture enchaînée des trois variantes        | Implémenter ces deux fonctions                                                 |
 | Révisions sans filtre ni répétition espacée                                  | Filtres par module et répétition espacée                                       |
 | Le correcteur ne juge pas la grammaire ni le genre                           | Correcteur par motifs, ou réponse à choix guidés                               |

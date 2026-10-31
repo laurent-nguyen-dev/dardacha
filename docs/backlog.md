@@ -85,6 +85,16 @@ autres modules suivent un par un (fonctionnel §3.7).
 | T29    | Écriture arabe du module 1 et du mini-dialogue          | T25       | fait |
 | T30    | Écriture arabe des modules 2 à 8 (un commit par module) | T29       | fait |
 
+## Sprint 6 — Mini-dialogue de séance (version 1.2)
+
+**Jalon** : chaque séance des 8 modules a son propre mini-dialogue, qui met
+en scène sa situation et réemploie ses expressions (fonctionnel §3.8).
+
+| Ticket | Titre                                                    | Dépend de | État    |
+| ------ | -------------------------------------------------------- | --------- | ------- |
+| T31    | Modèle, contrôle et affichage du mini-dialogue de séance | —         | à faire |
+| T32    | Mini-dialogues des 24 séances (un commit par module)     | T31       | à faire |
+
 ## Hors sprint
 
 | Ticket | Titre                                               | État |
