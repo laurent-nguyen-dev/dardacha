@@ -1,6 +1,6 @@
 # Cahier des charges — Arabe au quotidien
 
-Oct 30, 2026 · @Emma
+Oct 30, 2026 · Marie-Emmanuelle Pichard
 
 Arabe au quotidien est une application d'apprentissage en français de l'arabe parlé, qui compare l'arabe littéraire moderne (MSA), la darija marocaine et le tounsi tunisien, en 24 séances de 5 à 10 minutes.
 
