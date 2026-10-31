@@ -10,6 +10,64 @@ export const sentiments: Module = {
   seances: [
     {
       id: 'sentiments-amitie',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "Tu m'as manqué !",
+            formes: { msa: 'ichta9tou ilayki !', darija: 'twe77echtek !', tounsi: 'twa7chtek !' },
+            arabe: { msa: 'اشتقت إليك!', darija: 'توحشتك!', tounsi: 'توحشتك!' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Toi aussi ! On se connaît depuis longtemps.',
+            formes: {
+              msa: 'wa anta aydan ! nata3arafou mounthou zaman.',
+              darija: '7ta nta ! kan3erfo ba3diyatna chhal hadi.',
+              tounsi: 'enti zeda ! na3arfou b3adhna men zman.',
+            },
+            arabe: {
+              msa: 'وأنت أيضا! نتعارف منذ زمان.',
+              darija: 'حتى نتا! كنعرفو بعضياتنا شحال هادي.',
+              tounsi: 'انتي زادة! نعرفو بعضنا من زمان.',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Tu es ma meilleure amie. Tu peux compter sur moi.',
+            formes: {
+              msa: 'anti sadi9ati al-mou9arraba. youmkinouki al-i3timad 3alayya.',
+              darija: 'nti a7san sa7bti. t9dri t3awli 3liya.',
+              tounsi: 'enti a7sen sa7bti. tnajjem t3awel 3liya.',
+            },
+            arabe: {
+              msa: 'أنت صديقتي المقربة. يمكنك الاعتماد علي.',
+              darija: 'نتي أحسن صاحبتي. تقدري تعولي عليا.',
+              tounsi: 'انتي أحسن صاحبتي. تنجم تعول عليا.',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: "Merci d'être là.",
+            formes: {
+              msa: 'choukran li-woujoudik.',
+              darija: 'choukran 3la wjoudek.',
+              tounsi: 'ya3tik sa77a 3la wjoudek.',
+            },
+            arabe: {
+              msa: 'شكرا لوجودك.',
+              darija: 'شكرا على وجودك.',
+              tounsi: 'يعطيك الصحة على وجودك.',
+            },
+          },
+        },
+      ],
       titre: "Parler d'amitié",
       objectif: "Dire qu'on apprécie quelqu'un, présenter un ami.",
       contexte:
@@ -96,6 +154,60 @@ export const sentiments: Module = {
     },
     {
       id: 'sentiments-affection',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Je pense à toi. Prends soin de toi.',
+            formes: {
+              msa: 'oufakkirou fiki. i3tani bi-nafsiki.',
+              darija: 'kanfekker fik. rdi balek 3la rasek.',
+              tounsi: 'n5ammem fik. rod balek 3la rou7ek.',
+            },
+            arabe: {
+              msa: 'أفكر فيك. اعتني بنفسك.',
+              darija: 'كنفكر فيك. ردي بالك على راسك.',
+              tounsi: 'نخمم فيك. رد بالك على روحك.',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Toi aussi. Je tiens à toi.',
+            formes: {
+              msa: 'wa anta aydan. anta 3aziz 3alayya.',
+              darija: '7ta nta. nta 3ziz 3liya.',
+              tounsi: 'enti zeda. enti 3ziz 3liya.',
+            },
+            arabe: {
+              msa: 'وأنت أيضا. أنت عزيز علي.',
+              darija: 'حتى نتا. نتا عزيز عليا.',
+              tounsi: 'انتي زادة. انتي عزيز عليا.',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Je suis fier de toi.',
+            formes: {
+              msa: 'ana fa5our biki.',
+              darija: 'ana fa5our bik.',
+              tounsi: 'ena fa5our bik.',
+            },
+            arabe: { msa: 'أنا فخور بك.', darija: 'أنا فخور بيك.', tounsi: 'أنا فخور بيك.' },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Que Dieu te protège !',
+            formes: { msa: 'allah ya7mik !', darija: 'lla ye7mik !', tounsi: 'rabbi y7amik !' },
+            arabe: { msa: 'الله يحميك!', darija: 'الله يحميك!', tounsi: 'ربي يحميك!' },
+          },
+        },
+      ],
       titre: 'Exprimer son affection avec tact',
       objectif: 'Montrer son attachement avec pudeur, selon le contexte.',
       contexte:
@@ -183,6 +295,72 @@ export const sentiments: Module = {
     },
     {
       id: 'sentiments-reconforter',
+      dialogue: [
+        {
+          locuteur: 'A',
+          expression: {
+            sens: 'Ça ne va pas ? Tu veux en parler ?',
+            formes: {
+              msa: 'ma biki ? hal touridina an nata7addath ?',
+              darija: 'machi mzyana ? bghiti nhadro ?',
+              tounsi: 'mouch labes ? t7ebb nahkiw ?',
+            },
+            arabe: {
+              msa: 'ما بك؟ هل تريدين أن نتحدث؟',
+              darija: 'ماشي مزيانة؟ بغيتي نهضرو؟',
+              tounsi: 'موش لاباس؟ تحب نحكيو؟',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: "J'ai raté mon examen.",
+            formes: {
+              msa: 'rasabtou fi imti7ani.',
+              darija: 'ma nja7tch f l-imti7an.',
+              tounsi: 'ma nja7tech fel examen.',
+            },
+            arabe: {
+              msa: 'رسبت في امتحاني.',
+              darija: 'ما نجحتش ف الامتحان.',
+              tounsi: 'ما نجحتش في الإكزامن.',
+            },
+          },
+        },
+        {
+          locuteur: 'A',
+          expression: {
+            sens: "Ce n'est pas grave, je suis là pour toi.",
+            formes: {
+              msa: 'laysa amran 5a6iran, ana houna min ajliki.',
+              darija: 'machi mouchkil, ana hna m3ak.',
+              tounsi: 'mouch mochkla, ena houni m3ak.',
+            },
+            arabe: {
+              msa: 'ليس أمرا خطيرا، أنا هنا من أجلك.',
+              darija: 'ماشي مشكل، أنا هنا معاك.',
+              tounsi: 'موش مشكلة، أنا هوني معاك.',
+            },
+          },
+        },
+        {
+          locuteur: 'B',
+          expression: {
+            sens: 'Merci. Que Dieu facilite !',
+            formes: {
+              msa: 'choukran. allah youyassir !',
+              darija: 'choukran. lla ysahhel !',
+              tounsi: 'ya3tik sa77a. rabbi ysahhel !',
+            },
+            arabe: {
+              msa: 'شكرا. الله ييسر!',
+              darija: 'شكرا. الله يسهل!',
+              tounsi: 'يعطيك الصحة. ربي يسهل!',
+            },
+          },
+        },
+      ],
       titre: "Réconforter quelqu'un",
       objectif: 'Soutenir un ami qui traverse un moment difficile.',
       contexte:
