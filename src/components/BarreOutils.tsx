@@ -4,8 +4,7 @@ import { Alert, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useActionsProgression } from '@/services/progression';
 import { couleurs } from '@/theme';
 
-// Barre permanente (fonctionnel §4). Les entrées Révisions et Mémo
-// s'ajoutent avec leurs tickets (T16, T17).
+// Barre permanente (fonctionnel §4).
 export function BarreOutils() {
   const { reinitialiser } = useActionsProgression();
 
@@ -27,6 +26,8 @@ export function BarreOutils() {
   return (
     <View style={styles.barre}>
       <Entree icone="🏠" libelle="Menu" onPress={() => router.dismissTo('/')} />
+      <Entree icone="📝" libelle="Révisions" onPress={() => router.push('/revisions')} />
+      <Entree icone="🔢" libelle="Mémo" onPress={() => router.push('/memo')} />
       <Entree icone="↺" libelle="Réinitialiser" onPress={demanderReinitialisation} />
     </View>
   );

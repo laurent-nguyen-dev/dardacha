@@ -55,12 +55,18 @@ du défi oral et un correcteur de réponse libre ; quatre modules de contenu.
 
 ## Sprint 4 — Révisions, mémo, livraison de test
 
-| Ticket | Titre                                       | Dépend de |
-| ------ | ------------------------------------------- | --------- |
-| T16    | Révisions (F11)                             | T09       |
-| T17    | Mémo des chiffres SMS et son quiz (F12)     | T09, T15  |
-| T18    | Contenu des modules 5 à 8                   | T03       |
-| T20    | Recette sur Android et iPhone (13 critères) | tout      |
+**Développement terminé le 31 oct. 2026** ; reste la recette sur téléphone
+([fiche de recette](recette.md)).
+
+**Jalon** : application complète en parité avec la version web (15
+fonctions, 8 modules), prête pour la recette sur téléphone.
+
+| Ticket | Titre                                       | Dépend de | État                                   |
+| ------ | ------------------------------------------- | --------- | -------------------------------------- |
+| T16    | Révisions (F11)                             | T09       | fait                                   |
+| T17    | Mémo des chiffres SMS et son quiz (F12)     | T09, T15  | fait                                   |
+| T18    | Contenu des modules 5 à 8                   | T03       | fait                                   |
+| T20    | Recette sur Android et iPhone (13 critères) | tout      | fiche prête ; essais par l'utilisateur |
 
 ## Hors sprint
 

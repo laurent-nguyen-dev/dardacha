@@ -1,17 +1,31 @@
-import { useState } from 'react';
+import { type ReactNode, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { parcours } from '@/content/parcours';
-import { genererQuiz, type Question } from '@/logic/quiz';
 import { couleurs } from '@/theme';
 
 import { Bouton } from './Bouton';
-import { ExpressionComparee } from './Variantes';
 
-// F08 : quiz de séance. Une question répondue est verrouillée ; le score
-// s'affiche quand toutes les questions sont répondues.
-export function Quiz({ seanceId }: { seanceId: string }) {
-  const [questions, setQuestions] = useState(() => genererQuiz(parcours, seanceId));
+/** Ce que tout quiz à choix doit fournir pour une question. */
+export interface QuestionAChoix {
+  enonce: string;
+  choix: string[];
+  bonneReponse: string;
+}
+
+interface Props<Q extends QuestionAChoix> {
+  /** Tire un nouveau jeu de questions (au premier affichage et à « Refaire »). */
+  generer: () => Q[];
+  /** Correction détaillée affichée sous une question répondue. */
+  correction: (question: Q) => ReactNode;
+  /** Agrandit le texte des choix (lettres arabes du mémo). */
+  grandsChoix?: boolean;
+}
+
+// Quiz à choix multiples, partagé par le quiz de séance (F08) et celui du
+// mémo (F12). Une question répondue est verrouillée ; le score s'affiche
+// quand toutes les questions sont répondues.
+export function Quiz<Q extends QuestionAChoix>({ generer, correction, grandsChoix }: Props<Q>) {
+  const [questions, setQuestions] = useState(generer);
   const [reponses, setReponses] = useState<(string | undefined)[]>([]);
 
   const nbRepondues = reponses.filter((r) => r !== undefined).length;
@@ -25,7 +39,7 @@ export function Quiz({ seanceId }: { seanceId: string }) {
   }
 
   function refaire() {
-    setQuestions(genererQuiz(parcours, seanceId));
+    setQuestions(generer());
     setReponses([]);
   }
 
@@ -38,6 +52,8 @@ export function Quiz({ seanceId }: { seanceId: string }) {
           question={question}
           reponse={reponses[index]}
           onChoix={(choix) => repondre(index, choix)}
+          correction={correction(question)}
+          grandsChoix={grandsChoix}
         />
       ))}
       {nbRepondues === questions.length && questions.length > 0 && (
@@ -54,12 +70,21 @@ export function Quiz({ seanceId }: { seanceId: string }) {
 
 interface PropsQuestion {
   numero: number;
-  question: Question;
+  question: QuestionAChoix;
   reponse: string | undefined;
   onChoix: (choix: string) => void;
+  correction: ReactNode;
+  grandsChoix?: boolean;
 }
 
-function QuestionQuiz({ numero, question, reponse, onChoix }: PropsQuestion) {
+function QuestionQuiz({
+  numero,
+  question,
+  reponse,
+  onChoix,
+  correction,
+  grandsChoix,
+}: PropsQuestion) {
   const repondue = reponse !== undefined;
   const juste = reponse === question.bonneReponse;
 
@@ -84,7 +109,7 @@ function QuestionQuiz({ numero, question, reponse, onChoix }: PropsQuestion) {
               repondue && estChoisie && !estBonne && styles.choixFaux,
             ]}
           >
-            <Text style={styles.texteChoix}>{choix}</Text>
+            <Text style={[styles.texteChoix, grandsChoix && styles.texteGrandChoix]}>{choix}</Text>
           </Pressable>
         );
       })}
@@ -93,7 +118,7 @@ function QuestionQuiz({ numero, question, reponse, onChoix }: PropsQuestion) {
           <Text style={[styles.verdict, juste ? styles.verdictJuste : styles.verdictFaux]}>
             {juste ? '✓ Bonne réponse !' : `✗ La bonne réponse était : ${question.bonneReponse}`}
           </Text>
-          <ExpressionComparee expression={question.expression} />
+          {correction}
         </View>
       )}
     </View>
@@ -117,6 +142,7 @@ const styles = StyleSheet.create({
   choixJuste: { backgroundColor: couleurs.fondSucces, borderColor: couleurs.succes },
   choixFaux: { backgroundColor: couleurs.fondErreur, borderColor: couleurs.erreur },
   texteChoix: { fontSize: 16, color: couleurs.texte },
+  texteGrandChoix: { fontSize: 26, textAlign: 'center' },
   correction: { gap: 8 },
   verdict: { fontSize: 15, fontWeight: '600' },
   verdictJuste: { color: couleurs.succes },

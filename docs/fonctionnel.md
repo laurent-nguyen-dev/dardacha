@@ -108,7 +108,10 @@ supplémentaires**.
 8. **À toi de jouer** : consigne de réponse libre, zone de saisie et bouton
    « Corriger ma réponse » (F10).
 
-Dans les séances du module 3, un lien ouvre le mémo des chiffres SMS.
+Dans les séances d'un module marqué comme lié au mémo (aujourd'hui « SMS et
+WhatsApp »), un bouton ouvre le mémo des chiffres SMS. Le lien est une
+propriété du module, pas de sa position : il suit le module si l'ordre du
+parcours change.
 
 ### 3.4 Mémo des chiffres SMS
 
@@ -172,23 +175,23 @@ habituel du téléphone.
 
 ## 5. Fonctions
 
-| Réf. | Fonction                     | Comportement attendu                                                                                                                                                                                                                                      |
-| ---- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| F01  | Menu principal               | Affiche tous les modules du parcours, dans l'ordre défini, en cartes : icône, titre, description, « N / S séances » terminées (S = séances du module) et pourcentage arrondi à l'entier le plus proche (1 / 3 → 33 %). Toucher une carte ouvre le module. |
-| F02  | Page module                  | Liste les séances du module (titre, objectif). Une séance terminée est marquée d'une coche et d'un fond vert.                                                                                                                                             |
-| F03  | Page séance                  | Affiche la séance complète (3.3). En bas, trois boutons : « Retour aux séances », « Marquer comme terminée », « Séance suivante ».                                                                                                                        |
-| F04  | Séance suivante              | Ouvre la séance suivante du module, puis la 1re séance du module suivant après la 3e. Désactivé sur la dernière séance du dernier module.                                                                                                                 |
-| F05  | Marquer comme terminée       | Enregistre la séance comme terminée, met à jour la progression, désactive le bouton et affiche « Séance terminée ». Une séance déjà terminée s'ouvre avec ce bouton déjà désactivé.                                                                       |
-| F06  | Progression globale          | Barre et texte « N / T séances terminées », T étant le nombre total de séances du parcours (24 avec le contenu initial).                                                                                                                                  |
-| F07  | Écoute                       | Bouton « 🔊 Écouter » par expression et par variante. Voir règles 6.3.                                                                                                                                                                                    |
-| F08  | Quiz de séance               | 4 questions à 3 choix. Au toucher : bonne réponse en vert, choix erroné en rouge, correction affichant l'expression dans les trois variantes. Score final, et bouton « Refaire avec de nouvelles questions ». Voir règles 6.1.                            |
-| F09  | Correction type du défi oral | Le bouton affiche ou masque les 4 premières expressions de base de la séance (toutes s'il y en a moins), chacune dans les trois variantes.                                                                                                                |
-| F10  | Correcteur de réponse libre  | Analyse le texte saisi ; liste les expressions de la séance reconnues (avec la variante reconnue) ; propose jusqu'à 3 expressions non utilisées. Texte vide : demande de saisir un texte. Voir règles 6.2.                                                |
-| F11  | Révisions                    | Les 2 premières expressions de base de chaque séance (48 fiches avec le contenu initial), groupées par module, avec les trois variantes, le sens et un bouton d'écoute par variante.                                                                      |
-| F12  | Mémo des chiffres SMS        | Tableau (3.4) et quiz de 5 questions « Quelle lettre arabe remplace le chiffre X ? », 3 choix, chiffres tirés sans répétition parmi les 6 ; chaque réponse est corrigée. Accessible depuis la barre et depuis les séances du module 3.                    |
-| F13  | Réinitialisation             | Demande confirmation ; si confirmé, efface toute la progression et revient au Menu. Si annulé, rien ne change.                                                                                                                                            |
-| F14  | Installation                 | L'application s'installe sur Android et iPhone comme toute application, avec son nom et son icône. Affichage en orientation portrait uniquement.                                                                                                          |
-| F15  | Hors ligne                   | Tout le contenu est embarqué : aucune fonction ne nécessite de connexion, y compris à la première ouverture.                                                                                                                                              |
+| Réf. | Fonction                     | Comportement attendu                                                                                                                                                                                                                                       |
+| ---- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| F01  | Menu principal               | Affiche tous les modules du parcours, dans l'ordre défini, en cartes : icône, titre, description, « N / S séances » terminées (S = séances du module) et pourcentage arrondi à l'entier le plus proche (1 / 3 → 33 %). Toucher une carte ouvre le module.  |
+| F02  | Page module                  | Liste les séances du module (titre, objectif). Une séance terminée est marquée d'une coche et d'un fond vert.                                                                                                                                              |
+| F03  | Page séance                  | Affiche la séance complète (3.3). En bas, trois boutons : « Retour aux séances », « Marquer comme terminée », « Séance suivante ».                                                                                                                         |
+| F04  | Séance suivante              | Ouvre la séance suivante du module, puis la 1re séance du module suivant après la 3e. Désactivé sur la dernière séance du dernier module.                                                                                                                  |
+| F05  | Marquer comme terminée       | Enregistre la séance comme terminée, met à jour la progression, désactive le bouton et affiche « Séance terminée ». Une séance déjà terminée s'ouvre avec ce bouton déjà désactivé.                                                                        |
+| F06  | Progression globale          | Barre et texte « N / T séances terminées », T étant le nombre total de séances du parcours (24 avec le contenu initial).                                                                                                                                   |
+| F07  | Écoute                       | Bouton « 🔊 Écouter » par expression et par variante. Voir règles 6.3.                                                                                                                                                                                     |
+| F08  | Quiz de séance               | 4 questions à 3 choix. Au toucher : bonne réponse en vert, choix erroné en rouge, correction affichant l'expression dans les trois variantes. Score final, et bouton « Refaire avec de nouvelles questions ». Voir règles 6.1.                             |
+| F09  | Correction type du défi oral | Le bouton affiche ou masque les 4 premières expressions de base de la séance (toutes s'il y en a moins), chacune dans les trois variantes.                                                                                                                 |
+| F10  | Correcteur de réponse libre  | Analyse le texte saisi ; liste les expressions de la séance reconnues (avec la variante reconnue) ; propose jusqu'à 3 expressions non utilisées. Texte vide : demande de saisir un texte. Voir règles 6.2.                                                 |
+| F11  | Révisions                    | Les 2 premières expressions de base de chaque séance (48 fiches avec le contenu initial), groupées par module, avec les trois variantes, le sens et un bouton d'écoute par variante.                                                                       |
+| F12  | Mémo des chiffres SMS        | Tableau (3.4) et quiz de 5 questions « Quelle lettre arabe remplace le chiffre X ? », 3 choix, chiffres tirés sans répétition parmi les 6 ; chaque réponse est corrigée. Accessible depuis la barre et depuis les séances des modules liés au mémo (§3.3). |
+| F13  | Réinitialisation             | Demande confirmation ; si confirmé, efface toute la progression et revient au Menu. Si annulé, rien ne change.                                                                                                                                             |
+| F14  | Installation                 | L'application s'installe sur Android et iPhone comme toute application, avec son nom et son icône. Affichage en orientation portrait uniquement.                                                                                                           |
+| F15  | Hors ligne                   | Tout le contenu est embarqué : aucune fonction ne nécessite de connexion, y compris à la première ouverture.                                                                                                                                               |
 
 ## 6. Règles de gestion
 
@@ -328,7 +331,8 @@ Chaque contrôle est joué sur un téléphone Android **et** sur un iPhone.
    et ne fait rien si on annule.
 6. « Séance suivante » enchaîne séances et modules, et est désactivé à la fin.
 7. Les révisions affichent 48 fiches (contenu initial) sans erreur.
-8. Le mémo s'ouvre depuis la barre et depuis le module 3 ; son quiz corrige
+8. Le mémo s'ouvre depuis la barre et depuis les séances du module « SMS et
+   WhatsApp » ; son quiz corrige
    chaque réponse.
 9. Avec une voix arabe installée, le son est audible dans les trois variantes ;
    sans voix arabe, un message s'affiche et rien ne plante.

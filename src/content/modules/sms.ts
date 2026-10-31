@@ -7,6 +7,7 @@ export const sms: Module = {
   titre: 'SMS et WhatsApp',
   description: 'Écrire des messages courts, comprendre les chiffres du chat',
   reluParNatif: false,
+  lienMemo: true,
   seances: [
     {
       id: 'sms-chiffres',
