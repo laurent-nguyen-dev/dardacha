@@ -40,16 +40,18 @@ modules de contenu.
 
 ## Sprint 3 — Exercices
 
+**Terminé le 31 oct. 2026.**
+
 **Jalon** : chaque séance se termine par un quiz corrigé, une correction type
 du défi oral et un correcteur de réponse libre ; quatre modules de contenu.
 
-| Ticket | Titre                                          | Dépend de | État    |
-| ------ | ---------------------------------------------- | --------- | ------- |
-| T11    | Normalisation de texte                         | —         | fait    |
-| T12    | Quiz de séance (F08), logique puis écran       | T08       | fait    |
-| T13    | Correction type du défi oral (F09)             | T08       | fait    |
-| T14    | Correcteur de réponse libre (F10)              | T11, T08  | fait    |
-| T15    | Contenu des modules 3 et 4 (+ données du mémo) | T03       | à faire |
+| Ticket | Titre                                          | Dépend de | État |
+| ------ | ---------------------------------------------- | --------- | ---- |
+| T11    | Normalisation de texte                         | —         | fait |
+| T12    | Quiz de séance (F08), logique puis écran       | T08       | fait |
+| T13    | Correction type du défi oral (F09)             | T08       | fait |
+| T14    | Correcteur de réponse libre (F10)              | T11, T08  | fait |
+| T15    | Contenu des modules 3 et 4 (+ données du mémo) | T03       | fait |
 
 ## Sprint 4 — Révisions, mémo, livraison de test
 
