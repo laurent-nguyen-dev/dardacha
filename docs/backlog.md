@@ -92,7 +92,7 @@ en scène sa situation et réemploie ses expressions (fonctionnel §3.8).
 
 | Ticket | Titre                                                    | Dépend de | État    |
 | ------ | -------------------------------------------------------- | --------- | ------- |
-| T31    | Modèle, contrôle et affichage du mini-dialogue de séance | —         | à faire |
+| T31    | Modèle, contrôle et affichage du mini-dialogue de séance | —         | fait    |
 | T32    | Mini-dialogues des 24 séances (un commit par module)     | T31       | à faire |
 
 ## Hors sprint

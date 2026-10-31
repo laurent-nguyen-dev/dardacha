@@ -13,7 +13,7 @@
   - Cahier des charges de la version web (archive) : [docs/archives/cahier-des-charges-pwa.md](docs/archives/cahier-des-charges-pwa.md)
 - **Règle** : le cahier des charges est une synthèse ; toute modification est
   reportée dans fonctionnel.md / technique.md dans le même commit, et inversement.
-- **Ticket en cours** : T31 — modèle, contrôle et affichage du mini-dialogue de séance.
+- **Ticket en cours** : T32 — mini-dialogues des 24 séances.
 - **En attente de l'utilisateur** : relecture native du contenu, écriture arabe comprise (`src/content/`) ; choix de la prochaine évolution.
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T30 — Écriture arabe des modules 2 à 8](docs/journal/T30-arabe-modules-2-8.md)
+- **Dernière entrée du journal** : [T31 — Mini-dialogue de séance : modèle, contrôle, affichage](docs/journal/T31-dialogue-seance.md)

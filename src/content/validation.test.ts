@@ -1,4 +1,4 @@
-import type { Expression, Module, Seance } from './types';
+import type { Expression, Module, Replique, Seance } from './types';
 import { validerParcours } from './validation';
 
 // Fabriques de contenu minimal valide, que chaque test abîme d'une façon.
@@ -147,6 +147,55 @@ describe('validerParcours', () => {
     it('exige autant d’alternatives « / » que la forme latine', () => {
       expect(avecArabe({ msa: 'ما اسمك؟' }, { msa: 'ma ismouka ? / ma ismouki ?' })).toEqual([
         "Séance « s » : l'écriture arabe de « au revoir » en msa a 1 alternative(s), la forme latine 2.",
+      ]);
+    });
+  });
+
+  describe('mini-dialogue de séance (fonctionnel §3.8)', () => {
+    function replique(locuteur: string, sens = 'Bonjour'): Replique {
+      return {
+        locuteur,
+        expression: {
+          sens,
+          formes: { msa: 'marhaban', darija: 'salam', tounsi: '3aslema' },
+          arabe: { msa: 'مرحبا', darija: 'سلام', tounsi: 'عسلامة' },
+        },
+      };
+    }
+
+    function avecDialogue(dialogue: Replique[]) {
+      const s = seance('s');
+      s.dialogue = dialogue;
+      return validerParcours([module('m', [s])]);
+    }
+
+    it('accepte un dialogue de 3 à 6 répliques A/B en alternance', () => {
+      expect(avecDialogue([replique('A'), replique('B'), replique('A')])).toEqual([]);
+      expect(avecDialogue(['A', 'B', 'A', 'B', 'A', 'B'].map((l) => replique(l)))).toEqual([]);
+    });
+
+    it('refuse trop peu ou trop de répliques', () => {
+      expect(avecDialogue([replique('A'), replique('B')])).toEqual([
+        'Séance « s » : le mini-dialogue a 2 répliques (attendu : 3 à 6).',
+      ]);
+    });
+
+    it('exige A et B en alternance, en commençant par A', () => {
+      expect(avecDialogue([replique('B'), replique('A'), replique('B')])).toEqual([
+        'Séance « s » : la réplique 1 du mini-dialogue doit être dite par A.',
+        'Séance « s » : la réplique 2 du mini-dialogue doit être dite par B.',
+        'Séance « s » : la réplique 3 du mini-dialogue doit être dite par A.',
+      ]);
+    });
+
+    it('exige chaque réplique complète dans les trois variantes, écriture arabe comprise', () => {
+      const incomplete = replique('B', 'Ça va');
+      incomplete.expression.formes.tounsi = null;
+      delete incomplete.expression.arabe!.msa;
+      expect(avecDialogue([replique('A'), incomplete, replique('A')])).toEqual([
+        "Séance « s » : la réplique 2 du mini-dialogue n'a pas d'écriture arabe en msa.",
+        "Séance « s » : la réplique 2 du mini-dialogue n'a pas de forme en tounsi.",
+        "Séance « s » (mini-dialogue) : l'expression « Ça va » a une écriture arabe en tounsi sans forme latine.",
       ]);
     });
   });

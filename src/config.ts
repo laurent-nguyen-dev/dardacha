@@ -11,6 +11,8 @@ export const config = {
   revisionsParSeance: 2,
   quizMemoNbQuestions: 5,
   reponseLongueurMax: 1000,
+  dialogueRepliquesMin: 3,
+  dialogueRepliquesMax: 6,
 
   // Règles de structure du contenu, vérifiées automatiquement (§3.2, §3.5).
   contenuExpressionsBaseMin: 3,
