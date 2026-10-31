@@ -13,7 +13,7 @@ marocaine et le tounsi tunisien.
 | Tous         | [Cahier des charges](docs/cahier-des-charges.md)                                                       |
 | Produit      | [Document fonctionnel](docs/fonctionnel.md) — ce que fait l'application                                |
 | Développeurs | [Document technique](docs/technique.md), [backlog](docs/backlog.md), [journal](docs/journal/README.md) |
-| Exploitation | [Installer et tester sur un téléphone](docs/exploitation.md)                                           |
+| Exploitation | [Installer et tester sur un téléphone](docs/exploitation.md), [fiche de recette](docs/recette.md)      |
 | Utilisateurs | [Guide d'utilisation](docs/utilisateur.md)                                                             |
 
 ## Démarrer (développeurs)
