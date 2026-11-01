@@ -29,3 +29,12 @@ version `docs/versions.md`, mode d'emploi dans `docs/exploitation.md`.
   commit).
 - **Tag git** : une étiquette fixe sur un commit (`v1.2.0`). La release
   GitHub est attachée à ce tag.
+
+## Publication des trois versions
+
+`v1.1.0` et `v1.2.0` ont été publiées du premier coup. `v1.0.0` a échoué à
+la création de la release (HTTP 403) : le tag devait viser un commit dont
+`apk.yml` différait de celui de `main`, ce que GitHub interdit au jeton des
+workflows. Contournement documenté dans technique §9 : un commit qui
+reprend exactement le code de `9d98733` avec les workflows actuels, puis
+nouvelle publication depuis ce commit.

@@ -248,6 +248,15 @@ fonctionnel §7. Aucun paramètre interne caché à ce jour.
   commit avec ce numéro et crée la release `vX.Y.Z` (tag sur ce commit).
   Le workflow vient toujours de `main`, le code fabriqué du commit choisi :
   on peut donc publier une version passée. Refus si la release existe déjà.
+- **Limite pour une version passée** : GitHub refuse au jeton du workflow
+  (`GITHUB_TOKEN`) de créer un tag sur un commit dont les fichiers
+  `.github/workflows` diffèrent de ceux de `main` (erreur « HTTP 403 :
+  Resource not accessible by integration »). Contournement, utilisé pour
+  `v1.0.0` : créer un commit qui reprend le code de la version tel quel et
+  les workflows actuels de `main` (`git checkout <commit> && git checkout
+origin/main -- .github/workflows`), le pousser sur une branche, puis
+  publier la version depuis ce commit. Sans objet pour une nouvelle version
+  publiée depuis `main`.
 - **Publication** : sur `main` uniquement, Release GitHub `apk-test`
   (pré-version), supprimée et recréée à chaque fabrication. Sur toute
   branche, l'APK est conservé en artefact du build, ce qui permet d'essayer
