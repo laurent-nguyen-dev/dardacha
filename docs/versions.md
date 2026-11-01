@@ -6,6 +6,11 @@ https://github.com/laurent-nguyen-dev/dardacha/releases
 Le contenu linguistique de toutes les versions est un premier jet, **non relu
 par des locuteurs natifs**.
 
+## Prochaine version (non publiée)
+
+- **Icône définitive** : le logo Dardacha (trois bulles MSA, darija,
+  tounsi), avec une icône à thème pour Android 13 et plus.
+
 ## v1.2.0 — 31 octobre 2026
 
 - Un **mini-dialogue propre à chaque séance** (4 répliques, entre Karim et
