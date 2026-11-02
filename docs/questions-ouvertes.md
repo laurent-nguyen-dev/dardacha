@@ -13,7 +13,6 @@ Aucune.
 - Relecteurs natifs (marocain, tunisien) : qui ?
 - Publication sur les magasins : fiches, captures, politique de
   confidentialité, compte Apple Developer.
-- Icônes définitives (celles de la version web, ou nouvelles).
 - Recette sur iPhone : pas d'appareil disponible. À jouer avant toute
   publication sur l'App Store (Expo Go suffit, ou un build iOS de test).
 
@@ -56,3 +55,4 @@ Aucune.
 | 2026-10-31 | —    | Écriture arabe : voyelles du MSA           | Sans voyelles (harakat)                                                                                                                     | fonctionnel §3.7                   |
 | 2026-10-31 | —    | Écriture arabe : livraison                 | Mécanisme + module 1 d'abord, puis module par module ; champ facultatif                                                                     | technique §2.2, backlog            |
 | 2026-10-31 | Q-08 | Mini-dialogue par séance (v1.2)            | Facultatif par séance (repli sur le dialogue commun) ; 3 à 6 répliques A/B en alternance ; complet dans les 3 variantes avec écriture arabe | fonctionnel §3.8                   |
+| 2026-11-01 | Q-17 | Icône définitive                           | Logo Dardacha fourni par l'utilisateur (bulles MSA, darija, tounsi)                                                                         | technique §1, §9                   |

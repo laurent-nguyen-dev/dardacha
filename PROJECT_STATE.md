@@ -4,7 +4,7 @@
 
 - **Projet** : Dardacha (anciennement « Arabe au quotidien »), application mobile native (Android + iPhone),
   portage de la version web (PWA) existante.
-- **Phase actuelle** : version 1.2 terminée : un mini-dialogue propre à chacune des 24 séances (sprint 6). Prochaine étape à choisir parmi les évolutions du fonctionnel §9.
+- **Phase actuelle** : version 1.2 terminée ; icône définitive (logo Dardacha) en place sur `main`, à publier avec la prochaine version. Prochaine étape à choisir parmi les évolutions du fonctionnel §9.
 - **Documents**
   - Fonctionnel : [docs/fonctionnel.md](docs/fonctionnel.md)
   - Technique : [docs/technique.md](docs/technique.md)
@@ -17,4 +17,4 @@
 - **En attente de l'utilisateur** : relecture native du contenu, écriture arabe comprise (`src/content/`) ; choix de la prochaine évolution.
 - **Versions** : numéro dans `app.json` (`node scripts/version.js X.Y.Z`), notes dans [docs/versions.md](docs/versions.md), publication par le workflow « Publier une version ».
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T33 — Versions numérotées](docs/journal/T33-versions.md)
+- **Dernière entrée du journal** : [T21 — Icône définitive](docs/journal/T21-icone.md)

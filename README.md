@@ -1,5 +1,7 @@
 # Dardacha
 
+<p align="center"><img src="assets/logo.png" alt="Logo Dardacha" width="200"></p>
+
 [![CI](https://github.com/laurent-nguyen-dev/dardacha/actions/workflows/ci.yml/badge.svg)](https://github.com/laurent-nguyen-dev/dardacha/actions/workflows/ci.yml)
 [![Licence MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
 

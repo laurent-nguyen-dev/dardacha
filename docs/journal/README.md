@@ -34,3 +34,4 @@ expliquées en chemin. Fichiers nommés `T<numéro>-<sujet>.md`.
 - [T31 — Mini-dialogue de séance : modèle, contrôle, affichage](T31-dialogue-seance.md)
 - [T32 — Mini-dialogues des 24 séances](T32-dialogues-seances.md)
 - [T33 — Versions numérotées](T33-versions.md)
+- [T21 — Icône définitive](T21-icone.md)

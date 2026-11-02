@@ -105,9 +105,4 @@ en scène sa situation et réemploie ses expressions (fonctionnel §3.8).
 | T23    | Préparation à l'ouverture en open source            | fait |
 | T24    | Cache Gradle pour accélérer la fabrication de l'APK | fait |
 | T33    | Versions numérotées et releases par version         | fait |
-
-## Plus tard
-
-| Ticket | Titre                             |
-| ------ | --------------------------------- |
-| T21    | Icône définitive de l'application |
+| T21    | Icône définitive de l'application (logo Dardacha)   | fait |

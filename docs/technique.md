@@ -16,7 +16,7 @@ est appelé à évoluer. Le « quoi » est dans [fonctionnel.md](fonctionnel.md)
 | Qualité                   | ESLint (config Expo) + Prettier + `tsc --noEmit`                  | Contrôlés en CI.                                                                                                                                                                                                                                                                            |
 | Distribution v1           | **APK fabriqué par GitHub Actions** (`.github/workflows/apk.yml`) | À chaque push : `expo prebuild` puis `gradlew assembleRelease` sur un serveur GitHub ; sur `main`, l'APK est publié dans la Release de test `apk-test` (artefact de build sur les autres branches). Aucun compte Expo ni outil Android sur l'ordinateur de l'utilisateur. iPhone : Expo Go. |
 | Identifiant d'application | `dev.laurentnguyen.dardacha`                                      | Android `package` et iOS `bundleIdentifier`. Modifiable jusqu'à la première publication, définitif ensuite.                                                                                                                                                                                 |
-| Nom, couleur              | « Dardacha », #102a43                                             | Icône provisoire en attendant les icônes définitives.                                                                                                                                                                                                                                       |
+| Nom, couleur              | « Dardacha », #102a43                                             | Icône : logo Dardacha (`assets/logo-source.png`), icônes dérivées par `scripts/generer-icones.py` (§9).                                                                                                                                                                                     |
 
 Choix arrêtés avec l'utilisateur le 30 oct. 2026 : Expo, parité avec la
 version web, contenu réécrit, distribution de test uniquement.
@@ -257,6 +257,14 @@ fonctionnel §7. Aucun paramètre interne caché à ce jour.
 origin/main -- .github/workflows`), le pousser sur une branche, puis
   publier la version depuis ce commit. Sans objet pour une nouvelle version
   publiée depuis `main`.
+- **Icônes** : tirées du logo source `assets/logo-source.png` par
+  `python3 scripts/generer-icones.py` (Pillow et NumPy), à relancer si le
+  logo change. `icon.png` (iOS et défaut) : la tuile pleine, coins remplis,
+  iOS arrondit lui-même. Icône adaptative Android : le logo occupe les
+  72 dp visibles sur 108 dp, le lanceur découpe un cercle ou une forme
+  arrondie ; fond `#b9e3fb`. Icône monochrome (icônes à thème d'Android 13) :
+  le mot « Dardacha ». `logo.png` : le logo à fond transparent, pour le
+  README.
 - **Publication** : sur `main` uniquement, Release GitHub `apk-test`
   (pré-version), supprimée et recréée à chaque fabrication. Sur toute
   branche, l'APK est conservé en artefact du build, ce qui permet d'essayer
