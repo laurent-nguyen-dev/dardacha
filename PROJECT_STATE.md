@@ -9,6 +9,7 @@
   - Fonctionnel : [docs/fonctionnel.md](docs/fonctionnel.md)
   - Technique : [docs/technique.md](docs/technique.md)
   - Questions ouvertes : [docs/questions-ouvertes.md](docs/questions-ouvertes.md)
+  - Applications comparables : [docs/concurrence.md](docs/concurrence.md)
   - Cahier des charges mobile (synthèse) : [docs/cahier-des-charges.md](docs/cahier-des-charges.md)
   - Cahier des charges de la version web (archive) : [docs/archives/cahier-des-charges-pwa.md](docs/archives/cahier-des-charges-pwa.md)
 - **Règle** : le cahier des charges est une synthèse ; toute modification est
