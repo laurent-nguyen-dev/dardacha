@@ -97,6 +97,16 @@ en scène sa situation et réemploie ses expressions (fonctionnel §3.8).
 | T31    | Modèle, contrôle et affichage du mini-dialogue de séance | —         | fait |
 | T32    | Mini-dialogues des 24 séances (un commit par module)     | T31       | fait |
 
+## Sprint 7 — Relecture par l'application (version 1.3)
+
+**Jalon** : l'application, distribuée par APK aux relecteurs natifs, leur
+permet de signaler une erreur depuis chaque expression (fonctionnel §3.9).
+
+| Ticket | Titre                                                  | Dépend de | État |
+| ------ | ------------------------------------------------------ | --------- | ---- |
+| T34    | Signaler une erreur (F16) : lien prérempli vers GitHub | —         | fait |
+| T35    | Guide du relecteur et version 1.3.0                    | T34       | fait |
+
 ## Hors sprint
 
 | Ticket | Titre                                               | État |
