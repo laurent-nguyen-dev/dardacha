@@ -4,6 +4,7 @@ import { type Expression, VARIANTES } from '@/content/types';
 import { couleurs } from '@/theme';
 
 import { BoutonEcouter } from './BoutonEcouter';
+import { BoutonSignaler } from './Signaler';
 import { TexteArabe } from './TexteArabe';
 import { EtiquetteVariante, texteForme } from './Variantes';
 
@@ -26,7 +27,10 @@ export function TableauVocabulaire({ expressions }: { expressions: readonly Expr
         </View>
         {expressions.map((expression) => (
           <View key={expression.sens} style={styles.ligne}>
-            <Text style={[styles.cellule, styles.sens]}>{expression.sens}</Text>
+            <View style={[styles.cellule, styles.celluleForme]}>
+              <Text style={[styles.texteForme, styles.sens]}>{expression.sens}</Text>
+              <BoutonSignaler expression={expression} />
+            </View>
             {VARIANTES.map((variante) => {
               const forme = expression.formes[variante];
               const arabe = expression.arabe?.[variante];

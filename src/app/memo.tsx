@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { BoutonEcouter } from '@/components/BoutonEcouter';
 import { Quiz } from '@/components/Quiz';
+import { BoutonSignaler, LieuSignalement } from '@/components/Signaler';
 import { memo } from '@/content/memo';
 import type { ChiffreMemo } from '@/content/types';
 import { genererQuizMemo } from '@/logic/quizMemo';
@@ -14,27 +15,30 @@ const INTRO =
 // F12 : mémo des chiffres SMS — une fiche par chiffre, puis un quiz.
 export default function Memo() {
   return (
-    <ScrollView contentContainerStyle={styles.page}>
-      <Stack.Screen options={{ title: 'Mémo des chiffres SMS' }} />
-      <Text style={styles.intro}>{INTRO}</Text>
+    <LieuSignalement lieu="Mémo des chiffres SMS">
+      <ScrollView contentContainerStyle={styles.page}>
+        <Stack.Screen options={{ title: 'Mémo des chiffres SMS' }} />
+        <Text style={styles.intro}>{INTRO}</Text>
 
-      {memo.map((chiffre) => (
-        <FicheChiffre key={chiffre.chiffre} chiffre={chiffre} />
-      ))}
+        {memo.map((chiffre) => (
+          <FicheChiffre key={chiffre.chiffre} chiffre={chiffre} />
+        ))}
 
-      <Text style={styles.titreSection} accessibilityRole="header">
-        Quiz
-      </Text>
-      <Quiz
-        generer={() => genererQuizMemo(memo)}
-        grandsChoix
-        correction={({ chiffre }) => (
-          <Text style={styles.texte}>
-            {chiffre.chiffre} = {chiffre.lettre} : {chiffre.son}.
-          </Text>
-        )}
-      />
-    </ScrollView>
+        <Text style={styles.titreSection} accessibilityRole="header">
+          Quiz
+        </Text>
+        <Quiz
+          generer={() => genererQuizMemo(memo)}
+          grandsChoix
+          correction={({ chiffre }) => (
+            <Text style={styles.texte}>
+              {chiffre.chiffre} = {chiffre.lettre} : {chiffre.son}.
+            </Text>
+          )}
+        />
+        <BoutonSignaler libelle="⚑ Signaler une erreur dans cette page" />
+      </ScrollView>
+    </LieuSignalement>
   );
 }
 

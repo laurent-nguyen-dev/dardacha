@@ -176,6 +176,27 @@ L'apprentissage de l'alphabet reste hors périmètre.
 - **Règle de rédaction** (non vérifiée automatiquement) : le dialogue met en
   scène la situation de la séance et réemploie ses expressions.
 
+### 3.9 Signalement d'erreurs (version 1.3)
+
+L'application sert elle-même d'outil de relecture : distribuée à des
+locuteurs natifs, elle leur permet de signaler une erreur là où ils la
+voient, sans autre document.
+
+- **Où** : un lien « ⚑ Signaler » sur chaque expression (expressions
+  supplémentaires, vocabulaire comparé, mini-dialogue, corrections, fiches
+  de révision), et un lien « ⚑ Signaler une erreur dans cette page » en bas
+  de la page séance (textes : objectif, contexte, consignes, à retenir) et
+  du mémo.
+- **Quoi** : le lien ouvre, dans le navigateur, le formulaire « Correction de
+  contenu » du dépôt GitHub, **prérempli** : lieu (module, séance), sens de
+  l'expression et formes actuelles dans les trois variantes (transcription et
+  écriture arabe). Le relecteur choisit la variante, écrit la forme proposée
+  et envoie. Un compte GitHub est nécessaire (choix de l'utilisateur, 2 nov.
+  2026).
+- **Hors ligne** : l'application ne transmet rien elle-même ; sans
+  connexion, c'est le navigateur qui affiche l'erreur.
+- L'avertissement du Menu (3.5) indique comment signaler une erreur.
+
 ### 3.6 Évolution du parcours
 
 L'application doit permettre d'ajouter des modules plus tard **sans modifier
@@ -230,7 +251,8 @@ habituel du téléphone.
 | F12  | Mémo des chiffres SMS        | Tableau (3.4) et quiz de 5 questions « Quelle lettre arabe remplace le chiffre X ? », 3 choix, chiffres tirés sans répétition parmi les 6 ; chaque réponse est corrigée. Accessible depuis la barre et depuis les séances des modules liés au mémo (§3.3). |
 | F13  | Réinitialisation             | Demande confirmation ; si confirmé, efface toute la progression et revient au Menu. Si annulé, rien ne change.                                                                                                                                             |
 | F14  | Installation                 | L'application s'installe sur Android et iPhone comme toute application, avec son nom et son icône. Affichage en orientation portrait uniquement.                                                                                                           |
-| F15  | Hors ligne                   | Tout le contenu est embarqué : aucune fonction ne nécessite de connexion, y compris à la première ouverture.                                                                                                                                               |
+| F15  | Hors ligne                   | Tout le contenu est embarqué : aucune fonction ne nécessite de connexion, y compris à la première ouverture (sauf l'envoi d'un signalement, F16).                                                                                                          |
+| F16  | Signaler une erreur          | Ouvre le formulaire de correction prérempli du dépôt GitHub depuis une expression ou une page (§3.9).                                                                                                                                                      |
 
 ## 6. Règles de gestion
 
@@ -346,13 +368,16 @@ logique de l'application.
 
 Aucune collecte, aucun compte, aucune publicité, aucune mesure d'audience,
 aucun échange réseau. La seule donnée conservée est la liste des séances
-terminées, sur l'appareil.
+terminées, sur l'appareil. Le signalement d'erreur (F16) ouvre le
+navigateur : ce que la personne envoie ensuite à GitHub, elle le voit et le
+choisit.
 
 ## 9. Évolutions envisagées (après la version 1)
 
 Par ordre de priorité proposé :
 
-1. Relecture du contenu par un locuteur marocain et un locuteur tunisien.
+1. Relecture du contenu par un locuteur marocain et un locuteur tunisien —
+   l'application distribuée sert d'outil de relecture (§3.9, version 1.3).
 2. Écriture arabe pour chaque expression, et écoute lue sur l'écriture
    arabe — **fait en version 1.1 (§3.7)**, à relire par des natifs.
 3. Un mini-dialogue propre à chaque séance — **fait en version 1.2 (§3.8)**, à relire par des natifs.

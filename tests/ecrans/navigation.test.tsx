@@ -24,7 +24,7 @@ describe('Navigation', () => {
     }
     expect(screen.getByText(`0 / ${totalSeances} séances terminées`)).toBeVisible();
     expect(
-      screen.getByText('Contenu en cours de relecture par des locuteurs natifs.'),
+      screen.getByText(/^Contenu en cours de relecture par des locuteurs natifs./),
     ).toBeVisible();
   });
 

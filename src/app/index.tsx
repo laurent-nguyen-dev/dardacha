@@ -7,6 +7,9 @@ import { progressionModule } from '@/logic/parcours';
 import { useSeancesTerminees } from '@/services/progression';
 import { couleurs } from '@/theme';
 
+const AVERTISSEMENT =
+  "Contenu en cours de relecture par des locuteurs natifs. Une erreur ? Touchez « ⚑ Signaler » sous l'expression.";
+
 // F01 : menu principal, une carte par module du registre.
 export default function Menu() {
   const terminees = useSeancesTerminees();
@@ -17,9 +20,7 @@ export default function Menu() {
       <Stack.Screen options={{ title: 'Dardacha' }} />
       {contenuNonRelu && (
         <View style={styles.avertissement}>
-          <Text style={styles.texteAvertissement}>
-            Contenu en cours de relecture par des locuteurs natifs.
-          </Text>
+          <Text style={styles.texteAvertissement}>{AVERTISSEMENT}</Text>
         </View>
       )}
       {parcours.map((module, index) => {
