@@ -15,7 +15,8 @@ Aucune.
 - Publication sur les magasins : fiches, captures, politique de
   confidentialité, compte Apple Developer.
 - Recette sur iPhone : pas d'appareil disponible. À jouer avant toute
-  publication sur l'App Store (Expo Go suffit, ou un build iOS de test).
+  publication sur l'App Store (build iOS par TestFlight, compte Apple
+  Developer ; Expo Go ne suffit plus, technique §4).
 
 ## Tranchées
 
@@ -59,4 +60,5 @@ Aucune.
 | 2026-11-02 | —    | Relecture native                           | Par l'application distribuée (APK GitHub), avec un bouton « Signaler » ; pas de document à part                                             | fonctionnel §3.9                   |
 | 2026-11-02 | —    | Canal des signalements                     | Formulaire GitHub prérempli (compte GitHub requis)                                                                                          | fonctionnel §3.9, technique §2.4   |
 | 2026-11-02 | —    | Distribution aux relecteurs                | APK des releases GitHub ; Android d'abord, iPhone plus tard                                                                                 | relecture.md                       |
+| 2026-11-04 | Q-14 | Relecteurs sur iPhone                      | Version web gratuite (GitHub Pages) ; Expo Go ne suffit plus ; TestFlight (99 $/an) seulement pour publier                                  | technique §4, §9.1                 |
 | 2026-11-01 | Q-17 | Icône définitive                           | Logo Dardacha fourni par l'utilisateur (bulles MSA, darija, tounsi)                                                                         | technique §1, §9                   |

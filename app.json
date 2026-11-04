@@ -21,6 +21,14 @@
       "predictiveBackGestureEnabled": false,
       "versionCode": 10300
     },
-    "plugins": ["expo-router"]
+    "plugins": ["expo-router"],
+    "web": {
+      "output": "single",
+      "favicon": "./assets/icon.png",
+      "bundler": "metro"
+    },
+    "experiments": {
+      "baseUrl": "/dardacha"
+    }
   }
 }

@@ -1,0 +1,61 @@
+# Version web, publiée sur GitHub Pages à chaque fusion sur `main`
+# (technique §9.1). Elle sert surtout aux relecteurs sur iPhone, qui n'ont
+# pas d'APK : un lien à ouvrir dans le navigateur suffit.
+#
+# Adresse : https://laurent-nguyen-dev.github.io/dardacha/
+# Prérequis (une seule fois) : Settings → Pages → Source « GitHub Actions ».
+name: Version web
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Une seule publication à la fois ; on ne coupe pas une publication en cours.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write # publier sur GitHub Pages
+  id-token: write # prouver à GitHub Pages que la publication vient de ce dépôt
+
+jobs:
+  fabrication:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Installation des dépendances
+        run: npm ci
+
+      # Site statique dans dist/ ; les adresses commencent par /dardacha
+      # (experiments.baseUrl dans app.json), le nom du dépôt.
+      - name: Export web
+        run: npx expo export --platform web
+
+      # GitHub Pages ne connaît que des fichiers : une adresse comme
+      # /dardacha/seance/salutations-bonjour, ouverte directement ou
+      # rechargée, n'en est pas un. Pages sert alors 404.html, copie de
+      # l'application, qui affiche la bonne page.
+      - name: Page de repli pour les liens directs
+        run: cp dist/index.html dist/404.html
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  publication:
+    needs: fabrication
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.publication.outputs.page_url }}
+    steps:
+      - id: publication
+        uses: actions/deploy-pages@v5

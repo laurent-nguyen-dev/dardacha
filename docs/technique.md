@@ -188,6 +188,13 @@ Exigence : ajouter un module = ajouter du contenu, sans toucher aux écrans ni
 - **iOS 16.4** minimum (Expo SDK 58, `Expo.podspec`).
 - Téléphones uniquement (`supportsTablet: false`). Orientation portrait verrouillée (`orientation: "portrait"` dans
   `app.json`).
+- **Navigateur** (version web, §9.1) : pour les relecteurs sans Android,
+  surtout sur iPhone. Même code, rendu par `react-native-web`.
+- **Expo Go n'est plus une solution de test sur iPhone** (vérifié le 4 nov.
+  2026, d'après le journal des changements d'Expo) : Expo Go n'est plus
+  publié sur l'App Store pour les SDK récents, et depuis mai 2026 il n'ouvre
+  plus que les projets de son propriétaire. Une vraie application iPhone
+  (TestFlight) demande un compte Apple Developer à 99 $/an.
 
 ## 5. Voix et langues
 
@@ -288,6 +295,27 @@ origin/main -- .github/workflows`), le pousser sur une branche, puis
   branche, l'APK est conservé en artefact du build, ce qui permet d'essayer
   une branche sans écraser la version proposée au public. Le workflow a la
   permission d'écrire dans le dépôt (Releases) uniquement pour cela.
+
+### 9.1 Version web (GitHub Pages)
+
+- Workflow `.github/workflows/web.yml` : à chaque fusion sur `main`,
+  `npx expo export --platform web` produit un site statique (`dist/`), publié
+  sur GitHub Pages : https://laurent-nguyen-dev.github.io/dardacha/.
+- `app.json` : `web.output: "single"` (une seule page, l'application choisit
+  l'écran) et `experiments.baseUrl: "/dardacha"` (le site est servi sous le
+  nom du dépôt). Sans effet sur Android et iOS.
+- `404.html` = copie d'`index.html` : un lien direct vers une séance, ou un
+  rechargement, ouvre la bonne page au lieu d'une erreur de GitHub Pages.
+- Dépendances : `react-native-web` ; `react-dom` épinglé à la version exacte
+  de `react` (19.3.0), sinon npm refuse l'installation.
+- Ce qui marche comme sur téléphone : écrans, progression (gardée par le
+  navigateur), signalement. **L'écoute** dépend des voix du navigateur
+  (Safari sur iPhone utilise les voix arabes d'iOS) : à vérifier sur
+  appareil.
+- **Prérequis, une seule fois** : dans le dépôt, Settings → Pages → Source
+  « GitHub Actions ».
+- Vérification locale : `npx expo export --platform web`, puis servir
+  `dist/` sous `/dardacha/`.
 
 ## 10. Intégration continue
 
