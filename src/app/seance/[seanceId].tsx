@@ -7,6 +7,7 @@ import { CorrectionType } from '@/components/CorrectionType';
 import { Introuvable } from '@/components/Introuvable';
 import { Quiz } from '@/components/Quiz';
 import { ReponseLibre } from '@/components/ReponseLibre';
+import { BoutonSignaler, LieuSignalement } from '@/components/Signaler';
 import { TableauVocabulaire } from '@/components/TableauVocabulaire';
 import { ExpressionComparee } from '@/components/Variantes';
 import { miniDialogue } from '@/content/dialogue';
@@ -32,87 +33,91 @@ export default function PageSeance() {
   const terminee = terminees.has(seance.id);
 
   return (
-    <ScrollView contentContainerStyle={styles.page}>
-      <Stack.Screen options={{ title: `Module ${numeroModule} · Séance ${numeroSeance}` }} />
-      <Text style={styles.titre}>{seance.titre}</Text>
+    <LieuSignalement lieu={`Module ${numeroModule} · Séance ${numeroSeance} · ${seance.titre}`}>
+      <ScrollView contentContainerStyle={styles.page}>
+        <Stack.Screen options={{ title: `Module ${numeroModule} · Séance ${numeroSeance}` }} />
+        <Text style={styles.titre}>{seance.titre}</Text>
 
-      <Section titre="Objectif">
-        <Text style={styles.texte}>{seance.objectif}</Text>
-      </Section>
+        <Section titre="Objectif">
+          <Text style={styles.texte}>{seance.objectif}</Text>
+        </Section>
 
-      <Section titre="Contexte et usage">
-        <Text style={styles.texte}>{seance.contexte}</Text>
-      </Section>
+        <Section titre="Contexte et usage">
+          <Text style={styles.texte}>{seance.contexte}</Text>
+        </Section>
 
-      <Section titre="Expressions supplémentaires">
-        {seance.supplementaires.map((expression) => (
-          <ExpressionComparee key={expression.sens} expression={expression} />
-        ))}
-      </Section>
+        <Section titre="Expressions supplémentaires">
+          {seance.supplementaires.map((expression) => (
+            <ExpressionComparee key={expression.sens} expression={expression} />
+          ))}
+        </Section>
 
-      {module.lienMemo && (
-        <Bouton
-          libelle="🔢 Mémo des chiffres SMS"
-          variante="secondaire"
-          onPress={() => router.push('/memo')}
-        />
-      )}
+        {module.lienMemo && (
+          <Bouton
+            libelle="🔢 Mémo des chiffres SMS"
+            variante="secondaire"
+            onPress={() => router.push('/memo')}
+          />
+        )}
 
-      <Section titre="Défi oral">
-        <Text style={styles.texte}>{seance.defiOral}</Text>
-        <CorrectionType key={seance.id} expressions={seance.expressions} />
-      </Section>
+        <Section titre="Défi oral">
+          <Text style={styles.texte}>{seance.defiOral}</Text>
+          <CorrectionType key={seance.id} expressions={seance.expressions} />
+        </Section>
 
-      <Section titre="Vocabulaire comparé">
-        <TableauVocabulaire expressions={seance.expressions} />
-      </Section>
+        <Section titre="Vocabulaire comparé">
+          <TableauVocabulaire expressions={seance.expressions} />
+        </Section>
 
-      <Section titre="À retenir">
-        <Text style={styles.texte}>{seance.aRetenir}</Text>
-      </Section>
+        <Section titre="À retenir">
+          <Text style={styles.texte}>{seance.aRetenir}</Text>
+        </Section>
 
-      <Section titre="Mini-dialogue">
-        {(seance.dialogue ?? miniDialogue).map((replique, index) => (
-          <View key={index} style={styles.replique}>
-            <Text style={styles.locuteur}>{replique.locuteur} :</Text>
-            <View style={styles.contenuReplique}>
-              <ExpressionComparee expression={replique.expression} />
+        <Section titre="Mini-dialogue">
+          {(seance.dialogue ?? miniDialogue).map((replique, index) => (
+            <View key={index} style={styles.replique}>
+              <Text style={styles.locuteur}>{replique.locuteur} :</Text>
+              <View style={styles.contenuReplique}>
+                <ExpressionComparee expression={replique.expression} />
+              </View>
             </View>
-          </View>
-        ))}
-      </Section>
+          ))}
+        </Section>
 
-      <Section titre="Vérifie ta compréhension">
-        <Quiz
-          key={seance.id}
-          generer={() => genererQuiz(parcours, seance.id)}
-          correction={(question) => <ExpressionComparee expression={question.expression} />}
-        />
-      </Section>
+        <Section titre="Vérifie ta compréhension">
+          <Quiz
+            key={seance.id}
+            generer={() => genererQuiz(parcours, seance.id)}
+            correction={(question) => <ExpressionComparee expression={question.expression} />}
+          />
+        </Section>
 
-      <Section titre="À toi de jouer">
-        <ReponseLibre key={seance.id} seance={seance} />
-      </Section>
+        <Section titre="À toi de jouer">
+          <ReponseLibre key={seance.id} seance={seance} />
+        </Section>
 
-      <View style={styles.actions}>
-        <Bouton
-          libelle="Retour aux séances"
-          variante="secondaire"
-          onPress={() => router.dismissTo(`/module/${module.id}`)}
-        />
-        <Bouton
-          libelle={terminee ? '✓ Séance terminée' : 'Marquer comme terminée'}
-          variante="secondaire"
-          desactive={terminee}
-          onPress={() => marquerTerminee(seance.id)}
-        />
-        <Bouton
-          libelle="Séance suivante"
-          desactive={!suivante}
-          onPress={() => suivante && router.replace(`/seance/${suivante.id}`)}
-        />
-      </View>
-    </ScrollView>
+        <BoutonSignaler libelle="⚑ Signaler une erreur dans cette page" />
+
+        <View style={styles.actions}>
+          <Bouton
+            libelle="Retour aux séances"
+            variante="secondaire"
+            onPress={() => router.dismissTo(`/module/${module.id}`)}
+          />
+          <Bouton
+            libelle={terminee ? '✓ Séance terminée' : 'Marquer comme terminée'}
+            variante="secondaire"
+            desactive={terminee}
+            onPress={() => marquerTerminee(seance.id)}
+          />
+          <Bouton
+            libelle="Séance suivante"
+            desactive={!suivante}
+            onPress={() => suivante && router.replace(`/seance/${suivante.id}`)}
+          />
+        </View>
+      </ScrollView>
+    </LieuSignalement>
   );
 }
 

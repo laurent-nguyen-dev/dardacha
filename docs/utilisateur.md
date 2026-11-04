@@ -81,6 +81,14 @@ WhatsApp ») explique les chiffres utilisés sur WhatsApp à la place de
 lettres arabes : 2, 3, 5, 6, 7, 9. Touche 🔊 pour entendre chaque exemple,
 lu en écriture arabe. Un quiz de 5 questions termine le mémo.
 
+## Signaler une erreur
+
+Le contenu est en cours de relecture. Si une expression vous semble fausse,
+touchez **« ⚑ Signaler »** sous l'expression (ou, en bas d'une séance,
+« ⚑ Signaler une erreur dans cette page ») : un formulaire déjà rempli
+s'ouvre dans le navigateur. Il faut un compte GitHub. Détails :
+[guide du relecteur](relecture.md).
+
 ## Progression
 
 - En bas d'une séance, **« Marquer comme terminée »** enregistre la séance.

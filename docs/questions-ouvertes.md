@@ -10,7 +10,8 @@ Aucune.
 
 ## Bloque une version ultérieure
 
-- Relecteurs natifs (marocain, tunisien) : qui ?
+- Relecteurs natifs (marocain, tunisien) : qui ? Leur envoyer le
+  [guide du relecteur](relecture.md).
 - Publication sur les magasins : fiches, captures, politique de
   confidentialité, compte Apple Developer.
 - Recette sur iPhone : pas d'appareil disponible. À jouer avant toute
@@ -55,4 +56,7 @@ Aucune.
 | 2026-10-31 | —    | Écriture arabe : voyelles du MSA           | Sans voyelles (harakat)                                                                                                                     | fonctionnel §3.7                   |
 | 2026-10-31 | —    | Écriture arabe : livraison                 | Mécanisme + module 1 d'abord, puis module par module ; champ facultatif                                                                     | technique §2.2, backlog            |
 | 2026-10-31 | Q-08 | Mini-dialogue par séance (v1.2)            | Facultatif par séance (repli sur le dialogue commun) ; 3 à 6 répliques A/B en alternance ; complet dans les 3 variantes avec écriture arabe | fonctionnel §3.8                   |
+| 2026-11-02 | —    | Relecture native                           | Par l'application distribuée (APK GitHub), avec un bouton « Signaler » ; pas de document à part                                             | fonctionnel §3.9                   |
+| 2026-11-02 | —    | Canal des signalements                     | Formulaire GitHub prérempli (compte GitHub requis)                                                                                          | fonctionnel §3.9, technique §2.4   |
+| 2026-11-02 | —    | Distribution aux relecteurs                | APK des releases GitHub ; Android d'abord, iPhone plus tard                                                                                 | relecture.md                       |
 | 2026-11-01 | Q-17 | Icône définitive                           | Logo Dardacha fourni par l'utilisateur (bulles MSA, darija, tounsi)                                                                         | technique §1, §9                   |

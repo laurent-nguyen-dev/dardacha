@@ -14,6 +14,9 @@ export const config = {
   dialogueRepliquesMin: 3,
   dialogueRepliquesMax: 6,
 
+  // Dépôt GitHub qui reçoit les signalements d'erreurs (F16, §3.9).
+  depot: 'https://github.com/laurent-nguyen-dev/dardacha',
+
   // Règles de structure du contenu, vérifiées automatiquement (§3.2, §3.5).
   contenuExpressionsBaseMin: 3,
   contenuExpressionsBaseMax: 5,

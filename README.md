@@ -47,8 +47,9 @@ tounsi tunisien.**
   [cahier des charges](docs/cahier-des-charges.md). Recette validée sur
   Android ; pas encore jouée sur iPhone.
 - ⚠️ **Le contenu linguistique n'a pas encore été relu par des locuteurs
-  natifs.** C'est un premier jet ; l'application l'indique sur son menu.
-  Toute correction est bienvenue (voir « Contribuer »).
+  natifs.** C'est un premier jet ; l'application l'indique sur son menu et
+  permet de signaler une erreur depuis chaque expression (version 1.3,
+  [guide du relecteur](docs/relecture.md)).
 - **Écriture arabe** (version 1.1) : affichée sous la transcription latine
   dans tous les modules, et lue par la voix pour une prononciation plus
   juste. Elle aussi attend la relecture de locuteurs natifs.
@@ -73,9 +74,11 @@ explique comment en ajouter une si besoin.
 Les contributions sont les bienvenues, en particulier :
 
 - **Relecture par des locuteurs natifs** (marocains et tunisiens surtout) :
-  signaler une expression fausse ou peu naturelle avec le modèle d'issue
-  « Correction de contenu », ou corriger directement le fichier du module
-  dans [`src/content/modules/`](src/content/modules/).
+  installez l'application et touchez « ⚑ Signaler » sous une expression
+  fausse ou peu naturelle — le formulaire arrive prérempli. Mode d'emploi :
+  [guide du relecteur](docs/relecture.md). On peut aussi corriger
+  directement le fichier du module dans
+  [`src/content/modules/`](src/content/modules/).
 - **Nouveaux modules** : un module est un simple fichier de contenu, sans
   code à écrire — voir [ajouter-un-module.md](docs/ajouter-un-module.md).
 - **Code** : voir [CONTRIBUTING.md](CONTRIBUTING.md).

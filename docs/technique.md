@@ -154,6 +154,24 @@ Exigence : ajouter un module = ajouter du contenu, sans toucher aux écrans ni
   A et B en alternance en commençant par A, formes et écriture arabe
   présentes dans les trois variantes, écriture arabe valide (§2.2).
 
+### 2.4 Signalement d'erreurs (version 1.3, fonctionnel §3.9)
+
+- `src/logic/signalement.ts` construit l'URL du formulaire GitHub
+  `.github/ISSUE_TEMPLATE/correction-contenu.yml` : paramètres `template`,
+  `title` et un paramètre par champ du formulaire, nommé par son `id`
+  (`seance`, `expression`, `actuelle`). **Renommer un `id` du formulaire
+  casse le préremplissage** : modifier les deux ensemble. La variante
+  (liste déroulante) n'est pas préremplie, le relecteur la choisit.
+- Encodage par `encodeURIComponent`, pas `URLSearchParams` (incomplet dans
+  React Native).
+- `src/components/Signaler.tsx` : `BoutonSignaler` ouvre l'URL avec
+  `Linking.openURL` (navigateur du téléphone, aucune dépendance ajoutée).
+  Le lieu (« Module 2 · Séance 3 · titre ») vient d'un contexte React posé
+  par la page (`LieuSignalement`) : les expressions s'affichent dans des
+  composants qui ne connaissent pas la séance (quiz, corrections).
+- Adresse du dépôt : `config.depot` (`src/config.ts`), à changer si le dépôt
+  est déplacé.
+
 ## 3. Correspondance avec la version web
 
 | Version web                                       | Version mobile                                      |

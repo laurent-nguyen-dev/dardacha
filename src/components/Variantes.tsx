@@ -4,6 +4,7 @@ import { type Expression, NOMS_VARIANTES, type Variante, VARIANTES } from '@/con
 import { couleurs } from '@/theme';
 
 import { BoutonEcouter } from './BoutonEcouter';
+import { BoutonSignaler } from './Signaler';
 import { TexteArabe } from './TexteArabe';
 
 /** Étiquette colorée d'une variante (convention fixe, fonctionnel §1). */
@@ -22,7 +23,8 @@ export function texteForme(forme: string | null): string {
 
 /**
  * Sens en français, puis une ligne par variante : transcription latine et,
- * si elle existe, écriture arabe en dessous (fonctionnel §3.7).
+ * si elle existe, écriture arabe en dessous (fonctionnel §3.7) ; enfin le
+ * lien « Signaler » (§3.9).
  */
 export function ExpressionComparee({ expression }: { expression: Expression }) {
   return (
@@ -42,6 +44,7 @@ export function ExpressionComparee({ expression }: { expression: Expression }) {
           </View>
         );
       })}
+      <BoutonSignaler expression={expression} />
     </View>
   );
 }

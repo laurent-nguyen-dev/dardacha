@@ -4,7 +4,7 @@
 
 - **Projet** : Dardacha (anciennement « Arabe au quotidien »), application mobile native (Android + iPhone),
   portage de la version web (PWA) existante.
-- **Phase actuelle** : version 1.2 terminée ; icône définitive (logo Dardacha) en place sur `main`, à publier avec la prochaine version. Prochaine étape à choisir parmi les évolutions du fonctionnel §9.
+- **Phase actuelle** : version 1.3 : signalement d'erreurs depuis l'application, pour une relecture native par l'APK distribué (sprint 7) ; icône définitive. Prochaine étape à choisir parmi les évolutions du fonctionnel §9.
 - **Documents**
   - Fonctionnel : [docs/fonctionnel.md](docs/fonctionnel.md)
   - Technique : [docs/technique.md](docs/technique.md)
@@ -15,7 +15,7 @@
 - **Règle** : le cahier des charges est une synthèse ; toute modification est
   reportée dans fonctionnel.md / technique.md dans le même commit, et inversement.
 - **Ticket en cours** : aucun.
-- **En attente de l'utilisateur** : relecture native du contenu, écriture arabe comprise (`src/content/`) ; choix de la prochaine évolution.
+- **En attente de l'utilisateur** : trouver des relecteurs natifs et leur envoyer le [guide du relecteur](docs/relecture.md) ; traiter ensuite leurs signalements (issues « contenu ») ; choix de la prochaine évolution.
 - **Versions** : numéro dans `app.json` (`node scripts/version.js X.Y.Z`), notes dans [docs/versions.md](docs/versions.md), publication par le workflow « Publier une version ».
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T21 — Icône définitive](docs/journal/T21-icone.md)
+- **Dernière entrée du journal** : [T34-T35 — Relecture par l'application](docs/journal/T34-signalement.md)

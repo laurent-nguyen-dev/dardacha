@@ -6,8 +6,12 @@ https://github.com/laurent-nguyen-dev/dardacha/releases
 Le contenu linguistique de toutes les versions est un premier jet, **non relu
 par des locuteurs natifs**.
 
-## Prochaine version (non publiée)
+## v1.3.0 — 2 novembre 2026
 
+- **Signaler une erreur** : un lien « ⚑ Signaler » sous chaque expression,
+  et en bas de chaque séance et du mémo, ouvre un formulaire de correction
+  déjà rempli (séance, expression, formes actuelles). Pour les relecteurs
+  natifs : [guide du relecteur](relecture.md).
 - **Icône définitive** : le logo Dardacha (trois bulles MSA, darija,
   tounsi), avec une icône à thème pour Android 13 et plus.
 
