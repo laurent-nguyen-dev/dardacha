@@ -6,7 +6,7 @@ Tout le contenu est un premier jet, **pas encore relu par des locuteurs
 natifs**. Ce guide s'adresse à eux : la relecture se fait directement dans
 l'application.
 
-## 1. Installer l'application (Android)
+## 1. Installer l'application
 
 1. Sur le téléphone, ouvrir la page de la dernière version :
    https://github.com/laurent-nguyen-dev/dardacha/releases/latest
@@ -15,7 +15,9 @@ l'application.
 3. Android demande d'autoriser l'installation depuis le navigateur : accepter
    (une seule fois).
 
-Pas de version iPhone pour l'instant.
+**Sur iPhone** (ou sans installer) : ouvrir la version web dans Safari,
+https://laurent-nguyen-dev.github.io/dardacha/ — même contenu, même bouton « Signaler ». Pour la
+retrouver, Partager → « Sur l'écran d'accueil ».
 
 ## 2. Créer un compte GitHub (une seule fois)
 

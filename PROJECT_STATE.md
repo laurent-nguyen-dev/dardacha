@@ -15,7 +15,7 @@
 - **Règle** : le cahier des charges est une synthèse ; toute modification est
   reportée dans fonctionnel.md / technique.md dans le même commit, et inversement.
 - **Ticket en cours** : aucun.
-- **En attente de l'utilisateur** : trouver des relecteurs natifs et leur envoyer le [guide du relecteur](docs/relecture.md) ; traiter ensuite leurs signalements (issues « contenu ») ; choix de la prochaine évolution.
+- **En attente de l'utilisateur** : activer GitHub Pages (Settings → Pages → Source « GitHub Actions », docs/exploitation.md) ; trouver des relecteurs natifs et leur envoyer le [guide du relecteur](docs/relecture.md) ; traiter ensuite leurs signalements (issues « contenu ») ; choix de la prochaine évolution.
 - **Versions** : numéro dans `app.json` (`node scripts/version.js X.Y.Z`), notes dans [docs/versions.md](docs/versions.md), publication par le workflow « Publier une version ».
 - **Méthode** : un commit par ticket sur la branche de travail ; documents à jour dans le même commit.
-- **Dernière entrée du journal** : [T34-T35 — Relecture par l'application](docs/journal/T34-signalement.md)
+- **Dernière entrée du journal** : [T36 — Version web](docs/journal/T36-version-web.md)

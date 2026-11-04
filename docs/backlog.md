@@ -106,6 +106,7 @@ permet de signaler une erreur depuis chaque expression (fonctionnel §3.9).
 | ------ | ------------------------------------------------------ | --------- | ---- |
 | T34    | Signaler une erreur (F16) : lien prérempli vers GitHub | —         | fait |
 | T35    | Guide du relecteur et version 1.3.0                    | T34       | fait |
+| T36    | Version web sur GitHub Pages (relecteurs sur iPhone)   | T34       | fait |
 
 ## Hors sprint
 

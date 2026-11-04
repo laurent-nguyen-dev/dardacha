@@ -63,8 +63,10 @@ tounsi tunisien.**
   pour le tout dernier état,
   puis l'ouvrir sur le téléphone (Android demande d'autoriser l'installation
   la première fois). Détails : [exploitation.md](docs/exploitation.md).
-- **iPhone** : pas encore de version installable ; on peut lancer
-  l'application avec Expo Go depuis les sources (voir « Développer »).
+- **iPhone, ou sans rien installer** : la
+  [version web](https://laurent-nguyen-dev.github.io/dardacha/), à ouvrir dans le navigateur
+  (Safari : Partager → « Sur l'écran d'accueil »). Pas encore de version
+  iPhone installable (compte Apple Developer nécessaire).
 
 Le son demande une voix arabe installée sur le téléphone ; l'application
 explique comment en ajouter une si besoin.
